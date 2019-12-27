@@ -1,0 +1,37 @@
+@mixin ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+@mixin bgUrl($url) {
+    background-image: url($urlLocation + $url);
+    background-repeat: no-repeat;
+}
+
+@mixin bgUrlSize($url, $width, $height) {
+    background-image: url($urlLocation + $url);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: $width+px;
+    height: $height+px;
+}
+
+@mixin bgPosCenter {
+    background-position: center;
+}
+
+@mixin push--auto {
+    margin: {
+        left: auto;
+        right: auto;
+    }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
