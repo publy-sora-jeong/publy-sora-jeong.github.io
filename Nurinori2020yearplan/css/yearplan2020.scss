@@ -1375,6 +1375,28 @@ header {
         &.section01 {
             padding-top: 130px !important
         }
+
+        &.section--footer {
+            padding: 20px 0 !important;
+
+            #nnFooter {
+                width: auto !important;
+                padding: 0 10px;
+
+                .nn-logo {
+                    display: none;
+                }
+
+                .nn-footer-menu,
+                .nn-info,
+                .nn-copy {
+                    margin: 0;
+                }
+
+                .nn-goodContent,
+                .nn-epub {}
+            }
+        }
     }
 
 
@@ -1557,82 +1579,138 @@ header {
             }
         }
     }
-}
 
-.section03 {
-    .tit01 {
-        width: 400px;
-        height: 53px;
-    }
+    .section03 {
+        .tit01 {
+            width: 400px;
+            height: 53px;
+        }
 
-    .tit02 {
-        width: 660px;
-        height: 43px;
-    }
+        .tit02 {
+            width: 660px;
+            height: 43px;
+        }
 
-    .tit03 {
-        width: 590px;
-        height: 43px;
-        margin: 20px auto 0;
-    }
+        .tit03 {
+            width: 590px;
+            height: 43px;
+            margin: 20px auto 0;
+        }
 
-    .cont-flex-box .item {
-        width: 31% !important;
-        background-position: center bottom;
-    }
-}
-
-.section04 {
-    .tit01 {
-        width: 700px;
-        height: 46px;
-    }
-
-    .tit02 {
-        width: 360px;
-        height: 43px;
-        margin: 20px auto 0;
-    }
-
-    .cont-wrap {
-        .item {
-            margin-left: 20px;
-            height: 458px !important
+        .cont-flex-box .item {
+            width: 31% !important;
+            background-position: center bottom;
         }
     }
-}
 
-.section05 {
-    .tit01 {
-        width: 600px;
-        height: 50px;
-    }
+    .section04 {
+        .tit01 {
+            width: 700px;
+            height: 46px;
+        }
 
-    .tit02 {
-        width: 450px;
-        height: 41px;
-        margin: 20px auto 0;
-    }
+        .tit02 {
+            width: 360px;
+            height: 43px;
+            margin: 20px auto 0;
+        }
 
-    .cont-wrap {
-        margin-top: 30px;
-
-        .item {
-            transform: scale(0.8);
-            margin: -10px !important;
+        .cont-wrap {
+            .item {
+                margin-left: 20px;
+                height: 458px !important
+            }
         }
     }
-}
 
-.section06 .tit01 {
-    width: 568px;
-    height: 104px;
+    .section05 {
+        .tit01 {
+            width: 600px;
+            height: 50px;
+        }
 
-    &::before {
-        width: 111px;
-        height: 84px;
-        background-size: contain;
-        left: 30px;
-        top: -40px;
+        .tit02 {
+            width: 450px;
+            height: 41px;
+            margin: 20px auto 0;
+        }
+
+        .cont-wrap {
+            margin-top: 30px;
+
+            .item {
+                transform: scale(0.8);
+                margin: -10px !important;
+            }
+        }
+    }
+
+    .section06 {
+        .tit01 {
+            width: 568px;
+            height: 104px;
+
+            &::before {
+                width: 111px;
+                height: 84px;
+                background-size: contain;
+                left: 30px;
+                top: -40px;
+            }
+        }
+
+        .plan-cont {
+            padding: 25px 15px;
+
+            .btn-down1 {
+                height: 50px;
+                line-height: 50px;
+            }
+
+            .btn-down2 {
+                width: 145px;
+                margin-left: 5px;
+                height: 50px;
+                line-height: 50px;
+            }
+
+            .btn-down-age3 span {
+                width: 110px;
+                height: 14px;
+            }
+
+            .btn-down-age4 span,
+            .btn-down-age5 span {
+                width: 117px;
+                height: 14px;
+            }
+
+            .btn-down-all span {
+                width: 109px;
+                height: 14px;
+            }
+        }
+    }
+
+    .section07 {
+        .tit01 {
+            width: 381px;
+            height: 50px;
+        }
+
+        .tit02 {
+            width: 264px;
+            height: 43px;
+            margin: 20px auto 0;
+        }
+
+        .cont-wrap {
+            margin-top: 20px;
+
+            .event-banner {
+                width: 750px;
+                height: 216px;
+            }
+        }
     }
 }

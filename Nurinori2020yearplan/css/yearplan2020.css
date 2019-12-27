@@ -1736,6 +1736,21 @@ header .header-top a:nth-of-type(1)::before {
   #fullpage > .section.section01 {
     padding-top: 130px !important;
   }
+  #fullpage > .section.section--footer {
+    padding: 20px 0 !important;
+  }
+  #fullpage > .section.section--footer #nnFooter {
+    width: auto !important;
+    padding: 0 10px;
+  }
+  #fullpage > .section.section--footer #nnFooter .nn-logo {
+    display: none;
+  }
+  #fullpage > .section.section--footer #nnFooter .nn-footer-menu,
+  #fullpage > .section.section--footer #nnFooter .nn-info,
+  #fullpage > .section.section--footer #nnFooter .nn-copy {
+    margin: 0;
+  }
   .section01 .tit01 {
     width: 600px;
     height: 96px;
@@ -1885,76 +1900,105 @@ header .header-top a:nth-of-type(1)::before {
     top: 80%;
     right: 11%;
   }
-}
-
-.section03 .tit01 {
-  width: 400px;
-  height: 53px;
-}
-
-.section03 .tit02 {
-  width: 660px;
-  height: 43px;
-}
-
-.section03 .tit03 {
-  width: 590px;
-  height: 43px;
-  margin: 20px auto 0;
-}
-
-.section03 .cont-flex-box .item {
-  width: 31% !important;
-  background-position: center bottom;
-}
-
-.section04 .tit01 {
-  width: 700px;
-  height: 46px;
-}
-
-.section04 .tit02 {
-  width: 360px;
-  height: 43px;
-  margin: 20px auto 0;
-}
-
-.section04 .cont-wrap .item {
-  margin-left: 20px;
-  height: 458px !important;
-}
-
-.section05 .tit01 {
-  width: 600px;
-  height: 50px;
-}
-
-.section05 .tit02 {
-  width: 450px;
-  height: 41px;
-  margin: 20px auto 0;
-}
-
-.section05 .cont-wrap {
-  margin-top: 30px;
-}
-
-.section05 .cont-wrap .item {
-  -webkit-transform: scale(0.8);
-          transform: scale(0.8);
-  margin: -10px !important;
-}
-
-.section06 .tit01 {
-  width: 568px;
-  height: 104px;
-}
-
-.section06 .tit01::before {
-  width: 111px;
-  height: 84px;
-  background-size: contain;
-  left: 30px;
-  top: -40px;
+  .section03 .tit01 {
+    width: 400px;
+    height: 53px;
+  }
+  .section03 .tit02 {
+    width: 660px;
+    height: 43px;
+  }
+  .section03 .tit03 {
+    width: 590px;
+    height: 43px;
+    margin: 20px auto 0;
+  }
+  .section03 .cont-flex-box .item {
+    width: 31% !important;
+    background-position: center bottom;
+  }
+  .section04 .tit01 {
+    width: 700px;
+    height: 46px;
+  }
+  .section04 .tit02 {
+    width: 360px;
+    height: 43px;
+    margin: 20px auto 0;
+  }
+  .section04 .cont-wrap .item {
+    margin-left: 20px;
+    height: 458px !important;
+  }
+  .section05 .tit01 {
+    width: 600px;
+    height: 50px;
+  }
+  .section05 .tit02 {
+    width: 450px;
+    height: 41px;
+    margin: 20px auto 0;
+  }
+  .section05 .cont-wrap {
+    margin-top: 30px;
+  }
+  .section05 .cont-wrap .item {
+    -webkit-transform: scale(0.8);
+            transform: scale(0.8);
+    margin: -10px !important;
+  }
+  .section06 .tit01 {
+    width: 568px;
+    height: 104px;
+  }
+  .section06 .tit01::before {
+    width: 111px;
+    height: 84px;
+    background-size: contain;
+    left: 30px;
+    top: -40px;
+  }
+  .section06 .plan-cont {
+    padding: 25px 15px;
+  }
+  .section06 .plan-cont .btn-down1 {
+    height: 50px;
+    line-height: 50px;
+  }
+  .section06 .plan-cont .btn-down2 {
+    width: 145px;
+    margin-left: 5px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .section06 .plan-cont .btn-down-age3 span {
+    width: 110px;
+    height: 14px;
+  }
+  .section06 .plan-cont .btn-down-age4 span,
+  .section06 .plan-cont .btn-down-age5 span {
+    width: 117px;
+    height: 14px;
+  }
+  .section06 .plan-cont .btn-down-all span {
+    width: 109px;
+    height: 14px;
+  }
+  .section07 .tit01 {
+    width: 381px;
+    height: 50px;
+  }
+  .section07 .tit02 {
+    width: 264px;
+    height: 43px;
+    margin: 20px auto 0;
+  }
+  .section07 .cont-wrap {
+    margin-top: 20px;
+  }
+  .section07 .cont-wrap .event-banner {
+    width: 750px;
+    height: 216px;
+  }
 }
 /*# sourceMappingURL=yearplan2020.css.map */
