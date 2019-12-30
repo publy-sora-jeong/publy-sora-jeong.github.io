@@ -411,7 +411,6 @@ html {
         width: 0;
         height: 100%;
         position: relative;
-        padding-top: 70%;
         overflow: hidden;
         transition: all 1s ease;
         position: absolute;
@@ -524,7 +523,7 @@ html {
         &::before {
             content: '';
             width: 100%;
-            height: 50%;
+            height: 60%;
             background: url('../img/bridge.jpg') no-repeat;
             display: block;
             position: absolute;
@@ -533,8 +532,8 @@ html {
         }
 
         .desc {
-            top: 50%;
-            height: 50%;
+            top: 60%;
+            height: 60%;
             background: #212533;
         }
     }
@@ -545,7 +544,7 @@ html {
         &::before {
             content: '';
             width: 100%;
-            height: 55%;
+            height: 65%;
             background: url('../img/localHeroes.jpg') no-repeat;
             display: block;
             position: absolute;
@@ -554,8 +553,8 @@ html {
         }
 
         .desc {
-            top: 55%;
-            height: 55%;
+            top: 65%;
+            height: 65%;
 
             background: #755353;
 
