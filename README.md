@@ -1,5 +1,3 @@
-# SORA-JEONG
-
 ## project_2019
 
 - 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
