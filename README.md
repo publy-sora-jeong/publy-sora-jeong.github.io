@@ -1,56 +1,64 @@
-# sora-jeong
+# SORA-JEONG
+
+---
+
+## project_2019
+
+- 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
+- 누리놀이위드 대표홈페이지 퍼블리싱 및 유지보수 [go](http://nurinoriwith.com/)
+- 누리놀이 연간교육계획안 [go](http://www.nurinori.com/yearplan2020.do)
+- 창의력발달검사 하이브리드앱 퍼블리싱
+- 한국매니지먼트연합 반응형 대표홈페이지 및 어드민 구축 [go](http://kmf5678.or.kr/)
+- GSFIC 다국어(Korean, Japanese, English, Chinese) 뉴스레터 퍼블리싱 [go](http://www.gafic.or.kr/webzine/201905/home/ko/index.html)
+- TOS 대표홈페이지
+- 셀스미스 대표홈페이지 퍼블리싱 [go](http://www.cell-smith.com/CELL/main.html)
+- MKG 대표홈페이지 퍼블리싱
+- 디자인포르테 대표홈페이지 [go](https://www.designforte.co.kr/_df/main.html)
+- 브이시스 컨텐츠 퍼블리싱 [go](http://www.vsys.co.kr/V2/)
+- 태비핸즈 모바일앱 퍼블리싱(서브)
+- 법무법인 채움 대표홈페이지 디자인 및 퍼블리싱 + 블로그 스킨작업 [go](http://chlaw.co.kr/)
+- 대한환자안전질향상간호사회 [go](http://qi.or.kr/)
+- 니모다이브 [go](http://nemodive.kr/)
+
+---
+
+- THEME02 - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
+
+## project_2018
+
+- 경기교육청 학교홈페이지 유지보수관리 (여주교육지원청, 화성오산, 구리남양주, 시흥, 부천, 이천)
+- 기록원 특성화고 반응형 홈페이지 제작
+- 경기도교육정보기록원 대표홈페이지 메인 구축 [go](https://www.goeia.go.kr)
+- 동일공업고등학교 홈페이지 퍼블리싱 [go](http://di.hs.kr/)
+- 계원예술고등학교 반응형 홈페이지 리뉴얼 [go](http://www.kaywon.hs.kr/)
+- 계원예술고등학교 인재채용 페이지 홈페이지 리뉴얼 [go](http://recruit.kaywon.hs.kr/)
+- 동화중학교 홈페이지 퍼블리싱 [go](http://www.donghwa.ms.kr/)
+- 중산고등학교 [go](http://jungsan.hs.kr/)
+- 링컨중고등학교 [go](http://www.lincolnmid.kr/)
+- 태원고등학교
+- 대일 외국어고등학교 [go](http://daeil.e-wut.co.kr/)
+- 구미전자공업고등학교 [go](http://gnet.hs.kr/)
+- 용인바이오고등학교 [go](http://www.yibio.hs.kr/) , 풍덕고등학교 [go](http://pungduck.hs.kr/) , 군포e비지니스고등학교 [go](http://www.gunpo-ebiz.hs.kr/) , 흥진고등학교 [go](http://www.hungjin.hs.kr/)
+- 성덕고등학교 학교 홈페이지 개선 [go](http://ssd.hs.kr/)
+- 한솔고 홈페이지 리뉴얼 [go](http://www.hansol.hs.kr/)
+- 안양예술고등학교 학교홈페이지 리뉴얼 [go](http://www.anyangart.hs.kr/)
+- 경기외국어고등학교 학교홈페이지 제작 [go](http://www.gafl.hs.kr/)
+- 시크릿아일랜드 디자인&퍼블리싱 [go](http://secret-island.co.kr/)
+- 루체스타 수원 반응형 랜딩페이지 디자인&퍼블리싱 2018 (호스팅만료)
+- 구미전자정보기술원 반응형 대표홈페이지 퍼블리싱 / 컨텐츠 디자인 [go](http://www.geri.re.kr/site/main.do)
+- 애니메디앤헬스 [go](http://www.anymedinhealth.com/main.html)
+- 세종교육청 반응형 템플릿 홈페이지 구축
+- 명덕외고 리뉴얼 퍼블리싱 [go](http://www.mdfh.or.kr/)
+- 경기도연수포털시스템 리뉴얼 퍼블리싱 [go](https://gelearning.kr/)
+- 가온건설
+- 애니테이프 [go](http://www.anytape.kr/ko/main.html)
 
 <!-- # PROJECT 2019
 
-- 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱
-- 누리놀이위드 대표홈페이지 퍼블리싱 및 유지보수
-- 창의력발달검사 하이브리드앱 퍼블리싱
-- 한국매니지먼트연합 반응형 대표홈페이지 및 어드민 구축
-
-- GSFIC 다국어 뉴스레터 퍼블리싱
-- TOS 대표홈페이지
-- 셀스미스 대표홈페이지 퍼블리싱
-- MKG 대표홈페이지 퍼블리싱
-- 디자인포르테 대표홈페이지
-- 브이시스 컨텐츠 퍼블리싱
-- 태비핸즈 모바일앱 퍼블리싱(서브)
-- 법무법인 채움 대표홈페이지 디자인 및 퍼블리싱 + 블로그 스킨작업
-- QI 간호사협회 대표홈페이지 [link](https://publy-sora-jeong.github.io/QINS/QINS.html)
-- 니모다이브
-- 누리놀이 연간교육계획안
--페트라텍
 
 # PROJECT 2018
 
-- 경기도교육정보기록원 대표홈페이지 메인 구축 [link](https://www.goeia.go.kr)
-- 경기교육청 학교홈페이지 유지보수관리 (여주교육지원청, 화성오산, 구리남양주, 시흥, 부천, 이천)
-- 기록원 특성화고 반응형 홈페이지 제작
-- 동일공업고등학교 홈페이지 구축
-- 계원예술고등학교 반응형 홈페이지 리뉴얼
-- 계원예술고등학교 인재채용 페이지 홈페이지 리뉴얼
-- 동화중학교 홈페이지 구축 및 관리 2018
-- 중산고등학교
-- 링컨중고등학교
-- 태원고등학교
-- 대일 외국어고등학교
-- 구미전자공업고등학교
-- 용인바이오고등학교 홈페이지 제작
-- 풍덕고등학교 홈페이지 구축
-- 성덕고등학교 학교 홈페이지 개선
-- 군포e비지니스 고등학교 2018학년도 반응형 홈페이지 개편
-- 흥진고등학교 학교홈페이지 제작
-- 한솔고 홈페이지 제작
-- 안양예술고등학교 학교홈페이지 제작
-- 경기외국어고등학교 학교홈페이지 제작
-- 시크릿아일랜드 디자인&퍼블리싱 2018
-- 루체스타 수원 반응형 랜딩페이지 디자인&퍼블리싱 2018
-- 구미전자정보기술원 반응형 대표홈페이지 퍼블리싱 / 컨텐츠 디자인
-- 애니메디앤헬스
-- 세종교육청 반응형 템플릿 홈페이지 구축
-- 명덕외고
-- 경기도연수포털시스템 리뉴얼 퍼블리싱
-- 가온건설 2018
-- 애니테이프 2018
+
 
 # PROJECT 2017
 
