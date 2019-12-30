@@ -45,7 +45,14 @@
     }
 
     .b_desc {
-      max-height: 60px;
+      max-height: 70px;
+
+      * {
+        line-height: 1.4 !important;
+        font-weight: normal !important;
+        color: #333 !important;
+        text-decoration: none !important;
+      }
     }
   }
 
@@ -55,6 +62,7 @@
       float: left;
       width: 220px;
       height: 148px;
+      display: none;
 
       &.no_thumb {
         background-color: #ddd;
@@ -69,10 +77,10 @@
       }
     }
 
-    .b_txtarea {
-      float: right;
-      width: calc(100% - 250px);
-    }
+    // .b_txtarea {
+    //   float: right;
+    //   width: calc(100% - 250px);
+    // }
   }
 
   //TAG WRAP
