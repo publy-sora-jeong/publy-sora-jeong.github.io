@@ -1,35 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="js/global.js"></script>
+    <script src="js/site.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <script src="js/global.js"></script>
-  <script src="js/site.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Horizental Fullpage</title>
+  </head>
 
-  <link rel="stylesheet" href="css/style.css">
-  <title>Horizental Fullpage</title>
-</head>
+  <body>
+    <div class="loading">
+      <div class="loading-spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <p>welcome to NEW YORK CITY</p>
+    </div>
 
-<body>
-  <div id="container">
-    <section id="sec01" class="active">
+    <div id="container">
+      <section id="sec01" class="">
+        <div class="main-visual">
+          <div class="main-visual--item">
+            <div class="typo">
+              <p>NEW YORK CITY</p>
+              <p>
+                Find out what to do, where to go, <br />
+                where to stay and what to eat in NYC from the experts who know
+                it best.
+              </p>
+            </div>
+          </div>
 
-      <a href="#" class="btnPagePrev"><span>1. Home</span></a>
-      <a href="#" class="btnPageNext"><span>2. Second Page</span></a>
-    </section>
-    <section id="sec02">
-      <a href="#" class="btnPagePrev"><span>1. Home</span></a>
-      <a href="#" class="btnPageNext"><span>3. Third Page</span></a>
+          <div class="main-visual--item">
+            <div class="typo">
+              <p>Welcome to NEW YORK CITY</p>
+              <p>The Official Guide to New York City</p>
+            </div>
+          </div>
+        </div>
+        <!--pager -->
+        <!-- <span href="#" class="btnPagePrev"><span>0. Main</span></a> -->
+        <a href="#" class="btnPageNext" data-page="1"
+          ><span>2. EXPLORE</span></a
+        >
+      </section>
+      <section id="sec02">
+        <div class="wrapper">
+          <div class="typo">
+            <p>EXPLORE</p>
+            <p>New York City in One Day</p>
+            <p>
+              Breathtaking views from Top of the Rock, the Empire State Building
+              and One World Observatory. Exhibits from throughout history at the
+              Metropolitan Museum of Art, the Brooklyn Museum and New York Hall
+              of Science. Thrilling performances at Lincoln Center, BAM and
+              Barclays Center.
+            </p>
+          </div>
+          <div class="item01"></div>
+          <div class="item02"></div>
+          <div class="item03">
+            <h3>
+              Browse all attractions
+              <span
+                >Breathtaking views from Top of the Rock, <br />
+                the Empire State Building and One World Observatory.</span
+              >
+            </h3>
+          </div>
+          <div class="item04"></div>
+        </div>
+        <a href="#" class="btnPagePrev" data-page="0"><span>1. Home</span></a>
+        <a href="#" class="btnPageNext" data-page="2"
+          ><span>3. NEWYORK CITY</span></a
+        >
+      </section>
+      <section id="sec03">
+        <div class="wrapper">
+          <div class="item01">
+            <p>
+              A trip to New York City is the experience of a lifetime. With
+              famous attractions like Times Square, Central Park, the Empire
+              State Building and Yankee Stadium—to name just a few—NYC packs
+              more to see and do into one compact area than any other place on
+              earth. Each of the City’s five boroughs contains its own roster of
+              must-see destinations, great restaurants, cultural hot spots and
+              unforgettable activities. Start planning your trip with the guides
+              on this page.
+            </p>
+          </div>
+        </div>
+        <video width="" id="sec03-vid" controls="false" autoplay muted loop>
+          <source src="img/city_video.mp4" type="video/mp4" />
+          Your browser does not support HTML5 video.
+        </video>
+        <a href="#" class="btnPagePrev" data-page="1"
+          ><span>2. EXPLORE</span></a
+        >
+        <a href="#" class="btnPageNext" data-page="3"
+          ><span>4. MUST SEE PLACES</span></a
+        >
+      </section>
 
-    </section>
-    <section id="sec03">
-      <span href="#" class="btnPagePrev"><span>2. Second Page</span></a>
-        <a href="#" class="btnPageNext"><span>4. Fourth Page</span></a>
+      <section id="sec04">
+        <div class="item01">
+          <dl class="desc">
+            <dt>Hudson Yards</dt>
+            <dd>
+              Hudson Yards is New York’s newest neighborhood. The site is home
+              to more than 100 diverse shops and culinary experiences; offices
+              for leaders in industry; significant public art such as Vessel;
+              dynamic cultural institutions including The Shed; Edge, the
+              tallest observation deck in the Western hemisphere; modern
+              residences; 14 acres of public plazas, gardens and groves; and the
+              world’s first Equinox Hotel.
+            </dd>
+            <dd><a href="#" class="btn-more">learn more</a></dd>
+          </dl>
+        </div>
+        <div class="item02">
+          <dl class="desc">
+            <dt>Brooklyn Bridge</dt>
+            <dd>
+              Celebrated in song, glamorized on celluloid and immortalized in
+              poetry, the postcard-perfect Brooklyn Bridge stands as one of New
+              York City’s most recognizable symbols—not to mention a magnificent
+              feat of engineering. Upon its completion in 1883 it became the
+              first roadway to connect Manhattan and Brooklyn, which were then
+              separate cities (Brooklyn became part of New York City in 1898).
+              Back then, with a central span of 1,595 feet, the Brooklyn Bridge
+              was also the world’s longest suspension bridge.
+            </dd>
+            <dd><a href="#" class="btn-more">learn more</a></dd>
+          </dl>
+        </div>
+        <div class="item03">
+          <dl class="desc">
+            <dt>Local Heroes</dt>
+            <dd>
+              The winds have shifted in the dining world, with focused, personal
+              restaurants grabbing diners’ attention away from international
+              celebrity chefs. These days, bragging rights belong to those who
+              have had Missy Robbins’ spaghetti with lemon and pine nuts at
+              Lilia, in Williamsburg, and Dan Kluger’s crunchy zucchini fries
+              with lemon-Parmesan dressing at Loring Place, in Greenwich
+              Village. King, in Soho, is another fantastic bistro; its
+              European-inspired menu changes daily.
+            </dd>
+            <dd><a href="#" class="btn-more">learn more</a></dd>
+          </dl>
+        </div>
 
-    </section>
-  </div>
-</body>
-
+        <a href="#" class="btnPagePrev" data-page="2"
+          ><span>3. NEWYORK CITY</span></a
+        >
+        <!-- <span href="#" class="btnPageNext"><span>5. MUST SEE PLACES</span></a> -->
+      </section>
+    </div>
+  </body>
 </html>
