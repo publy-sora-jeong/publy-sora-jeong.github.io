@@ -1,7 +1,5 @@
 # SORA-JEONG
 
----
-
 ## project_2019
 
 - 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
@@ -20,9 +18,7 @@
 - 대한환자안전질향상간호사회 [go](http://qi.or.kr/)
 - 니모다이브 [go](http://nemodive.kr/)
 
----
-
-- THEME02 - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
+* THEME02 - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
 
 ## project_2018
 
