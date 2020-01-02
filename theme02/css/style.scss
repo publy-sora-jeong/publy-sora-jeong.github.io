@@ -34,7 +34,7 @@ html {
             width: 300px;
             height: 215px;
             left: 50%;
-            top: 50%;
+            top: 50vh;
             color: #fff;
             text-align: center;
             transform: translate(-50%, -50%);
@@ -72,7 +72,7 @@ html {
 
 #container {
     position: absolute;
-    min-width: 1440px;
+    //min-width: 1440px;
     width: 100%;
     height: 100%;
     top: 0;
@@ -162,7 +162,7 @@ html {
                 bottom: 0;
                 width: 100%;
                 height: 100%;
-                background-size: cover;
+                background-size: cover !important;
 
                 &:nth-of-type(1) {
                     display: block;
@@ -575,6 +575,189 @@ html {
             dt {
                 color: #fff;
                 border-color: #fff;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: none;
+
+        .loading {
+            display: none;
+        }
+    }
+
+    #container {
+        position: initial;
+
+
+        &>section {
+            opacity: 1;
+            position: relative;
+            left: 0;
+            right: 0;
+
+            .btnPageNext,
+            .btnPagePrev {
+                display: none;
+            }
+
+        }
+
+        #sec01 {
+            display: block;
+            height: 768px;
+        }
+
+        #sec02 {
+            display: block;
+            background: #333;
+
+            .wrapper {
+                position: relative;
+            }
+
+            div[class*='item'] {
+                position: static;
+                float: none;
+                opacity: 1;
+                height: 200px;
+                width: auto;
+            }
+
+            .typo {
+                position: static;
+                text-align: center;
+                width: auto;
+                padding: 50px 2%;
+            }
+
+            .item01,
+            .item02,
+            .item04 {
+                display: none;
+            }
+
+            .item03 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                h3 {
+                    position: static;
+                }
+            }
+
+        }
+
+        #sec03 {
+            display: block;
+            position: relative;
+            height: 640px;
+
+            .wrapper {
+                .item01 {
+                    top: initial;
+                    bottom: 0;
+                    left: 0;
+                    width: auto;
+                    height: auto;
+                    padding: 5%;
+                }
+            }
+
+            video {
+                position: relative;
+                height: 100%;
+            }
+        }
+
+        #sec04 {
+            background: #333;
+
+            div[class*='item'] {
+                width: 100%;
+                height: auto;
+                opacity: 1;
+                left: 0;
+                position: relative;
+
+                &::before {
+                    position: static;
+                    top: 0;
+                    height: 200px;
+
+                }
+            }
+
+            .desc {
+                position: static;
+
+                padding: 20px;
+
+                dt {
+                    font-size: 1.3em;
+                }
+
+                dd {
+                    font-size: 0.7em;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    #container {
+        #sec01 {
+            height: 100vh;
+
+            .main-visual .typo {
+                font-size: 1.3rem;
+
+                &>p:first-child {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+
+        #sec02 {
+            .typo {
+                p {
+                    font-size: 1.3rem;
+                }
+
+                p:nth-of-type(1) {
+                    font-size: 1.6rem;
+                }
+            }
+
+            .item03 h3 {
+                font-size: 1.6rem;
+            }
+        }
+
+        #sec03 {
+            .wrapper {
+                .item01 {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+
+        #sec04 {
+            .desc {
+                dt {
+                    font-size: 1.6rem;
+                }
+
+                dd {
+                    font-size: 1.3rem;
+                }
             }
         }
     }

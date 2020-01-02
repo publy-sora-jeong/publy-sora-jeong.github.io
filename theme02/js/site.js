@@ -1,6 +1,6 @@
 //vars
 
-$(document).ready(function() {
+$(document).ready(function () {
   // initDon();
   // savePosition();
   var isScrolled = true;
@@ -10,14 +10,14 @@ $(document).ready(function() {
   visual();
 
   var vids = $("#sec03-vid");
-  $.each(vids, function() {
+  $.each(vids, function () {
     this.controls = false;
   });
 
   //MAIN PRE LOADING IMAGE
-  setTimeout(function() {
+  setTimeout(function () {
     $("#sec01").addClass("active");
-    $(".loading").fadeOut(500, function() {
+    $(".loading").fadeOut(500, function () {
       $(this).remove();
     });
     $("html body").css({
@@ -25,7 +25,7 @@ $(document).ready(function() {
     });
   }, 1500);
 
-  $("html, body").on("mousewheel DOMMouseScroll", function(e) {
+  $("html, body").on("mousewheel DOMMouseScroll", function (e) {
     var screenWidth = $(window).width();
     var screenHeight = $(window).height();
 
@@ -42,7 +42,7 @@ $(document).ready(function() {
           //console.log("Scroll Up");
           pageSlide(scroll_index);
         }
-        setTimeout(function() {
+        setTimeout(function () {
           isScrolled = true;
           //console.log("scroll animation finished");
         }, 2000);
@@ -50,7 +50,7 @@ $(document).ready(function() {
     }
   });
 
-  $(".btnPageNext, .btnPagePrev ").on("click", function(idx) {
+  $(".btnPageNext, .btnPagePrev ").on("click", function (idx) {
     var idx = $(this).data("page");
     pageSlide(idx);
   });
@@ -63,6 +63,7 @@ function pageSlide(idx) {
     .eq(idx)
     .addClass("active");
 }
+
 function resize() {
   var winH = $(window).outerHeight();
   var winW = $(window).outerWidth();
@@ -79,7 +80,7 @@ function visual() {
   var delay = 3000;
   var visual = $("#sec01 .main-visual--item");
   var text = $(".sec01 .visualText");
-  var timer = setInterval(function() {
+  var timer = setInterval(function () {
     idx == 0 ? (idx = 1) : (idx = 0);
     visual
       .eq(idx)

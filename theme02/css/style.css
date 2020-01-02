@@ -2243,7 +2243,7 @@ html body .loading {
   width: 300px;
   height: 215px;
   left: 50%;
-  top: 50%;
+  top: 50vh;
   color: #fff;
   text-align: center;
   -webkit-transform: translate(-50%, -50%);
@@ -2266,7 +2266,6 @@ html body .loading p {
 
 #container {
   position: absolute;
-  min-width: 1440px;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2355,7 +2354,7 @@ html body .loading p {
   bottom: 0;
   width: 100%;
   height: 100%;
-  background-size: cover;
+  background-size: cover !important;
 }
 
 #container #sec01 .main-visual--item:nth-of-type(1) {
@@ -2749,5 +2748,142 @@ html body .loading p {
 #sec04 .item03 .desc dt {
   color: #fff;
   border-color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    background-image: none;
+  }
+  body .loading {
+    display: none;
+  }
+  #container {
+    position: initial;
+  }
+  #container > section {
+    opacity: 1;
+    position: relative;
+    left: 0;
+    right: 0;
+  }
+  #container > section .btnPageNext,
+  #container > section .btnPagePrev {
+    display: none;
+  }
+  #container #sec01 {
+    display: block;
+    height: 768px;
+  }
+  #container #sec02 {
+    display: block;
+    background: #333;
+  }
+  #container #sec02 .wrapper {
+    position: relative;
+  }
+  #container #sec02 div[class*='item'] {
+    position: static;
+    float: none;
+    opacity: 1;
+    height: 200px;
+    width: auto;
+  }
+  #container #sec02 .typo {
+    position: static;
+    text-align: center;
+    width: auto;
+    padding: 50px 2%;
+  }
+  #container #sec02 .item01,
+  #container #sec02 .item02,
+  #container #sec02 .item04 {
+    display: none;
+  }
+  #container #sec02 .item03 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #container #sec02 .item03 h3 {
+    position: static;
+  }
+  #container #sec03 {
+    display: block;
+    position: relative;
+    height: 640px;
+  }
+  #container #sec03 .wrapper .item01 {
+    top: initial;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    padding: 5%;
+  }
+  #container #sec03 video {
+    position: relative;
+    height: 100%;
+  }
+  #container #sec04 {
+    background: #333;
+  }
+  #container #sec04 div[class*='item'] {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    left: 0;
+    position: relative;
+  }
+  #container #sec04 div[class*='item']::before {
+    position: static;
+    top: 0;
+    height: 200px;
+  }
+  #container #sec04 .desc {
+    position: static;
+    padding: 20px;
+  }
+  #container #sec04 .desc dt {
+    font-size: 1.3em;
+  }
+  #container #sec04 .desc dd {
+    font-size: 0.7em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container #sec01 {
+    height: 100vh;
+  }
+  #container #sec01 .main-visual .typo {
+    font-size: 1.3rem;
+  }
+  #container #sec01 .main-visual .typo > p:first-child {
+    font-size: 1.6rem;
+  }
+  #container #sec02 .typo p {
+    font-size: 1.3rem;
+  }
+  #container #sec02 .typo p:nth-of-type(1) {
+    font-size: 1.6rem;
+  }
+  #container #sec02 .item03 h3 {
+    font-size: 1.6rem;
+  }
+  #container #sec03 .wrapper .item01 {
+    font-size: 1.3rem;
+  }
+  #container #sec04 .desc dt {
+    font-size: 1.6rem;
+  }
+  #container #sec04 .desc dd {
+    font-size: 1.3rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
