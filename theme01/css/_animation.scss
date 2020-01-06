@@ -1,0 +1,108 @@
+@keyframes fadeInLeft {
+    0% {
+        transform: translateX(-100px)
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+
+
+@keyframes loading-spinner {
+    0% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
+
+
+
+.loading-spinner div {
+    left: 101.65px;
+    top: 62.06px;
+    position: absolute;
+    animation: loading-spinner linear 1s infinite;
+    background: #fff;
+    width: 10.700000000000001px;
+    height: 21.400000000000002px;
+    border-radius: 5.3500000000000005px / 7.062000000000001px;
+    transform-origin: 5.3500000000000005px 44.940000000000005px;
+}
+
+.loading-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -0.875s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(2) {
+    transform: rotate(45deg);
+    animation-delay: -0.75s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(3) {
+    transform: rotate(90deg);
+    animation-delay: -0.625s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(4) {
+    transform: rotate(135deg);
+    animation-delay: -0.5s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(5) {
+    transform: rotate(180deg);
+    animation-delay: -0.375s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(6) {
+    transform: rotate(225deg);
+    animation-delay: -0.25s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(7) {
+    transform: rotate(270deg);
+    animation-delay: -0.125s;
+    background: #fff;
+}
+
+.loading-spinner div:nth-child(8) {
+    transform: rotate(315deg);
+    animation-delay: 0s;
+    background: #fff;
+}
+
+.loadingio-spinner-spinner-c75bl3zzy5u {
+    width: 214px;
+    height: 214px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+}
+
+.loading-spinner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+    width: 214px;
+    height: 214px;
+    margin: 0 auto;
+}
+
+.loading-spinner div {
+    box-sizing: content-box;
+}
