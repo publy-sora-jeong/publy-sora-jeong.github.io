@@ -1,3 +1,6 @@
+@import 'reset';
+
+
 html {
     font-size: 62.5%;
     //font-size: calc(100vw / 7.2);
@@ -24,6 +27,127 @@ html {
     overflow: hidden;
 }
 
+
+.grid {
+    width: 98%;
+    margin: -1px auto;
+    margin-top: 20px;
+}
+
+.grid-item {
+    width: 20%;
+    height: 200px;
+    background-color: #333;
+    box-sizing: border-box;
+    //border: 1px solid #fff;
+    color: #fff;
+    overflow: hidden;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+
+    &:nth-child(3n+1) {
+        background-color: sandybrown;
+        height: 200px;
+    }
+
+    &:nth-child(3n+2) {
+        background-color: darkslategrey;
+        height: 200px;
+    }
+
+    &:nth-child(2n+8) {
+        background-color: tomato;
+        height: 200px;
+    }
+
+    &:nth-child(5n-1) {
+        background-color: tan;
+        height: 200px;
+    }
+
+    &:nth-child(11n-3) {
+        background-color: thistle;
+        height: 200px;
+    }
+
+    &.theme01 {
+        background-image: url('../img/theme01.png');
+    }
+
+    &.theme02 {
+        background-image: url('../img/theme02.png');
+    }
+
+    &.theme03 {
+        background-image: url('../img/theme03.png');
+    }
+
+    &.theme04 {
+        background-image: url('../img/theme04.png');
+    }
+
+    &.theme05 {
+        background-image: url('../img/theme05.png');
+    }
+
+    &.theme06 {
+        background-image: url('../img/theme06.png');
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 3px 3px 5px rgba($color: #000000, $alpha: 0.5);
+        z-index: 9999;
+
+        .desc {
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+    }
+
+    .desc {
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transition-delay: 0.4s;
+        transform: translateY(40px);
+        background-color: rgba($color: #000000, $alpha: 0.4);
+        font-size: 12px;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+
+        dt {}
+    }
+}
+
+@media (max-width: 1024px) {
+    .grid-item {
+        width: 33.333%;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid-item {
+        width: 50%;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-item {
+        width: 100%;
+    }
+}
 
 // @media (min-width:720px) {
 //     html {
