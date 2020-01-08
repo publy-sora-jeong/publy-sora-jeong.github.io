@@ -2070,6 +2070,49 @@ body .ui-tooltip {
   display: none;
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../font/icomoon.eot?uv8hxx");
+  src: url("../font/icomoon.eot?uv8hxx#iefix") format("embedded-opentype"), url("../font/icomoon.ttf?uv8hxx") format("truetype"), url("../font/icomoon.woff?uv8hxx") format("woff"), url("../font/icomoon.svg?uv8hxx#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-brush:before {
+  content: "\e902";
+}
+
+.icon-link:before {
+  content: "\e900";
+}
+
+.icon-code-signs:before {
+  content: "\e901";
+}
+
+@font-face {
+  font-family: 'silgothic';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 html {
   font-size: 62.5%;
   line-height: 1.3;
@@ -2103,7 +2146,7 @@ html body {
 .grid-item {
   width: 20%;
   height: 200px;
-  background-color: #333;
+  background-color: #ddd;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   color: #fff;
@@ -2111,33 +2154,121 @@ html body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.grid-item.yeartitle {
+  background-color: #333;
+  height: 400px;
+}
+
+.grid-item.yeartitle.y2014 {
+  height: 200px;
+}
+
+.grid-item.yeartitle:hover {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: none;
+  transition: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.grid-item.yeartitle h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: 'Quicksand', 'silgothic', sans-serif;
+  height: 100%;
+}
+
+.grid-item:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+}
+
+.grid-item:hover a {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.grid-item:hover .desc {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.grid-item > a {
+  display: block;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.grid-item:nth-child(3n+1) {
-  background-color: sandybrown;
-  height: 200px;
+.grid-item > a .desc {
+  display: inline-block;
+  opacity: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  font-size: 11px;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Quicksand', 'silgothic', sans-serif;
+  font-weight: 400;
 }
 
-.grid-item:nth-child(3n+2) {
-  background-color: darkslategrey;
-  height: 200px;
+.grid-item > a .desc dt {
+  padding-bottom: 5px;
+  font-weight: 700;
 }
 
-.grid-item:nth-child(2n+8) {
-  background-color: tomato;
-  height: 200px;
+.grid-item > a .desc dd.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #fff;
+  line-height: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  text-transform: lowercase;
+  font-family: 'Quicksand', 'silgothic', sans-serif;
+  font-size: 10px;
 }
 
-.grid-item:nth-child(5n-1) {
-  background-color: tan;
-  height: 200px;
-}
-
-.grid-item:nth-child(11n-3) {
-  background-color: thistle;
-  height: 200px;
+.grid-item > a .desc dd.btn:hover {
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .grid-item.theme01 {
@@ -2164,49 +2295,259 @@ html body {
   background-image: url("../img/theme06.png");
 }
 
-.grid-item:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
-  z-index: 9999;
+.grid-item.nuriyearplan {
+  background-image: url("../img/nuriyearplan_2020.png");
 }
 
-.grid-item:hover .desc {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-          transform: translateY(0);
+.grid-item.nuriwith {
+  background-image: url("../img/with_2019.png");
+  background-color: #fff;
+  background-size: 50%;
 }
 
-.grid-item .desc {
-  opacity: 0;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transition-delay: 0.4s;
-          transition-delay: 0.4s;
-  -webkit-transform: translateY(40px);
-          transform: translateY(40px);
-  background-color: rgba(0, 0, 0, 0.4);
-  font-size: 12px;
-  text-align: center;
-  color: #fff;
-  text-transform: uppercase;
+.grid-item.tinpo {
+  background-image: url("../img/tinpo_2019.png");
+  background-size: contain;
+  background-color: #56d9ec;
+}
+
+.grid-item.forte {
+  background-image: url("../img/designforte_2019.png");
+}
+
+.grid-item.vsys {
+  background-image: url("../img/vsys_2019.png");
+  background-color: #2f3945;
+  background-size: 50%;
+}
+
+.grid-item.tabbyhands {
+  background-image: url("../img/tabbyhands_2019.png");
+  background-color: #7bb5da;
+  background-size: 40%;
+}
+
+.grid-item.cellsmith {
+  background-image: url("../img/cellsmith_2019.png");
+  background-color: #1a4831;
+  background-size: 50%;
+}
+
+.grid-item.tos {
+  background-image: url("../img/tos_2019.png");
+  background-color: #1e323e;
+  background-size: 50%;
+}
+
+.grid-item.mkg {
+  background-image: url("../img/mkg_2019.png");
+}
+
+.grid-item.kmf {
+  background-image: url("../img/kmf_2019.png");
+  background-color: #3d4255;
+  background-size: 60%;
+}
+
+.grid-item.gsfic {
+  background-image: url("../img/gsfic_2019.png");
+  background-position: top center;
+}
+
+.grid-item.chaeum {
+  background-image: url("../img/chaeum_2019.png");
+  background-position: top center;
+  background-size: 140%;
+}
+
+.grid-item.kosqin {
+  background-image: url("../img/kosqin_20191.png");
+  background-size: 50%;
+}
+
+.grid-item.nemodive {
+  background-image: url("../img/nemodive_2019.png");
+  background-position: top center;
+}
+
+.grid-item.yibio {
+  background-image: url("../img/yibio_2018.png");
+  background-position: top center;
+  background-size: 140%;
+}
+
+.grid-item.pdhs {
+  background-image: url("../img/pungduckhs_2018.png");
+  background-position: top center;
+  background-size: 170%;
+}
+
+.grid-item.hjhs {
+  background-image: url("../img/hungjinhs_2018.png");
+  background-position: top center;
+  background-size: 130%;
+}
+
+.grid-item.geoia {
+  background-image: url("../img/goeia_2018.png");
+  background-size: 70%;
+  background-color: #fff;
+}
+
+.grid-item.dihs {
+  background-image: url("../img/dihs_2018.png");
+  background-position: top center;
+  background-size: 150%;
+}
+
+.grid-item.kaywonhs {
+  background-image: url("../img/kaywon_2018.png");
+  background-position: top center;
+  background-size: 120%;
+}
+
+.grid-item.donghwahs {
+  background-image: url("../img/donghwa_2018.png");
+}
+
+.grid-item.daeil {
+  background-image: url("../img/daeil_2018.png");
+  background-position: top center;
+  background-size: 150%;
+}
+
+.grid-item.gnet {
+  background-image: url("../img/gnet_2018.png");
+  background-position: top center;
+}
+
+.grid-item.ssd {
+  background-image: url("../img/ssd_2018.png");
+  background-position: top center;
+  background-size: 140%;
+}
+
+.grid-item.anyangart {
+  background-image: url("../img/anyangart_1.png");
+  background-position: top center;
+}
+
+.grid-item.gafl {
+  background-image: url("../img/gafl_1.png");
+  background-position: top center;
+}
+
+.grid-item.secretisland {
+  background-image: url("../img/secretisland_1.png");
+  background-position: top center;
+}
+
+.grid-item.luchestar {
+  background-image: url("../img/luchestar_1.png");
+  background-position: top center;
+}
+
+.grid-item.geri {
+  background-image: url("../img/geri_1.png");
+  background-position: top center;
+}
+
+.grid-item.anymedi {
+  background-image: url("../img/anymedi_1.png");
+  background-size: 30%;
+  background-color: #fff;
+}
+
+.grid-item.anytape {
+  background-image: url("../img/anytape_1.png");
+  background-color: #254354;
+  background-size: 30%;
+}
+
+.grid-item.mdfh {
+  background-image: url("../img/mdfh_1.png");
+  background-position: top center;
+  background-size: 170%;
+}
+
+.grid-item.gelearning {
+  background-image: url("../img/gelearning_1.png");
+  background-position: top center;
+}
+
+.grid-item.gaon {
+  background-image: url("../img/gaon_2.png");
+  background-size: 30%;
+  background-color: #fff;
+}
+
+.grid-item.dwfl {
+  background-image: url("../img/dwfl_1.png");
+  background-position: top center;
+}
+
+.grid-item.prteam {
+  background-image: url("../img/prteam_1.png");
+  background-position: top center;
+}
+
+.grid-item.yga {
+  background-image: url("../img/yga_1.png");
+  background-position: top center;
+}
+
+.grid-item.yangseo {
+  background-image: url("../img/yangseo_1.png");
+  background-position: top center;
+}
+
+.grid-item.yjafter {
+  background-image: url("../img/yjafter_1.png");
+  background-position: top center;
+}
+
+.grid-item.whimoon {
+  background-image: url("../img/whimoon_1.png");
+  background-position: top center;
+  background-size: 150%;
+}
+
+.grid-item.younghoon {
+  background-image: url("../img/younghoon_2017.jpg");
+  background-size: 70%;
+  background-color: #fff;
+}
+
+.grid-item.csia {
+  background-image: url("../img/csia_2017.png");
+  background-position: top center;
+  background-size: contain;
+  background-color: #fff;
+}
+
+.grid-item.danwon {
+  background-image: url("../img/416danwon_2017.png");
+  background-position: top center;
+  background-size: contain;
+  background-color: #fff;
+}
+
+.grid-item.yjhs {
+  background-image: url("../img/yjhs_2015.jpg");
+  background-position: top center;
+  background-size: cover;
+  background-size: 120%;
+}
+
+.grid-item.yjes {
+  background-image: url("../img/yjes_2015.jpg");
+  background-position: top center;
 }
 
 @media (max-width: 1024px) {
-  .grid-item {
-    width: 33.333%;
+  .grid {
+    width: 100%;
   }
-}
-
-@media (max-width: 768px) {
   .grid-item {
     width: 50%;
   }
@@ -2215,6 +2556,92 @@ html body {
 @media (max-width: 480px) {
   .grid-item {
     width: 100%;
+    height: 260px;
   }
+  .grid-item.yeartitle {
+    height: 150px;
+  }
+}
+
+.icowrap {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f8f8f8;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.icowrap span {
+  position: relative;
+  color: #333;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #d2d2d2;
+  text-align: center;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.icowrap span i {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  left: -10px;
+  top: -25px;
+  font-size: 12px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.icowrap span:hover i {
+  opacity: 1;
+  width: auto;
+  color: #fff;
+  border-radius: 5px;
+  padding: 1px 8px;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.icowrap span.icon-nolink {
+  background: #ffa5a5;
+  overflow: hidden;
+}
+
+.icowrap span.icon-nolink::before {
+  color: #fff;
+  font-weight: normal;
+}
+
+.icowrap span.icon-nolink::after {
+  content: '';
+  width: 50px;
+  height: 1px;
+  background: #f00;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: absolute;
+  left: -10px;
+  top: 14px;
+}
+
+.icowrap span::before {
+  font-family: 'icomoon';
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
 }
 /*# sourceMappingURL=style.css.map */

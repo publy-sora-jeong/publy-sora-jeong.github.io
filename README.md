@@ -1,3 +1,8 @@
+## project_2020
+
+- THEME01(디자인&퍼블리싱) - WINTER FOREST [go](https://publy-sora-jeong.github.io/theme01/).
+- THEME02(디자인&퍼블리싱) - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
+
 ## project_2019
 
 - 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
@@ -16,8 +21,6 @@
 - 대한환자안전질향상간호사회 퍼블리싱 [go](http://qi.or.kr/)
 - 니모다이브센터 Cebu city, philipin [go](http://nemodive.kr/)
 
-- THEME01(디자인&퍼블리싱) - WINTER FOREST [go](https://publy-sora-jeong.github.io/theme01/)
-- THEME02(디자인&퍼블리싱) - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
 - THEME03(디자인&퍼블리싱) - LAWN [go](https://publy-sora-jeong.github.io/theme03/)
 - THEME04(디자인&퍼블리싱) - ARTIST [go](https://publy-sora-jeong.github.io/theme04/)
 - THEME05(디자인&퍼블리싱) - UNIVERSE TRANSITION [go](https://publy-sora-jeong.github.io/theme05/)
