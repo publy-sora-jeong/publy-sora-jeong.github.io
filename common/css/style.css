@@ -2137,15 +2137,67 @@ html body {
   overflow: hidden;
 }
 
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 5px;
+}
+
+.button-group button {
+  border-radius: 10px;
+  height: 60px;
+  padding: 10px 20px;
+  background: #ccc;
+  margin: 0 2px;
+  color: #fff;
+  font-family: 'silgothic', sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.button-group button[data-filter='*'] {
+  background: #d8e8e8;
+}
+
+.button-group button[data-filter='.pb'] {
+  background: #a8d0da;
+}
+
+.button-group button[data-filter='.ds'] {
+  background: #406d96;
+}
+
+.button-group button[data-filter='.y2020'] {
+  background: #2f3a56;
+}
+
+.button-group button[data-filter='.y2019'] {
+  background: #e2474b;
+}
+
+.button-group button[data-filter='.2018'] {
+  background: #2b2e4a;
+}
+
+.button-group button[data-filter='.y2017'] {
+  background: #903749;
+}
+
+.button-group button[data-filter='.y2014'] {
+  background: #53354a;
+}
+
 .grid {
-  width: 98%;
+  width: 100%;
   margin: -1px auto;
   margin-top: 20px;
 }
 
 .grid-item {
-  width: 20%;
+  width: calc(20% - 10px);
   height: 200px;
+  margin: 5px;
   background-color: #ddd;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2156,6 +2208,7 @@ html body {
   background-size: cover;
   -webkit-transform-origin: center;
           transform-origin: center;
+  border-radius: 10px;
 }
 
 .grid-item.yeartitle {
