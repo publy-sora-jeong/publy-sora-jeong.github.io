@@ -1,6 +1,6 @@
 ## project_2020
 
-- THEME01(디자인&퍼블리싱) - WINTER FOREST [go](https://publy-sora-jeong.github.io/theme01/).
+- THEME01(디자인&퍼블리싱) - WINTER FOREST [go](https://publy-sora-jeong.github.io/theme01/)
 - THEME02(디자인&퍼블리싱) - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
 
 ## project_2019
@@ -20,7 +20,6 @@
 - 법무법인 채움 대표홈페이지 디자인 및 퍼블리싱 + 블로그 스킨작업 [go](http://chlaw.co.kr/)
 - 대한환자안전질향상간호사회 퍼블리싱 [go](http://qi.or.kr/)
 - 니모다이브센터 Cebu city, philipin [go](http://nemodive.kr/)
-
 - THEME03(디자인&퍼블리싱) - LAWN [go](https://publy-sora-jeong.github.io/theme03/)
 - THEME04(디자인&퍼블리싱) - ARTIST [go](https://publy-sora-jeong.github.io/theme04/)
 - THEME05(디자인&퍼블리싱) - UNIVERSE TRANSITION [go](https://publy-sora-jeong.github.io/theme05/)
@@ -30,7 +29,7 @@
 ## project_2018
 
 - 경기교육청 학교홈페이지 유지보수관리 (여주교육지원청, 화성오산, 구리남양주, 시흥, 부천, 이천)
-- 기록원 특성화고 반응형템플릿형 홈페이지 퍼블리싱 ▽
+- 기록원 특성화고 반응형템플릿형 홈페이지 퍼블리싱
 - 용인바이오고등학교 [go](http://www.yibio.hs.kr/) , 풍덕고등학교 [go](http://pungduck.hs.kr/) , 군포e비지니스고등학교 [go](http://www.gunpo-ebiz.hs.kr/) , 흥진고등학교 [go](http://www.hungjin.hs.kr/)
 - 경기도교육정보기록원 대표홈페이지 메인 퍼블리싱 [go](https://www.goeia.go.kr)
 - 동일공업고등학교 홈페이지 퍼블리싱 [go](http://di.hs.kr/)
