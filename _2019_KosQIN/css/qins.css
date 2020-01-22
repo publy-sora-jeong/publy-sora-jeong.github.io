@@ -540,6 +540,7 @@ header #gnb.on > .depth02 {
 
 .main-visual .panel-inner {
   width: 630px;
+  height: 440px;
   margin-top: 25px;
   padding: 60px 40px 30px 40px;
   -webkit-box-sizing: border-box;
@@ -1945,22 +1946,22 @@ footer .copyrights h2 .wa {
     display: block;
     position: absolute;
     top: 30px;
-    left: 30px;
-    right: 30px;
+    left: 20px;
+    right: 20px;
     padding: 30px 0;
-    width: 270px;
+    width: 280px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   }
-  header #m-gnb .m-login .btn-login {
-    display: block;
-    width: 210px;
+  header #m-gnb .m-login > a {
+    display: inline-block;
+    width: 100px;
     height: 50px;
     line-height: 50px;
     color: #fff;
-    font-size: 20px;
+    font-size: 16px;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     border: 1px solid #fff;
@@ -1968,7 +1969,7 @@ footer .copyrights h2 .wa {
     -webkit-transition: 1s;
     transition: 1s;
   }
-  header #m-gnb .m-login .btn-login:hover {
+  header #m-gnb .m-login > a:hover {
     background: #fff;
     color: #073190;
   }
@@ -2201,11 +2202,10 @@ footer .copyrights h2 .wa {
     padding: 15px 0;
     top: 15px;
   }
-  header #m-gnb .m-login .btn-login {
+  header #m-gnb .m-login > a {
     height: 35px;
     line-height: 35px;
-    width: 180px;
-    font-size: 16px;
+    font-size: 14px;
   }
   header #m-gnb .m-login .btn-close-gnb {
     top: 20px;
@@ -2653,6 +2653,9 @@ footer .copyrights h2 .wa {
   .doc-notify-search .search-box input#search-text {
     width: 200px;
   }
+  .doc-notify-search .search-box input.sch_input {
+    width: 240px;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -2674,6 +2677,7 @@ footer .copyrights h2 .wa {
     display: block;
     position: relative;
     margin-top: 2px;
+    text-align: left;
   }
   .doc-notify-search .search-box .search-input input#search-text {
     width: 100%;
@@ -8809,7 +8813,7 @@ footer .copyrights h2 .wa {
   .btn-area > a.btn-list {
     height: 40px;
     line-height: 40px;
-    min-width: 120px;
+    min-width: 47px !important;
   }
   .btn-area > a.btn-blue {
     min-width: 120px;
@@ -9494,6 +9498,7 @@ footer .copyrights h2 .wa {
     margin-top: 20px;
     width: 180px;
     font-size: 14px;
+    display: block;
   }
   .select-join-type.select-clearfy-pw2 .type {
     width: 47%;
@@ -9556,9 +9561,7 @@ footer .copyrights h2 .wa {
     display: none;
   }
   .select-join-type .type .btn-join {
-    position: static;
-    margin-top: 20px;
-    width: 180px;
+    margin: 15px auto 0 auto;
   }
   .select-join-type.select-clearfy-pw2 .type {
     width: 360px;
@@ -10687,7 +10690,41 @@ footer .copyrights h2 .wa {
   padding: 40px 0;
 }
 
+.org .org-depth01-wrap {
+  position: relative;
+}
+
+.org .org-depth01-side {
+  position: absolute;
+  left: calc(50% + 150px);
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.org .org-depth01-side::before {
+  content: '';
+  width: 100%;
+  left: -150px;
+  background: #ddd;
+  position: absolute;
+  top: 50%;
+  height: 1px;
+  z-index: -1;
+}
+
+.org .org-depth01-side span {
+  background: #78808d;
+  font-size: 18px;
+  color: #fff;
+  width: 220px;
+  text-align: center;
+  line-height: 50px;
+  display: block;
+}
+
 .org .org-depth01 {
+  z-index: 10;
   width: 172px;
   height: 172px;
   background: url("../img/org-chairman.png") no-repeat;
@@ -10755,11 +10792,19 @@ footer .copyrights h2 .wa {
   background: #78808d;
 }
 
+.org .org-depth02 ul li:nth-of-type(1) {
+  background: #466cb7;
+}
+
+.org .org-depth02 ul li:nth-of-type(2) {
+  background: #f5a100;
+}
+
 .org .org-depth03-wrap {
   position: relative;
   z-index: 100;
   width: 885px;
-  margin: 160px auto 0 auto;
+  margin: 150px auto 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10770,9 +10815,9 @@ footer .copyrights h2 .wa {
 
 .org .org-depth03-wrap::before {
   content: '';
-  width: 660px;
+  width: 667px;
   left: 110px;
-  top: -70px;
+  top: -60px;
   height: 1px;
   background: #ddd;
   position: absolute;
@@ -10797,32 +10842,20 @@ footer .copyrights h2 .wa {
 .org .org-depth03-wrap ul::before {
   content: '';
   width: 1px;
-  height: 400px;
+  height: 340px;
   left: 50%;
-  top: -70px;
+  top: -60px;
   position: absolute;
   background: #ddd;
   z-index: -1;
 }
 
 .org .org-depth03-wrap ul:nth-of-type(1) li:first-child {
-  background: #466cb7;
-  margin-bottom: 35px;
-  color: #fff;
-}
-
-.org .org-depth03-wrap ul:nth-of-type(1) li:nth-of-type(2) {
   border: 1px solid #466cb7;
   color: #466cb7;
 }
 
 .org .org-depth03-wrap ul:nth-of-type(2) li:first-child {
-  background: #f5a100;
-  margin-bottom: 35px;
-  color: #fff;
-}
-
-.org .org-depth03-wrap ul:nth-of-type(2) li:nth-of-type(2) {
   border: 1px solid #f5a100;
   color: #f5a100;
 }
@@ -10861,6 +10894,18 @@ footer .copyrights h2 .wa {
     height: 161px;
     top: 86px;
   }
+  .org .org-depth01-side {
+    left: 71%;
+  }
+  .org .org-depth01-side::before {
+    left: -70%;
+  }
+  .org .org-depth01-side span {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 15px;
+  }
   .org .org-depth02::before {
     width: 90%;
     left: 5%;
@@ -10879,7 +10924,7 @@ footer .copyrights h2 .wa {
     left: 75px;
   }
   .org .org-depth03-wrap ul::before {
-    height: 340px;
+    height: 270px;
   }
   .org .org-depth03-wrap ul > li {
     height: 40px;
@@ -10893,6 +10938,36 @@ footer .copyrights h2 .wa {
   }
   .org .org-depth03-wrap ul:nth-of-type(2) li:first-child {
     margin-bottom: 15px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .org .org-chart {
+    padding: 30px 6px;
+  }
+  .org .org-depth01::after {
+    height: 120px;
+  }
+  .org .org-depth01-side span {
+    width: 91px;
+    font-size: 11px;
+  }
+  .org .org-depth02 ul li {
+    width: 120px;
+  }
+  .org .org-depth03-wrap {
+    margin-top: 90px;
+  }
+  .org .org-depth03-wrap::before {
+    top: -40px;
+    width: calc(100% - 120px);
+    left: 60px;
+  }
+  .org .org-depth03-wrap ul::before {
+    top: -40px;
+  }
+  .org .org-depth03-wrap ul > li {
+    width: 120px;
   }
 }
 

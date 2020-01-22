@@ -72,6 +72,10 @@
             input#search-text {
                 width: 200px;
             }
+
+            input.sch_input {
+                width: 240px;
+            }
         }
     }
 
@@ -98,6 +102,7 @@
                 display: block;
                 position: relative;
                 margin-top: 2px;
+                text-align: left;
 
                 input#search-text {
                     width: 100%;
