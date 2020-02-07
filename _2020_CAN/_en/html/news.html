@@ -1,0 +1,186 @@
+<script language="JavaScript">
+<!--
+function __submit() {
+	jsListBbs();
+}
+function jsListBbs() {        
+	var _frm = document.mainForm;
+
+	if(_frm.srchWord.value=='') {
+		window.alert("검색어를 입력하세요.");
+		_frm.srchWord.focus();
+		return false;
+	}
+}
+function jsViewBbs(bbsId) {
+	var _frm = document.mainForm;
+
+	_frm.bbsId.value = bbsId;
+
+	_frm.action = "notice_view.html";
+	_frm.method = "get";
+	_frm.submit();
+}
+//-->
+</script>	
+
+  <div class="section section-subvisual sub-news">
+    <div class="subvisual-text">
+      <h3>NOTICE / NEWS</h3>
+    </div>
+  </div>
+
+<br>
+<br>
+	<div class="sub-company-title">
+      <h4 class="title">News</h4>
+      </p>
+    </div>
+
+  <div class="section-subcontent hasSub ">
+
+<?
+	$mgrId = "news";
+	$bbsSite = "KO";
+
+	$pageSize = "10";
+	$cPage = $_REQUEST["cPage"];
+	$srchItem2 = $_REQUEST["srchItem2"];
+	$srchItem = $_REQUEST["srchItem"];
+	$srchWord = $_REQUEST["srchWord"];
+
+	$currPage = $cPage?$cPage:"1";
+	$currBlck = ceil($currPage / $blckSize);
+
+    if($srchWord != ""){
+        if($srchItem == "ALL") {
+            $cond = "  AND (bbs_subject LIKE '%$srchWord%' OR bbs_content LIKE '%$srchWord%' OR bbs_name LIKE '%$srchWord%') ";
+        } else {
+            $cond = "  AND $srchItem LIKE '%$srchWord%' ";
+        }
+    
+		if($srchItem2 != "") {
+			$cond = "  AND bbs_type= '$srchItem2' ";
+		}
+	}
+    $sort = " ORDER BY bbs_group Desc, bbs_depth ";
+
+	/* 게시물 갯수 */
+	$totCount = $db->cnt("TB_BBS","WHERE mgr_id = '$mgrId' And (bbs_site='$bbsSite' Or bbs_site='')".$cond);
+
+	$totPages = ceil($totCount / $pageSize);
+    $totBlcks = ceil($totPages / $blckSize);
+
+	/* 게시물 리스트 */
+	$rs = $db->select("TB_BBS a","WHERE mgr_id='$mgrId' And (bbs_site='$bbsSite' Or bbs_site='') ".$cond.$sort."LIMIT ".($pageSize * ($currPage - 1)).", ".$pageSize, "a.*, DATE_FORMAT(create_date, '%Y-%m-%d') AS create_date, DATE_FORMAT(update_date, '%Y.%m.%d') AS update_date, create_date > DATE_ADD(now(), interval -7 day) AS new_flag ");
+?>
+	<div class="news-list">
+<?
+		for($i = 0; $obj = mysqli_fetch_object($rs); $i++) {
+			$no = $totCount - $pageSize * ($currPage - 1) - $i;
+?>
+      <div class="item ">
+        <a href="06_news01_view.html">
+          <p class="thumb"><img src="/upload/bbs/<?=$obj->bbs_main_img;?>" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--n">[NOTICE]</p>
+            <p class="title <? if($obj->new_flag){ ?>new<? } ?>"><a href="javascript:jsViewBbs('<?=$obj->bbs_id?>')"><?=$obj->bbs_subject;?></a></p>
+            <p class="cnt dot"><?=$obj->bbs_notice;?></p>
+            <p class="date"><?=$obj->create_date;?></p>
+          </div>
+        </a>
+      </div>
+<?		}	?>
+
+	  <div class="item ">
+        <a href="#">
+          <p class="thumb"><img src="img/sample-02.jpg" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--n">[NOTICE]</p>
+            <p class="title new">Open market link </p>
+            <p class="cnt dot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id, labore
+              doloribus
+              nisi, iusto dolorum odit quas reiciendis sequi quia quae autem. Fuga possimus, nam obcaecati blanditiis
+              quam
+              aspernatur magni.</p>
+
+            <p class="date">2000.01.01</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="item ">
+        <a href="#">
+          <p class="thumb"><img src="img/sample-03.jpg" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--p">[NEWS]</p>
+            <p class="title">CAN obtained new patent </p>
+            <p class="cnt dot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id, labore
+              doloribus
+              nisi, iusto dolorum odit quas reiciendis sequi quia quae autem. Fuga possimus, nam obcaecati blanditiis
+              quam
+              aspernatur magni.</p>
+
+            <p class="date">2000.01.01</p>
+          </div>
+        </a>
+      </div>
+
+
+      <div class="item ">
+        <a href="#">
+          <p class="thumb"><img src="img/sample-02.jpg" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--n">[NOTICE]</p>
+            <p class="title new">공지사항 입니다. 공지사항공지사항 입니다. </p>
+            <p class="cnt dot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id, labore
+              doloribus
+              nisi, iusto dolorum odit quas reiciendis sequi quia quae autem. Fuga possimus, nam obcaecati blanditiis
+              quam
+              aspernatur magni.</p>
+
+            <p class="date">2000.01.01</p>
+          </div>
+        </a>
+      </div>
+      <div class="item ">
+        <a href="#">
+          <p class="thumb"><img src="img/sample-02.jpg" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--n">[NOTICE]</p>
+            <p class="title new">공지사항 입니다. </p>
+            <p class="cnt dot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id, labore
+              doloribus
+              nisi, iusto dolorum odit quas reiciendis sequi quia quae autem. Fuga possimus, nam obcaecati blanditiis
+              quam
+              aspernatur magni.</p>
+
+            <p class="date">2000.01.01</p>
+          </div>
+        </a>
+      </div>
+      <div class="item ">
+        <a href="#">
+          <p class="thumb"><img src="img/sample-02.jpg" alt="sample"></p>
+          <div class="item-detail">
+            <p class="category category--n">[NOTICE]</p>
+            <p class="title new">공지사항 입니다. 공지사항공지사항 입니다. </p>
+            <p class="cnt dot">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit id, labore
+              doloribus
+              nisi, iusto dolorum odit quas reiciendis sequi quia quae autem. Fuga possimus, nam obcaecati blanditiis
+              quam
+              aspernatur magni.</p>
+
+            <p class="date">2000.01.01</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+<?	include "include/pager.html";	?>
+<?	include "include/search.html";	?>
+
+    <!--/////////////////////////////////////////////////////////////////////////-->
+    <a href="#" class="btn-gotop"><span class="blind">상단으로 이동</span></a>
+  </div>

@@ -1,0 +1,60 @@
+
+  <div class="section section-subvisual sub-company">
+    <div class="subvisual-text">
+      <h3>Company Introduction</h3>
+    </div>
+  </div>
+
+  <div class="section-subcontent hasSub ">
+
+    <!--SUB NAV -->
+    <div class="sub-nav">
+      <ul>
+        <li><a href="?url=caninfo">CAN Introduction</a></li>
+        <li class="on"><a href="?url=history">History</a></li>
+        <li><a href="?url=special">Core Technology</a></li>
+        <li><a href="?url=map">Directions</a></li>
+      </ul>
+    </div>
+
+
+    <div class="sub-company-title">
+      <h4 class="title">COMPANY HISTORY</h4>
+      <p class="subtitle">Let me introduce footstep of CAN, a great challenge to become the best</p>
+    </div>
+
+	<div class="history">
+      <div class="history-container">
+<?
+	$mgrId = "history";
+	//1. 년도 읽고 (최신순)
+	//2. 년도에 월을 읽는다
+	//3. 첫번째 년도는 item-left item-first  (홀수번째)
+	//4. 두번째 년도는 item-right  (짝수번째)
+
+	$year = $db->select("TB_BBS", "WHERE mgr_id='$mgrId' Order By bbs_parent Desc ", "Distinct bbs_parent");
+
+	$cnt = 0;
+	while($obj = mysqli_fetch_object($year)){
+		$cnt++;
+		$chk = $cnt % 2 ;		//나머지가 1이면 좌측, 0이면 우측;
+?>
+		<div class="<? if($chk==1){ echo "item-left";} else { echo "item-right";} ?> <? if($cnt==1){ echo "item-first";} ?> ">
+          <dl>
+            <dt><?=$obj->bbs_parent;?></dt>
+
+<?
+		$month = $db->select("TB_BBS", "WHERE mgr_id='$mgrId' And bbs_parent='$obj->bbs_parent' Order By bbs_notice Desc ");
+		while($obj2 = mysqli_fetch_object($month)){
+?>
+			<dd><span class="month"><?=$obj2->bbs_notice;?></span><?=$obj2->bbs_subject;?></dd>
+<?	}	?>
+		  </dl>
+        </div>
+	
+<?	}	?>
+
+	  </div>
+    </div>
+    <a href="#" class="btn-gotop"><span class="blind">상단으로 이동</span></a>
+  </div>
