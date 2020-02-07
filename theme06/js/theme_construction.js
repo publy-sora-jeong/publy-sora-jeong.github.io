@@ -17,37 +17,34 @@ var $btnPlay;
 var $subHistoryNav;
 var $subHistoryNavLen;
 
-$(document).ready(function() {
+$(document).ready(function () {
   initDon();
   savePosition();
 
-  $(window).on("scroll", function() {
+  $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
     activeBtn(scroll);
 
     var hasClassAbout = $(".main-about").hasClass("on");
     if (hasClassAbout) {
-      $(".figure-counter").each(function() {
+      $(".figure-counter").each(function () {
         $(this)
           .prop("Counter", 0)
 
-          .animate(
-            {
-              Counter: $(this).data("value")
-            },
-            {
-              duration: 1500,
-              easing: "swing",
-              step: function(now) {
-                $(this).text(this.Counter.toFixed(0));
-              }
+          .animate({
+            Counter: $(this).data("value")
+          }, {
+            duration: 1500,
+            easing: "swing",
+            step: function (now) {
+              $(this).text(this.Counter.toFixed(0));
             }
-          );
+          });
       });
     }
   });
 
-  $(window).on("resize", function() {
+  $(window).on("resize", function () {
     var windowWidth = $(window).width();
 
     if (windowWidth > 1024) {
@@ -60,11 +57,11 @@ $(document).ready(function() {
     pageHistoryWidth();
   });
 
-  $gnb_li.on("mouseenter", function() {
+  $gnb_li.on("mouseenter", function () {
     $(this).addClass("on");
   });
 
-  $gnb_li.on("mouseleave", function() {
+  $gnb_li.on("mouseleave", function () {
     $(this).removeClass("on");
   });
 
@@ -72,11 +69,11 @@ $(document).ready(function() {
   $gnb.on("mouseleave", closeSub);
   $gnb.on("focusin", openSub);
 
-  $btnPlay.on("click", function(e) {
+  $btnPlay.on("click", function (e) {
     e.preventDefault();
     $(this).addClass("on");
 
-    timer = setInterval(function() {
+    timer = setInterval(function () {
       $current = $panel_li.filter("." + class_name).index(); //현재슬라이더
 
       if (active_index != len - 1) {
@@ -91,30 +88,30 @@ $(document).ready(function() {
     }, 5000);
   });
 
-  $(".main-news .section-container li").each(function(i) {
+  $(".main-news .section-container li").each(function (i) {
     arrNewsHeight.push($(this).height());
     maxNewsHeight = Math.max(maxNewsHeight, arrNewsHeight[i]);
     $(this).height(maxNewsHeight + 50);
   });
 
-  $navi_li.on("click", function(e) {
+  $navi_li.on("click", function (e) {
     e.preventDefault();
     showThis(this);
     clearInterval(timer);
     $(".btn-play").removeClass("on");
   });
 
-  $sitemapBtn.on("click", function(e) {
+  $sitemapBtn.on("click", function (e) {
     e.preventDefault();
     sitemapOpen();
   });
 
-  $("html, body").on("click", ".btn-gnb-close", function() {
+  $("html, body").on("click", ".btn-gnb-close", function () {
     sitemapClose();
   });
 
   isOpen = false;
-  $(".gnb-sitemap > ul > li > a").on("click", function() {
+  $(".gnb-sitemap > ul > li > a").on("click", function () {
     $(".gnb-sitemap > ul > li > a")
       .removeClass("on")
       .parent()
@@ -127,7 +124,7 @@ $(document).ready(function() {
         .addClass("on")
         .parent()
         .children("ul")
-        .slideDown(500, function() {
+        .slideDown(500, function () {
           isOpen = true;
         });
     } else {
@@ -228,7 +225,7 @@ function openSub() {
 
 function closeSub() {
   $gnb_ul.slideUp(300);
-  $(".bgGnb").slideUp(300, function() {
+  $(".bgGnb").slideUp(300, function () {
     $(this).remove();
     isDone = true;
   });
@@ -238,11 +235,11 @@ function getSubMaxHeight() {
   var ht_max = 0;
   var ht_arr = [];
 
-  $gnb_li.each(function(i) {
+  $gnb_li.each(function (i) {
     ht_arr.push(
       $(this)
-        .children("ul")
-        .height()
+      .children("ul")
+      .height()
     );
     ht_max = Math.max(ht_max, ht_arr[i]);
   });
@@ -255,12 +252,11 @@ function showThis(evt2) {
   $current = $panel_li.filter("." + class_name);
 
   if (target_index > active_index || target_index < active_index) {
-    $current.stop().animate(
-      {
+    $current.stop().animate({
         opacity: 0
       },
       speed,
-      function() {
+      function () {
         $(this)
           .hide()
           .removeClass("on");
@@ -271,12 +267,11 @@ function showThis(evt2) {
       .eq(target_index)
       .stop()
       .show()
-      .animate(
-        {
+      .animate({
           opacity: 1
         },
         speed,
-        function() {
+        function () {
           $(this).addClass("on");
         }
       );
@@ -301,12 +296,11 @@ function showNext(idx) {
     .eq(idx)
     .show()
     .stop()
-    .animate(
-      {
+    .animate({
         opacity: 1
       },
       speed,
-      function() {
+      function () {
         $(this).addClass("on");
       }
     );
@@ -335,34 +329,33 @@ function sitemapOpen() {
 
   $("header").append(
     $('<div class="sitemapBg">')
-      .css({
-        position: "fixed",
-        top: 0,
-        right: "-100%",
-        background: "rgba(34,34,34,0.9)",
-        width: "100%",
-        height: "100%",
-        zIndex: 5000
-      })
-      .stop()
-      .delay(100)
-      .animate(
-        {
-          right: 0
-        },
-        500,
-        function() {
-          $sitemap.find("a").css({
-            opacity: 1
-          });
-          $(".btn-gnb-close").addClass("on");
-        }
+    .css({
+      position: "fixed",
+      top: 0,
+      right: "-100%",
+      background: "rgba(34,34,34,0.9)",
+      width: "100%",
+      height: "100%",
+      zIndex: 5000
+    })
+    .stop()
+    .delay(100)
+    .animate({
+        right: 0
+      },
+      500,
+      function () {
+        $sitemap.find("a").css({
+          opacity: 1
+        });
+        $(".btn-gnb-close").addClass("on");
+      }
+    )
+    .append(
+      $(
+        '<a href="#" class="btn-gnb-close"><em class="line1"></em><em class="line2"></em>'
       )
-      .append(
-        $(
-          '<a href="#" class="btn-gnb-close"><em class="line1"></em><em class="line2"></em>'
-        )
-      )
+    )
   );
 }
 
@@ -373,15 +366,14 @@ function sitemapClose() {
   });
   $(".sitemapBg")
     .stop()
-    .animate(
-      {
+    .animate({
         right: "-100%"
       },
       1000,
-      function() {
+      function () {
         $(this).remove();
         $(".gnb-sitemap").removeClass("on");
-        $(".gnb-sitemap-depth2").slideUp(0, function() {
+        $(".gnb-sitemap-depth2").slideUp(0, function () {
           isOpen = false;
           $(".gnb-sitemap > ul > li > a").removeClass("on");
         });
@@ -394,7 +386,7 @@ function sitemapClose() {
       transform: "rotate(0deg)"
     })
     .stop()
-    .fadeOut(500, function() {
+    .fadeOut(500, function () {
       $(this).remove();
     });
   //$sitemap.removeClass("on");
