@@ -363,6 +363,10 @@
 
 
 @media screen and (max-width: 1024px) {
+      .title01 {
+            font-size: 20px;
+      }
+
       .title01_b {
             font-size: 20px;
       }
@@ -395,6 +399,11 @@
             font-size: 18px;
       }
 
+      .title01 {
+            font-size: 18px;
+      }
+
+
       .title01_b {
             font-size: 17px;
       }
@@ -413,9 +422,18 @@
             }
       }
 
+      .li-dash li {
+            font-size: 14px;
+            line-height: 1.5;
+      }
+
       .radio-container,
       .check-container {
             font-size: 14px;
+      }
+
+      .form-request .input-box.input-box-inline {
+            margin-top: 3px;
       }
 }
 
@@ -424,4 +442,15 @@
       .bul-b-circle {
             font-size: 16px;
       }
+
+      .project-history .user-edit {
+            right: 10px;
+            top: 10px;
+      }
+
+      .li-dash li {
+            font-size: 13px;
+
+      }
+
 }

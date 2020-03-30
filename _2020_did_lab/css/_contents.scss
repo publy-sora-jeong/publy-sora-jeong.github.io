@@ -1949,9 +1949,18 @@ input.input-times {
     justify-content: space-between;
 
     .front-view {
-        width: 530px;
-        height: 670px;
+        width: 100%;
+        //height: 400px;
         background: #ccc;
+
+        .root_daum_roughmap {
+            width: 100%;
+        }
+
+        .root_daum_roughmap .wrap_map {
+            width: 100%;
+            height: 400px;
+        }
     }
 
 
@@ -2073,8 +2082,6 @@ input.input-times {
     line-height: 1.5;
     padding-top: 70px;
     font-family: "Nanum Square R", sans-serif;
-
-
 
     img {
         max-width: 100%;
@@ -2466,6 +2473,12 @@ input.input-times {
             }
         }
     }
+
+    .form-request legend {
+        font-size: 22px;
+    }
+
+
 }
 
 @media screen and (max-width: 900px) {
@@ -2487,10 +2500,24 @@ input.input-times {
 @media screen and (max-width: 768px) {
 
     .form-request {
+        legend {
+            font-size: 20px;
+        }
+
+        .t-help {
+            display: block;
+            font-size: 13px;
+            margin: 5px 0;
+        }
+
         .col {
             dt {
                 width: 100px;
                 padding: 10px;
+
+                &.t-left {
+                    padding: 10px;
+                }
             }
 
             dd {
@@ -2573,22 +2600,141 @@ input.input-times {
             }
         }
     }
+
+    .policy-email {
+        padding-left: 0;
+        height: auto;
+        margin-top: 30px;
+        padding-top: 170px;
+        background-size: auto 170px;
+        background-position: center top;
+
+        p {
+            margin-top: 15px !important;
+        }
+
+        p:nth-of-type(1) {
+            padding-top: 20px;
+            font-size: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
 
-    .project-history {
-        .user-files li {
-            a {
-                max-width: initial;
-                float: none;
+    //BTN
+    .btn-area {
+        margin-top: 20px;
+
+
+        &.btn-pro {
+
+            [class*='pro-'] {
+                height: 40px;
+                line-height: 40px;
             }
 
-            .file-info {
-                float: none;
-                text-align: left;
-                font-size: 13px;
-                margin-top: 5px;
+            button {
+                padding: 0 15px;
+            }
+        }
+
+        //멘토링수행 보고서작성 회차선택 
+        &.select-session {
+            select {
+                width: 120px;
+                line-height: 40px;
+                height: 40px;
+            }
+        }
+
+        button {
+            display: inline-block;
+            vertical-align: middle;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            padding: 0 15px;
+            font-size: 13px;
+            margin: 0 2px;
+        }
+
+        .btn-list-blue {
+            background-color: #073190;
+            color: #fff;
+            padding: 0 20px;
+
+            span::after {
+                margin-left: 10px;
+            }
+        }
+
+        .btn-apply {
+            padding: 0 20px;
+
+            span::after {
+                margin-left: 10px;
+            }
+        }
+
+        .btn-attach {
+            width: 40px;
+            height: 40px;
+        }
+
+        .btn-apply-edu {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+
+        }
+
+        .btn-reply {
+            border: 1px solid #ddd;
+        }
+
+        .btn-list {
+            height: 40px;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+
+
+    .project-history {
+        .project-title h3 {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .user-info .info {
+            font-size: 14px;
+        }
+
+        .user-files {
+            font-size: 13px;
+
+            li {
+                a {
+                    max-width: initial;
+                    float: none;
+                }
+
+                .file-info {
+                    float: none;
+                    text-align: left;
+                    font-size: 13px;
+                    margin-top: 5px;
+                }
+            }
+        }
+
+        .user-comment {
+            font-size: 13px;
+            line-height: 1.5;
+
+            .input-textarea textarea {
+                height: 140px;
             }
         }
     }
@@ -2636,6 +2782,11 @@ input.input-times {
 
     .form-request {
         font-size: 14px;
+        margin-top: 40px !important;
+
+        legend {
+            font-size: 18px;
+        }
 
         .row-col2 {
             flex-wrap: wrap;
@@ -2647,6 +2798,10 @@ input.input-times {
 
         .col-50 {
             width: 100%;
+        }
+
+        .input-box.input-box-long input {
+            width: 100% !important;
         }
     }
 
@@ -2770,10 +2925,62 @@ input.input-times {
         }
     }
 
+    .policy {
+        font-size: 14px;
+        padding-top: 30px;
+
+
+        &-title {
+            font-size: 18px;
+
+            .link {
+                margin-top: 15px;
+            }
+        }
+
+        .policy-history {
+            margin: 20px 0;
+
+
+        }
+
+        &-articles {
+            .p-chapter {
+                font-size: 16px;
+            }
+
+            .p-big-chapter {
+                font-size: 18px;
+
+            }
+
+            .sec {
+
+                strong {
+
+                    font-size: 14px;
+                }
+            }
+
+            .basic>li {
+                strong {
+                    font-size: 15px;
+                    padding-top: 15px;
+                }
+            }
+        }
+
+
+    }
+
 
 }
 
 @media screen and (max-width: 480px) {
+    .layer-search-wrap {
+        right: -200px;
+    }
+
     .cs-faq {
         font-size: 13px;
     }

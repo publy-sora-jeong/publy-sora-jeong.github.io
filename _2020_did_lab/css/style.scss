@@ -1437,9 +1437,60 @@ footer {
     background-repeat: no-repeat;
     background-position: top center;
     background-size: cover;
+    position: relative;
 
-    &.notice {
-        background-image: url('../img/sub_visual01.png');
+    .sub-visual-typo {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        transform: translateY(-50%);
+        text-align: center;
+        color: #fff;
+
+        .sub-typo01 {
+            font-size: 32px;
+        }
+
+        .sub-typo02 {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    }
+
+    &-news {
+        background-image: url('../img/sub_visual_news.png');
+    }
+
+    &-cs {
+        background-image: url('../img/sub_visual_cs.png');
+    }
+
+    &-intro {
+        background-image: url('../img/sub_visual_intro.png');
+    }
+
+    &-archive {
+        background-image: url('../img/sub_visual_archive.png');
+    }
+
+    &-information {
+        background-image: url('../img/sub_visual_information.png');
+    }
+
+    &-mypage {
+        background-image: url('../img/sub_visual_mypage.png');
+    }
+
+    &-prototype {
+        background-image: url('../img/sub_visual_prototype.png');
+    }
+
+    &-mentor {
+        background-image: url('../img/sub_visual_mentor.png');
+    }
+
+    &-facility {
+        background-image: url('../img/sub_visual_facility.png');
     }
 }
 
@@ -1455,6 +1506,7 @@ footer {
     .page-title {
         font-size: 34px;
         padding-bottom: 10px;
+        padding-left: 5px;
         border-bottom: 1px solid #999;
         font-weight: normal;
 
@@ -1479,9 +1531,12 @@ footer {
             width: 50%;
         }
 
-        &.sub-nav--type03>ul>li,
-        &.sub-nav--type06>ul>li {
+        &.sub-nav--type03>ul>li {
             width: 33.33%;
+        }
+
+        &.sub-nav--type06>ul>li {
+            width: 16.66%;
         }
 
         &.sub-nav--type04>ul>li {
@@ -1673,10 +1728,18 @@ footer {
         .sub-nav--leftside {
             float: left;
 
+            ul li {
+                width: auto;
+            }
+
         }
 
         .sub-nav--rightside {
             float: right;
+
+            ul li {
+                width: auto;
+            }
         }
 
         .sub-nav--leftside,
@@ -2131,6 +2194,16 @@ footer {
             .sub-nav--leftside {
                 float: none;
                 width: 100%;
+                margin-bottom: 5px !important;
+
+                ul {
+                    flex-wrap: nowrap !important;
+                    justify-content: space-evenly;
+
+                    li {
+                        width: 100%;
+                    }
+                }
 
                 li a {
                     width: auto;
@@ -2140,10 +2213,22 @@ footer {
             .sub-nav--rightside {
                 float: none;
                 width: 100%;
+                margin-top: 0;
+
 
                 li a {
                     width: auto;
                 }
+
+                ul {
+                    flex-wrap: nowrap !important;
+                    justify-content: space-evenly;
+
+                    li {
+                        width: 100%;
+                    }
+                }
+
             }
         }
     }
@@ -2229,8 +2314,20 @@ footer {
 
 
     .sub-visual {
-        height: 200px;
+        .sub-visual-typo {
+
+            .sub-typo01 {
+                font-size: 28px;
+            }
+
+            .sub-typo02 {
+                font-size: 14px;
+                margin-top: 0;
+
+            }
+        }
     }
+
 
     .section-sub {
         padding: 40px 0;
@@ -2238,6 +2335,12 @@ footer {
         .page-title {
             font-size: 26px;
             padding-bottom: 5px;
+
+            span {
+                display: block;
+                font-size: 14px;
+                margin-left: 0;
+            }
         }
 
         .sub-nav li>a {
@@ -2420,6 +2523,21 @@ footer {
         }
     }
 
+    .sub-visual {
+        .sub-visual-typo {
+
+            .sub-typo01 {
+                font-size: 24px;
+            }
+
+            .sub-typo02 {
+                font-size: 13px;
+                margin-top: 0;
+
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -2483,6 +2601,18 @@ footer {
 
         .sub-nav-tab li a {
             font-size: 13px;
+        }
+    }
+
+    .sub-visual {
+        height: 150px;
+
+        .sub-visual-typo {
+
+            .sub-typo01 {
+                font-size: 18px;
+            }
+
         }
     }
 

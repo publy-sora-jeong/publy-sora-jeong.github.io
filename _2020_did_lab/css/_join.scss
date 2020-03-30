@@ -138,9 +138,11 @@
         height: 130px;
         margin: 30px auto;
         background: url('../img/certifytype_thumb_01.png') no-repeat;
+        background-size: contain;
 
         &.thumb-type02 {
             background: url('../img/certifytype_thumb_02.png') no-repeat;
+            background-size: contain;
         }
 
     }
@@ -797,9 +799,29 @@
             }
         }
     }
+
+    .select-join-type {
+        .type-box {
+            width: 30%;
+            margin: 1%;
+
+        }
+
+        .type-title {
+            font-size: 20px;
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
+    .login-title {
+        font-size: 36px;
+
+        span {
+            display: block;
+        }
+    }
+
     .join-list {
         padding: 30px;
 
@@ -834,9 +856,164 @@
             }
         }
     }
+
+    .select-certify-type {
+        padding: 50px;
+        margin-top: 40px;
+
+        .type-box {
+            width: 47%;
+            margin: 1%;
+        }
+
+        .type-title {
+            font-size: 22px;
+        }
+    }
+
+    .select-certify-full {
+        padding: 50px;
+
+        .type-box--left,
+        .type-box--right {
+            width: 49%;
+        }
+
+        .type-title {
+            font-size: 22px;
+        }
+
+        .thumb {
+            width: 100px;
+            height: 100px;
+            background-size: contain !important;
+        }
+
+        .type-box--right .input-email select {
+            display: block;
+            width: 240px;
+            margin-top: 7px;
+        }
+    }
+}
+
+@media screen and (max-width:768px) {
+    .select-certify-type {
+        padding: 30px;
+
+        &.select-certify-type2 .type-box {
+            height: auto;
+        }
+
+        .type-title {
+            font-size: 20px;
+        }
+
+        .thumb {
+
+            width: 100px;
+            height: 100px;
+            margin: 15px auto;
+        }
+
+        .type-txt {
+            font-size: 15px;
+            margin-bottom: 15px;
+
+            br {
+                display: none;
+            }
+        }
+
+        .type-box {
+            width: auto;
+            height: auto;
+            display: block;
+            padding: 30px 20px;
+        }
+    }
+
+    .select-certify-full {
+        padding: 30px;
+
+        .nomatch {
+            bottom: 0;
+            margin-top: 10px;
+        }
+
+        .type-title {
+            font-size: 20px;
+        }
+
+        .type-box {
+            padding: 30px;
+        }
+
+        .type-txt {
+            font-size: 16px;
+        }
+
+        .type-box--left,
+        .type-box--right {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+
+        .type-box--right {
+            padding: 0 5%;
+
+            input,
+            select {
+                width: 100%;
+            }
+
+            .input-email select {
+                width: 100%;
+            }
+        }
+
+    }
+
+    .join-complete .welcome-text {
+        strong {
+
+            font-size: 30px;
+        }
+
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:680px) {
+
+    .select-certify-full .check-entire .bg-box {
+        text-align: center;
+
+        strong {
+            display: block;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .btn-seld {
+            position: static;
+            margin: 10px auto 0;
+        }
+    }
+
+    .select-join-type .type-box {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width:640px) {
+    .login-title {
+        font-size: 30px;
+    }
+
     .join-list {
         padding: 5px;
 
@@ -910,9 +1087,56 @@
             }
         }
     }
+
+    .li-join li {
+        font-size: 13px;
+    }
+
 }
 
 @media screen and (max-width: 480px) {
+    .login-title {
+        font-size: 26px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .select-certify-type {
+        .type-title {
+            font-size: 18px;
+        }
+
+        .thumb {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .select-certify-full {
+
+        padding: 30px;
+
+        .nomatch {
+            font-size: 14px;
+        }
+
+        .type-title {
+            font-size: 18px;
+        }
+
+        .type-txt {
+            font-size: 14px;
+        }
+
+
+        .thumb {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
     .join-progress {
 
         .progress {
@@ -942,6 +1166,16 @@
                 background: #2055a4;
                 color: #fff;
             }
+        }
+    }
+
+    .join-complete .welcome-text {
+        strong {
+            font-size: 25px;
+        }
+
+        .subtext {
+            font-size: 14px;
         }
     }
 
