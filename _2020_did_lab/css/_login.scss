@@ -1,0 +1,290 @@
+.login-title {
+    font-size: 43px;
+    font-family: "Nanum Square R", sans-serif;
+    border-bottom: 1px solid #666666;
+    padding-bottom: 10px;
+    color: #666;
+
+    span {
+        font-size: 16px;
+    }
+}
+
+.login-wrap {
+    border: 5px solid #dddddd;
+    padding: 50px;
+
+
+    .logo-title {
+        background-image: url('../img/logo_ci.png');
+        background-repeat: no-repeat;
+        background-position: left top;
+        padding-left: 130px;
+        height: 103px;
+        width: 770px;
+        @include push--auto;
+        font-size: 24px;
+        padding-top: 35px;
+
+        strong {
+            color: #0c4e9b;
+        }
+    }
+
+    .login-form {
+        width: 770px;
+        @include push--auto;
+        position: relative;
+
+        .input-box {
+            width: 585px;
+            display: flex;
+            margin-bottom: 10px;
+
+            label {
+                width: 95px;
+                line-height: 40px;
+            }
+
+            input {
+                width: calc(100% - 95px);
+                height: 40px;
+                line-height: 40px;
+
+                &::placeholder {
+                    font-style: italic;
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .auto-login {
+            margin-left: 95px;
+        }
+
+        #btn-login {
+            position: absolute;
+            background: #023894;
+            display: block;
+            width: 160px;
+            height: 90px;
+            color: #fff;
+            font-size: 18px;
+            right: 0;
+            top: 0;
+        }
+
+    }
+
+    .sns-login {
+        letter-spacing: -10px;
+        text-align: center;
+        margin-top: 35px;
+
+        button {
+            letter-spacing: 0;
+            text-align: center;
+            display: inline-block;
+            color: #fff;
+            height: 32px;
+            line-height: 32px;
+            width: 185px;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0 2px;
+
+            span::before {
+                content: '';
+                margin-right: 10px;
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            &.sns-login--naver {
+                background: #23c822;
+
+                span::before {
+                    width: 15px;
+                    height: 14px;
+                    background: url('../img/ico_login_naver.png') no-repeat;
+                }
+            }
+
+            &.sns-login--face {
+                background: #5370ac;
+
+                span::before {
+                    width: 11px;
+                    height: 16px;
+                    background: url('../img/ico_login_facebook.png') no-repeat;
+                }
+            }
+
+            &.sns-login--kakao {
+                background: #ffeb00;
+                color: #432314;
+
+                span::before {
+                    width: 18px;
+                    height: 16px;
+                    background: url('../img/ico_login_kakao.png') no-repeat;
+                }
+            }
+
+            &.sns-login--google {
+                background: #e04a32;
+
+                span::before {
+                    width: 21px;
+                    height: 14px;
+                    background: url('../img/ico_login_google.png') no-repeat;
+                }
+            }
+        }
+    }
+}
+
+.tb-login {
+    border-top: 2px solid #656565;
+    overflow: hidden;
+
+    table {
+        font-size: 14px;
+        margin-left: -1px;
+    }
+
+    th {
+        background: #f5f5f5;
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    td {
+        font-size: 13.5px;
+    }
+
+
+    th,
+    td {
+        padding: 10px 15px;
+        border-bottom: 1px solid #d6d6d6;
+        border-left: 1px solid #d6d6d6;
+    }
+}
+
+
+.td-link {
+    font-weight: bold;
+    font-size: 14px;
+    display: block;
+
+    span {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #023894;
+    }
+
+    &::before {
+        content: '';
+        width: 13px;
+        height: 12px;
+        background: url('../img/login_td_link.png') no-repeat;
+        display: inline-block;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 1024px) {
+    .login-wrap {
+        .logo-title {
+            width: auto;
+        }
+
+        .login-form {
+            width: auto;
+        }
+
+        .sns-login {
+            button {
+                margin: 2px;
+
+
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .login-wrap {
+        .logo-title {
+            padding-top: 80px;
+            padding-left: 0;
+            height: auto;
+            font-size: 20px;
+            background-position: top center;
+            background-size: auto 75px;
+            text-align: center;
+        }
+
+        .login-form .input-box {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .login-wrap {
+
+        .logo-title {
+            font-size: 18px;
+        }
+
+        .login-form #btn-login {
+            width: 100%;
+            position: static;
+            height: 45px;
+            line-height: 45px;
+            display: block;
+        }
+
+        .sns-login {
+            margin-top: 15px;
+
+            button {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .login-wrap {
+
+        .login-form .input-box {
+            flex-wrap: wrap;
+
+
+            label {
+                width: 100%;
+                line-height: 1.5;
+                padding-bottom: 5px;
+                font-size: 16px;
+            }
+
+            input {
+                width: 100%;
+            }
+        }
+
+        .logo-title {
+            font-size: 16px;
+        }
+    }
+}
