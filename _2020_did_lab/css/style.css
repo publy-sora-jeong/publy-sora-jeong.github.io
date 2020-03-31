@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*RESET */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, article, aside, hgroup, header, footer, figure, figcaption, nav, section {
   margin: 0;
@@ -2147,55 +2148,47 @@ body .ui-tooltip {
   font-weight: bold;
 }
 
-/* font style */
-/* 
-
-	font-family:'Nanum Barun Gothic';
-
-	font-family:"Noto Sans KR" 
-		font-weight: 300
-		font-weight: 700
-
-	font-family:"Nanum Square R";
-
-*/
 @font-face {
-  font-family: 'Nanum Barun Gothic';
+  font-family: "Noto Sans KR";
   font-style: normal;
-  font-weight: 400;
-  src: url(../font/NanumBarunGothic.woff);
+  font-weight: 100;
+  src: url("../font/notokr-regular.woff") format("woff2"), url("../font/notokr-regular.woff") format("woff"), url("../font/notokr-regular.eot"), url("../font/notokr-regular.eot?#iefix") format("embedded-opentype");
 }
 
 @font-face {
   font-family: "Noto Sans KR";
-  src: url(../font/notokr-regular.woff) format("woff");
-  font-weight: 300;
   font-style: normal;
-}
-
-@font-face {
-  font-family: "Noto Sans KR";
-  src: url(../font/notokr-bold.woff) format("woff");
   font-weight: 700;
-  font-style: normal;
+  font-weight: bold;
+  src: url("../font/notokr-bold.woff") format("woff2"), url("../font/notokr-bold.woff") format("woff"), url("../font/notokr-bold.eot"), url("../font/notokr-bold.eot?#iefix") format("embedded-opentype");
 }
 
 @font-face {
-  font-family: 'Nanum Square R';
+  font-family: "Nanum Square L";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../font/NanumSquareL.woff") format("woff2"), url("../font/NanumSquareL.woff") format("woff"), url("../font/NanumSquareL.eot"), url("../font/NanumSquareL.eot?#iefix") format("embedded-opentype");
+}
+
+@font-face {
+  font-family: "Nanum Square R";
   font-style: normal;
   font-weight: 400;
-  src: local("Nanum Square R"), url(../font/NanumSquareRoundR.woff) format("woff");
+  src: url("../font/NanumSquareR.woff") format("woff2"), url("../font/NanumSquareR.woff") format("woff"), url("../font/NanumSquareR.eot"), url("../font/NanumSquareR.eot?#iefix") format("embedded-opentype");
 }
 
 @font-face {
-  font-family: 'Nanum Square R';
+  font-family: "Nanum Square R";
   font-style: normal;
-  font-weight: bold;
-  src: local("Nanum Square R"), url(../font/NanumSquareRoundEB.woff) format("woff");
+  font-weight: 800;
+  src: url("../font/NanumSquareEB.woff") format("woff2"), url("../font/NanumSquareEB.woff") format("woff"), url("../font/NanumSquareEB.eot"), url("../font/NanumSquareEB.eot?#iefix") format("embedded-opentype");
 }
 
-.nanumbarungothic * {
-  font-family: 'NanumBarunGothic', sans-serif;
+@font-face {
+  font-family: "Nanum Square EB";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../font/NanumSquareB.woff") format("woff2"), url("../font/NanumSquareB.woff") format("woff"), url("../font/NanumSquareB.eot"), url("../font/NanumSquareB.eot?#iefix") format("embedded-opentype");
 }
 
 /* IR  */
@@ -2379,7 +2372,7 @@ body {
   background-color: #fff;
   background-position: top center;
   background-repeat: no-repeat;
-  font-family: "Noto Sans KR", 'Nanum Barun Gothic', "Nanum Gothic", dotum, sans-serif;
+  font-family: "Noto Sans KR", 'Nanum Square R', "Nanum Gothic", "나눔고딕", "Malgun Gothic", dotum, sans-serif;
   font-weight: 400;
   overflow-x: hidden;
   letter-spacing: -0.4px;
@@ -2403,6 +2396,17 @@ header .header-top {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  top: 0;
+  z-index: 500;
+  background: #dedede;
+  padding-right: 10px;
+}
+
+header .header-top.fixed {
+  position: fixed;
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .header-top--left {
@@ -2488,6 +2492,19 @@ header .header-top--right .sns li.sns--kakao {
 
 header .header-top--right .sns li.sns--youtube {
   background-position: -54px 0;
+}
+
+header .header-top--right .sns li.logo-startup {
+  width: 102px;
+  height: 29px;
+  background-image: url("../img/logo_startup.png");
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+
+header .header-top--right .sns li.logo-startup a {
+  width: 100%;
+  height: 100%;
 }
 
 header .header-top--right .sns li a {
@@ -2810,7 +2827,7 @@ header .header--nav .search-mnav .btn-sitemap {
 
 .main-visual .main-visual-text > p {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-  font-family: 'Nanum Barun Gothic', sans-serif;
+  font-family: "Nanum Square R", sans-serif;
 }
 
 .main-visual .main-visual-text .t1 {
@@ -3764,12 +3781,11 @@ header .header--nav .search-mnav .btn-sitemap {
 .btn-go-top {
   width: 61px;
   height: 61px;
-  position: relative;
+  position: fixed;
   background: url(../img/btn_go_top.png) no-repeat;
   /* right: 10%; */
   /* bottom: 0; */
   display: block;
-  float: right;
   bottom: 70px;
   right: 5%;
 }
@@ -3826,6 +3842,7 @@ footer .footer-container .logo {
   background-position: top center;
   background-size: cover;
   position: relative;
+  background-image: url("../img/sub_visual_mypage.png");
 }
 
 .sub-visual .sub-visual-typo {
@@ -3836,6 +3853,7 @@ footer .footer-container .logo {
           transform: translateY(-50%);
   text-align: center;
   color: #fff;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
 }
 
 .sub-visual .sub-visual-typo .sub-typo01 {
@@ -5356,6 +5374,13 @@ footer .footer-container .logo {
   .tb-type01 table td {
     padding: 10px;
   }
+  .tb-policy table {
+    font-size: 14px;
+  }
+  .tb-policy td,
+  .tb-policy th {
+    padding: 10px;
+  }
   .bbs-content {
     padding: 30px;
   }
@@ -5597,6 +5622,13 @@ footer .footer-container .logo {
   }
   .bbs-gallery-pub .item {
     width: 100%;
+  }
+  .tb-policy table {
+    font-size: 13px;
+  }
+  .tb-policy td,
+  .tb-policy th {
+    padding: 8px;
   }
 }
 
@@ -6232,10 +6264,6 @@ footer .footer-container .logo {
   font-size: 13px;
 }
 
-.project-history {
-  font-family: 'Nanum Barun Gothic';
-}
-
 .project-history .project-title {
   border-top: 1px solid #000;
 }
@@ -6243,7 +6271,7 @@ footer .footer-container .logo {
 .project-history .project-title h3 {
   padding: 30px 15px 20px 15px;
   font-size: 24px;
-  font-family: 'Nanum Barun Gothic';
+  font-family: 'Nanum Square R';
   font-weight: bold;
   background: #f9fafb;
 }
@@ -6622,7 +6650,7 @@ a.link-article {
   z-index: 1;
   left: 40px;
   top: 20px;
-  font-family: 'Nanum Barun Gothic';
+  font-family: 'Nanum Square R';
   font-weight: normal;
 }
 
@@ -6673,7 +6701,7 @@ a.link-article {
   font-size: 20px;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
-  font-family: 'Nanum Barun Gothic';
+  font-family: 'Nanum Square R';
 }
 
 .professional .profile-wrap {
@@ -7451,6 +7479,26 @@ input.input-times {
   margin-top: 4px;
 }
 
+.cs-contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cs-contact-info .contact-info--left {
+  width: 40%;
+}
+
+.cs-contact-info .contact-info--right {
+  width: 60%;
+  padding-left: 1%;
+}
+
 .li-bul-gray li {
   padding-left: 20px;
   position: relative;
@@ -7985,6 +8033,21 @@ input.input-times {
   .policy-email p:nth-of-type(1) {
     padding-top: 20px;
     font-size: 20px;
+  }
+  .cs-contact-info {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .cs-contact-info .contact-info--left {
+    width: 100%;
+  }
+  .cs-contact-info .contact-info--right {
+    width: 100%;
+    padding-left: 0%;
+    margin-top: 20px;
   }
 }
 
@@ -9416,6 +9479,26 @@ input.input-times {
   width: 100%;
   height: 160px;
   border: 1px solid #ddd;
+}
+
+.term-bg-box .term-text {
+  width: 100%;
+  height: 200px;
+  border: 1px solid #ddd;
+  overflow: auto;
+  padding: 20px;
+  margin-top: 10px;
+  background: #fff;
+}
+
+.term-bg-box .term-text .policy {
+  padding: 0;
+  font-size: 14px;
+}
+
+.term-bg-box .term-text .policy > * {
+  font-size: 14px !important;
+  margin-top: 10px !important;
 }
 
 .term-textbox {

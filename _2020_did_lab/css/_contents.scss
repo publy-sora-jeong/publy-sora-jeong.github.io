@@ -671,7 +671,6 @@
 }
 
 .project-history {
-    font-family: 'Nanum Barun Gothic';
 
     .project-title {
         border-top: 1px solid #000;
@@ -679,7 +678,7 @@
         h3 {
             padding: 30px 15px 20px 15px;
             font-size: 24px;
-            font-family: 'Nanum Barun Gothic';
+            font-family: 'Nanum Square R';
             font-weight: bold;
             background: #f9fafb;
         }
@@ -1078,7 +1077,7 @@ a.link-article {
         z-index: 1;
         left: 40px;
         top: 20px;
-        font-family: 'Nanum Barun Gothic';
+        font-family: 'Nanum Square R';
         font-weight: normal;
 
         strong {
@@ -1136,7 +1135,7 @@ a.link-article {
         font-size: 20px;
         padding-bottom: 5px;
         border-bottom: 1px solid #ddd;
-        font-family: 'Nanum Barun Gothic';
+        font-family: 'Nanum Square R';
     }
 
     .profile-wrap {
@@ -1987,6 +1986,21 @@ input.input-times {
     }
 }
 
+.cs-contact-info {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .contact-info--left {
+        width: 40%
+    }
+
+    .contact-info--right {
+        width: 60%;
+        padding-left: 1%;
+    }
+}
+
 
 
 .li-bul-gray {
@@ -2618,6 +2632,22 @@ input.input-times {
             font-size: 20px;
         }
     }
+
+    .cs-contact-info {
+        flex-wrap: wrap;
+        justify-content: unset;
+
+        .contact-info--left {
+            width: 100%;
+        }
+
+        .contact-info--right {
+            width: 100%;
+            padding-left: 0%;
+            margin-top: 20px;
+        }
+    }
+
 }
 
 @media screen and (max-width: 640px) {

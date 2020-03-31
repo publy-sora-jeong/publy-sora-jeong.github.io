@@ -189,7 +189,7 @@ $(document).ready(function () {
   var subNavLiCount = $('.section-sub .sub-nav li').length;
   console.log(subNavLiCount);
 
-  $subNav.removeClass('sub-nav-type02  sub-nav--type03   sub-nav--type04 sub-nav--type05 sub-nav--type06');
+  $subNav.removeClass('sub-nav-type02 sub-nav--type03 sub-nav--type04 sub-nav--type05 sub-nav--type06');
   if (subNavLiCount == 2) {
     $subNav.addClass('sub-nav-type02');
   } else if (subNavLiCount == 3) {
@@ -220,6 +220,14 @@ $(document).ready(function () {
 
   $(window).on('scroll', function () {
     $('.header-sitemap').hide();
+
+    var scrollTop = $(this).scrollTop();
+
+    if (scrollTop >= 45) {
+      $('.header-top').addClass('fixed');
+    } else {
+      $('.header-top').removeClass('fixed');
+    }
   })
 
 

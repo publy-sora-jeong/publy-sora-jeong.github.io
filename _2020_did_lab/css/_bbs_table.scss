@@ -1259,6 +1259,17 @@
             }
       }
 
+      .tb-policy {
+            table {
+                  font-size: 14px;
+            }
+
+            td,
+            th {
+                  padding: 10px;
+            }
+      }
+
       .bbs-content {
             padding: 30px;
       }
@@ -1389,6 +1400,7 @@
                   max-width: 100px;
             }
       }
+
 
       .tb-reservation2 {
             overflow: auto;
@@ -1623,6 +1635,17 @@
 
       .bbs-gallery-pub .item {
             width: 100%;
+      }
+
+      .tb-policy {
+            table {
+                  font-size: 13px;
+            }
+
+            td,
+            th {
+                  padding: 8px;
+            }
       }
 }
 

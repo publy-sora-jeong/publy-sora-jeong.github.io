@@ -54,32 +54,65 @@ input { font-family: 'Gmarket Sans', sans-serif;}
 
 .font-bold {font-weight: bold; }
 
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:100;
+	src:url("../font/notokr-regular.woff") format("woff2"),
+		url("../font/notokr-regular.woff") format("woff"),
+		url("../font/notokr-regular.eot"),
+		url("../font/notokr-regular.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family:"Noto Sans KR";
+	font-style:normal;
+	font-weight:700;
+	font-weight: bold; 
+	src:url("../font/notokr-bold.woff") format("woff2"),
+		url("../font/notokr-bold.woff") format("woff"),
+		url("../font/notokr-bold.eot"),
+		url("../font/notokr-bold.eot?#iefix") format("embedded-opentype");
+}
 
+//light 300 regular 400 bold 700 eb 800 
+@font-face {
+	font-family:"Nanum Square L";
+	font-style:normal;
+	font-weight:300;
+	src:url("../font/NanumSquareL.woff") format("woff2"),
+		url("../font/NanumSquareL.woff") format("woff"),
+		url("../font/NanumSquareL.eot"),
+		url("../font/NanumSquareL.eot?#iefix") format("embedded-opentype");
+}
 
-/* font style */
-/* 
-
-	font-family:'Nanum Barun Gothic';
-
-	font-family:"Noto Sans KR" 
-		font-weight: 300
-		font-weight: 700
-
+@font-face {
 	font-family:"Nanum Square R";
+	font-style:normal;
+	font-weight:400;
+	src:url("../font/NanumSquareR.woff") format("woff2"),
+		url("../font/NanumSquareR.woff") format("woff"),
+		url("../font/NanumSquareR.eot"),
+		url("../font/NanumSquareR.eot?#iefix") format("embedded-opentype");
+}
 
-*/
-@font-face{font-family:'Nanum Barun Gothic';font-style:normal;font-weight:400;src:url(../font/NanumBarunGothic.woff)}
-
-@font-face{font-family:"Noto Sans KR";src:url(../font/notokr-regular.woff) format("woff");font-weight:300;font-style:normal}
-@font-face{font-family:"Noto Sans KR";src:url(../font/notokr-bold.woff) format("woff");font-weight:700;font-style:normal}
-
-
-
-@font-face{font-family:'Nanum Square R';font-style:normal;font-weight:400;src:local("Nanum Square R"),url(../font/NanumSquareRoundR.woff) format("woff")}
-@font-face{font-family:'Nanum Square R';font-style:normal;font-weight:bold;src:local("Nanum Square R"),url(../font/NanumSquareRoundEB.woff) format("woff")}
-
-.nanumbarungothic * {font-family: 'NanumBarunGothic', sans-serif;}
-
+@font-face {
+	font-family:"Nanum Square R";
+	font-style:normal;
+	font-weight:800;
+	src:url("../font/NanumSquareEB.woff") format("woff2"),
+		url("../font/NanumSquareEB.woff") format("woff"),
+		url("../font/NanumSquareEB.eot"),
+		url("../font/NanumSquareEB.eot?#iefix") format("embedded-opentype");
+}
+@font-face {
+	font-family:"Nanum Square EB";
+	font-style:normal;
+	font-weight:700;
+	src:url("../font/NanumSquareB.woff") format("woff2"),
+		url("../font/NanumSquareB.woff") format("woff"),
+		url("../font/NanumSquareB.eot"),
+		url("../font/NanumSquareB.eot?#iefix") format("embedded-opentype");
+}
 
 
 

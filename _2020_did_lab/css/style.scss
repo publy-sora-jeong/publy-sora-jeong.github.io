@@ -15,7 +15,7 @@ body {
     background-color: #fff;
     background-position: top center;
     background-repeat: no-repeat;
-    font-family: "Noto Sans KR", 'Nanum Barun Gothic', "Nanum Gothic", dotum, sans-serif;
+    font-family: "Noto Sans KR", 'Nanum Square R', "Nanum Gothic", "나눔고딕", "Malgun Gothic", dotum, sans-serif;
     font-weight: 400;
     overflow-x: hidden;
     letter-spacing: -0.4px;
@@ -40,6 +40,16 @@ header {
         overflow: hidden;
         width: $contentWidth;
         @include push--auto;
+        top: 0;
+        z-index: 500;
+        background: #dedede;
+        padding-right: 10px;
+
+        &.fixed {
+            position: fixed;
+            width: 100%;
+            box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
+        }
 
         &--left {
             float: left;
@@ -126,6 +136,19 @@ header {
 
                     &.sns--youtube {
                         background-position: -54px 0;
+                    }
+
+                    &.logo-startup {
+                        width: 102px;
+                        height: 29px;
+                        background-image: url('../img/logo_startup.png');
+                        background-repeat: no-repeat;
+                        margin-left: 10px;
+
+                        a {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
 
                     a {
@@ -445,7 +468,7 @@ header {
 
         &>p {
             text-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.4);
-            font-family: 'Nanum Barun Gothic', sans-serif;
+            font-family: "Nanum Square R", sans-serif;
         }
 
         .t1 {
@@ -1371,12 +1394,11 @@ header {
 .btn-go-top {
     width: 61px;
     height: 61px;
-    position: relative;
+    position: fixed;
     background: url(../img/btn_go_top.png) no-repeat;
     /* right: 10%; */
     /* bottom: 0; */
     display: block;
-    float: right;
     bottom: 70px;
     right: 5%;
 }
@@ -1438,6 +1460,7 @@ footer {
     background-position: top center;
     background-size: cover;
     position: relative;
+    background-image: url('../img/sub_visual_mypage.png');
 
     .sub-visual-typo {
         position: absolute;
@@ -1446,6 +1469,7 @@ footer {
         transform: translateY(-50%);
         text-align: center;
         color: #fff;
+        text-shadow: 3px 3px 4px rgba($color: #000000, $alpha: 0.6);
 
         .sub-typo01 {
             font-size: 32px;
