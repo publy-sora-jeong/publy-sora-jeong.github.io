@@ -286,17 +286,17 @@ header {
         position: fixed;
         left: 0;
         width: 30px;
-        height: 80px;
+        height: 202px;
         top: 50%;
-        margin-top: -40px;
+        margin-top: -100px;
         //background: #313851;
-        background: #313851 url('../img/btn_close_fixnav.png') center;
+        background: #112651 url('../img/btn_open_fixnav.png') center;
         background-repeat: no-repeat;
         transition: left 1s;
 
         &.on {
             left: 180px;
-            transform: rotate(180deg);
+            background: #112651 url('../img/btn_close_fixnav.png') center;
         }
     }
 
@@ -1291,6 +1291,7 @@ header {
             height: 46px;
             font-size: 0;
             background: #fff url('../img/btn_slide_controls.png') no-repeat;
+            position: relative;
 
             &.btn-ban-prev {
                 background-position: 0 0;
@@ -1298,12 +1299,17 @@ header {
             }
 
             &.btn-ban-next {
-                background-position: -48px 0;
-                width: 45px;
+
+                background-position: -92px 0;
+
+                width: 47px;
             }
 
             &.btn-ban-pause {
-                background-position: -92px 0;
+                background-position: -45px 0;
+                width: 45px;
+
+
             }
         }
     }
@@ -1533,6 +1539,22 @@ footer {
 
     &-facility {
         background-image: url('../img/sub_visual_facility.png');
+    }
+
+    &-education {
+        background-image: url('../img/sub_visual_facility.png');
+    }
+
+    &-login {
+        background-image: url('../img/sub_visual_login.png');
+    }
+
+    &-join {
+        background-image: url('../img/sub_visual_join.png');
+    }
+
+    &-term {
+        background-image: url('../img/sub_visual_termofuse.png');
     }
 }
 
@@ -1849,6 +1871,10 @@ footer {
             width: auto;
             padding-right: 10px;
 
+            .header-top-container {
+                width: 100%;
+            }
+
             &--left {
                 li a {
                     padding: 0 10px;
@@ -2137,9 +2163,23 @@ footer {
 @media screen and (max-width: 1024px) {
 
     header {
-        .header-sitemap {
-            display: none;
+
+        .header-top--left {
+            float: left;
+
+            li a {
+                font-size: 13px;
+                padding: 0 6px;
+            }
         }
+
+        .header-top--right .signup li a,
+        .header-top--right .sns li a {
+            font-size: 13px;
+        }
+
+
+
 
         .header--nav {
             .logo {
@@ -2317,10 +2357,79 @@ footer {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
+    header .header-sitemap {
+        padding-left: 20px;
+        background-image: none;
+
+        .sitemap-container {
+            dl {
+                padding-right: 1%;
+
+                dt {
+                    font-size: 15px;
+                }
+
+                dd {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .main-visual {
+        height: 350px;
+
+        .main-visual-text {
+
+            .t1 {
+                font-size: 20px;
+            }
+
+            .t2 {
+                font-size: 50px;
+            }
+
+            .t3 {
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 830px) {
     header {
+        .header-top {
+            padding-right: 0
+        }
+
         .header-top--left {
-            display: none;
+            float: none;
+            height: 45px;
+            overflow: hidden;
+
+            li {
+                width: 20%;
+                text-align: center;
+                height: 45px;
+                overflow: hidden;
+            }
+        }
+
+        .header-top--right {
+            float: none;
+            text-align: right;
+            padding-right: 10px;
+
+            .signup,
+            .sns {
+                display: inline-block;
+                float: none;
+            }
+        }
+
+        .header-sitemap {
+            display: none !important
         }
 
 
@@ -2339,17 +2448,26 @@ footer {
             margin-top: 10px;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+
 
     .main-visual {
-        .main-visual-slider {
-            height: 300px;
+        height: 300px;
 
-            [class*='item'] {
-                height: 300px;
+        .main-visual-text {
+
+            .t1 {
+                font-size: 18px;
             }
 
-            .slick-dots {
-                bottom: 20px;
+            .t2 {
+                font-size: 40px;
+            }
+
+            .t3 {
+                font-size: 22px;
             }
         }
     }
@@ -2442,6 +2560,10 @@ footer {
 }
 
 @media screen and (max-width: 640px) {
+    header .header--nav .logo {
+        width: 210px;
+        height: 36px;
+    }
 
     .main-facility .facility-container dl {
         dt {
@@ -2582,16 +2704,46 @@ footer {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
     .main-visual {
-        .main-visual-slider {
-            height: 250px;
+        height: auto;
 
-            [class*='item'] {
-                height: 250px;
+        video {
+            position: static;
+        }
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    .btn-go-top {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    header .header--nav nav li a {
+        font-size: 13px;
+    }
+
+    .main-visual {
+
+        .main-visual-text {
+
+            .t1 {
+                font-size: 16px;
+            }
+
+            .t2 {
+                font-size: 30px;
+                padding: 0;
+            }
+
+            .t3 {
+                font-size: 18px;
             }
         }
     }
+
 
     .main-facility .facility-container dl {
         dt {
@@ -2675,9 +2827,36 @@ footer {
             }
         }
     }
+
+    footer .footer-container .logo {
+        width: 231px;
+        height: 39px;
+    }
 }
 
 @media screen and (max-width:414px) {
+    header {
+        .header-top--right {
+
+            .signup li a {
+                line-height: 1.5;
+            }
+
+
+
+            .signup,
+            .sns {
+                display: block;
+                margin: 10px 0;
+                padding-top: 0;
+            }
+
+            .signup {
+                margin-bottom: 0;
+            }
+        }
+    }
+
     .section-sub {
         .sub-nav {
             ul {

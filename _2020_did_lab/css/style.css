@@ -2630,10 +2630,10 @@ header .btn-fix-nav {
   position: fixed;
   left: 0;
   width: 30px;
-  height: 80px;
+  height: 202px;
   top: 50%;
-  margin-top: -40px;
-  background: #313851 url("../img/btn_close_fixnav.png") center;
+  margin-top: -100px;
+  background: #112651 url("../img/btn_open_fixnav.png") center;
   background-repeat: no-repeat;
   -webkit-transition: left 1s;
   transition: left 1s;
@@ -2641,8 +2641,7 @@ header .btn-fix-nav {
 
 header .btn-fix-nav.on {
   left: 180px;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  background: #112651 url("../img/btn_close_fixnav.png") center;
 }
 
 header .header-sitemap {
@@ -3667,6 +3666,7 @@ header .header--nav .search-mnav .btn-sitemap {
   height: 46px;
   font-size: 0;
   background: #fff url("../img/btn_slide_controls.png") no-repeat;
+  position: relative;
 }
 
 .footer-banner .banner-control a.btn-ban-prev {
@@ -3675,12 +3675,13 @@ header .header--nav .search-mnav .btn-sitemap {
 }
 
 .footer-banner .banner-control a.btn-ban-next {
-  background-position: -48px 0;
-  width: 45px;
+  background-position: -92px 0;
+  width: 47px;
 }
 
 .footer-banner .banner-control a.btn-ban-pause {
-  background-position: -92px 0;
+  background-position: -45px 0;
+  width: 45px;
 }
 
 .sitemap {
@@ -3896,6 +3897,22 @@ footer .footer-container .logo {
 
 .sub-visual-facility {
   background-image: url("../img/sub_visual_facility.png");
+}
+
+.sub-visual-education {
+  background-image: url("../img/sub_visual_facility.png");
+}
+
+.sub-visual-login {
+  background-image: url("../img/sub_visual_login.png");
+}
+
+.sub-visual-join {
+  background-image: url("../img/sub_visual_join.png");
+}
+
+.sub-visual-term {
+  background-image: url("../img/sub_visual_termofuse.png");
 }
 
 .section-sub {
@@ -8351,6 +8368,7 @@ input.input-times {
   margin-top: 8px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  text-align: left;
 }
 
 .li-cir-y li:first-child {
@@ -8373,6 +8391,7 @@ input.input-times {
   padding-left: 30px;
   line-height: 24px;
   position: relative;
+  text-align: left;
 }
 
 .bul-b-circle::before {
@@ -8439,6 +8458,7 @@ input.input-times {
   margin-top: 8px;
   position: relative;
   padding-left: 15px;
+  text-align: left;
 }
 
 .li-dot > li::before {
@@ -10114,6 +10134,9 @@ input.input-times {
     width: auto;
     padding-right: 10px;
   }
+  header .header-top .header-top-container {
+    width: 100%;
+  }
   header .header-top--left li a {
     padding: 0 10px;
     font-size: 15px;
@@ -10335,8 +10358,16 @@ input.input-times {
 }
 
 @media screen and (max-width: 1024px) {
-  header .header-sitemap {
-    display: none;
+  header .header-top--left {
+    float: left;
+  }
+  header .header-top--left li a {
+    font-size: 13px;
+    padding: 0 6px;
+  }
+  header .header-top--right .signup li a,
+  header .header-top--right .sns li a {
+    font-size: 13px;
   }
   header .header--nav .logo {
     width: 260px;
@@ -10471,9 +10502,61 @@ input.input-times {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
+  header .header-sitemap {
+    padding-left: 20px;
+    background-image: none;
+  }
+  header .header-sitemap .sitemap-container dl {
+    padding-right: 1%;
+  }
+  header .header-sitemap .sitemap-container dl dt {
+    font-size: 15px;
+  }
+  header .header-sitemap .sitemap-container dl dd {
+    font-size: 14px;
+  }
+  .main-visual {
+    height: 350px;
+  }
+  .main-visual .main-visual-text .t1 {
+    font-size: 20px;
+  }
+  .main-visual .main-visual-text .t2 {
+    font-size: 50px;
+  }
+  .main-visual .main-visual-text .t3 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  header .header-top {
+    padding-right: 0;
+  }
   header .header-top--left {
-    display: none;
+    float: none;
+    height: 45px;
+    overflow: hidden;
+  }
+  header .header-top--left li {
+    width: 20%;
+    text-align: center;
+    height: 45px;
+    overflow: hidden;
+  }
+  header .header-top--right {
+    float: none;
+    text-align: right;
+    padding-right: 10px;
+  }
+  header .header-top--right .signup,
+  header .header-top--right .sns {
+    display: inline-block;
+    float: none;
+  }
+  header .header-sitemap {
+    display: none !important;
   }
   header .header--nav .logo {
     width: 264px;
@@ -10485,14 +10568,20 @@ input.input-times {
   header .fixed-nav .nav-list li {
     margin-top: 10px;
   }
-  .main-visual .main-visual-slider {
+}
+
+@media screen and (max-width: 768px) {
+  .main-visual {
     height: 300px;
   }
-  .main-visual .main-visual-slider [class*='item'] {
-    height: 300px;
+  .main-visual .main-visual-text .t1 {
+    font-size: 18px;
   }
-  .main-visual .main-visual-slider .slick-dots {
-    bottom: 20px;
+  .main-visual .main-visual-text .t2 {
+    font-size: 40px;
+  }
+  .main-visual .main-visual-text .t3 {
+    font-size: 22px;
   }
   .sub-visual .sub-visual-typo .sub-typo01 {
     font-size: 28px;
@@ -10558,6 +10647,10 @@ input.input-times {
 }
 
 @media screen and (max-width: 640px) {
+  header .header--nav .logo {
+    width: 210px;
+    height: 36px;
+  }
   .main-facility .facility-container dl dt {
     font-size: 20px;
   }
@@ -10652,12 +10745,32 @@ input.input-times {
   }
 }
 
-@media screen and (max-width: 480px) {
-  .main-visual .main-visual-slider {
-    height: 250px;
+@media screen and (max-width: 560px) {
+  .main-visual {
+    height: auto;
   }
-  .main-visual .main-visual-slider [class*='item'] {
-    height: 250px;
+  .main-visual video {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .btn-go-top {
+    right: 10px;
+    bottom: 10px;
+  }
+  header .header--nav nav li a {
+    font-size: 13px;
+  }
+  .main-visual .main-visual-text .t1 {
+    font-size: 16px;
+  }
+  .main-visual .main-visual-text .t2 {
+    font-size: 30px;
+    padding: 0;
+  }
+  .main-visual .main-visual-text .t3 {
+    font-size: 18px;
   }
   .main-facility .facility-container dl dt {
     font-size: 18px;
@@ -10713,9 +10826,25 @@ input.input-times {
   .apply-view .apply-summary .capacity-cost .cost::before {
     display: none;
   }
+  footer .footer-container .logo {
+    width: 231px;
+    height: 39px;
+  }
 }
 
 @media screen and (max-width: 414px) {
+  header .header-top--right .signup li a {
+    line-height: 1.5;
+  }
+  header .header-top--right .signup,
+  header .header-top--right .sns {
+    display: block;
+    margin: 10px 0;
+    padding-top: 0;
+  }
+  header .header-top--right .signup {
+    margin-bottom: 0;
+  }
   .section-sub .sub-nav ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;

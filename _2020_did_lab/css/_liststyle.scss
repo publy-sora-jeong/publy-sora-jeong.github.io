@@ -6,6 +6,7 @@
             line-height: 1.5;
             margin-top: 8px;
             box-sizing: border-box;
+            text-align: left;
 
             &:first-child {
                   margin-top: 0;
@@ -29,6 +30,7 @@
       padding-left: 30px;
       line-height: 24px;
       position: relative;
+      text-align: left;
 
       &::before {
             content: '';
@@ -48,6 +50,7 @@
       color: #fff;
       text-align: center;
       padding: 13px 10px;
+
 
       &-yellow {
             background: #ffc000;
@@ -99,6 +102,7 @@
       margin-top: 8px;
       position: relative;
       padding-left: 15px;
+      text-align: left;
 
       &::before {
             content: '';
