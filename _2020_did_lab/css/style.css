@@ -2378,35 +2378,25 @@ body {
   letter-spacing: -0.4px;
 }
 
-header::before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 45px;
-  background: #dedede;
-  left: 0;
-  top: 0;
-  right: 0;
-  z-index: -1;
-}
-
 header .header-top {
   overflow: hidden;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
   top: 0;
+  width: 100%;
   z-index: 500;
   background: #dedede;
   padding-right: 10px;
 }
 
+header .header-top .header-top-container {
+  width: 1190px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
 header .header-top.fixed {
   position: fixed;
   width: 100%;
-  -webkit-box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 header .header-top--left {
@@ -2669,11 +2659,11 @@ header .header-sitemap {
   background-image: url("../img/sitemap_bg.png");
   background-repeat: no-repeat;
   background-position: 35px center;
-  display: none;
+  display: block;
 }
 
 header .header-sitemap .sitemap-container {
-  padding: 40px 0;
+  padding: 40px 0 0 0;
   font-size: 14px;
   color: #999;
   display: -webkit-box;
@@ -2681,6 +2671,7 @@ header .header-sitemap .sitemap-container {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  position: relative;
 }
 
 header .header-sitemap .sitemap-container dl {
@@ -2712,6 +2703,12 @@ header .header-sitemap .sitemap-container dl dd:nth-of-type(1) {
   margin-top: 10px;
 }
 
+header .header-sitemap .sitemap-container dl.last {
+  position: absolute;
+  right: 0;
+  bottom: 60px;
+}
+
 header .header--nav .header-container {
   width: 1200px;
   margin-left: auto;
@@ -2731,7 +2728,7 @@ header .header--nav nav li {
 }
 
 header .header--nav nav li a {
-  font-size: 15px;
+  font-size: 14px;
   color: #777;
   letter-spacing: -0.6px;
 }
@@ -2743,7 +2740,7 @@ header .header--nav nav li::before {
   background: #777;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 7px;
+  margin: 0 5px;
 }
 
 header .header--nav nav li:first-child::before {
@@ -4613,7 +4610,7 @@ footer .footer-container .logo {
 }
 
 .bbs-view img {
-  width: 100%;
+  max-width: 100%;
 }
 
 .bbs-attach {

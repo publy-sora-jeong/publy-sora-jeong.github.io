@@ -218,12 +218,17 @@ $(document).ready(function () {
     $('.fixed-nav').toggleClass('on');
   });
 
+  var scrollTop = $(window).scrollTop();
+  if (scrollTop >= 45) {
+    $('.header-top').addClass('fixed');
+  }
+
   $(window).on('scroll', function () {
     $('.header-sitemap').hide();
 
     var scrollTop = $(this).scrollTop();
 
-    if (scrollTop >= 45) {
+    if (scrollTop > 0) {
       $('.header-top').addClass('fixed');
     } else {
       $('.header-top').removeClass('fixed');

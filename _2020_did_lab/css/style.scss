@@ -25,30 +25,39 @@ body {
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 header {
 
-    &::before {
-        @include pseudo;
-        width: 100%;
-        height: 45px;
-        background: #dedede;
-        left: 0;
-        top: 0;
-        right: 0;
-        z-index: -1;
-    }
+    // &::before {
+    //     @include pseudo;
+    //     width: 100%;
+    //     height: 45px;
+    //     background: #dedede;
+    //     left: 0;
+    //     top: 0;
+    //     right: 0;
+    //     z-index: -1;
+    // }
 
     .header-top {
         overflow: hidden;
-        width: $contentWidth;
-        @include push--auto;
+        //width: $contentWidth;
+        //@include push--auto;
         top: 0;
+        width: 100%;
         z-index: 500;
         background: #dedede;
         padding-right: 10px;
 
+        .header-top-container {
+            width: 1190px;
+            @include push--auto;
+            overflow: hidden;
+        }
+
         &.fixed {
             position: fixed;
             width: 100%;
-            box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
+
+            //box-shadow: 2px 2px 4px rgba($color: #000000, $alpha: 0.3);
+
         }
 
         &--left {
@@ -304,15 +313,17 @@ header {
         background-image: url('../img/sitemap_bg.png');
         background-repeat: no-repeat;
         background-position: 35px center;
-        display: none;
+        display: block;
+
 
         .sitemap-container {
-            padding: 40px 0;
+            padding: 40px 0 0 0;
             font-size: 14px;
             color: #999;
 
             display: flex;
             flex-wrap: wrap;
+            position: relative;
 
             dl {
                 width: 20%;
@@ -341,6 +352,13 @@ header {
                         margin-top: 10px;
                     }
                 }
+
+                &.last {
+                    position: absolute;
+                    right: 0;
+                    bottom: 60px;
+                    //padding-right: 0;
+                }
             }
         }
     }
@@ -362,7 +380,7 @@ header {
                 display: inline-block;
 
                 a {
-                    font-size: 15px;
+                    font-size: 14px;
                     //display: block;
                     color: #777;
                     letter-spacing: -0.6px;
@@ -377,7 +395,7 @@ header {
                     background: #777;
                     display: inline-block;
                     vertical-align: middle;
-                    margin: 0 7px;
+                    margin: 0 5px;
                 }
 
                 &:first-child::before {
