@@ -960,68 +960,258 @@ h3 {
 
 .form-container {
 
+    width: 1000px;
+    margin: 50px auto;
+
+    form {
+        border-top: 2px solid #222;
+    }
+
+
+    //Hide Arrows From Input Number - chrome, safari, edge, opera
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .item {
+        position: relative;
+
+        &.item-inline {
+            display: inline-block;
+        }
+
+        &.item-dash {
+            &::before {
+                content: '-';
+                position: absolute;
+                top: 15%;
+                left: -12px;
+                font-size: 15px;
+            }
+        }
+
+        &.item-phone {
+            width: 15%;
+
+        }
+
+        #user_name {
+            width: 50%;
+        }
+
+
+
+        &>label,
+        &>input {
+            font-size: 14px;
+        }
+
+        &>label {
+            position: absolute;
+            left: 10px;
+            top: 8px;
+            text-align: left;
+            color: #333;
+            transition: all .5s ease-out;
+            box-sizing: border-box;
+            display: inline-block;
+            z-index: -1;
+        }
+
+        &>input {
+            position: relative;
+            outline: 0;
+            transition: all .5s ease-out;
+
+
+            &:focus {
+                //box-shadow: 0 1px 0 0 #333;
+            }
+        }
+
+
+        &.focused {
+            &>label {
+                transform: translateY(-120%);
+                left: 0;
+                font-size: 12px;
+            }
+
+            &>input {
+                line-height: 30px;
+                height: 30px;
+                margin-top: 8px;
+            }
+        }
+    }
+
+
+
+
+    .row {
+        border-bottom: 1px solid #ddd;
+
+
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        [class*="col-"] {
+            padding: 10px;
+            min-height: 75px;
+            box-sizing: border-box;
+
+        }
+
+        .col-th {
+            display: table;
+            background: #f7f7f7;
+            height: 100%;
+
+            span {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            label {
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+
+        .col-td {
+            border-left: 1px solid #ddd;
+            padding-top: 20px;
+
+        }
+    }
+
     input[type=text],
+    input[type=number],
     select,
     textarea {
-        width: 100%;
-        padding: 12px;
+        width: 90%;
         border: 1px solid #ccc;
+        line-height: 35px;
+        min-height: 35px;
         border-radius: 4px;
         resize: vertical;
+        background-color: transparent;
+        padding-left: 15px;
+        box-sizing: border-box;
     }
 
-    label {
-        padding: 12px 12px 12px 0;
-        display: inline-block;
-    }
 
-    input[type=submit] {
-        background-color: #4CAF50;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        float: right;
-    }
 
-    input[type=submit]:hover {
-        background-color: #45a049;
-    }
 
-    .container {
-        border-radius: 5px;
-        background-color: #f2f2f2;
-        padding: 20px;
-    }
+
 
     .col-25 {
         float: left;
         width: 25%;
-        margin-top: 6px;
     }
 
     .col-75 {
         float: left;
         width: 75%;
-        margin-top: 6px;
     }
 
-    /* Clear floats after the columns */
-    .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+
 
     /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 1000px) {
+
+        width: auto;
 
         .col-25,
         .col-75,
         input[type=submit] {
             width: 100%;
             margin-top: 0;
+        }
+    }
+}
+
+
+
+/* PLACEHOLDER */
+
+.label-input {
+    position: relative;
+
+    &.item-inline {
+        display: inline-block;
+    }
+
+    &.item-dash {
+        &::before {
+            content: '-';
+            position: absolute;
+            top: 15%;
+            left: -12px;
+            font-size: 15px;
+        }
+    }
+
+    &.item-phone {
+        width: 15%;
+
+    }
+
+    #user_name {
+        width: 50%;
+    }
+
+
+
+    &>label,
+    &>input {
+        font-size: 14px;
+    }
+
+    &>label {
+        position: absolute;
+        left: 10px;
+        top: 8px;
+        text-align: left;
+        color: #333;
+        transition: all .5s ease-out;
+        box-sizing: border-box;
+        display: inline-block;
+        z-index: -1;
+    }
+
+    &>input {
+        position: relative;
+        outline: 0;
+        transition: all .5s ease-out;
+
+
+        &:focus {
+            //box-shadow: 0 1px 0 0 #333;
+        }
+    }
+
+
+    &.focused {
+        &>label {
+            transform: translateY(-120%);
+            left: 0;
+            font-size: 12px;
+        }
+
+        &>input {
+            line-height: 30px;
+            height: 30px;
+            margin-top: 8px;
         }
     }
 }

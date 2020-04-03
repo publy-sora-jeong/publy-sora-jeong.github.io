@@ -2978,55 +2978,90 @@ h3:nth-of-type(1) {
 }
 
 .form-container {
-  /* Clear floats after the columns */
+  width: 1000px;
+  margin: 50px auto;
   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 }
 
-.form-container input[type=text],
-.form-container select,
-.form-container textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
+.form-container form {
+  border-top: 2px solid #222;
 }
 
-.form-container label {
-  padding: 12px 12px 12px 0;
+.form-container input::-webkit-outer-spin-button,
+.form-container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.form-container input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.form-container .item {
+  position: relative;
+}
+
+.form-container .item.item-inline {
   display: inline-block;
 }
 
-.form-container input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
+.form-container .item.item-dash::before {
+  content: '-';
+  position: absolute;
+  top: 15%;
+  left: -12px;
+  font-size: 15px;
 }
 
-.form-container input[type=submit]:hover {
-  background-color: #45a049;
+.form-container .item.item-phone {
+  width: 15%;
 }
 
-.form-container .container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
+.form-container .item #user_name {
+  width: 50%;
 }
 
-.form-container .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+.form-container .item > label,
+.form-container .item > input {
+  font-size: 14px;
 }
 
-.form-container .col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
+.form-container .item > label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  text-align: left;
+  color: #333;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  z-index: -1;
+}
+
+.form-container .item > input {
+  position: relative;
+  outline: 0;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.form-container .item.focused > label {
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  left: 0;
+  font-size: 12px;
+}
+
+.form-container .item.focused > input {
+  line-height: 30px;
+  height: 30px;
+  margin-top: 8px;
+}
+
+.form-container .row {
+  border-bottom: 1px solid #ddd;
 }
 
 .form-container .row:after {
@@ -3035,12 +3070,133 @@ h3:nth-of-type(1) {
   clear: both;
 }
 
-@media screen and (max-width: 600px) {
+.form-container .row [class*="col-"] {
+  padding: 10px;
+  min-height: 75px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-container .row .col-th {
+  display: table;
+  background: #f7f7f7;
+  height: 100%;
+}
+
+.form-container .row .col-th span {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.form-container .row .col-th label {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.form-container .row .col-td {
+  border-left: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.form-container input[type=text],
+.form-container input[type=number],
+.form-container select,
+.form-container textarea {
+  width: 90%;
+  border: 1px solid #ccc;
+  line-height: 35px;
+  min-height: 35px;
+  border-radius: 4px;
+  resize: vertical;
+  background-color: transparent;
+  padding-left: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.form-container .col-25 {
+  float: left;
+  width: 25%;
+}
+
+.form-container .col-75 {
+  float: left;
+  width: 75%;
+}
+
+@media screen and (max-width: 1000px) {
+  .form-container {
+    width: auto;
+  }
   .form-container .col-25,
   .form-container .col-75,
   .form-container input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
+}
+
+/* PLACEHOLDER */
+.label-input {
+  position: relative;
+}
+
+.label-input.item-inline {
+  display: inline-block;
+}
+
+.label-input.item-dash::before {
+  content: '-';
+  position: absolute;
+  top: 15%;
+  left: -12px;
+  font-size: 15px;
+}
+
+.label-input.item-phone {
+  width: 15%;
+}
+
+.label-input #user_name {
+  width: 50%;
+}
+
+.label-input > label,
+.label-input > input {
+  font-size: 14px;
+}
+
+.label-input > label {
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  text-align: left;
+  color: #333;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: inline-block;
+  z-index: -1;
+}
+
+.label-input > input {
+  position: relative;
+  outline: 0;
+  -webkit-transition: all .5s ease-out;
+  transition: all .5s ease-out;
+}
+
+.label-input.focused > label {
+  -webkit-transform: translateY(-120%);
+          transform: translateY(-120%);
+  left: 0;
+  font-size: 12px;
+}
+
+.label-input.focused > input {
+  line-height: 30px;
+  height: 30px;
+  margin-top: 8px;
 }
 /*# sourceMappingURL=style.css.map */

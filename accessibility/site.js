@@ -67,24 +67,28 @@ $(function () {
   });
 
   //input placeholder / label animation
-  $("input").focus(function () {
+  $(".ph-input").focus(function () {
     $(this)
       .parents(".place-ani")
       .addClass("focused");
+    $(this)
+      .parents(".item")
+      .addClass("focused");
   });
 
-  $("input").blur(function () {
+  $(".ph-input").blur(function () {
     var inputValue = $(this).val();
     if (inputValue == "") {
       $(this).removeClass("filled");
       $(this)
         .parents(".place-ani")
         .removeClass("focused");
+      $(this)
+        .parents(".item")
+        .removeClass("focused");
     } else {
       $(this).addClass("filled");
     }
-
-
   });
 
 

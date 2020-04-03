@@ -523,45 +523,33 @@
     <div class="form-container">
         <form action="/action_page.php">
             <div class="row">
-                <div class="col-25">
-                    <label for="fname">First Name</label>
+                <div class="col-th col-25">
+                    <span>Name</span>
                 </div>
-                <div class="col-75">
-                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="lname">Last Name</label>
-                </div>
-                <div class="col-75">
-                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <div class="col-td col-75">
+                    <div class="item">
+                        <label class="ph-label" for="user_name2">이름을 입력해주세요.</label>
+                        <input id="user_name" class="ph-input" type="text" maxlength="100" name="user_name2" />
+                    </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-25">
-                    <label for="country">Country</label>
+                <div class="col-th col-25">
+                    <span>Phone</span>
                 </div>
-                <div class="col-75">
-                    <select id="country" name="country">
-                        <option value="australia">Australia</option>
-                        <option value="canada">Canada</option>
-                        <option value="usa">USA</option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-25">
-                    <label for="subject">Subject</label>
-                </div>
-                <div class="col-75">
-                    <textarea id="subject" name="subject" placeholder="Write something.."
-                        style="height:200px"></textarea>
+                <div class="col-td col-75">
+                    <div class="item item-inline item-phone">
+                        <input title="핸드폰번호1" class=" " type="number" maxlength="5" name="user_phone1" />
+                    </div>
+                    <div class="item item-inline item-phone item-dash">
+                        <input title="핸드폰번호2" class=" " type="number" maxlength="5" name="user_phone1" />
+                    </div>
+                    <div class="item item-inline item-phone item-dash">
+                        <input title="핸드폰번호3" class=" " type="number" maxlength="5" name="user_phone1" />
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <input type="submit" value="Submit">
-            </div>
+
         </form>
 
     </div>
