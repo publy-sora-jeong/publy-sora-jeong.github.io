@@ -2659,6 +2659,7 @@ header .header-sitemap {
   background-repeat: no-repeat;
   background-position: 35px center;
   display: block;
+  display: none;
 }
 
 header .header-sitemap .sitemap-container {
@@ -2705,7 +2706,7 @@ header .header-sitemap .sitemap-container dl dd:nth-of-type(1) {
 header .header-sitemap .sitemap-container dl.last {
   position: absolute;
   right: 0;
-  bottom: 60px;
+  bottom: 0;
 }
 
 header .header--nav .header-container {
@@ -3900,7 +3901,7 @@ footer .footer-container .logo {
 }
 
 .sub-visual-education {
-  background-image: url("../img/sub_visual_facility.png");
+  background-image: url("../img/sub_visual_education.png");
 }
 
 .sub-visual-login {

@@ -1,9 +1,14 @@
-## project_2020
+## \_2020
 
+- 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
 - THEME01(디자인&퍼블리싱) - WINTER FOREST [go](https://publy-sora-jeong.github.io/theme01/)
 - THEME02(디자인&퍼블리싱) - NYC ATTRACTIONS [go](https://publy-sora-jeong.github.io/theme02/)
+- 바이오파마 신규 홈페이지 퍼블리싱 [go](http://biopharmacorp.com/html/index.php)
+- DID기술융합공작소(대전전문랩) 리뉴얼
+- 주식회사 캔 브랜드홈페이지 퍼블리싱
+- 새로운교육(K engeerning school) 국문&영문 홈페이지 퍼블리싱
 
-## project_2019
+## \_2019
 
 - 누리놀이대표홈페이지&모바일웹 유지보수 및 이벤트 랜딩페이지 퍼블리싱 [go](http://www.nurinori.com/)
 - 누리놀이위드 대표홈페이지 퍼블리싱 및 유지보수 [go](http://nurinoriwith.com/)
@@ -26,7 +31,7 @@
 - THEME06(디자인&퍼블리싱) - CONSTRUCTION [go](https://publy-sora-jeong.github.io/theme06/)
 - LOGIN THEMES(디자인&퍼블리싱) - LOGIN [go](https://publy-sora-jeong.github.io/theme_login/)
 
-## project_2018
+## \_2018
 
 - 경기교육청 학교홈페이지 유지보수관리 (여주교육지원청, 화성오산, 구리남양주, 시흥, 부천, 이천)
 - 기록원 특성화고 반응형템플릿형 홈페이지 퍼블리싱
@@ -55,7 +60,7 @@
 - 가온건설
 - 애니테이프 [go](http://www.anytape.kr/ko/main.html)
 
-## project_2017
+## \_2017
 
 - 2017 경기교육지원청(구리남양주, 시흥, 부천) 웹호스팅 학교 홈페이지 퍼블리싱
 - 2017 수원교육지원청 반응형 템플릿 퍼블리싱
@@ -64,13 +69,13 @@
 - 예닮글로벌중고등학교 [go](http://yga.or.kr/)
 - 양서고등학교 [go](http://yangseo.hs.kr/)
 
-## project_2016
+## \_2016
 
 - 2016 상반기 고양교육지원청 웹호스팅 홈페이지 구축
 - 청심국제중고등학교 [go](http://www.csia.hs.kr/)
 - 그라시아스 음악학교 (서비스종료)
 
-## project_2015
+## \_2015
 
 - 인천하늘고등학교 대표홈페이지 컨텐츠 퍼블리싱 & 교수학습센터 메인 퍼블리싱 [go](http://haneul.hs.kr/?main)
 - 여주방과후지원센터 홈페이지 (만료)
@@ -78,12 +83,12 @@
 - 영훈국제중학교 [go](http://younghoon.ms.kr/)
 - 416단원장학재단 컨텐츠 디자인 및 퍼블리싱 [go](http://416danwon.or.kr/)
 
-## project_2014
+## \_2014
 
 - 위더스OMC 폐쇄몰 홈페이지 디자인 및 퍼블리싱
 - 양지고등학교 홈페이지 디자인 [go](http://yj.hs.kr/)
 
-## project_2013
+## \_2013
 
 - 야마하평촌 앙상블 페스티벌 리플렛, 티켓 디자인
 - 코돈대표홈페이지&오코돈몰 홈페이지 운영&디자인

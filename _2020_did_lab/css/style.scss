@@ -314,6 +314,7 @@ header {
         background-repeat: no-repeat;
         background-position: 35px center;
         display: block;
+        display: none;
 
 
         .sitemap-container {
@@ -356,7 +357,7 @@ header {
                 &.last {
                     position: absolute;
                     right: 0;
-                    bottom: 60px;
+                    bottom: 0;
                     //padding-right: 0;
                 }
             }
@@ -1542,7 +1543,7 @@ footer {
     }
 
     &-education {
-        background-image: url('../img/sub_visual_facility.png');
+        background-image: url('../img/sub_visual_education.png');
     }
 
     &-login {
@@ -1915,8 +1916,6 @@ footer {
                     padding: 10px 4px;
                     text-align: center;
                     border-bottom: 1px solid #dfdfdf;
-
-                    li {}
                 }
             }
         }
