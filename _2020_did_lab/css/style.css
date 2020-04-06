@@ -5647,6 +5647,23 @@ footer .footer-container .logo {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .new::after {
+    display: none;
+  }
+  .tb-policy table,
+  .tb-type01 table {
+    font-size: 12px;
+  }
+  .tb-type01 table th,
+  .tb-type01 table td {
+    padding: 8px 5px;
+  }
+  .bbs-gallery .box .desc .title {
+    font-size: 13px;
+  }
+}
+
 .yearplan {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10537,14 +10554,22 @@ input.input-times {
   }
   header .header-top--left {
     float: none;
-    height: 45px;
+    height: 35px;
     overflow: hidden;
   }
   header .header-top--left li {
     width: 20%;
     text-align: center;
-    height: 45px;
     overflow: hidden;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+  }
+  header .header-top--left li a {
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+    font-size: 12px;
   }
   header .header-top--right {
     float: none;
@@ -10834,6 +10859,14 @@ input.input-times {
 }
 
 @media screen and (max-width: 414px) {
+  header .header--nav nav li::before {
+    display: none;
+  }
+  header .header--nav nav li a {
+    font-size: 12px;
+    letter-spacing: -1px;
+    margin: 0 1px;
+  }
   header .header-top--right .signup li a {
     line-height: 1.5;
   }
@@ -10844,7 +10877,11 @@ input.input-times {
     padding-top: 0;
   }
   header .header-top--right .signup {
+    margin-top: 0;
     margin-bottom: 0;
+  }
+  header .header-top--right .sns {
+    display: none;
   }
   .section-sub .sub-nav ul {
     -ms-flex-wrap: wrap;

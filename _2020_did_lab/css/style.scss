@@ -2166,9 +2166,11 @@ footer {
         .header-top--left {
             float: left;
 
-            li a {
-                font-size: 13px;
-                padding: 0 6px;
+            li {
+                a {
+                    font-size: 13px;
+                    padding: 0 6px;
+                }
             }
         }
 
@@ -2404,14 +2406,18 @@ footer {
 
         .header-top--left {
             float: none;
-            height: 45px;
+            height: 35px;
             overflow: hidden;
 
             li {
                 width: 20%;
                 text-align: center;
-                height: 45px;
                 overflow: hidden;
+                height:35px; line-height:35px; overflow: hidden;
+                a{
+                    height:35px; line-height:35px; overflow: hidden;
+                    font-size:12px;
+                }
             }
         }
 
@@ -2419,7 +2425,7 @@ footer {
             float: none;
             text-align: right;
             padding-right: 10px;
-
+            
             .signup,
             .sns {
                 display: inline-block;
@@ -2835,6 +2841,16 @@ footer {
 
 @media screen and (max-width:414px) {
     header {
+ .header--nav nav li {
+    &::before{
+        display: none;
+    }
+    a {
+     font-size:12px; 
+     letter-spacing: -1px; 
+     margin: 0 1px;
+ }}
+
         .header-top--right {
 
             .signup li a {
@@ -2849,9 +2865,12 @@ footer {
                 margin: 10px 0;
                 padding-top: 0;
             }
-
             .signup {
+                margin-top: 0;
                 margin-bottom: 0;
+            }
+            .sns {
+                display: none;
             }
         }
     }

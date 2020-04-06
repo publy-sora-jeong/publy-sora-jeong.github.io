@@ -1649,4 +1649,27 @@
       }
 }
 
+@media screen and (max-width: 480px) {
+      .new::after {
+            display: none;
+      }
+
+      .tb-policy table,
+      .tb-type01 table {
+            font-size: 12px;
+
+      }
+
+      .tb-type01 table th,
+      .tb-type01 table td {
+            padding: 8px 5px;
+      }
+
+      .bbs-gallery .box .desc .title {
+            font-size: 13px;
+      }
+
+
+}
+
 @media screen and (max-width: 360px) {}
