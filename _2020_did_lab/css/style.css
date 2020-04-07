@@ -2812,15 +2812,13 @@ header .m-gnb-open {
   display: none;
   position: fixed;
   z-index: 1600;
-  top: 17px;
+  top: 50px;
   right: 15px;
   width: 25px;
-  height: 25px;
+  height: 18px;
   text-align: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
-  background: #0c4e9b;
-  padding: 10px;
 }
 
 header .m-gnb-open span {
@@ -2828,7 +2826,7 @@ header .m-gnb-open span {
   position: absolute;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #0c4e9b;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   border-radius: 2px;
@@ -2849,7 +2847,7 @@ header .m-gnb-open span.line3 {
 }
 
 header .m-gnb-open.on span {
-  background-color: #333;
+  background-color: #fff;
 }
 
 header .m-gnb-open.on span.line1 {
@@ -2914,7 +2912,7 @@ header #m-gnb .m-nav-item .m-sub-nav a {
 }
 
 header #m-gnb .m-nav-item .m-sub-nav a:hover {
-  color: #159db4 !important;
+  color: #a6c65a !important;
 }
 
 .main-visual {
@@ -5764,6 +5762,12 @@ footer .footer-container .logo {
   .new::after {
     display: none;
   }
+  .flag-notice,
+  .flag-news,
+  .flag-report {
+    width: auto;
+    font-size: 11px;
+  }
   .tb-policy table,
   .tb-type01 table {
     font-size: 12px;
@@ -5773,6 +5777,19 @@ footer .footer-container .logo {
     padding: 8px 5px;
   }
   .bbs-gallery .box .desc .title {
+    font-size: 13px;
+  }
+  .bbs-pagination a.page-first, .bbs-pagination a.page-last {
+    display: none;
+  }
+  .bbs-pagination a.page-num {
+    border: none;
+    margin: 0;
+  }
+  .bbs-top .total-count {
+    font-size: 13px;
+  }
+  .bbs-top .view-option #select-list {
     font-size: 13px;
   }
 }
@@ -10489,12 +10506,6 @@ input.input-times {
 }
 
 @media screen and (max-width: 1024px) {
-  header .m-gnb-open {
-    display: block;
-  }
-  header #m-gnb {
-    display: block;
-  }
   header .header-top--left {
     float: left;
   }
@@ -10716,8 +10727,25 @@ input.input-times {
 }
 
 @media screen and (max-width: 768px) {
+  .btn-go-top {
+    bottom: 0;
+    right: 0;
+  }
   .btn-fix-nav {
     display: none;
+  }
+  header .header-top--right {
+    text-align: left;
+    padding: 0 10px;
+  }
+  header .header-top--right .sns {
+    display: none;
+  }
+  header .m-gnb-open {
+    display: block;
+  }
+  header #m-gnb {
+    display: block;
   }
   .main-visual {
     height: 300px;
@@ -10884,6 +10912,27 @@ input.input-times {
   .apply-view .text-complete .complete {
     font-size: 20px;
   }
+  .apply-view .apply-summary {
+    margin-top: 10px;
+  }
+  .apply-view .apply-summary .desc h4 {
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  .apply-view .apply-summary .desc .capacity-cost {
+    border: none;
+    background: #f7f7f7;
+    padding: 10px;
+    font-size: 14px;
+  }
+  .apply-view .apply-summary .desc .ca-number,
+  .apply-view .apply-summary .desc .cost strong {
+    font-size: 15px;
+  }
+  .cancel-info {
+    font-size: 13px;
+    padding: 10px;
+  }
   .sub-visual .sub-visual-typo .sub-typo01 {
     font-size: 24px;
   }
@@ -10909,6 +10958,10 @@ input.input-times {
   }
   header .header--nav nav li a {
     font-size: 13px;
+  }
+  header .header--nav .logo {
+    width: 179px;
+    height: 30px;
   }
   .main-visual .main-visual-text .t1 {
     font-size: 16px;
@@ -10959,6 +11012,9 @@ input.input-times {
   .sub-visual .sub-visual-typo .sub-typo01 {
     font-size: 18px;
   }
+  .apply-view {
+    padding: 15px;
+  }
   .apply-view .apply-summary .capacity-cost {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -10977,6 +11033,12 @@ input.input-times {
   footer .footer-container .logo {
     width: 231px;
     height: 39px;
+  }
+  .tab-top li a {
+    padding: 0 20px;
+    font-size: 13px;
+    height: 35px;
+    line-height: 35px;
   }
 }
 
@@ -10999,10 +11061,16 @@ input.input-times {
     padding-top: 0;
   }
   header .header-top--right .signup {
-    margin-top: 0;
-    margin-bottom: 0;
+    height: 45px;
+    margin: 0;
+  }
+  header .header-top--right .signup li {
+    line-height: 45px;
   }
   header .header-top--right .sns {
+    display: none;
+  }
+  header .header--nav .header-container nav {
     display: none;
   }
   .section-sub .sub-nav ul {
@@ -11012,6 +11080,10 @@ input.input-times {
   .section-sub .sub-nav ul li a {
     line-height: 30px;
     height: 30px;
+    font-size: 12px;
+  }
+  .btns .btn-heart {
+    width: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -1654,6 +1654,13 @@
             display: none;
       }
 
+      .flag-notice,
+      .flag-news,
+      .flag-report {
+            width: auto;
+            font-size: 11px;
+      }
+
       .tb-policy table,
       .tb-type01 table {
             font-size: 12px;
@@ -1669,6 +1676,31 @@
             font-size: 13px;
       }
 
+      .bbs-pagination a {
+
+            &.page-first,
+            &.page-last {
+                  display: none;
+            }
+
+            &.page-num {
+                  border: none;
+                  //width: 17px;
+                  margin: 0;
+            }
+      }
+
+      .bbs-top {
+            .total-count {
+                  font-size: 13px;
+            }
+
+            .view-option {
+                  #select-list {
+                        font-size: 13px;
+                  }
+            }
+      }
 
 }
 
