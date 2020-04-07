@@ -242,6 +242,68 @@ $(document).ready(function () {
     $('.header-top').addClass('fixed');
   }
 
+  //MOBILE GNB
+  $("#m-gnb").removeClass("on");
+  $(".m-gnb-open").toggle(
+    function () {
+      $(this).addClass("on");
+      $("#m-gnb-bg").addClass("on");
+      $("#m-gnb")
+        .stop()
+        .delay(10)
+        .animate({
+            right: 0
+          },
+          300
+        )
+        .addClass("on");
+    },
+    function () {
+      $(this).removeClass("on");
+      $("#m-gnb-bg").removeClass("on");
+      $("#m-gnb")
+        .stop()
+        .delay(100)
+        .animate({
+            right: -300
+          },
+          300
+        )
+        .removeClass("on");
+    }
+  );
+
+
+  //모바일네비 > Slide up & down
+  $("#m-gnb > ul > li  > a ").on("click", function (e) {
+    e.preventDefault();
+    if ($("#m-gnb").hasClass("on")) {
+      $("#m-gnb > ul li").removeClass("selected");
+      $("#m-gnb .m-sub-nav")
+        .stop()
+        .slideUp(500);
+
+      $(this)
+        .parent()
+        .addClass("selected");
+      $(this)
+        .parent()
+        .find(".m-sub-nav")
+        .stop()
+        .slideDown(500);
+    } else {
+      $(this)
+        .parent()
+        .removeClass("selected");
+      $(this)
+        .parent()
+        .find(".m-sub-nav")
+        .stop()
+        .slideUp(500);
+    }
+  });
+
+
   $(window).on('scroll', function () {
     $('.header-sitemap').hide();
 

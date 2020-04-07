@@ -24,18 +24,6 @@ body {
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 header {
-
-    // &::before {
-    //     @include pseudo;
-    //     width: 100%;
-    //     height: 45px;
-    //     background: #dedede;
-    //     left: 0;
-    //     top: 0;
-    //     right: 0;
-    //     z-index: -1;
-    // }
-
     .header-top {
         overflow: hidden;
         //width: $contentWidth;
@@ -462,6 +450,119 @@ header {
                 float: left;
                 margin-left: 5px;
                 display: none;
+            }
+        }
+    }
+
+    //MOBILE NAV
+    #m-gnb {
+        display: none;
+    }
+
+    //MOBILE NAV OPEN ICON 
+    .m-gnb-open {
+        display: none;
+        //display: block;
+        position: fixed;
+        z-index: 1600;
+        top: 17px;
+        right: 15px;
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        transition: all 0.3s ease;
+        background: #0c4e9b;
+        padding: 10px;
+
+        span {
+            display: block;
+            position: absolute;
+            //top: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            transition: all 0.7s ease;
+            border-radius: 2px;
+
+            &.line1 {
+                top: 0;
+            }
+
+            &.line2 {
+                top: 8px;
+                transition-delay: 0.2s;
+            }
+
+            &.line3 {
+                top: 16px;
+            }
+        }
+
+        &.on span {
+            background-color: #333;
+
+            &.line1 {
+                transform: rotate(-45deg);
+                top: 14px;
+            }
+
+            &.line2 {
+                width: 0;
+            }
+
+            &.line3 {
+                transform: rotate(45deg);
+                top: 14px;
+            }
+        }
+    }
+
+
+    //Mobile Navigation
+    #m-gnb {
+        position: fixed;
+        z-index: 151;
+        top: 0;
+        right: -300px;
+        padding: 107px 0 0 0;
+        width: 300px;
+        height: 100%;
+        background: #0c4e9b;
+        box-sizing: border-box;
+        transition: right 0.3s ease;
+
+        .m-nav-item {
+            a {
+                display: block;
+                padding: 8px 0;
+                text-align: left;
+                color: #fff !important;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                transition: all 0.4s ease;
+                padding-left: 20px;
+            }
+
+            &:first-child a {
+                border-top: 1px solid rgba(255, 255, 255, 0.5);
+            }
+
+            .m-sub-nav {
+                display: none;
+                background-color: #22272c;
+                padding: 5px 0;
+
+                a {
+                    font-size: 14px;
+                    border: none;
+                    padding: 5px 0 5px 20px;
+                    color: #fff;
+                    border-bottom: none;
+
+                    &:hover {
+                        color: #159db4 !important;
+                    }
+                }
             }
         }
     }
@@ -2163,6 +2264,15 @@ footer {
 
     header {
 
+        .m-gnb-open {
+
+            display: block;
+        }
+
+        #m-gnb {
+            display: block;
+        }
+
         .header-top--left {
             float: left;
 
@@ -2413,10 +2523,15 @@ footer {
                 width: 20%;
                 text-align: center;
                 overflow: hidden;
-                height:35px; line-height:35px; overflow: hidden;
-                a{
-                    height:35px; line-height:35px; overflow: hidden;
-                    font-size:12px;
+                height: 35px;
+                line-height: 35px;
+                overflow: hidden;
+
+                a {
+                    height: 35px;
+                    line-height: 35px;
+                    overflow: hidden;
+                    font-size: 12px;
                 }
             }
         }
@@ -2425,7 +2540,7 @@ footer {
             float: none;
             text-align: right;
             padding-right: 10px;
-            
+
             .signup,
             .sns {
                 display: inline-block;
@@ -2456,7 +2571,9 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
+    .btn-fix-nav {
+        display: none;
+    }
 
     .main-visual {
         height: 300px;
@@ -2841,15 +2958,17 @@ footer {
 
 @media screen and (max-width:414px) {
     header {
- .header--nav nav li {
-    &::before{
-        display: none;
-    }
-    a {
-     font-size:12px; 
-     letter-spacing: -1px; 
-     margin: 0 1px;
- }}
+        .header--nav nav li {
+            &::before {
+                display: none;
+            }
+
+            a {
+                font-size: 12px;
+                letter-spacing: -1px;
+                margin: 0 1px;
+            }
+        }
 
         .header-top--right {
 
@@ -2865,10 +2984,12 @@ footer {
                 margin: 10px 0;
                 padding-top: 0;
             }
+
             .signup {
                 margin-top: 0;
                 margin-bottom: 0;
             }
+
             .sns {
                 display: none;
             }
