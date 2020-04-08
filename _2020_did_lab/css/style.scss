@@ -519,7 +519,7 @@ header {
     //Mobile Navigation
     #m-gnb {
         position: fixed;
-        z-index: 151;
+        z-index: 1500;
         top: 0;
         right: -300px;
         padding: 107px 0 0 0;
@@ -535,14 +535,14 @@ header {
                 padding: 8px 0;
                 text-align: left;
                 color: #fff !important;
-                font-size: 16px;
-                border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+                font-size: 15px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
                 transition: all 0.4s ease;
                 padding-left: 20px;
             }
 
             &:first-child a {
-                border-top: 1px solid rgba(255, 255, 255, 0.5);
+                border-top: 1px solid rgba(255, 255, 255, 0.4);
             }
 
             .m-sub-nav {
@@ -2570,6 +2570,14 @@ footer {
 
     .btn-fix-nav {
         display: none;
+    }
+
+    .fixed-nav {
+        left: -180px !important;
+
+        &.on {
+            left: -180px !important;
+        }
     }
 
     header {

@@ -2868,7 +2868,7 @@ header .m-gnb-open.on span.line3 {
 
 header #m-gnb {
   position: fixed;
-  z-index: 151;
+  z-index: 1500;
   top: 0;
   right: -300px;
   padding: 107px 0 0 0;
@@ -2886,15 +2886,15 @@ header #m-gnb .m-nav-item a {
   padding: 8px 0;
   text-align: left;
   color: #fff !important;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
   padding-left: 20px;
 }
 
 header #m-gnb .m-nav-item:first-child a {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 header #m-gnb .m-nav-item .m-sub-nav {
@@ -8270,6 +8270,9 @@ input.input-times {
     line-height: 40px;
     font-size: 14px;
   }
+  .greetings {
+    font-size: 14px;
+  }
   .project-history .project-title h3 {
     padding: 10px;
     font-size: 16px;
@@ -10733,6 +10736,12 @@ input.input-times {
   }
   .btn-fix-nav {
     display: none;
+  }
+  .fixed-nav {
+    left: -180px !important;
+  }
+  .fixed-nav.on {
+    left: -180px !important;
   }
   header .header-top--right {
     text-align: left;
