@@ -2433,28 +2433,7 @@ footer {
         font-size: 15px;
     }
 
-    .apply-view .apply-summary {
-        .thumb {
-            display: none;
-        }
 
-        .desc {
-            width: 100%;
-            padding-left: 0;
-
-            h4 {
-                font-size: 20px;
-            }
-
-            ul {
-                margin-top: 10px;
-            }
-
-            .capacity-cost {
-                margin-top: 10px;
-            }
-        }
-    }
 
 
 }
@@ -2826,45 +2805,13 @@ footer {
             height: 40px;
             font-size: 14px;
         }
-    }
 
-    .apply-view {
-        .text-complete {
-            font-size: 16px;
-
-            .complete {
-                font-size: 20px;
-            }
-        }
-
-        .apply-summary {
-            margin-top: 10px;
-
-            .desc {
-                h4 {
-                    font-size: 16px;
-                    padding-bottom: 10px;
-                }
-
-                .capacity-cost {
-                    border: none;
-                    background: #f7f7f7;
-                    padding: 10px;
-                    font-size: 14px;
-                }
-
-                .ca-number,
-                .cost strong {
-                    font-size: 15px;
-                }
-            }
+        .sub-nav-depth2 {
+            padding-bottom: 20px;
         }
     }
 
-    .cancel-info {
-        font-size: 13px;
-        padding: 10px;
-    }
+
 
     .sub-visual {
         .sub-visual-typo {
@@ -2975,6 +2922,10 @@ footer {
     .section-sub {
         .sub-nav li>a {
             font-size: 13px;
+
+            &::after {
+                display: none;
+            }
         }
 
         .sub-nav-tab li a {
@@ -2994,27 +2945,7 @@ footer {
         }
     }
 
-    .apply-view {
-        padding: 15px;
-    }
 
-    .apply-view .apply-summary .capacity-cost {
-        flex-wrap: wrap;
-
-        .capacity {
-            width: 100%;
-        }
-
-        .cost {
-            width: 100%;
-            padding-left: 0;
-            margin-top: 10px;
-
-            &::before {
-                display: none;
-            }
-        }
-    }
 
     footer .footer-container .logo {
         width: 231px;

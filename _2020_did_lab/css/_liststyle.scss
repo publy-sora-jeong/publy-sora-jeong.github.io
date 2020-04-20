@@ -41,7 +41,7 @@
             border-radius: 50%;
             position: absolute;
             left: 0;
-            top: 3px;
+            top: 1px;
       }
 }
 
@@ -395,6 +395,11 @@
             font-size: 18px;
       }
 
+      .li-dot>li {
+            font-size: 14px;
+            margin-top: 4px;
+      }
+
 }
 
 
@@ -445,6 +450,14 @@
 
       .bul-b-circle {
             font-size: 16px;
+            padding-left: 20px;
+
+            &::before {
+                  width: 16px;
+                  height: 16px;
+                  top: 3px;
+
+            }
       }
 
       .project-history .user-edit {
@@ -457,4 +470,22 @@
 
       }
 
+      .li-dot>li {
+            font-size: 13px;
+      }
+
+      .pro-item {
+            flex-wrap: wrap;
+            padding: 10px 15px;
+
+            .pro-pics {
+                  display: block;
+                  margin-top: 10px;
+
+                  &>p {
+                        display: inline-block;
+                        max-width: 49%;
+                  }
+            }
+      }
 }

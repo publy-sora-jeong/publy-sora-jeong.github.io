@@ -265,6 +265,12 @@
 }
 
 @media screen and (max-width: 480px) {
+
+    .li-basic li {
+        font-size: 13px;
+        margin-top: 2px;
+    }
+
     .login-wrap {
 
         .login-form .input-box {
@@ -286,5 +292,28 @@
         .logo-title {
             font-size: 16px;
         }
+    }
+
+    .radio-container,
+    .check-container {
+        font-size: 13px;
+    }
+
+    a.link-article {
+        font-size: 13px;
+    }
+
+    .tb-login table {
+
+        &,
+        th,
+        td {
+            font-size: 13px;
+        }
+
+    }
+
+    .td-link {
+        font-size: 13px;
     }
 }

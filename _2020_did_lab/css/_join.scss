@@ -918,6 +918,8 @@
 }
 
 @media screen and (max-width:768px) {
+
+
     .select-certify-type {
         padding: 30px;
 
@@ -955,6 +957,10 @@
 
     .select-certify-full {
         padding: 30px;
+
+        .check-entire {
+            padding: 0;
+        }
 
         .nomatch {
             bottom: 0;
@@ -1112,11 +1118,23 @@
         font-size: 13px;
     }
 
+    .select-certify-full {
+        .check-entire h5 {
+            font-size: 16px;
+        }
+
+        .note {
+            font-size: 14px;
+        }
+    }
+
+
 }
 
 @media screen and (max-width: 480px) {
+
     .login-title {
-        font-size: 26px;
+        font-size: 22px;
 
         span {
             font-size: 14px;
@@ -1137,6 +1155,25 @@
     .select-certify-full {
 
         padding: 30px;
+        margin-top: 20px !important;
+
+        .note {
+            font-size: 13px;
+        }
+
+        .type-box {
+            padding: 20px;
+        }
+
+        .result-id {
+            font-size: 15px;
+            margin-top: 15px !important;
+        }
+
+        .type-txt2 {
+            margin-top: 15px !important;
+            font-size: 14px;
+        }
 
         .nomatch {
             font-size: 14px;
@@ -1144,6 +1181,11 @@
 
         .type-title {
             font-size: 18px;
+        }
+
+        .check-entire .bg-box {
+            font-size: 14px;
+            padding: 15px;
         }
 
         .type-txt {
@@ -1158,6 +1200,7 @@
     }
 
     .join-progress {
+        margin-top: 20px;
 
         .progress {
             width: auto;
@@ -1199,9 +1242,30 @@
         }
     }
 
+    .select-certify-type {
+        .type-title {
+            font-size: 16px;
+        }
+
+        .type-txt {
+            font-size: 14px;
+        }
+    }
+
+    .edit-memberinfo-tab li a {
+        line-height: 35px;
+        height: 35px;
+        font-size: 13px;
+        overflow: hidden;
+
+        &::after {
+            display: none !important;
+        }
+    }
+
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 375px) {
 
     .join-list {
         li {
@@ -1244,6 +1308,31 @@
                     }
                 }
             }
+        }
+    }
+
+    .join-complete {
+        margin-top: 50px;
+        min-height: 380px;
+
+
+        .welcome-text {
+            padding-top: 100px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            strong {
+                font-size: 20px;
+            }
+
+            .subtext {
+                font-size: 13px;
+            }
+        }
+
+        .user-info {
+            font-size: 15px;
+            margin-top: 80px;
         }
     }
 }

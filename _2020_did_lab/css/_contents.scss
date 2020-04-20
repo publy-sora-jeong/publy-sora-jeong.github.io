@@ -2338,6 +2338,147 @@ input.input-times {
     }
 }
 
+.tb-proty-flow-map {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    table {
+        width: 49%;
+        font-size: 16px;
+        height: 280px;
+
+        td,
+        th {
+            padding: 15px 10px;
+            border: 1px solid #c7c7c7;
+        }
+
+        th {
+            background: #ededed;
+        }
+
+        td {
+            font-size: 14px;
+            vertical-align: top
+        }
+
+        .bg-blue {
+            background: #5b84e8;
+            color: #fff;
+        }
+
+        .bg-purple {
+            background: #a05be8;
+            color: #fff;
+        }
+    }
+}
+
+.proto-support {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.proto-method {
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.proto-methos-list {
+    &>ul>li {
+        margin-top: 20px;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        strong {
+            font-size: 18px;
+            padding: 10px;
+            font-weight: bold;
+        }
+
+        li {
+            font-size: 15px;
+            margin-top: 4px;
+        }
+    }
+}
+
+.tb-proto-edu {
+    margin-top: 20px;
+
+    table {
+        table-layout: fixed;
+        font-size: 17px;
+
+        th,
+        td {
+            padding: 15px 10px;
+            border: 1px solid #c7c7c7;
+        }
+
+        td {
+            font-size: 15px;
+            vertical-align: top
+        }
+
+        .bg-blue-01 {
+            background: #bad4e0;
+        }
+
+        .bg-blue-02 {
+            background: #6c9eca;
+            color: #fff;
+        }
+
+        .bg-blue-03 {
+            background: #5992ce;
+            color: #fff;
+        }
+
+        .bg-blue-04 {
+            background: #38679a;
+            color: #fff;
+        }
+
+    }
+}
+
+.proto-fest {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+        width: 287px;
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 10px;
+
+        .tit {
+            font-size: 19px;
+            font-weight: bold;
+            color: #38679a;
+            padding: 15px 0;
+        }
+
+        ul {
+            margin-top: 15px;
+            margin-left: 10px;
+
+            li {
+                text-align: left;
+                font-size: 14px;
+            }
+        }
+    }
+}
 
 @media screen and (max-width: 1200px) {
     .cs-contact {
@@ -2492,7 +2633,42 @@ input.input-times {
         font-size: 22px;
     }
 
+    .apply-view .apply-summary {
+        .thumb {
+            display: none;
+        }
 
+        .desc {
+            width: 100%;
+            padding-left: 0;
+
+            h4 {
+                font-size: 20px;
+            }
+
+            ul {
+                margin-top: 10px;
+            }
+
+            .capacity-cost {
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    .proto-fest {
+        flex-wrap: wrap;
+
+        .item {
+            width: 49%;
+            margin-bottom: 10px;
+
+            .tit {
+                font-size: 16px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -2509,6 +2685,8 @@ input.input-times {
             padding: 10px;
         }
     }
+
+
 }
 
 @media screen and (max-width: 768px) {
@@ -2558,6 +2736,11 @@ input.input-times {
         }
 
 
+    }
+
+    .pro-item .pro-simple-info h5 {
+        font-size: 15px;
+        padding-bottom: 5px;
     }
 
 
@@ -2648,10 +2831,100 @@ input.input-times {
         }
     }
 
+    .tb-proty-flow-map {
+        flex-wrap: wrap;
+
+        table {
+            width: 100%;
+            margin-bottom: 10px;
+            height: auto;
+            font-size: 14px;
+
+            th,
+            td {
+                padding: 10px;
+            }
+        }
+    }
+
+    .proto-support,
+    .proto-method {
+        flex-wrap: wrap;
+    }
+
+    .tb-proto-edu {
+        table {
+            font-size: 14px;
+
+            td {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 640px) {
+    .professional h4 {
+        font-size: 16px;
+    }
 
+    .apply-view {
+        .text-complete {
+            font-size: 16px;
+
+            .complete {
+                font-size: 20px;
+            }
+        }
+
+        .apply-summary {
+            margin-top: 10px;
+
+            .info li {
+                font-size: 13px;
+            }
+
+            .cost {
+                font-size: 14px;
+            }
+
+            .desc {
+                h4 {
+                    font-size: 16px;
+                    padding-bottom: 10px;
+                }
+
+                .capacity-cost {
+                    border: none;
+                    background: #f7f7f7;
+                    padding: 10px;
+                    font-size: 14px;
+                }
+
+                .ca-number,
+                .cost strong {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        &.apply-view-v2 {
+            .apply-summary .info li {
+                margin-top: 5px;
+            }
+        }
+    }
+
+    .cancel-info {
+        font-size: 13px;
+        padding: 10px;
+
+
+        li {
+            font-size: 13px;
+            margin-top: 5px;
+        }
+    }
 
     //BTN
     .btn-area {
@@ -3008,16 +3281,57 @@ input.input-times {
 
     }
 
+    .yearplan .calendar-schedule {
+        font-size: 13px;
+
+        ul li {
+            margin-top: 6px;
+        }
+    }
+
+    .floor-plan .facility-nav {
+        .floor {
+            font-size: 22px;
+        }
+
+        ul li {
+            margin-right: 9px;
+        }
+    }
 
 }
 
 @media screen and (max-width: 480px) {
+
+    .gray-box-top .reserve-info .info li {
+        font-size: 13px;
+    }
+
+    .labtour-intro .lab-text {
+        font-size: 13px;
+    }
+
     .layer-search-wrap {
         right: -200px;
     }
 
     .cs-faq {
         font-size: 13px;
+    }
+
+    .form-request {
+        font-size: 13px;
+
+        .col {
+
+            dt {
+                width: 55px;
+            }
+
+            dd {
+                width: calc(100% - 55px);
+            }
+        }
     }
 
     .lec-gallery .item {
@@ -3054,6 +3368,36 @@ input.input-times {
         font-size: 13px;
     }
 
+    .apply-view {
+        padding: 15px;
+
+        .text-complete {
+            font-size: 14px;
+        }
+
+        .apply-summary .capacity-cost {
+            flex-wrap: wrap;
+
+            .capacity {
+                width: 100%;
+            }
+
+            .cost {
+                width: 100%;
+                padding-left: 0;
+                margin-top: 10px;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .apply-bottom-wrap .t-big {
+        font-size: 14px;
+    }
+
     .btns {
 
         .btn-apply,
@@ -3071,6 +3415,46 @@ input.input-times {
 
         .btn-apply-list span::after {
             width: 15px;
+        }
+    }
+
+    .section-sub .sub-nav-facility-sml li a,
+    .section-sub .sub-nav-depth2 li a {
+        font-size: 13px;
+        padding: 0 5px;
+    }
+
+    .tb-proty-flow-map {
+
+        table {
+            font-size: 13px;
+        }
+    }
+
+    .tb-proto-edu {
+        table {
+            font-size: 13px;
+
+            td {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 8px;
+            }
+        }
+    }
+
+    .proto-fest {
+
+        .item {
+            width: 100%;
+            margin-bottom: 10px;
+
+            .tit {
+                font-size: 16px;
+            }
         }
     }
 }

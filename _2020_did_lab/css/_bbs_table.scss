@@ -882,7 +882,8 @@
       white-space: nowrap;
       padding-right: 20px;
       position: relative;
-      display: block;
+      display: inline-block;
+      vertical-align: middle;
 
       &::after {
             @include pseudo;
@@ -892,6 +893,7 @@
             margin-left: 5px;
             position: absolute;
             right: 0;
+            top: 0;
       }
 }
 
@@ -1244,6 +1246,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+      .file {
+            max-width: 300px;
+      }
+
       .tb-type01 {
             .reply {
                   max-width: 150px;
@@ -1312,13 +1318,40 @@
 }
 
 @media screen and (max-width: 800px) {
-      .tb-equip {
+
+      .tb-equip,
+      .tb-equip2 {
             //width: 640px;
             overflow: auto;
 
             table {
                   width: 800px;
             }
+      }
+
+      .tb-mentor-history table {
+            colgroup {
+                  display: none;
+            }
+      }
+
+      .tb-mentor-history table,
+      .tb-type01 {
+            colgroup {}
+
+            .b-num,
+            .b-view {
+                  display: none;
+            }
+
+            .b-title {
+                  width: 45%;
+
+                  a {
+                        max-width: 100%;
+                  }
+            }
+
       }
 }
 
@@ -1335,18 +1368,30 @@
                   margin: 1px;
 
                   &.page-num {
-                        width: 25px;
+                        width: 22px;
                         margin: 1px 0;
                   }
             }
       }
 
+      .flag-news,
+      .flag-report {
+            display: none;
+      }
 
+
+      .file {
+            max-width: 200px;
+
+            &::after {
+                  top: -3px
+            }
+      }
 
       .bbs-gallery {
             .box {
                   width: 32.3%;
-                  height: 280px;
+                  height: auto;
 
                   .thumb {
                         height: 160px;
@@ -1354,17 +1399,37 @@
 
                   .desc {
                         padding-bottom: 0;
+                        padding: 10px;
 
                         .title {
                               font-size: 15px;
 
                               &.new::after {
-                                    display: inline-block;
-                                    margin-top: -5px;
-                                    vertical-align: middle;
-                                    margin-left: 5px;
+                                    display: none;
                               }
                         }
+
+                        .info {
+                              padding: 0;
+                              position: static;
+                              margin-top: 5px;
+                        }
+                  }
+            }
+      }
+
+      .bbs-gallery-pub .item {
+            .thumb {
+                  height: 160px;
+            }
+
+            .desc {
+                  .title {
+                        font-size: 15px;
+                  }
+
+                  .writer {
+                        margin-top: 10px;
                   }
             }
       }
@@ -1383,6 +1448,10 @@
 
 
 @media screen and (max-width: 640px) {
+      .file {
+            max-width: 150px;
+      }
+
       .tb-type01 {
             table {
                   font-size: 14px;
@@ -1459,6 +1528,7 @@
                   width: 20%;
                   display: block;
                   float: left;
+                  font-size: 14px;
             }
 
             .input-search {
@@ -1558,6 +1628,7 @@
 @media screen and (max-width: 480px) {
       .bbs-content {
             padding: 15px;
+            font-size: 13px;
       }
 
       .bbs-attach {
@@ -1571,6 +1642,17 @@
             }
       }
 
+      .bbs-top {
+            margin-top: 10px !important;
+      }
+
+
+
+      .tb-map table {
+            font-size: 13px;
+      }
+
+
       .bbs-gallery {
             .box {
                   width: auto;
@@ -1582,14 +1664,14 @@
 
                   .desc {
                         //height: auto;
-                        padding: 20px 10px;
+                        padding: 10px;
 
                         .title {
                               height: 36px;
                         }
 
                         .info {
-                              margin-top: 10px;
+                              margin-top: 5px;
                               position: static;
                               padding: 0;
                         }
@@ -1598,14 +1680,39 @@
             }
       }
 
+      .bbs-gallery-pub .item .desc .title {
+            font-size: 14px;
+      }
+
       .bbs-view {
             .titlearea {
                   padding: 10px;
             }
 
             .reply-wrap {
+                  .reply-title strong {
+                        font-size: 15px;
+                        padding-right: 5px;
+                  }
+
+
+                  .comment-list>li .cont-header {
+                        .date {
+                              display: block;
+                              font-size: 12px;
+                        }
+
+                        .btn-edit {
+                              float: none;
+                              position: absolute;
+                              right: 0;
+                              top: 20px;
+                        }
+                  }
+
                   .commentbox {
-                        padding: 20px;
+                        padding: 15px;
+                        margin-top: 10px;
                   }
 
                   .write-reply {
@@ -1625,10 +1732,14 @@
                   dt {
                         width: 20%;
                         text-align: center;
+                        padding: 10px;
+                        font-size: 13px;
                   }
 
                   dd {
                         width: 80%;
+                        padding: 10px;
+                        font-size: 13px;
                   }
             }
       }
@@ -1647,6 +1758,8 @@
                   padding: 8px;
             }
       }
+
+
 }
 
 @media screen and (max-width: 480px) {
@@ -1658,8 +1771,10 @@
       .flag-news,
       .flag-report {
             width: auto;
-            font-size: 11px;
+            font-size: 10px;
       }
+
+
 
       .tb-policy table,
       .tb-type01 table {
@@ -1691,6 +1806,24 @@
       }
 
       .bbs-top {
+
+            &.bbs-top-publication {
+                  .year-info {
+                        float: none;
+
+                        .current-year {
+                              font-size: 14px;
+                        }
+
+                  }
+
+                  .view-option {
+                        float: none;
+                        display: block;
+                        margin-top: 10px;
+                  }
+            }
+
             .total-count {
                   font-size: 13px;
             }
@@ -1702,6 +1835,19 @@
             }
       }
 
+      .bbs-attach {
+            font-size: 13px;
+      }
+}
+
+@media screen and (max-width: 414px) {
+      .file {
+            width: 100%;
+      }
+
+      .file::after {
+            display: none;
+      }
 }
 
 @media screen and (max-width: 360px) {}
