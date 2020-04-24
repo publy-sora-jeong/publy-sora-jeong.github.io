@@ -1,21 +1,110 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <script src="common/js/global.js"></script>
-    <script src="dist/js/bundle.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css?family=Quicksand:400,600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <script src="common/js/jquery-3.3.1.min.js"></script>
+  <script src="common/js/slick.min.js"></script>
+  <script src="common/js/isotope.pkgd.min.js"></script>
+  <script src="common/js/wavify.js"></script>
+  <script src="common/js/jquery.wavify.js"></script>
 
-    <link rel="stylesheet" href="dist/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+  <script src="common/js/main.js"></script>
 
-    <title>INDEX</title>
-  </head>
+  <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
 
-  <body></body>
+
+  <link rel="stylesheet" href="common/css/main.css" />
+
+  <title>INDEX</title>
+</head>
+
+<body class="wrap">
+  <header>
+    <p id="m-gnb"></p>
+  </header>
+
+  <div class="menu-btn">
+    <span class="btn-line-1"></span>
+    <span class="btn-line-2"></span>
+    <span class="btn-line-3"></span>
+  </div>
+
+  <section class="visual">
+    <!--TYPO -->
+    <h2>Bubble Bubble</h2>
+    <p class="visual-subtext">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+    <!-- WAVE -->
+    <div class="visual-wave">
+      <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+        <defs></defs>
+        <path id="feel-the-wave" d="" />
+      </svg>
+
+      <svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" class="wave">
+        <defs></defs>
+        <path id="feel-the-wave-two" d="" />
+      </svg>
+    </div>
+
+    <!-- CIRCLE ANIMATION-->
+    <p class="circle circle1"></p>
+    <p class="circle circle2"></p>
+    <p class="circle circle3"></p>
+    <p class="circle circle4"></p>
+    <p class="circle circle5"></p>
+    <p class="circle circle6"></p>
+    <p class="circle circle7"></p>
+  </section>
+
+
+  <div class="button-group filter-button-group">
+    <button data-filter="*">show all</button>
+    <button data-filter=".pb">SORT1</button>
+    <button data-filter=".ds">SORT2</button>
+  </div>
+
+  <!-- <section class="grid">
+    <div class="grid-item pb">
+      <div class="item-container">
+        <img src="common/img/main/sample.jpg" alt="sample" />
+        <dl>
+          <dt>item title</dt>
+          <dd>item description #tag1 #tag2</dd>
+        </dl>
+        <a href="#">liNK</a>
+      </div>
+    </div>
+    <div class="grid-item ds">
+      <div class="item-container">
+        <a href="#">
+          <img src="common/img/main/sample2.jpg" alt="sample" />
+          <dl>
+            <dt>item title</dt>
+            <dd>item description #tag1 #tag2</dd>
+          </dl>
+        </a>
+      </div>
+    </div>
+  </section> -->
+
+  <section class="bg1">
+    <img src="common/img/main/street.jpg" alt="">
+  </section>
+  <div class="layer-popup" style="display: none;">
+    <div class="popup-container">
+      <img src="common/img/main/sample.jpg" alt="sample" />
+    </div>
+  </div>
+
+  <!-- <div class="mouse bounce"></div>
+  Icons made by <a href="https://www.flaticon.com/authors/swifticons" title="Swifticons">Swifticons</a> from <a
+    href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a> -->
+
+
+</body>
+
 </html>

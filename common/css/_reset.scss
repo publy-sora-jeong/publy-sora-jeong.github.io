@@ -136,7 +136,7 @@ button {
     color: inherit;
     background: transparent;
     overflow: visible;
-    cursor: pointer;
+    //cursor: pointer;
     line-height: 1;
 }
 
@@ -147,7 +147,7 @@ a,
 active,
 a:focus {
     text-decoration: none;
-    cursor: pointer;
+    //cursor: pointer;
     color: #111;
 }
 
@@ -227,8 +227,8 @@ input {
 }
 
 .slick-list.dragging {
-    cursor: pointer;
-    cursor: hand
+    // cursor: pointer;
+    // cursor: hand
 }
 
 .slick-slider .slick-list,
