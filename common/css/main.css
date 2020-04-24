@@ -479,7 +479,7 @@ body {
 
 .menu-btn {
   position: fixed;
-  z-index: 10;
+  z-index: 1000;
   right: 20px;
   top: 20px;
   width: 60px;
@@ -488,6 +488,7 @@ body {
   border-radius: 30px;
   -webkit-transition: 1s;
   transition: 1s;
+  border: 3px solid transparent;
 }
 
 .menu-btn span {
@@ -495,8 +496,8 @@ body {
   width: 30px;
   height: 2px;
   position: absolute;
-  left: 15px;
-  top: 20px;
+  left: 12px;
+  top: 17px;
   -webkit-transition: 1s;
   transition: 1s;
 }
@@ -513,8 +514,8 @@ body {
   content: '';
   height: 60px;
   width: 60px;
-  left: -2px;
-  top: -2px;
+  left: -5px;
+  top: -5px;
   border: 1px solid #fff;
   position: absolute;
   border-radius: 50%;
@@ -527,6 +528,7 @@ body {
 
 .menu-btn:hover {
   background-color: #fff;
+  border-color: #f9cd35;
   cursor: url("../img/main/n_link.png"), auto !important;
 }
 
@@ -570,11 +572,24 @@ a:hover {
   font-family: 'Pangolin', cursive;
   font-size: 4em;
   padding-top: 100px;
+  letter-spacing: -10px;
+}
+
+.visual h2 li {
+  letter-spacing: 0;
+  display: inline-block;
 }
 
 .visual .visual-subtext {
   font-size: 1.3em;
   padding: 0 5em;
+}
+
+.visual .visual-subtext span {
+  display: inline-block;
+  margin-left: 5px;
+  -webkit-transform: scale(1.5) rotate(180deg);
+          transform: scale(1.5) rotate(180deg);
 }
 
 .visual .circle {
@@ -672,5 +687,15 @@ body .grid-item:hover {
 
 .wave + .wave {
   z-index: 2;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 100%;
+  height: 100vh;
+  z-index: 999;
+  background: #130423;
 }
 /*# sourceMappingURL=main.css.map */

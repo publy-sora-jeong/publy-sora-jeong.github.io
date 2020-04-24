@@ -133,6 +133,25 @@ $(function () {
   });
 
 
+  var typo = new TimelineMax({});
+
+  typo.staggerFrom(".visual-typo ul  li", 2, {
+    repeat: -1,
+    y: 30,
+    opacity: 0,
+    ease: Expo.easeInOut,
+    yoyo: true,
+  }, 0.1);
+  typo.staggerFrom('.visual-subtext span', 2, {
+    repeat: -1,
+    rotation: 0,
+    ease: Expo.easeInOut,
+    scale: 1,
+    yoyo: true,
+  });
+
+
+  typo.reverse();
   circle.to('.circle1', 5, {
     x: Math.floor(Math.random()) + 150,
     y: Math.floor(Math.random()) - 400,
@@ -182,6 +201,38 @@ $(function () {
 
   circle.play();
   circle2.play();
+
+  typo.play();
+
+
+
+  var menu = new TimelineMax({});
+
+  menu.to('#menu', 1, {
+    right: 0
+  }).to('.btn-line-1', 0.5, {
+    rotation: -45,
+    y: 10,
+    ease: Expo.easeInOut
+  }).to('.btn-line-3', 0.5, {
+    rotation: 45,
+    y: -10,
+    ease: Expo.easeInOut
+  }).to('.btn-line-2', 0.5, {
+    width: 0
+  })
+
+  menu.reverse();
+
+  $(document).on("click", ".menu-btn", function () {
+    menu.reversed(!menu.reversed());
+  });
+  $(document).on("click", "a", function () {
+    menu.reversed(!menu.reversed());
+  })
+
+
+
 
 
 
