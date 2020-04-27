@@ -486,8 +486,6 @@ body {
   height: 60px;
   background: transparent;
   border-radius: 30px;
-  -webkit-transition: 1s;
-  transition: 1s;
   border: 3px solid transparent;
 }
 
@@ -498,8 +496,6 @@ body {
   position: absolute;
   left: 12px;
   top: 17px;
-  -webkit-transition: 1s;
-  transition: 1s;
 }
 
 .menu-btn span.btn-line-2 {
@@ -556,9 +552,10 @@ a:hover {
 }
 
 .visual {
-  background: url("../img/main/bg_snail.jpg") top center;
+  background-color: #cc5376;
   background-size: cover;
-  height: 500px;
+  background-repeat: repeat-x;
+  height: 600px;
   position: relative;
   background-attachment: fixed;
   font-family: 'Pangolin', cursive;
@@ -578,6 +575,70 @@ a:hover {
 .visual h2 li {
   letter-spacing: 0;
   display: inline-block;
+}
+
+.visual .snail {
+  width: 50%;
+  background: url("../img/main/smail.png") no-repeat;
+  height: 400px;
+  position: absolute;
+  bottom: -30%;
+  left: -30%;
+  background-size: contain;
+}
+
+.visual .snail1 {
+  left: 10%;
+  -webkit-animation: snailMoving infinite 60s forwards;
+          animation: snailMoving infinite 60s forwards;
+}
+
+.visual .snail2 {
+  left: -50%;
+  -webkit-animation: snailMoving infinite 60s 10s forwards;
+          animation: snailMoving infinite 60s 10s forwards;
+}
+
+@-webkit-keyframes snailMoving {
+  10% {
+    bottom: -10%;
+  }
+  20% {
+    bottom: -30%;
+  }
+  50% {
+    bottom: -20%;
+  }
+  70% {
+    bottom: -40%;
+  }
+  80% {
+    bottom: -30%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes snailMoving {
+  10% {
+    bottom: -10%;
+  }
+  20% {
+    bottom: -30%;
+  }
+  50% {
+    bottom: -20%;
+  }
+  70% {
+    bottom: -40%;
+  }
+  80% {
+    bottom: -30%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .visual .visual-subtext {
@@ -696,6 +757,25 @@ body .grid-item:hover {
   width: 100%;
   height: 100vh;
   z-index: 999;
-  background: #130423;
+  background: #444;
+}
+
+#menu .menu-data {
+  position: absolute;
+  left: 10%;
+  top: 20%;
+}
+
+#menu .menu-data li a {
+  color: #fff;
+  font-family: 'Pangolin', cursive;
+  font-size: 50px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#menu .menu-data li:hover a {
+  padding-left: 20px;
+  color: #ff4b6a;
 }
 /*# sourceMappingURL=main.css.map */

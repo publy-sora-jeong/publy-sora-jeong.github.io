@@ -1,11 +1,8 @@
 @import "reset";
+@import "font";
+@import "mixins";
 
-@font-face {
-    font-family: "NB";
-    src: url("../font/NanumBarunGothic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
+
 
 @keyframes fadeInDown {
     from {
@@ -19,67 +16,6 @@
     }
 }
 
-@mixin pseudo($display: block, $pos: absolute, $content: '') {
-    content: $content;
-    display: $display;
-    position: $pos;
-}
-
-@mixin push--auto {
-    margin: {
-        left: auto;
-        right: auto;
-    }
-}
-
-@mixin responsive-ratio($x, $y, $pseudo: false) {
-    $padding: unquote(($y / $x) * 100 + '%');
-
-    @if $pseudo {
-        &:before {
-            @include pseudo($pos: relative);
-            width: 100%;
-            padding-top: $padding;
-        }
-    }
-
-    @else {
-        padding-top: $padding;
-    }
-}
-
-@mixin ellipsis($truncation-boundary) {
-    max-width: $truncation-boundary;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-
-$breakpoints: ("phone": 400px,
-    "phone-wide": 480px,
-    "phablet": 560px,
-    "tablet-small": 640px,
-    "tablet": 768px,
-    "tablet-wide": 1024px,
-    "desktop": 1248px,
-    "desktop-wide": 1440px);
-
-@mixin mq($width, $type: min) {
-    @if map_has_key($breakpoints, $width) {
-        $width: map_get($breakpoints, $width);
-
-        @if $type==max {
-            $width: $width - 1px;
-        }
-
-        @media only screen and (#{$type}-width: $width) {
-            @content;
-        }
-    }
-}
-
-
 
 $contentWidth: 1200px;
 
@@ -88,7 +24,7 @@ body {
     background-color: #fff;
     background-position: top center;
     background-repeat: no-repeat;
-    font-family: 'NB', sans-serif;
+    font-family: 'NanumBarunGothic', sans-serif;
     letter-spacing: -0.7px;
     overflow-x: hidden;
 }
@@ -244,16 +180,16 @@ header {
     }
 
     .bgGnb {
-        background-image: url('../img/gnb-over-bg.png');
+        //background-image: url('../img/gnb-over-bg.png');
         background-color: #fff;
         background-repeat: no-repeat;
         background-position: left top;
     }
 
     //MOBILE NAV
-    #m-gnb {
-        //display: none;
-    }
+    // #m-gnb {
+    //  display: none;
+    // }
 
     //MOBILE NAV OPEN ICON 
     .m-gnb-open {
@@ -373,15 +309,14 @@ header {
     }
 
 
-    @media screen and (max-width: 1600px) {
+    @include mq('desktop-full') {
         #gnb {
             padding-left: 200px;
 
         }
     }
 
-    @media screen and (max-width: 1400px) {
-
+    @include mq('desktop-wide') {
         .logo {
             left: 20px;
         }
@@ -396,7 +331,12 @@ header {
         }
     }
 
-    @media screen and (max-width: 1080px) {
+    @include mq('tablet-wide') {
+        #gnb {
+            display: none;
+        }
+
+        //1080
         .logo {
             width: 200px;
             height: 40px;
@@ -404,14 +344,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 1024px) {
-        #gnb {
-            display: none;
-        }
-    }
-
-
-    @media screen and (max-width: 768px) {
+    @include mq('tablet') {
         .site-eng {
             display: none;
         }
@@ -424,7 +357,7 @@ header {
         }
     }
 
-    @media screen and (max-width: 640px) {
+    @include mq('tablet-small') {
 
         height: 60px;
 
@@ -1290,12 +1223,6 @@ header {
             .slick-current {
                 margin-right: 0;
             }
-
-            img {
-                //width: 100%;
-
-            }
-
         }
     }
 
@@ -1503,7 +1430,7 @@ header {
         .section-container {
             width: auto;
             flex-wrap: wrap;
-            padding: 0 40px;
+            padding: 0 5%;
         }
 
         .section-title {
@@ -1850,6 +1777,26 @@ footer {
         background-image: url('../img/subvisual_biz.png');
     }
 
+    &-petratec {
+        background-image: url('../img/subvisual_petratec.png');
+    }
+
+    &-inquiry {
+        background-image: url('../img/subvisual_inquiry.png');
+    }
+
+    &-promotion {
+        background-image: url('../img/subvisual_promotion.png');
+    }
+
+    &-recruit {
+        background-image: url('../img/subvisual_recruit.png');
+    }
+
+    &-service {
+        background-image: url('../img/subvisual_service.png');
+    }
+
     @media screen and (max-width: 1024px) {
         height: 300px;
 
@@ -2072,8 +2019,6 @@ footer {
             .tit {
                 font-size: 30px;
             }
-
-            .cnt {}
         }
     }
 
@@ -2331,10 +2276,6 @@ footer {
             .slick-slide {
                 height: auto;
                 margin-bottom: 40px;
-
-                img {
-                    //position: relative;
-                }
             }
 
 
@@ -2454,17 +2395,16 @@ footer {
             right: -15px;
             bottom: -30px;
             color: #fff;
-            padding: 80px 40px 50px 40px;
+            padding: 40px 40px 50px 40px;
             font-size: 28px;
 
             &::before {
                 content: '';
-                position: absolute;
-                left: 40px;
-                top: 50px;
+                display: block;
                 width: 42px;
                 height: 1px;
                 background: rgba(255, 255, 255, 0.3);
+                margin-bottom: 29px;
             }
         }
     }
@@ -2478,6 +2418,47 @@ footer {
             font-size: 21px;
             display: block;
             padding-bottom: 10px;
+        }
+    }
+
+    @include mq('contents') {
+        width: 90%;
+        @include push--auto();
+
+        .img {
+            width: 99%;
+        }
+    }
+
+    @include mq('tablet-small') {
+        .img {
+            background-position: center;
+            background-size: cover;
+
+            .desc {
+                font-size: 25px;
+                width: 260px;
+                height: 200px;
+                padding: 35px;
+
+
+                br {
+                    display: none;
+                    ;
+                }
+            }
+        }
+
+        .txt {
+            strong {
+                font-size: 19px;
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        .img .desc {
+            font-size: 20px;
         }
     }
 }
@@ -2519,6 +2500,74 @@ footer {
             margin-top: 10px;
         }
     }
+
+    @include mq('contents') {
+        .en {
+            font-size: 45px;
+        }
+
+        .mean {
+            font-size: 18px;
+        }
+
+        .container {
+            width: auto;
+            padding: 0 5%;
+        }
+
+        dl {
+            dt {
+                font-size: 30px
+            }
+
+        }
+    }
+
+    @include mq('tablet-small') {
+        .en {
+            font-size: 40px;
+        }
+
+        .mean {
+            font-size: 16px;
+        }
+
+        dl {
+            margin-top: 50px;
+
+            dt {
+                font-size: 35px;
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        height: auto;
+        padding: 70px 0;
+        margin-top: 60px;
+
+        .container {
+            transform: none;
+        }
+
+        .en {
+            font-size: 25px;
+        }
+
+        .mean {
+            font-size: 14px;
+        }
+
+        dl {
+            dt {
+                font-size: 25px;
+            }
+
+            dd {
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 .petra-mission {
@@ -2547,6 +2596,8 @@ footer {
             margin: 0 30px;
             border-radius: 50%;
             background-image: url('../img/sub_petra01_off.png');
+            background-size: contain;
+            background-repeat: no-repeat;
             vertical-align: top;
             transition: 1s;
 
@@ -2567,6 +2618,7 @@ footer {
                         width: 96px;
                         height: 82px;
                         background-image: url('../img/sub_petra01_ico01_off.png');
+                        background-size: contain;
                         background-repeat: no-repeat;
                         background-position: 0 0;
                         display: block;
@@ -2596,6 +2648,7 @@ footer {
                             height: 82px;
                             background-image: url('../img/sub_petra01_ico01_on.png');
                             background-repeat: no-repeat;
+                            background-size: contain;
                             background-position: 0 0;
                             display: block;
                             margin: 0 auto 10px auto;
@@ -2622,6 +2675,144 @@ footer {
 
                 .on p::before {
                     background-image: url('../img/sub_petra01_ico03_on.png')
+                }
+            }
+        }
+    }
+
+    @include mq('tablet-wide') {
+        .mission-list li {
+            width: 195px;
+            height: 195px;
+            margin: 0 1%;
+
+            .off strong {
+                font-size: 25px;
+
+                &::after {
+                    width: 66px;
+                    height: 56px;
+                    margin-top: 15px;
+                }
+            }
+
+            &:hover {
+                .on {
+                    p {
+                        padding: 10px 20px;
+                        font-size: 15px;
+
+                        &::before {
+                            width: 66px;
+                            height: 56px;
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    @include mq('tablet-small') {
+        padding: 70px 5%;
+
+        h4 {
+            font-size: 30px;
+
+            span {
+                font-size: 16px;
+            }
+        }
+
+        .mission-list {
+            margin-top: 40px;
+
+            li {
+                width: 120px;
+                height: 120px;
+                margin: 0 4px;
+
+                .off strong {
+                    font-size: 18px;
+                    padding-top: 30px;
+
+                    &::after {
+                        width: 45px;
+                        height: 39px;
+                        margin-top: 5px;
+                    }
+                }
+
+                &:hover {
+                    .on {
+                        p {
+                            padding: 10px 20px;
+                            font-size: 15px;
+
+                            &::before {
+                                width: 45px;
+                                height: 39px;
+                                margin-top: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+
+    @include mq('phone-wide') {
+        h4 {
+            font-size: 25px;
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .mission-list li {
+            width: auto;
+            height: auto;
+            margin: 5px 0;
+            display: block;
+            background: none;
+            background: rgb(110, 188, 69);
+            background: radial-gradient(circle, rgba(110, 188, 69, 1) 0%, rgba(2, 61, 92, 1) 100%);
+            border-radius: 0;
+            padding: 5px;
+
+            .off,
+            .on {
+                background: #fff;
+                padding: 20px;
+            }
+
+            &:hover {
+
+                background-image: none;
+                background: rgb(110, 188, 69);
+                background: radial-gradient(circle, rgba(110, 188, 69, 1) 0%, rgba(2, 61, 92, 1) 100%);
+
+                .on,
+                .off {
+
+                    background-image: none;
+
+                    background-color: transparent;
+
+                    p::before {
+                        margin-top: 0;
+                    }
+                }
+            }
+
+            .off {
+                strong {
+                    padding: 0;
                 }
             }
         }
@@ -2660,6 +2851,43 @@ footer {
                 display: block;
                 margin: 0 auto 40px auto;
             }
+        }
+    }
+
+    @include mq('contents') {
+
+        .petra-policy-bg {
+            padding: 0 5%;
+
+            p {
+                width: auto;
+                font-size: 18px;
+            }
+        }
+    }
+
+    @include mq('tablet-small') {
+        h4 {
+            font-size: 30px;
+        }
+
+        .petra-policy-bg {
+            height: auto;
+            padding: 100px 5%;
+
+            p {
+                transform: none;
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        h4 {
+            font-size: 25px;
         }
     }
 }
@@ -2716,20 +2944,60 @@ footer {
             position: relative;
             background-size: contain;
             float: right;
+        }
+    }
 
-            .name {
-                background: #71bf44;
-                width: 170px;
-                height: 140px;
-                color: #fff;
-                position: absolute;
-                bottom: 0;
-                left: -15px;
-                padding-top: 60px;
-                //text-align: center;
-                padding-left: 30px;
-                box-shadow: 3px 3px 10px rgba($color: #000000, $alpha: 0.2);
+    @include mq('contents') {
+        width: auto;
+        padding: 0 5%;
+    }
+
+    @include mq('tablet') {
+        margin-top: 70px;
+
+        h4 {
+            font-size: 30px;
+        }
+
+        .greeting-wrap .pic {
+            float: none;
+            width: auto;
+            text-align: center;
+            background-position: center top;
+        }
+
+        .greeting-wrap .text {
+            float: none;
+            width: auto;
+
+            .top {
+                br {
+                    display: none;
+
+                }
             }
+        }
+    }
+
+    @include mq('tablet-small') {
+        .greeting-wrap {
+            .pic {
+                height: 350px;
+            }
+
+            .text {
+                font-size: 14px;
+
+                .top {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        h4 {
+            font-size: 25px;
         }
     }
 }

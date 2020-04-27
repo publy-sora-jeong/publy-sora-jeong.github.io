@@ -102,47 +102,50 @@ $(function () {
   //   }, 1000);
 
   // })
-  var wave1 = $('#feel-the-wave').wavify({
+  var wave1 = $("#feel-the-wave").wavify({
     height: 80,
     bones: 4,
     amplitude: 60,
-    color: 'rgba(255 ,255,255, 0.8)',
-    speed: .15
+    color: "rgba(255 ,255,255, 0.8)",
+    speed: 0.15,
   });
 
-  var wave2 = $('#feel-the-wave-two').wavify({
+  var wave2 = $("#feel-the-wave-two").wavify({
     height: 60,
     bones: 3,
     amplitude: 40,
-    color: 'rgba(255 ,255,255,0.7)',
-    speed: .25
+    color: "rgba(255 ,255,255,0.7)",
+    speed: 0.25,
   });
 
   // var randomNum = 0;
   // setInterval(() => {
-  //   randomNum = Math.floor(Math.random() * 50); //0 ~ 9 
+  //   randomNum = Math.floor(Math.random() * 50); //0 ~ 9
   //   console.log(randomNum);
   // }, 300);
 
   var circle = new TimelineMax({
-    paused: false
+    paused: false,
   });
 
   var circle2 = new TimelineMax({
-    paused: false
+    paused: false,
   });
-
 
   var typo = new TimelineMax({});
 
-  typo.staggerFrom(".visual-typo ul  li", 2, {
-    repeat: -1,
-    y: 30,
-    opacity: 0,
-    ease: Expo.easeInOut,
-    yoyo: true,
-  }, 0.1);
-  typo.staggerFrom('.visual-subtext span', 2, {
+  typo.staggerFrom(
+    ".visual-typo ul  li",
+    2, {
+      repeat: -1,
+      y: 30,
+      opacity: 0,
+      ease: Expo.easeInOut,
+      yoyo: true,
+    },
+    0.1
+  );
+  typo.staggerFrom(".visual-subtext span", 2, {
     repeat: -1,
     rotation: 0,
     ease: Expo.easeInOut,
@@ -150,77 +153,88 @@ $(function () {
     yoyo: true,
   });
 
-
   typo.reverse();
-  circle.to('.circle1', 5, {
-    x: Math.floor(Math.random()) + 150,
-    y: Math.floor(Math.random()) - 400,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0
-  }).to('.circle2', 4, {
-    x: Math.floor(Math.random()) + 50,
-    y: Math.floor(Math.random()) - 400,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0,
-    delay: 0
-  }).to('.circle3', 3, {
-    x: Math.floor(Math.random()) + 150,
-    y: Math.floor(Math.random()) - 400,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0,
-    delay: 0
-  });
-  circle2.to('.circle4', 5, {
-    x: Math.floor(Math.random()) + 80,
-    y: Math.floor(Math.random()) - 400,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0
-  }).to('.circle5', 5, {
-    x: Math.floor(Math.random()) + 20,
-    y: Math.floor(Math.random()) - 300,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0
-  }).to('.circle6', 4, {
-    x: Math.floor(Math.random()) + -70,
-    y: Math.floor(Math.random()) - 400,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0
-  }).to('.circle7', 5, {
-    x: Math.floor(Math.random()) - 40,
-    y: Math.floor(Math.random()) - 200,
-    rotation: 45,
-    repeat: -1,
-    opacity: 0
-  });
+  circle
+    .to(".circle1", 5, {
+      x: Math.floor(Math.random()) + 150,
+      y: Math.floor(Math.random()) - 400,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+    })
+    .to(".circle2", 4, {
+      x: Math.floor(Math.random()) + 50,
+      y: Math.floor(Math.random()) - 400,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+      delay: 0,
+    })
+    .to(".circle3", 3, {
+      x: Math.floor(Math.random()) + 150,
+      y: Math.floor(Math.random()) - 400,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+      delay: 0,
+    });
+  circle2
+    .to(".circle4", 5, {
+      x: Math.floor(Math.random()) + 80,
+      y: Math.floor(Math.random()) - 400,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+    })
+    .to(".circle5", 5, {
+      x: Math.floor(Math.random()) + 20,
+      y: Math.floor(Math.random()) - 300,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+    })
+    .to(".circle6", 4, {
+      x: Math.floor(Math.random()) + -70,
+      y: Math.floor(Math.random()) - 400,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+    })
+    .to(".circle7", 5, {
+      x: Math.floor(Math.random()) - 40,
+      y: Math.floor(Math.random()) - 200,
+      rotation: 45,
+      repeat: -1,
+      opacity: 0,
+    });
 
   circle.play();
   circle2.play();
 
   typo.play();
 
+  var menu = new TimelineMax({
+    paused: true,
+  });
 
 
-  var menu = new TimelineMax({});
-
-  menu.to('#menu', 1, {
-    right: 0
-  }).to('.btn-line-1', 0.5, {
+  menu.to(".btn-line-1", 0.3, {
     rotation: -45,
     y: 10,
-    ease: Expo.easeInOut
-  }).to('.btn-line-3', 0.5, {
+    ease: Expo.easeInOut,
+  });
+  menu.to(".btn-line-3", 0.3, {
     rotation: 45,
     y: -10,
-    ease: Expo.easeInOut
-  }).to('.btn-line-2', 0.5, {
-    width: 0
-  })
+    ease: Expo.easeInOut,
+  });
+  menu.to(".btn-line-2", 0.3, {
+    width: 0,
+  });
+
+  menu.to("#menu", {
+    right: 0,
+  });
 
   menu.reverse();
 
@@ -229,11 +243,5 @@ $(function () {
   });
   $(document).on("click", "a", function () {
     menu.reversed(!menu.reversed());
-  })
-
-
-
-
-
-
+  });
 });
