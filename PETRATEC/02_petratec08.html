@@ -13,7 +13,7 @@
       <script src="js/script.js"></script>
 
       <link rel="stylesheet" href="css/style.css">
-	  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
       <title>PETRATEC</title>
 </head>
 
@@ -166,43 +166,71 @@
                   <a href="02_petratec08.html" class="current-page">오시는 길</a>
             </article>
 
-            <h3 class="page-title"><span>주요연혁</span></h3>
+            <h3 class="page-title"><span>오시는 길</span></h3>
 
             <div class="contents-area">
-                  <div class="petra-history">
 
-                        <div class="history-year-tab">
-                              <ul>
-                                    <li class="on"><span>2018 ~ 현재</span></li>
-                                    <li><span>2017 ~ 2015</span></li>
-                                    <li><span>2009 ~ 2014</span></li>
+                  <div class="map">
+                        <iframe
+                              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3178.995089049351!2d126.87068011571407!3d37.176587679872824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b14a67cc018eb%3A0xb3a1e5bbe3b7cbe0!2z6rK96riw64-EIO2ZlOyEseyLnCDtjJTtg4TrqbQg7Iuc7LKt66GcNjc367KI6ri4IDE5!5e0!3m2!1sko!2skr!4v1588085355319!5m2!1sko!2skr"
+                              width="100%" height="360" frameborder="0" style="border:0;" allowfullscreen=""
+                              aria-hidden="false" tabindex="0"></iframe>
+
+                        <div class="map-desc">
+                              <ul class="desc">
+                                    <li class="address">경기도 화성시 팔탄면 시청로 677번길 19</li>
+                                    <li class="tel">031-466-4410</li>
+                                    <li class="fax">031-356-4421</li>
+                                    <li class="mail">qins@qi.or.kr</li>
+                              </ul>
+
+                              <ul class="map-link">
+                                    <li class="naver"><a href="#"><span>네이버지도</span></a></li>
+                                    <li class="google"><a href="#"><span>구글지도</span></a></li>
                               </ul>
                         </div>
-                        <div class="history-cnt on">
-                              2018
-                        </div>
-                        <div class="history-cnt ">
-                              2017
-                        </div>
-                        <div class="history-cnt ">
-                              2009
+
+
+                        <div class="transport">
+                              <div class="item">
+                                    <p class="how how-subway">
+                                          <span>지하철</span>
+                                    </p>
+                                    <div class="how-detail">
+                                          <ul>
+                                                <li><span class="line line-blue">4</span>
+                                                      <p>금정역 4번 출구 330번 승차 → 남냥사거리 정류장 하차 → 기업은행정류장 1-2번 승차 → 대성낚시터 정류장
+                                                            하차</p>
+                                                </li>
+                                                <li><span class="line line-navy">1</span>
+                                                      <p>수원역 환승센타 <br>
+                                                            (4번 승강장) 1004번, 1004-1번 승차 → 기업은행 사거리 하차 → 기업은행정류장 1-2번 승차 →
+                                                            대성낚시터
+                                                            정류장 하차<br>
+                                                            (6번 승강장) 400-4번, 400-5번 승차 → 기업은행 사거리 하차 → 기업은행정류장 1-2번 승차 →
+                                                            대성낚시터
+                                                            정류장 하차</p>
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
+                              <div class="item">
+                                    <p class="how how-car">
+                                          <span>자가용</span>
+                                    </p>
+                                    <div class="how-detail">
+                                          <ul>
+                                                <li>비봉IC → 비봉IC교차로 향남/발안 방향 (39번도로) 8.3Km 직진 → <br>
+                                                      팔탄/화성시청방향 1.1Km 직진 → 율암1교차로 우회전  100m 율암교에서 우회전 시청로677번길 100m직진
+                                                </li>
+                                          </ul>
+                                    </div>
+                              </div>
                         </div>
                   </div>
             </div>
 
-            <script>
-                  function tabs() {
-                        $('.history-year-tab li').click(function () {
-                              var thisIndex = $('.history-year-tab li').index(this);
-                              $('div.history-cnt').removeClass('on');
-                              $('.history-year-tab li').removeClass('on');
-                              $('div.history-cnt').eq(thisIndex).addClass('on');
-                              $('.history-year-tab li').eq(thisIndex).addClass('on');
-                              return false;
-                        });
-                  };
-                  tabs();
-            </script>
+
       </section>
       <section class="main-guide">
             <div class="section-container">

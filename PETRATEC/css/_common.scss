@@ -207,6 +207,7 @@
     color: #023d5c;
     line-height: 1;
     padding-bottom: 20px;
+    text-transform: uppercase;
 
     span {
         font-size: 16px;
@@ -236,40 +237,6 @@
     }
 }
 
-@include mq('tablet-small') {
-    .title01 {
-        margin-top: 40px;
-        font-size: 18px;
-        padding-bottom: 15px;
-
-        span {
-            font-size: 15px;
-            margin-top: 5px;
-        }
-    }
-
-    .li-bul {
-        li {
-            font-size: 16px;
-        }
-    }
-}
-
-@include mq('phone-wide') {
-    .title01 {
-        margin-top: 20px;
-
-        span {
-            font-size: 14px;
-        }
-    }
-
-    .li-bul {
-        li {
-            font-size: 14px;
-        }
-    }
-}
 
 //checkbox custom
 .checkbox-container {
@@ -411,192 +378,49 @@
 
 }
 
-.inquiry-form {
-    border-top: 2px solid #333;
-    border-bottom: 1px solid #333;
-    background: #fbfbfb;
-    padding-bottom: 30px;
-    margin-top: 40px;
+@include mq('tablet-small') {
+    .title01 {
+        margin-top: 40px;
+        font-size: 18px;
+        padding-bottom: 15px;
 
-    .field {
-        overflow: hidden;
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: center;
-        //justify-content: flex-start;
-        padding: 30px 2% 0 2%;
-
-        input,
-        select {
-            padding: 4px 15px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            font-size: 16px;
-            color: #999;
-            height: 35px;
-            line-height: 32px;
-            width: 100%;
-        }
-
-        textarea {
-            padding: 20px;
-            border: 1px solid #ddd;
-            background-color: #fff;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #999;
-            width: 100%;
-            min-height: 200px;
-        }
-
-        select {
-            -moz-appearance: none;
-            -webkit-appearance: none;
-            appearance: none;
-            background: #fff url('../img/arr_sel_gray.png') no-repeat 94% center;
-            padding-right: 50px;
-        }
-
-        .at {
-            padding: 0 5px;
-            color: #999;
-        }
-
-        dt {
-            width: 140px;
-            //padding-left: 20px;
-            position: relative;
-
-            &::after {
-                content: '';
-                width: 1px;
-                height: 12px;
-                background: #ddd;
-                position: absolute;
-                right: 0;
-                top: 50%;
-                transform: translateY(-6px);
-            }
-        }
-
-        dd {
-            padding-left: 20px;
-            width: calc(100% - 140px);
-
-            .input-box {
-
-                &.inline {
-                    display: inline-block;
-                }
-
-                &.input-mid {
-                    width: 300px;
-
-                    input,
-                    select {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
-    @include mq('contents') {}
-
-    @include mq('tablet-small') {
-        .field {
+        span {
             font-size: 15px;
-
-            input,
-            select,
-            textarea {
-                font-size: 15px;
-            }
-
-            dt {
-                width: 20%;
-            }
-
-            dd {
-                padding-left: 20px;
-                width: 80%;
-
-                .input-box {
-
-                    &.inline {
-                        display: inline-block;
-                        width: 32%;
-
-                        input,
-                        select {
-                            width: 100%;
-                        }
-                    }
-
-                    &.input-mid {
-                        width: auto;
-
-                        input,
-                        select {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
+            margin-top: 5px;
         }
-
     }
 
-    @include mq('phone-wide') {
+    .li-bul {
+        li {
+            font-size: 16px;
+        }
+    }
 
-        .field {
+
+
+    .checkbox-container,
+    .radio-container {
+        font-size: 15px;
+    }
+}
+
+@include mq('phone-wide') {
+    .title01 {
+        margin-top: 20px;
+
+        span {
             font-size: 14px;
-
-            input,
-            select {
-                font-size: 14px;
-            }
-
-            textarea {
-                font-size: 14px;
-            }
-
-            .at {
-                padding: 0 2px;
-            }
         }
     }
 
-    @include mq('phone-mid') {
-
-        .field {
-
-            flex-wrap: wrap;
-
-            dt {
-                width: 100%;
-
-                &::after {
-                    display: none;
-                }
-            }
-
-            dd {
-                width: 100%;
-                padding-left: 0;
-                margin-top: 10px;
-
-                .input-box {
-
-
-                    &.input-mid {
-
-                        input,
-                        select {}
-                    }
-                }
-            }
+    .li-bul {
+        li {
+            font-size: 14px;
         }
+    }
 
+    .checkbox-container,
+    .radio-container {
+        font-size: 14px;
     }
 }
