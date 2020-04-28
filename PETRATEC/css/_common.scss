@@ -1,0 +1,602 @@
+::-webkit-input-placeholder {
+    color: #999;
+    font-size: 15px;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+    font-size: 15px;
+}
+
+::placeholder {
+    color: #999;
+    font-size: 15px;
+}
+
+
+.col-navy {
+    color: #095379
+}
+
+
+.border-box {
+    border: 1px solid #ddd;
+    padding: 30px;
+    background-color: #fff;
+
+    @include mq('tablet-small') {
+        padding: 20px;
+    }
+}
+
+.tb-gray {
+    border-top: 2px solid #023d5c;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 16px;
+        text-align: center;
+
+
+        td,
+        th {
+            border-bottom: 1px solid #c9c9c9;
+            border-right: 1px solid #c9c9c9;
+            border-left: 1px solid #c9c9c9;
+            padding: 15px 10px;
+            background-color: #fff;
+
+        }
+
+        th {
+            background: #f7f7f7;
+            color: #333;
+
+        }
+
+        tbody th {
+            color: #023d5c;
+        }
+
+        tbody td {
+            td {
+                color: #666666
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        table {
+            font-size: 15px;
+        }
+    }
+
+    @include mq('tablet-small') {
+        table {
+            font-size: 14px;
+
+            td,
+            th {
+                padding: 10px;
+            }
+        }
+    }
+
+    @include mq('phone') {
+        table {
+            font-size: 13px;
+
+            td,
+            th {
+                padding: 10px 7px
+            }
+        }
+    }
+}
+
+
+.tab-list {
+    width: 100%;
+    border-bottom: 1px solid #023d5c;
+
+    ul {
+        width: 1200px;
+        @include push--auto;
+        text-align: center;
+        letter-spacing: -10px;
+
+        li {
+            display: inline-block;
+            width: 245px;
+            height: 50px;
+            line-height: 50px;
+            overflow: hidden;
+            letter-spacing: 0;
+            vertical-align: bottom;
+            border: 1px solid #023d5c;
+            border-bottom: none;
+            margin: 0 5px;
+            cursor: pointer;
+
+            &.on {
+                background: #023d5c;
+                color: #fff;
+            }
+        }
+    }
+
+    &.tab-list-3type {
+        ul li {
+            width: 245px;
+        }
+    }
+}
+
+
+//컨텐츠 공통스타일 
+.tab-cnt {
+    display: none;
+    width: 1200px;
+    @include push--auto;
+
+
+    &.on {
+        display: block;
+        padding-top: 60px;
+        overflow: hidden;
+    }
+
+}
+
+@include mq('contents') {
+    .tab-list {
+        ul {
+            width: auto;
+        }
+    }
+
+    .tab-cnt {
+        width: auto;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@include mq('tablet') {
+    .tab-list {
+
+        &.tab-list-3type {
+            ul li {
+                width: 30%;
+                margin: 0 1%;
+            }
+        }
+    }
+}
+
+@include mq('tablet-small') {
+    .tab-list {
+        ul li {
+            font-size: 14px;
+            width: auto;
+        }
+
+        &.tab-list-3type {}
+    }
+
+    .tab-cnt.on {
+        padding-top: 30px;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+}
+
+@include mq('phone') {
+    .tab-list {
+        ul li {
+            font-size: 13px;
+        }
+
+    }
+}
+
+.title01 {
+    margin-top: 60px;
+    font-size: 22px;
+    color: #023d5c;
+    line-height: 1;
+    padding-bottom: 20px;
+
+    span {
+        font-size: 16px;
+        color: #888;
+        display: block;
+        margin-top: 10px;
+    }
+}
+
+.li-bul {
+    li {
+        padding-left: 30px;
+        position: relative;
+        font-size: 18px;
+        color: #666666;
+        margin-top: 18px;
+
+        &::before {
+            content: '';
+            width: 13px;
+            height: 23px;
+            background: url('../img/bul01.png') no-repeat;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+@include mq('tablet-small') {
+    .title01 {
+        margin-top: 40px;
+        font-size: 18px;
+        padding-bottom: 15px;
+
+        span {
+            font-size: 15px;
+            margin-top: 5px;
+        }
+    }
+
+    .li-bul {
+        li {
+            font-size: 16px;
+        }
+    }
+}
+
+@include mq('phone-wide') {
+    .title01 {
+        margin-top: 20px;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .li-bul {
+        li {
+            font-size: 14px;
+        }
+    }
+}
+
+//checkbox custom
+.checkbox-container {
+    display: block;
+    position: relative;
+    padding-left: 31px;
+    height: 26px;
+    line-height: 26px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &.ciecle {
+        .checkmark {
+            border-radius: 50%;
+            background-color: #fff;
+            border: 1px solid #efefef;
+
+            &::after {
+                content: "";
+                position: absolute;
+                display: none;
+                top: 6px;
+                left: 6px;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background: white;
+                transform: none;
+            }
+        }
+
+        input:checked~.checkmark {
+            background-color: #095379;
+        }
+
+    }
+
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #eee;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            left: 9px;
+            top: 5px;
+            width: 5px;
+            height: 10px;
+            border: solid white;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+    }
+
+    &:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    input:checked~.checkmark {
+        background-color: #095379;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+}
+
+.radio-container {
+
+    //   <label class="container">Four
+    //     <input type="radio" name="radio">
+    //     <span class="checkmark"></span>
+    //   </label>
+    display: block;
+    position: relative;
+    padding-left: 31px;
+    cursor: pointer;
+    font-size: 16px;
+    height: 26px;
+    line-height: 26px;
+    user-select: none;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #fff;
+        border-radius: 50%;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: none;
+            top: 9px;
+            left: 9px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+        }
+    }
+
+    &:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    input:checked~.checkmark {
+        background-color: #095379;
+    }
+
+    input:checked~.checkmark:after {
+        display: block;
+    }
+
+}
+
+.inquiry-form {
+    border-top: 2px solid #333;
+    border-bottom: 1px solid #333;
+    background: #fbfbfb;
+    padding-bottom: 30px;
+    margin-top: 40px;
+
+    .field {
+        overflow: hidden;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        //justify-content: flex-start;
+        padding: 30px 2% 0 2%;
+
+        input,
+        select {
+            padding: 4px 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            font-size: 16px;
+            color: #999;
+            height: 35px;
+            line-height: 32px;
+            width: 100%;
+        }
+
+        textarea {
+            padding: 20px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #999;
+            width: 100%;
+            min-height: 200px;
+        }
+
+        select {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            background: #fff url('../img/arr_sel_gray.png') no-repeat 94% center;
+            padding-right: 50px;
+        }
+
+        .at {
+            padding: 0 5px;
+            color: #999;
+        }
+
+        dt {
+            width: 140px;
+            //padding-left: 20px;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 1px;
+                height: 12px;
+                background: #ddd;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-6px);
+            }
+        }
+
+        dd {
+            padding-left: 20px;
+            width: calc(100% - 140px);
+
+            .input-box {
+
+                &.inline {
+                    display: inline-block;
+                }
+
+                &.input-mid {
+                    width: 300px;
+
+                    input,
+                    select {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @include mq('contents') {}
+
+    @include mq('tablet-small') {
+        .field {
+            font-size: 15px;
+
+            input,
+            select,
+            textarea {
+                font-size: 15px;
+            }
+
+            dt {
+                width: 20%;
+            }
+
+            dd {
+                padding-left: 20px;
+                width: 80%;
+
+                .input-box {
+
+                    &.inline {
+                        display: inline-block;
+                        width: 32%;
+
+                        input,
+                        select {
+                            width: 100%;
+                        }
+                    }
+
+                    &.input-mid {
+                        width: auto;
+
+                        input,
+                        select {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include mq('phone-wide') {
+
+        .field {
+            font-size: 14px;
+
+            input,
+            select {
+                font-size: 14px;
+            }
+
+            textarea {
+                font-size: 14px;
+            }
+
+            .at {
+                padding: 0 2px;
+            }
+        }
+    }
+
+    @include mq('phone-mid') {
+
+        .field {
+
+            flex-wrap: wrap;
+
+            dt {
+                width: 100%;
+
+                &::after {
+                    display: none;
+                }
+            }
+
+            dd {
+                width: 100%;
+                padding-left: 0;
+                margin-top: 10px;
+
+                .input-box {
+
+
+                    &.input-mid {
+
+                        input,
+                        select {}
+                    }
+                }
+            }
+        }
+
+    }
+}

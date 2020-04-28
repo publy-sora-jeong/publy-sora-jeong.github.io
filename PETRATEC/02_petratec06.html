@@ -13,7 +13,7 @@
       <script src="js/script.js"></script>
 
       <link rel="stylesheet" href="css/style.css">
-
+	  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
       <title>PETRATEC</title>
 </head>
 
@@ -166,43 +166,152 @@
                   <a href="02_petratec06.html" class="current-page">협력사 및 협력 실험동</a>
             </article>
 
-            <h3 class="page-title"><span>주요연혁</span></h3>
+            <h3 class="page-title"><span>협력사 및 협력 실험동</span></h3>
 
             <div class="contents-area">
-                  <div class="petra-history">
+                  <div class="company-inquiry">
+                        <div class="company-list">
+                              <div class="c-box c-box-01">
+                                    <input type="radio" id="company01" class="img-checkbox" name="sel">
+                                    <span class="c-name">한국산업기술시험원(KTL)</span>
+                                    <label for="company01" class="checker"></label>
+                              </div>
+                              <div class="c-box c-box-02">
+                                    <input type="radio" id="company02" class="img-checkbox" name="sel">
+                                    <span class="c-name">(주)아이텔</span>
+                                    <label for="company02" class="checker"></label>
+                              </div>
+                              <div class="c-box c-box-03">
+                                    <input type="radio" id="company03" class="img-checkbox" name="sel">
+                                    <span class="c-name">서울과학기술대학교 공동실험실습관</span>
+                                    <label for="company03" class="checker"></label>
+                              </div>
+                              <div class="c-box c-box-04">
+                                    <input type="radio" id="company04" class="img-checkbox" name="sel">
+                                    <span class="c-name">명지대학교</span>
+                                    <label for="company04" class="checker"></label>
+                              </div>
+                              <div class="c-box c-box-05">
+                                    <input type="radio" id="company05" class="img-checkbox" name="sel">
+                                    <span class="c-name">MTS</span>
+                                    <label for="company05" class="checker"></label>
+                              </div>
+                        </div>
 
-                        <div class="history-year-tab">
-                              <ul>
-                                    <li class="on"><span>2018 ~ 현재</span></li>
-                                    <li><span>2017 ~ 2015</span></li>
-                                    <li><span>2009 ~ 2014</span></li>
-                              </ul>
+                        <h4 class="title01">상생 협력 문의
+                              <span>아래의 내용을 입력 하신후 전송 버튼을 누르시면 협력문의 담당자에게 전송됩니다.</span>
+                        </h4>
+
+                        <div class="inquiry-policy">
+                              <div class="policy-content">
+                                    <ul>
+                                          <li><strong>01. 수집하는 개인정보 항목</strong>
+                                                <ul>
+                                                      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic
+                                                            repellat dolore laudantium a beatae suscipit? Rem minima
+                                                            vero ut illo. Aperiam sint voluptatem harum amet
+                                                            consequuntur deleniti praesentium rem quos?</li>
+                                                </ul>
+                                          </li>
+                                    </ul>
+                              </div>
+                              <div class="agree agree--space">
+                                    <span>위 개인정보 수집 이용에 동의합니다. </span>
+                                    <label class="checkbox-container ciecle"> 동의합니다.
+                                          <input type="radio" name="radio">
+                                          <span class="checkmark"></span>
+                                    </label>
+                              </div>
                         </div>
-                        <div class="history-cnt on">
-                              2018
+
+                        <div class="inquiry-form">
+                              <dl class="field">
+                                    <dt>질문유형</dt>
+                                    <dd>
+                                          <div class="input-box input-mid">
+                                                <select name="inq-opt" id="inq-opt">
+                                                      <option value="0">질문 유형을 선택해 주세요.</option>
+                                                </select>
+                                          </div>
+                                    </dd>
+                              </dl>
+                              <dl class="field">
+                                    <dt>상호</dt>
+                                    <dd>
+                                          <div class="input-box input-mid">
+                                                <input type="text" title="상호" placeholder="상호명을 입력해 주세요.">
+                                          </div>
+                                    </dd>
+                              </dl>
+                              <dl class="field">
+                                    <dt>담당자명</dt>
+                                    <dd>
+                                          <div class="input-box input-mid">
+                                                <input type="text" title="담당자명" placeholder="">
+                                          </div>
+                                    </dd>
+                              </dl>
+                              <dl class="field">
+                                    <dt>이메일</dt>
+                                    <dd>
+                                          <div class="input-box inline">
+                                                <input type="text" title="이메일" placeholder="이메일">
+                                          </div>
+                                          <span class="at">@</span>
+                                          <div class="input-box inline">
+                                                <input type="text" title="이메일" placeholder="이메일 도메인">
+                                          </div>
+                                          <div class="input-box inline">
+                                                <select name="domain" id="domain">
+                                                      <option value="self" selected>직접입력</option>
+                                                      <option value="naver">naver.com</option>
+                                                </select>
+                                          </div>
+                                    </dd>
+                              </dl>
+                              <dl class="field">
+                                    <dt>연락처</dt>
+                                    <dd>
+                                          <div class="input-box inline">
+                                                <select name="phone1" id="phone1">
+                                                      <option value="010">010</option>
+                                                      <option value="070">070</option>
+                                                </select>
+                                          </div>
+                                          <div class="input-box inline">
+                                                <input type="number" title="phone1_1">
+                                          </div>
+                                          <div class="input-box inline">
+                                                <input type="number" title="phone1_2">
+                                          </div>
+                                    </dd>
+                              </dl>
+
+                              <dl class="field">
+                                    <dt>제목</dt>
+                                    <dd>
+                                          <div class="input-box input-mid">
+                                                <input type="text" title="제목" placeholder="">
+                                          </div>
+                                    </dd>
+                              </dl>
+                              <dl class="field">
+                                    <dt>문의내용</dt>
+                                    <dd>
+                                          <div class="input-box">
+                                                <textarea name="" id="" cols="30" rows="10"></textarea>
+                                          </div>
+                                    </dd>
+                              </dl>
                         </div>
-                        <div class="history-cnt ">
-                              2017
-                        </div>
-                        <div class="history-cnt ">
-                              2009
+
+                        <div class="btn-area btn-center">
+                              <button class="btn-apply"><span>문의 신청</span></button>
                         </div>
                   </div>
             </div>
 
-            <script>
-                  function tabs() {
-                        $('.history-year-tab li').click(function () {
-                              var thisIndex = $('.history-year-tab li').index(this);
-                              $('div.history-cnt').removeClass('on');
-                              $('.history-year-tab li').removeClass('on');
-                              $('div.history-cnt').eq(thisIndex).addClass('on');
-                              $('.history-year-tab li').eq(thisIndex).addClass('on');
-                              return false;
-                        });
-                  };
-                  tabs();
-            </script>
+
       </section>
       <section class="main-guide">
             <div class="section-container">

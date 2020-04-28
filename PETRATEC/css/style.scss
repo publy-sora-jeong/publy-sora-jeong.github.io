@@ -1,6 +1,8 @@
 @import "reset";
 @import "font";
 @import "mixins";
+@import "common";
+@import "button";
 
 
 
@@ -1839,6 +1841,10 @@ footer {
     min-height: 1000px;
     //z-index: -2;
 
+    img {
+        max-width: 100%;
+    }
+
 
     .page-history {
         text-align: right;
@@ -3036,49 +3042,7 @@ footer {
 
 //HISTORY
 .petra-history {
-
-    .history-year-tab {
-        width: 100%;
-        border-bottom: 1px solid #023d5c;
-
-        ul {
-            width: 1200px;
-            @include push--auto;
-            text-align: center;
-            letter-spacing: -10px;
-
-            li {
-                display: inline-block;
-                width: 245px;
-                height: 50px;
-                line-height: 50px;
-                letter-spacing: 0;
-                vertical-align: bottom;
-                border: 1px solid #023d5c;
-                border-bottom: none;
-                margin: 0 5px;
-                cursor: pointer;
-
-                &.on {
-                    background: #023d5c;
-                    color: #fff;
-                }
-            }
-        }
-    }
-
-    .history-cnt {
-        display: none;
-        width: 1200px;
-        @include push--auto;
-
-
-        &.on {
-            display: block;
-            padding-top: 60px;
-            overflow: hidden;
-        }
-
+    .tab-cnt {
         &--left {
             .article {
                 float: left;
@@ -3145,23 +3109,7 @@ footer {
         }
     }
 
-    @include mq('contents') {
-
-        .history-year-tab {
-            ul {
-                width: auto;
-            }
-        }
-
-        .history-cnt {
-            width: auto;
-            padding-left: 5%;
-            padding-right: 5%;
-        }
-    }
-
     @include mq('tablet-wide') {
-
         .cnt-img {
             width: auto !important;
             float: none !important;
@@ -3180,25 +3128,10 @@ footer {
         }
     }
 
-    @include mq('tablet') {
-        .history-year-tab ul li {
-            width: 32%;
-            margin: 0 0.5%;
-        }
-    }
+
 
     @include mq('tablet-small') {
-        .history-year-tab ul li {
-            font-size: 14px;
-        }
-
-        .history-cnt.on {
-            padding-top: 30px;
-            padding-left: 3%;
-            padding-right: 3%;
-        }
-
-        .history-cnt {
+        .tab-cnt {
             .article {
                 dl {
 
@@ -3414,11 +3347,6 @@ footer {
     }
 
 
-    .border-box {
-        border: 1px solid #ddd;
-        padding: 30px;
-        background-color: #fff;
-    }
 
     .certi-gallery {
         letter-spacing: -10px;
@@ -3504,10 +3432,6 @@ footer {
     }
 
     @include mq('tablet-small') {
-        .border-box {
-            padding: 20px;
-        }
-
         .certi-img-top {
             ul {
                 display: none
@@ -3540,44 +3464,202 @@ footer {
     }
 }
 
-.title01 {
-    margin-top: 60px;
-    font-size: 22px;
-    color: #023d5c;
-    line-height: 1;
-    padding-bottom: 20px;
+.equipment {
+    overflow: hidden;
 
-    span {
-        font-size: 16px;
-        color: #888;
-        display: block;
-        margin-top: 10px;
+    .border-box {
+        margin-top: 40px;
+    }
+
+    .equip-img-left {
+        width: 490px;
+        float: left;
+    }
+
+    .equip-table-right {
+        width: calc(100% - 490px);
+        padding-left: 5%;
+        float: right;
+
+        .equip-detail.tb-gray {
+            table {
+                table-layout: fixed;
+
+                .sec {
+                    width: 20%;
+                }
+
+                .cap {
+                    width: 20%;
+                }
+
+                .used {
+                    width: 20%;
+                }
+            }
+        }
+    }
+
+    @include mq('tablet-wide') {
+
+        .equip-img-left,
+        .equip-table-right {
+            width: auto;
+            text-align: center;
+            float: none;
+            padding: 0;
+            margin-top: 20px;
+        }
     }
 }
 
-.li-bul {
-    li {
-        padding-left: 30px;
-        position: relative;
-        font-size: 18px;
-        color: #666666;
-        margin-top: 18px;
+.company-inquiry {
+    width: 1200px;
+    @include push--auto;
 
-        &::before {
-            content: '';
-            width: 13px;
-            height: 23px;
-            background: url('../img/bul01.png') no-repeat;
+    .company-list {
+        display: flex;
+        flex-wrap: wrap;
+        border-top: 2px solid #07486a;
+
+
+        .c-box {
+            width: 20%;
+            margin-top: 0;
+            position: relative;
+        }
+
+        //IMAGE CHEKCBOX
+        .img-checkbox {
+            display: none;
+
+            &:checked+.checker {
+                background: #07486a;
+                border-color: #07486a;
+            }
+
+            &:checked+.c-name {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0 1em;
+            }
+        }
+
+        .c-name {
+            display: none;
             position: absolute;
-            left: 0;
             top: 0;
+            left: 0;
+            background: #07486a;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .checker {
+            background-color: #fff;
+            background-size: contain;
+            background-position: center;
+            display: block;
+            border: 1px solid #eee;
+            height: 150px;
+            background-repeat: no-repeat;
+        }
+
+        .c-box-01 {
+            .checker {
+                background-image: url('../img/sub_logo_ktl.png');
+            }
+        }
+
+        .c-box-02 {
+            .checker {
+                background-image: url('../img/sub_logo_itel.png');
+            }
+        }
+
+        .c-box-03 {
+            .checker {
+                background-image: url('../img/sub_logo_seoultech.png');
+            }
+        }
+
+        .c-box-04 {
+            .checker {
+                background-image: url('../img/sub_logo_mjuniv.png');
+            }
+        }
+
+        .c-box-05 {
+            .checker {
+                background-image: url('../img/sub_logo_mts.png');
+            }
+        }
+    }
+
+    @include mq('contents') {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    @include mq('tablet-small') {
+        .company-list {
+            border: 1px solid #e1e1e1;
+
+            .c-box {
+                width: 50%;
+
+                &.c-box-05 {
+                    .checker {
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .c-name {
+                font-size: 14px;
+            }
+
+            .checker {
+                border-left: none;
+                border-top: none;
+                height: 100px;
+            }
+        }
+    }
+
+    @include mq('phone') {}
+}
+
+//POLICY AGREE BOX 
+.inquiry-policy {
+    border: 1px solid #e1e1e1;
+    border-top: 2px solid #333;
+    background: #fbfbfb;
+    padding: 35px 50px;
+
+    .policy-content {
+        background: #fff;
+        padding: 30px;
+        border: 1px solid #e1e1e1;
+    }
+
+    .agree {
+        margin-top: 20px;
+        overflow: hidden;
+
+        &--space {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
     }
 
     @include mq('tablet-small') {
-
-        li {
-            font-size: 16px;
-        }
+        padding: 25px;
+        font: 15px;
     }
+
 }

@@ -13,7 +13,7 @@
       <script src="js/script.js"></script>
 
       <link rel="stylesheet" href="css/style.css">
-
+	  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png">
       <title>PETRATEC</title>
 </head>
 
@@ -171,14 +171,14 @@
             <div class="contents-area">
                   <div class="petra-history">
 
-                        <div class="history-year-tab">
+                        <div class="tab-list">
                               <ul>
                                     <li class="on"><span>2018 ~ 현재</span></li>
                                     <li><span>2017 ~ 2015</span></li>
                                     <li><span>2009 ~ 2014</span></li>
                               </ul>
                         </div>
-                        <div class="history-cnt history-cnt--left on ">
+                        <div class="tab-cnt tab-cnt--left on ">
                               <div class="cnt-img">
                                     <img src="img/sub_history_img01.png" alt="2018~ 현재">
                               </div>
@@ -220,7 +220,7 @@
                                     </dl>
                               </div>
                         </div>
-                        <div class="history-cnt history-cnt--right">
+                        <div class="tab-cnt tab-cnt--right">
                               <div class="cnt-img">
                                     <img src="img/sub_history_img02.png" alt="2015 ~ 2017">
                               </div>
@@ -268,7 +268,7 @@
                                     </dl>
                               </div>
                         </div>
-                        <div class="history-cnt history-cnt--left  ">
+                        <div class="tab-cnt tab-cnt--left  ">
                               <div class="cnt-img">
                                     <img src="img/sub_history_img03.png" alt="2018~ 현재">
                               </div>
@@ -318,12 +318,12 @@
 
             <script>
                   function tabs() {
-                        $('.history-year-tab li').click(function () {
-                              var thisIndex = $('.history-year-tab li').index(this);
-                              $('div.history-cnt').removeClass('on');
-                              $('.history-year-tab li').removeClass('on');
-                              $('div.history-cnt').eq(thisIndex).addClass('on');
-                              $('.history-year-tab li').eq(thisIndex).addClass('on');
+                        $('.tab-list li').click(function () {
+                              var thisIndex = $('.tab-list li').index(this);
+                              $('div.tab-cnt').removeClass('on');
+                              $('.tab-list li').removeClass('on');
+                              $('div.tab-cnt').eq(thisIndex).addClass('on');
+                              $('.tab-list li').eq(thisIndex).addClass('on');
                               return false;
                         });
                   };
@@ -386,21 +386,3 @@
 </body>
 
 </html>
-
-<!--
-      <dl>
-                                          <dt>2018</dt>
-                                          <dd>
-                                                <strong class="month"></strong>
-                                                <span></span>
-                                          </dd>
-                                          <dd>
-                                                <strong class="month"></strong>
-                                                <span></span>
-                                          </dd>
-                                          <dd>
-                                                <strong class="month"></strong>
-                                                <span></span>
-                                          </dd>
-                                    </dl>
--->
