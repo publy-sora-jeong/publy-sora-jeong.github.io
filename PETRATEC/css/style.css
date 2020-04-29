@@ -646,6 +646,26 @@ input {
   margin-left: 30px;
 }
 
+.btn-list {
+  background: #0060a1;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 40px;
+  font-size: 15px;
+  color: #fff;
+  text-align: center;
+}
+
+.btn-list span::before {
+  content: '';
+  width: 18px;
+  height: 15px;
+  background: url("../img/ico_list.png") no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 30px;
+}
+
 @media screen and (max-width: 640px) {
   .btn-area {
     margin-top: 20px;
@@ -657,6 +677,13 @@ input {
   .btn-apply span::after {
     margin-left: 20px;
   }
+  .btn-list {
+    font-size: 14px;
+    padding: 0 30px;
+  }
+  .btn-list span::before {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -666,6 +693,13 @@ input {
   }
   .btn-apply span::after {
     margin-left: 10px;
+  }
+  .btn-list {
+    font-size: 13px;
+    padding: 0 20px;
+  }
+  .btn-list span::before {
+    margin-right: 10px;
   }
 }
 
@@ -825,6 +859,279 @@ input {
     width: 100%;
     padding-left: 0;
     margin-top: 10px;
+  }
+}
+
+.board-gallery {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+
+.board-gallery .gallery-item {
+  width: 24%;
+  height: 365px;
+  padding: 1%;
+  background-color: #fff;
+}
+
+.board-gallery .gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e1e1e1;
+}
+
+.board-gallery .gallery-item a .thumb {
+  height: 235px;
+  width: 100%;
+  position: relative;
+}
+
+.board-gallery .gallery-item a .thumb.thumb-video::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: url("../img/btn_play.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.board-gallery .gallery-item a .thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.board-gallery .gallery-item a:hover .thumb.thumb-video::before {
+  opacity: 1;
+}
+
+.board-gallery .gallery-item a .desc {
+  padding: 15px 20px;
+  position: relative;
+  height: calc(100% - 235px);
+}
+
+.board-gallery .gallery-item a .desc::after {
+  content: '';
+  width: 15px;
+  height: 15px;
+  background: url("../img/ico_bbs_more.png") no-repeat;
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+}
+
+.board-gallery .gallery-item a .desc .title {
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.board-gallery .gallery-item a .desc .title.title--new {
+  padding-top: 25px;
+}
+
+.board-gallery .gallery-item a .desc .title.title--new::before {
+  content: '';
+  width: 40px;
+  height: 17px;
+  background: url("../img/ico_new_blue.png") no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.board-gallery .gallery-item a .desc .date {
+  display: block;
+  color: #888;
+  font-size: 15px;
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 1200px) {
+  .board-gallery {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .board-gallery .gallery-item {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .board-gallery .gallery-item {
+    height: 210px;
+  }
+  .board-gallery .gallery-item a .thumb {
+    height: 120px;
+  }
+  .board-gallery .gallery-item a .desc {
+    height: calc(100% - 120px);
+    padding: 10px 15px;
+  }
+  .board-gallery .gallery-item a .desc .title {
+    font-size: 15px;
+  }
+  .board-gallery .gallery-item a .desc .date {
+    font-size: 13px;
+  }
+}
+
+.board-pagination {
+  margin-top: 40px;
+  letter-spacing: -10px;
+  text-align: center;
+}
+
+.board-pagination a {
+  display: inline-block;
+  letter-spacing: 0;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.board-pagination a:first-child {
+  border-left: 1px solid #ccc;
+}
+
+.board-pagination a:first-child.on {
+  border-left: 1px solid #555;
+}
+
+.board-pagination .page-num {
+  color: #999;
+  border: 1px solid #ccc;
+  border-left: none;
+}
+
+.board-pagination .page-num.on {
+  background: #666;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.board-view {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.board-view .title {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.board-view .title.title--new::before {
+  content: '';
+  width: 40px;
+  height: 17px;
+  background: url("../img/ico_new_skyblue.png") no-repeat;
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+.board-view .board-postinfo {
+  background: #f6f6f6;
+  padding: 30px;
+  text-align: right;
+  border: 1px solid #ddd;
+}
+
+.board-view .board-postinfo li {
+  display: inline-block;
+  font-size: 14px;
+  margin-left: 15px;
+}
+
+.board-view .board-postinfo li:first-child {
+  margin-left: 0;
+}
+
+.board-view .board-postinfo li::before {
+  content: '';
+  display: inline-block;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+}
+
+.board-view .board-postinfo li.date::before {
+  width: 19px;
+  height: 19px;
+  background-image: url("../img/ico_date.png");
+}
+
+.board-view .board-postinfo li.view::before {
+  width: 16px;
+  height: 23px;
+  background-image: url("../img/ico_hits.png");
+}
+
+.board-view .board-content {
+  padding: 50px;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .board-view {
+    width: auto;
+    padding: 0 5%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .board-view {
+    padding: 0 2%;
+  }
+  .board-view .title {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .board-view .board-postinfo {
+    padding: 20px;
+  }
+  .board-view .board-content {
+    padding: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .board-view .title {
+    font-size: 16px;
+  }
+  .board-view .board-postinfo {
+    padding: 10px 20px;
+  }
+  .board-view .board-postinfo li {
+    font-size: 13px;
+  }
+  .board-view .board-content {
+    font-size: 14px;
+    padding: 20px;
   }
 }
 
@@ -2008,6 +2315,7 @@ header #m-gnb .m-nav-item .m-sub-nav a:hover {
   font-size: 40px;
   line-height: 150px;
   color: #fff;
+  font-weight: normal;
 }
 
 .main-guide .guide-list ul {

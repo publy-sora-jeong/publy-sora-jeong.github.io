@@ -1,0 +1,286 @@
+.board-gallery {
+    width: 1200px;
+    @include push--auto();
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+    .gallery-item {
+        width: 24%;
+        height: 365px;
+        padding: 1%;
+        background-color: #fff;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #e1e1e1;
+
+
+
+
+            .thumb {
+                height: 235px;
+                width: 100%;
+                position: relative;
+
+                &.thumb-video {
+                    &::before {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background-color: rgba($color: #000000, $alpha: 0.7);
+                        background-image: url('../img/btn_play.png');
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                        opacity: 0;
+                        transition: 1s;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &:hover {
+                .thumb.thumb-video {
+                    &::before {
+
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .desc {
+                padding: 15px 20px;
+                position: relative;
+                height: calc(100% - 235px);
+
+                &::after {
+                    content: '';
+                    width: 15px;
+                    height: 15px;
+                    background: url('../img/ico_bbs_more.png') no-repeat;
+                    position: absolute;
+                    right: 20px;
+                    bottom: 15px;
+                }
+
+                .title {
+                    display: block;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    position: relative;
+
+
+                    &.title--new {
+                        padding-top: 25px;
+
+                        &::before {
+                            content: '';
+                            width: 40px;
+                            height: 17px;
+                            background: url("../img/ico_new_blue.png") no-repeat;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                        }
+                    }
+                }
+
+                .date {
+                    display: block;
+                    color: #888;
+                    font-size: 15px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+    @include mq('contents') {
+        width: auto;
+    }
+
+    @include mq('tablet') {
+        .gallery-item {
+            width: 50%;
+        }
+    }
+
+    @include mq('tablet-small') {
+        .gallery-item {
+            height: 210px;
+
+            a {
+                .thumb {
+                    height: 120px;
+                }
+
+                .desc {
+                    height: calc(100% - 120px);
+                    padding: 10px 15px;
+
+                    .title {
+                        font-size: 15px;
+                    }
+
+                    .date {
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+.board-pagination {
+    margin-top: 40px;
+    letter-spacing: -10px;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        letter-spacing: 0;
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 13px;
+        text-align: center;
+
+        &:first-child {
+            border-left: 1px solid #ccc;
+
+            &.on {
+                border-left: 1px solid #555
+            }
+        }
+
+    }
+
+    .page-num {
+        color: #999;
+        border: 1px solid #ccc;
+        border-left: none;
+
+        &.on {
+            background: #666;
+            border: 1px solid #555;
+            color: #fff;
+        }
+    }
+}
+
+.board-view {
+    width: 1200px;
+    @include push--auto;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+
+    .title {
+        padding: 30px;
+        font-size: 20px;
+
+        &.title--new {
+            &::before {
+                content: '';
+                width: 40px;
+                height: 17px;
+                background: url('../img/ico_new_skyblue.png') no-repeat;
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: middle;
+            }
+        }
+    }
+
+    .board-postinfo {
+        background: #f6f6f6;
+        padding: 30px;
+        text-align: right;
+        border: 1px solid #ddd;
+
+        li {
+            display: inline-block;
+            font-size: 14px;
+            margin-left: 15px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &::before {
+                content: '';
+                display: inline-block;
+                margin-right: 5px;
+                vertical-align: middle;
+                background-repeat: no-repeat;
+            }
+
+            &.date::before {
+                width: 19px;
+                height: 19px;
+                background-image: url('../img/ico_date.png');
+            }
+
+            &.view::before {
+                width: 16px;
+                height: 23px;
+                background-image: url('../img/ico_hits.png');
+            }
+        }
+    }
+
+    .board-content {
+        padding: 50px;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    @include mq('contents') {
+        width: auto;
+        padding: 0 5%;
+    }
+
+    @include mq('tablet') {
+        padding: 0 2%;
+
+        .title {
+            font-size: 18px;
+            padding: 20px;
+        }
+
+        .board-postinfo {
+            padding: 20px;
+        }
+
+        .board-content {
+            padding: 30px 20px;
+        }
+    }
+
+    @include mq('tablet-small') {
+        .title {
+            font-size: 16px;
+        }
+
+        .board-postinfo {
+            padding: 10px 20px;
+
+            li {
+                font-size: 13px;
+            }
+        }
+
+        .board-content {
+            font-size: 14px;
+            padding: 20px;
+        }
+    }
+}

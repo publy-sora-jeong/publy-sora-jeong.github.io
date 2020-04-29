@@ -30,6 +30,26 @@
     }
 }
 
+.btn-list {
+    background: #0060a1;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 40px;
+    font-size: 15px;
+    color: #fff;
+    text-align: center;
+
+    span::before {
+        content: '';
+        width: 18px;
+        height: 15px;
+        background: url('../img/ico_list.png') no-repeat;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 30px;
+    }
+}
+
 @include mq('tablet-small') {
     .btn-area {
         margin-top: 20px;
@@ -43,6 +63,15 @@
             margin-left: 20px;
         }
     }
+
+    .btn-list {
+        font-size: 14px;
+        padding: 0 30px;
+
+        span::before {
+            margin-right: 20px;
+        }
+    }
 }
 
 
@@ -53,6 +82,15 @@
 
         span::after {
             margin-left: 10px;
+        }
+    }
+
+    .btn-list {
+        font-size: 13px;
+        padding: 0 20px;
+
+        span::before {
+            margin-right: 10px;
         }
     }
 }

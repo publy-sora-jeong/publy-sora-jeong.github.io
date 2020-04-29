@@ -4,6 +4,7 @@
 @import "common";
 @import "button";
 @import "form";
+@import "board";
 
 
 
@@ -1368,6 +1369,7 @@ header {
         font-size: 40px;
         line-height: 150px;
         color: #fff;
+        font-weight: normal;
     }
 
     .guide-list {

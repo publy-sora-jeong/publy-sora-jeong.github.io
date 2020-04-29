@@ -3199,4 +3199,52 @@ h3:nth-of-type(1) {
   height: 30px;
   margin-top: 8px;
 }
+
+.board-gallery {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.board-gallery .board-gallery-list {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.board-gallery .gallery-item {
+  width: 33.33%;
+  padding: 1.5em;
+}
+
+.board-gallery .gallery-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #e1e1e1;
+}
+
+.board-gallery .gallery-item a .thumb {
+  height: 235px;
+}
+
+.board-gallery .gallery-item a .thumb img {
+  width: 100%;
+  height: 100%;
+}
+
+.board-gallery .gallery-item a .desc {
+  padding: 15px 20px;
+}
+
+.board-gallery .gallery-item a .desc .title {
+  font-size: 17px;
+  height: 50px;
+  word-break: break-all;
+  display: block;
+}
 /*# sourceMappingURL=style.css.map */

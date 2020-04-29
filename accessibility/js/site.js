@@ -1,4 +1,15 @@
 $(function () {
+
+  $(".dot").each(function () {
+    $(this).dotdotdot({
+      ellipsis: "\u2026",
+      wrap: "word",
+      watch: true,
+      tolerance: 0
+    });
+  });
+
+
   //BOARD TAB
   var tab = $(".tab_list");
   tab.css("height", tab.find(">ul>li>ul:visible").height() + 40);
@@ -153,6 +164,7 @@ $(function () {
 
     tooltip();
     accessibilityFocus();
+
 
   });
 
