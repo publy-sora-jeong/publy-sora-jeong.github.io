@@ -120,8 +120,7 @@ select {
         li {
             display: inline-block;
             width: 245px;
-            height: 50px;
-            line-height: 50px;
+
             overflow: hidden;
             letter-spacing: 0;
             vertical-align: bottom;
@@ -130,9 +129,22 @@ select {
             margin: 0 5px;
             cursor: pointer;
 
+            a {
+                display: block;
+                height: 50px;
+                line-height: 50px;
+            }
+
+
+
             &.on {
                 background: #023d5c;
                 color: #fff;
+
+                a {
+                    color: #fff;
+
+                }
             }
         }
     }
@@ -148,8 +160,6 @@ select {
             width: 245px;
         }
     }
-
-
 }
 
 

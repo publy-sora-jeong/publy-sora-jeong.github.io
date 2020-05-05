@@ -51,7 +51,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 100;
-    border-bottom: 3px solid #07486a;
+    //border-bottom: 3px solid #07486a;
     transition: 0.4s;
     height: 80px;
 
@@ -85,6 +85,7 @@ header {
         width: 1200px;
         margin: 0 auto;
         padding: 0 60px;
+        padding-left: 120px;
 
 
         .depth01>li {
@@ -96,14 +97,15 @@ header {
             &::before {
                 content: '';
                 width: 0;
-                height: 1px;
+                height: 3px;
 
                 display: block;
                 position: absolute;
-                bottom: -1px;
+                bottom: 0px;
                 z-index: 3003;
                 left: 50%;
-                transition: 1s;
+                transition: .2s;
+                background: #71bf44;
             }
 
             &::after {
@@ -131,6 +133,9 @@ header {
             }
 
             &.on {
+                //border-bottom: 2px solid green;
+
+
                 &::before {
                     width: 100%;
                     left: 0;
@@ -156,17 +161,28 @@ header {
                 width: 100%;
                 z-index: 1;
                 padding-top: 20px;
-
+                text-align: left;
 
                 a {
                     display: block;
                     font-size: 14px;
                     //line-height: 15px;
                     text-transform: uppercase;
-                    color: #777777;
+                    color: #333;
                     padding: 5px 4px;
                     transition: .3s;
                     letter-spacing: 0.5px;
+                    font-weight: bold;
+                }
+
+                .depth03 {
+
+
+                    a {
+                        color: #666;
+                        font-weight: normal;
+                        font-size: 13px;
+                    }
                 }
             }
         }
@@ -306,6 +322,16 @@ header {
 
                     &:hover {
                         color: #159db4 !important;
+                    }
+                }
+
+                .depth03 {
+                    padding-left: 15px;
+
+                    a {
+                        font-size: 13px;
+                        color: #999 !important;
+
                     }
                 }
             }
@@ -748,6 +774,12 @@ header {
             margin: 0 30px;
             padding: 30px;
             background-color: rgba($color: #ffffff, $alpha: 0.5);
+            transition: .3s;
+
+            &:hover {
+                border-width: 7px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
 
             a {
                 display: block;
@@ -773,6 +805,8 @@ header {
         }
 
         .biz-02 {
+            border-color: #1c9ad6 !important;
+
             .biz-tit {
                 color: #1c9ad6;
 
@@ -783,6 +817,8 @@ header {
         }
 
         .biz-03 {
+            border-color: #71bf44 !important;
+
             .biz-tit {
                 color: #71bf44;
 

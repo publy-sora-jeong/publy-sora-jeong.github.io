@@ -85,25 +85,48 @@ header {
         width: 1200px;
         margin: 0 auto;
         padding: 0 60px;
+        padding-left: 120px;
 
+
+        &>ul {
+            display: flex;
+            justify-content: space-between;
+        }
 
         .depth01>li {
             float: left;
-            width: 16%;
+            //display: inline-block;
+            min-width: 12%;
             position: relative;
+
+            &:nth-of-type(1) {
+                width: 22%;
+            }
+
+            &:nth-of-type(2) {
+                width: 20%;
+            }
+
+            &:nth-of-type(3) {
+                width: 25%;
+            }
+
+            &:nth-of-type(4) {
+                width: 15%;
+            }
 
 
             &::before {
                 content: '';
                 width: 0;
-                height: 1px;
-
+                height: 3px;
                 display: block;
                 position: absolute;
-                bottom: -1px;
+                bottom: 0px;
                 z-index: 3003;
                 left: 50%;
-                transition: 1s;
+                transition: .2s;
+                background: #71bf44;
             }
 
             &::after {
@@ -122,15 +145,19 @@ header {
             &>a {
                 line-height: 80px;
                 display: block;
-                font-size: 18px;
+                font-size: 17px;
                 font-weight: bold;
                 transition: .3s;
                 overflow: hidden;
                 height: 80px;
                 color: #043d5d;
+                //padding: 0 20px;
             }
 
             &.on {
+                //border-bottom: 2px solid green;
+
+
                 &::before {
                     width: 100%;
                     left: 0;
@@ -155,18 +182,34 @@ header {
                 left: 0;
                 width: 100%;
                 z-index: 1;
-                padding-top: 20px;
+                padding: 20px 10px;
+                text-align: left;
 
 
                 a {
                     display: block;
-                    font-size: 15px;
+                    font-size: 14px;
                     //line-height: 15px;
-                    text-transform: uppercase;
-                    color: #777777;
-                    padding: 5px 4px;
+                    color: #333;
+                    padding: 7px 0;
                     transition: .3s;
                     letter-spacing: 0.5px;
+                    font-weight: bold;
+
+                }
+
+                .depth03 {
+                    li {
+                        margin-top: 4px;
+                    }
+
+                    a {
+                        color: #666;
+                        font-weight: normal;
+                        font-size: 13px;
+                        padding: 0;
+                        text-transform: initial;
+                    }
                 }
             }
         }
@@ -306,6 +349,16 @@ header {
 
                     &:hover {
                         color: #159db4 !important;
+                    }
+                }
+
+                .depth03 {
+                    padding-left: 15px;
+
+                    a {
+                        font-size: 13px;
+                        color: #999 !important;
+
                     }
                 }
             }
@@ -747,7 +800,14 @@ header {
             height: 360px;
             margin: 0 30px;
             padding: 30px;
+            transition: .2s;
             background-color: rgba($color: #ffffff, $alpha: 0.5);
+
+            &:hover {
+                border-width: 7px;
+                box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+            }
+
 
             a {
                 display: block;
@@ -775,6 +835,8 @@ header {
         }
 
         .biz-02 {
+            border-color: #1c9ad6 !important;
+
             .biz-tit {
                 color: #1c9ad6;
 
@@ -785,6 +847,8 @@ header {
         }
 
         .biz-03 {
+            border-color: #71bf44 !important;
+
             .biz-tit {
                 color: #71bf44;
 
@@ -1342,9 +1406,12 @@ header {
 
     .section-title {
         font-size: 40px;
-        line-height: 150px;
+        //line-height: 150px;
         color: #fff;
         font-weight: normal;
+        line-height: initial;
+        text-transform: uppercase;
+        padding-top: 40px;
     }
 
     .guide-list {
@@ -1875,14 +1942,14 @@ footer {
         font-size: 35px;
         text-align: center;
         margin-top: 100px;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
 
 
     }
 
     .page-subtitle {
         color: #666;
-        font-size: 20px;
+        font-size: 15px;
         text-align: center;
         margin-bottom: 40px;
     }
@@ -1960,6 +2027,7 @@ footer {
             line-height: 1;
             margin-top: 54px;
             color: #043d5d;
+            text-transform: uppercase;
 
             span {
                 position: relative;
@@ -1986,7 +2054,7 @@ footer {
 
         //20 17 
         .cnt {
-            font-size: 20px;
+            font-size: 18px;
             color: #555;
             padding-left: 10px;
             margin-top: 40px;
@@ -2216,9 +2284,9 @@ footer {
             z-index: 1;
             width: 33%;
             height: 350px;
-            font-size: 33px;
+            font-size: 30px;
             font-weight: bold;
-            padding: 80px 40px 20px 40px;
+            padding: 60px 40px 20px 40px;
 
             p::after {
                 content: '';
@@ -2231,8 +2299,8 @@ footer {
             }
 
         }
-
     }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -2243,16 +2311,28 @@ footer {
 }
 
 @media screen and (max-width: 1024px) {
-    .biz-case-slider .slide-desc dt {
+    .sub-biz-slider .biz-case-slider .slide-desc {
         font-size: 25px;
+        padding-top: 40px;
+        padding-right: 20px;
 
+        dt {
+            font-size: 25px;
+        }
     }
+
 }
 
 @media screen and (max-width: 768px) {
 
     .sub-biz-slider {
+
+        .slick-dots {
+            left: 20px;
+        }
+
         .biz-case-slider {
+
 
             .slick-slide {
                 height: auto;
@@ -2261,7 +2341,8 @@ footer {
 
 
             .slide-desc {
-                font-size: 25px;
+                font-size: 20px;
+                padding-left: 20px;
 
                 br {
                     display: none;
@@ -2301,6 +2382,10 @@ footer {
     width: 1200px;
     margin: 40px auto 0 auto;
     display: flex;
+
+    &.bg-single {
+        padding: 30px;
+    }
 
     &>div {
         width: 50%;
@@ -2420,7 +2505,7 @@ footer {
             bottom: -30px;
             color: #fff;
             padding: 40px 40px 50px 40px;
-            font-size: 28px;
+            font-size: 24px;
 
             &::before {
                 content: '';
@@ -3194,16 +3279,18 @@ footer {
 
             p {
                 display: inline-block;
+                align-items: center;
                 width: 154px;
                 height: 176px;
                 background-image: url('../img/sub_org_blue.png');
                 background-repeat: no-repeat;
                 background-size: contain;
                 text-align: center;
-                line-height: 176px;
+                //line-height: 176px;
                 color: #fff;
                 font-size: 20px;
                 margin: 0 60px;
+                padding: 50px 10px 0 10px;
                 letter-spacing: 0;
 
                 &:nth-of-type(2) {
@@ -3273,7 +3360,8 @@ footer {
                 p {
                     width: 134px;
                     height: 155px;
-                    line-height: 155px;
+                    //line-height: 155px;
+                    font-size: 14px;
                     margin: 0;
                     width: 50%;
                     background-position: center;
@@ -3844,7 +3932,7 @@ footer {
 
 
     .petra-color {
-        margin-top: 50px;
+        padding-top: 10px;
         clear: both;
 
         .color-list {

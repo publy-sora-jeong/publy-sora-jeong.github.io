@@ -150,14 +150,14 @@ function openSub() {
       $('<div class="bgGnb">').css({
         width: "3000px",
         //height: getSubMaxHeight(),
-        height: 300,
+        height: 350,
         //backgroundColor: "#fff",
         position: "absolute",
         left: "50%",
         top: 77,
         display: "none",
         marginLeft: -1500,
-        borderTop: "3px solid #07486a"
+        borderTop: "1px solid #eee"
       })
     );
 
@@ -228,7 +228,7 @@ function mainBizSlide() {
 
 
 function tabs() {
-  $('.tab-list li').click(function () {
+  $('.tab-list li').click(function (e) {
     var thisIndex = $('.tab-list li').index(this);
 
     $('div.tab-cnt').removeClass('on');

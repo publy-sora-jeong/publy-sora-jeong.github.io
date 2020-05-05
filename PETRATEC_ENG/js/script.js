@@ -150,7 +150,7 @@ function openSub() {
       $('<div class="bgGnb">').css({
         width: "3000px",
         //height: getSubMaxHeight(),
-        height: 300,
+        height: 460,
         //backgroundColor: "#fff",
         position: "absolute",
         left: "50%",
