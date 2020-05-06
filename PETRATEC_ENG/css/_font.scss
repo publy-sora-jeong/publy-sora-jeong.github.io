@@ -1,4 +1,22 @@
 @font-face {
+    font-family: 'Lato';
+    font-weight: 300;
+    src: url('../font/Lato-Light.eot');
+    src: url('../font/Lato-Light.eot?#iefix') format('embedded-opentype'),
+        url('../font/Lato-Light.woff') format('woff'),
+        url('../font/Lato-Light.ttf') format('truetype'),
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-weight: 400;
+    src: url('../font/Lato-Regular.eot');
+    src: url('../font/Lato-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../font/Lato-Regular.woff') format('woff'),
+        url('../font/Lato-Regular.ttf') format('truetype'),
+}
+
+@font-face {
     font-family: 'NanumBarunGothic';
     src: url('../font/NanumBarunGothic.eot');
     src: url('../font/NanumBarunGothic.eot?#iefix') format('embedded-opentype'),

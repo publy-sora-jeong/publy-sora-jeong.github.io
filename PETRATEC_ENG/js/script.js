@@ -212,7 +212,7 @@ function mainBizSlide() {
         settings: "unslick"
       },
       {
-        breakpoint: 641,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,

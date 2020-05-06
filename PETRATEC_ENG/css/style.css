@@ -219,6 +219,20 @@ input {
 }
 
 @font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  src: url("../font/Lato-Light.eot");
+  src: url("../font/Lato-Light.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Light.woff") format("woff"), url("../font/Lato-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: url("../font/Lato-Regular.eot");
+  src: url("../font/Lato-Regular.eot?#iefix") format("embedded-opentype"), url("../font/Lato-Regular.woff") format("woff"), url("../font/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
   font-family: 'NanumBarunGothic';
   src: url("../font/NanumBarunGothic.eot");
   src: url("../font/NanumBarunGothic.eot?#iefix") format("embedded-opentype"), url("../font/NanumBarunGothic.woff") format("woff"), url("../font/NanumBarunGothic.ttf") format("truetype");
@@ -1750,8 +1764,9 @@ body {
   background-color: #fff;
   background-position: top center;
   background-repeat: no-repeat;
-  font-family: 'NanumBarunGothic', sans-serif;
-  letter-spacing: -0.7px;
+  font-family: 'Lato', 'arial', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.2px;
   overflow-x: hidden;
 }
 
@@ -2081,7 +2096,7 @@ header #m-gnb .m-nav-item .m-sub-nav .depth03 a {
     width: 80px;
   }
   header #gnb {
-    width: 1000px;
+    display: none;
   }
 }
 
