@@ -425,7 +425,7 @@ html body {
 }
 
 body {
-  cursor: url("../../cursor_basic.png"), default !important;
+  cursor: url("../img/main/n_basic_32.png"), default !important;
 }
 
 ::-moz-selection {
@@ -525,7 +525,7 @@ body {
 .menu-btn:hover {
   background-color: #fff;
   border-color: #f9cd35;
-  cursor: url("../img/main/n_link.png"), auto !important;
+  cursor: url("../img/main/n_link_32.png"), auto !important;
 }
 
 .menu-btn:hover::before {
@@ -537,25 +537,17 @@ body {
   background: #cc5376;
 }
 
-a {
-  cursor: url("../img/main/cursor_link.png");
-}
-
 a:hover {
-  cursor: url("../img/main/cursor_basic.png");
+  cursor: url("../img/main/n_link_32.png");
   width: 100px;
   height: 100px;
-}
-
-.handclass:hover {
-  cursor: url("../img/main/cursor_basic.png") default !important;
 }
 
 .visual {
   background-color: #cc5376;
   background-size: cover;
   background-repeat: repeat-x;
-  height: 600px;
+  height: 90vh;
   position: relative;
   background-attachment: fixed;
   font-family: 'Pangolin', cursive;
@@ -568,7 +560,7 @@ a:hover {
   color: #fff;
   font-family: 'Pangolin', cursive;
   font-size: 4em;
-  padding-top: 100px;
+  padding-top: 25vh;
   letter-spacing: -10px;
 }
 
@@ -589,14 +581,14 @@ a:hover {
 
 .visual .snail1 {
   left: 10%;
-  -webkit-animation: snailMoving infinite 60s forwards;
-          animation: snailMoving infinite 60s forwards;
+  -webkit-animation: snailMoving infinite 100s forwards;
+          animation: snailMoving infinite 100s forwards;
 }
 
 .visual .snail2 {
   left: -50%;
-  -webkit-animation: snailMoving infinite 60s 10s forwards;
-          animation: snailMoving infinite 60s 10s forwards;
+  -webkit-animation: snailMoving infinite 110s 10s forwards;
+          animation: snailMoving infinite 110s 10s forwards;
 }
 
 @-webkit-keyframes snailMoving {
@@ -713,11 +705,11 @@ a:hover {
 }
 
 body {
-  cursor: url("../img/main/n_basic.png"), auto !important;
+  cursor: url("../img/main/n_basic_32.png"), auto !important;
 }
 
 body a:hover {
-  cursor: url("../img/main/n_link.png"), auto !important;
+  cursor: url("../img/main/n_link_32.png"), auto !important;
 }
 
 body .grid-item:hover {
@@ -777,5 +769,68 @@ body .grid-item:hover {
 #menu .menu-data li:hover a {
   padding-left: 20px;
   color: #ff4b6a;
+}
+
+.page-nav a {
+  width: 50px;
+  height: 200px;
+  background: #000;
+  color: #fff;
+  display: block;
+  position: fixed;
+  top: 50%;
+  margin-top: -100px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  border: 1px solid transparent;
+}
+
+.page-nav a:hover {
+  cursor: url("../img/main/n_link_32.png"), auto !important;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #fff;
+}
+
+.page-nav a span {
+  display: block;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transform-origin: 0 100%;
+          transform-origin: 0 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: 'Abel', sans-serif;
+  font-size: 18px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.page-nav a span::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: url("../img/main/skip_w.png") no-repeat;
+  background-size: contain;
+  right: -70px;
+  bottom: 14px;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  display: block;
+  position: absolute;
+}
+
+.page-nav a.page-prev {
+  left: 0;
+}
+
+.page-nav a.page-prev span::after {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.page-nav a.page-next {
+  right: 0;
 }
 /*# sourceMappingURL=main.css.map */

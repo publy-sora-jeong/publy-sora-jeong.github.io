@@ -76,23 +76,7 @@ $(function () {
     });
   });
 
-  $(".slider").slick({
-    infinite: true,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    dots: false,
-    arrows: false,
-    vertical: true,
-    verticalSwiping: true,
-  });
 
-  $(".slider2").slick({
-    infinite: true,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    dots: false,
-    arrows: false,
-  });
 
   // $('.item-container > a ').on('click', function (e) {
   //   e.preventDefault();
@@ -241,7 +225,7 @@ $(function () {
   $(document).on("click", ".menu-btn", function () {
     menu.reversed(!menu.reversed());
   });
-  $(document).on("click", "a", function () {
+  $(document).on("click", ".menu-data a", function () {
     menu.reversed(!menu.reversed());
   });
 });
