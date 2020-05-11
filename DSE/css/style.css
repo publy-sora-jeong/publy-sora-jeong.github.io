@@ -2448,6 +2448,18 @@ footer .copyrights {
           transform: scale(1.15);
 }
 
+.floor-facility .facility-gallery.facility-gallery2 .item {
+  width: 32%;
+}
+
+.floor-facility .facility-gallery.facility-gallery2 .item .thumb {
+  height: 300px;
+}
+
+.floor-facility .facility-gallery.facility-gallery2 .item .thumb img {
+  height: 100%;
+}
+
 @media screen and (max-width: 1200px) {
   .floor-facility {
     width: auto;
@@ -2478,6 +2490,9 @@ footer .copyrights {
     width: 100%;
     height: auto;
     margin-bottom: 20px;
+  }
+  .floor-facility .facility-gallery.facility-gallery2 .item {
+    width: 100%;
   }
 }
 
@@ -2559,5 +2574,92 @@ footer .copyrights {
   width: auto;
   height: auto;
   padding: 0;
+}
+
+.premium-tax .tax-img {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.premium-tax h4 {
+  text-align: center;
+  font-size: 16px;
+}
+
+.premium-tax h4 b {
+  font-size: 20px;
+  color: #114a6a;
+}
+
+.premium-tax .tax-list {
+  background: #f5f5f5;
+  padding: 65px 0;
+  margin-top: 50px;
+}
+
+.premium-tax .tax-list .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.premium-tax .tax-list .container .item {
+  width: 32%;
+  padding-bottom: 20px;
+  background: #fff;
+  border: 1px solid #ececec;
+  margin: 25px 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.premium-tax .tax-list .container .item-txt {
+  color: #888;
+  padding: 30px;
+  line-height: 26px;
+  font-size: 16px;
+}
+
+.premium-tax .tax-list .container .item-txt span {
+  font-size: 13px;
+  display: block;
+  margin-top: 10px;
+}
+
+.premium-tax .tax-list .container .item-txt strong {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 25px;
+  display: block;
+}
+
+.premium-tax .tax-list .container .item-txt strong::before {
+  content: '';
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 25px auto;
+  background-image: url("../img/premium_tax_img01.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.premium-tax .tax-list .container .item-txt strong.ico02::before {
+  background-image: url("../img/premium_tax_img02.png");
+}
+
+.premium-tax .tax-list .container .item-txt strong.ico03::before {
+  background-image: url("../img/premium_tax_img03.png");
 }
 /*# sourceMappingURL=style.css.map */
