@@ -206,7 +206,7 @@ $(function () {
     rotation: -45,
     y: 10,
     ease: Expo.easeInOut,
-  });
+  })
   menu.to(".btn-line-3", 0.3, {
     rotation: 45,
     y: -10,
@@ -219,6 +219,10 @@ $(function () {
   menu.to("#menu", {
     right: 0,
   });
+  menu.staggerFrom('.menu-data ul li ', 2, {
+    x: 100,
+    ease: Expo.easeInOut,
+  })
 
   menu.reverse();
 

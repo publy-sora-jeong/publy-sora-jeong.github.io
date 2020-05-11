@@ -1164,6 +1164,142 @@ footer {
     @include mq('contents') {}
 }
 
+//floor2.html
+.floor-crossSection {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    @include push--auto;
+
+    &>div {
+        width: 48%;
+        transition: 0.4s;
+
+
+        &:hover {
+            box-shadow: 7px 7px 0 rgba($color: #000000, $alpha: 0.1);
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    @include mq('contents') {
+        width: auto;
+    }
+
+    @include mq('tablet-small') {
+        flex-wrap: wrap;
+
+        &>div {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.floor-facility {
+    width: 1200px;
+    @include push--auto;
+
+    .facility-land {
+        .txt {
+            font-size: 16px;
+            padding-top: 20px;
+            margin-bottom: 20px;
+
+
+            strong {
+                color: #104a6a;
+                display: block;
+                font-size: 20px;
+                font-family: 'S-CoreDream-6Bold';
+            }
+        }
+    }
+
+    .facility-gallery {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        .item {
+            width: 49%;
+            border: 1px solid #ddd;
+            background: #f7f7f7;
+            border: 1px solid #ddd;
+
+            .thumb {
+                height: 400px;
+                text-align: center;
+                background: #fff;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    //height: 100%;
+                    transition: .5s;
+                    transform-origin: center;
+                }
+            }
+
+            .txt {
+                border-top: 1px solid #ddd;
+                padding: 20px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                .thumb {
+                    img {
+                        transform: scale(1.15);
+                    }
+                }
+            }
+        }
+
+    }
+
+    @include mq('contents') {
+        width: auto;
+    }
+
+    @include mq('tablet-wide') {
+        .facility-land {
+            .txt {
+                font-size: 16px;
+
+                strong {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    @include mq('phone-wide') {
+        .facility-land {
+            .txt {
+                font-size: 16px;
+
+                strong {
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .facility-gallery {
+            flex-wrap: wrap;
+
+            .item {
+                width: 100%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
 .inquiry-policy {
     border: 1px solid #e1e1e1;
     border-top: 2px solid #333;
