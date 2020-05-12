@@ -219,10 +219,6 @@ $(function () {
   menu.to("#menu", {
     right: 0,
   });
-  menu.staggerFrom('.menu-data ul li ', 2, {
-    x: 100,
-    ease: Expo.easeInOut,
-  })
 
   menu.reverse();
 

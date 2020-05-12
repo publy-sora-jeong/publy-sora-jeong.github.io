@@ -2662,4 +2662,229 @@ footer .copyrights {
 .premium-tax .tax-list .container .item-txt strong.ico03::before {
   background-image: url("../img/premium_tax_img03.png");
 }
+
+.premium7 {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-perspective: 1200px;
+          perspective: 1200px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  font-size: 18px;
+  text-align: center;
+}
+
+.premium7 .box {
+  width: 31%;
+  height: 300px;
+  margin: 1%;
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
+.premium7 .box:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.premium7 .box p {
+  z-index: 3;
+}
+
+.premium7 .box b {
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #104a6a;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 40px;
+  text-align: center;
+  margin: 0 auto 10px auto;
+}
+
+.premium7 .box b.light {
+  background: #ffd042;
+  color: #104a6a;
+}
+
+.premium7 .box.box01 {
+  background-color: #104a6a;
+  color: #fff;
+  text-align: center;
+}
+
+.premium7 .box.box01 strong {
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #ffd042;
+}
+
+.premium7 .box.box01 strong::before {
+  background-image: url("../img/precious.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  background-size: contain;
+  content: '';
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.premium7 .box.box02 {
+  background-image: url("../img/premium7_img01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  color: #fff;
+}
+
+.premium7 .box.box02::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.premium7 .box.box02 strong {
+  z-index: 2;
+}
+
+.premium7 .box.box03 {
+  background: #6eb0b7;
+  color: #fff;
+}
+
+.premium7 .box.box03 strong::before {
+  background-image: url("../img/premium7_ico02_w.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  content: '';
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.premium7 .box.box04 {
+  position: relative;
+  background-color: #000;
+  color: #fff;
+}
+
+.premium7 .box.box04::after {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  background-image: url("../img/premium7_img02.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.premium7 .box.box04 i {
+  color: #ffd042;
+}
+
+.premium7 .box.box05 {
+  background: #ffc800;
+}
+
+.premium7 .box.box05 strong::before {
+  background-image: url("../img/premium7_ico03.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  content: '';
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.premium7 .box.box06 {
+  background-image: url("../img/premium7_img03.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.premium7 .box.box08 {
+  position: relative;
+  background-color: #104a6a;
+  color: #fff;
+}
+
+.premium7 .box.box08::after {
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.4;
+  width: 100%;
+  height: 100%;
+  background-color: #104a6a;
+  background-image: url("../img/premium7_img03.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.premium7 .box.box08 i {
+  color: #ffd042;
+}
+
+.premium7 .box.box07 strong::before {
+  background-image: url("../img/premium7_ico05.png");
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  background-size: contain;
+  content: '';
+  display: block;
+  margin: 0 auto 20px auto;
+}
+
+.premium7 .box.box09 {
+  color: #fff;
+  background: #104a6a;
+}
 /*# sourceMappingURL=style.css.map */
