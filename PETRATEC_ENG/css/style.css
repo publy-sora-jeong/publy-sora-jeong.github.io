@@ -3940,7 +3940,7 @@ footer .footer-company .copy {
     background-size: cover;
   }
   .petra-intro .img .desc {
-    font-size: 25px;
+    font-size: 18px;
     width: 260px;
     height: 200px;
     padding: 35px;
@@ -3955,7 +3955,10 @@ footer .footer-company .copy {
 
 @media screen and (max-width: 480px) {
   .petra-intro .img .desc {
-    font-size: 20px;
+    font-size: 18px !important;
+  }
+  .petra-intro .txt strong {
+    font-size: 16px;
   }
 }
 
@@ -4160,18 +4163,47 @@ footer .footer-company .copy {
 }
 
 @media screen and (max-width: 1024px) {
+  .petra-mission .mission-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 40px;
+  }
   .petra-mission .mission-list li {
-    width: 195px;
-    height: 195px;
+    width: 32%;
+    height: 250px;
     margin: 0 1%;
+    border-radius: 0;
+    background-image: none;
+    border: 5px solid #71bf44;
+    -webkit-transition: 1s;
+    transition: 1s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    transition: 1s;
   }
   .petra-mission .mission-list li .off strong {
     font-size: 25px;
+    padding: 0;
   }
   .petra-mission .mission-list li .off strong::after {
     width: 66px;
     height: 56px;
     margin-top: 15px;
+  }
+  .petra-mission .mission-list li:hover {
+    background: #6ebc45;
+    background: radial-gradient(circle, #6ebc45 0%, #023d5c 100%);
   }
   .petra-mission .mission-list li:hover .on p {
     padding: 10px 20px;
@@ -4186,39 +4218,13 @@ footer .footer-company .copy {
 
 @media screen and (max-width: 640px) {
   .petra-mission {
-    padding: 70px 5%;
+    padding: 70px 2%;
   }
   .petra-mission h4 {
     font-size: 30px;
   }
   .petra-mission h4 span {
     font-size: 16px;
-  }
-  .petra-mission .mission-list {
-    margin-top: 40px;
-  }
-  .petra-mission .mission-list li {
-    width: 120px;
-    height: 120px;
-    margin: 0 4px;
-  }
-  .petra-mission .mission-list li .off strong {
-    font-size: 18px;
-    padding-top: 30px;
-  }
-  .petra-mission .mission-list li .off strong::after {
-    width: 45px;
-    height: 39px;
-    margin-top: 5px;
-  }
-  .petra-mission .mission-list li:hover .on p {
-    padding: 10px 20px;
-    font-size: 15px;
-  }
-  .petra-mission .mission-list li:hover .on p::before {
-    width: 45px;
-    height: 39px;
-    margin-top: 15px;
   }
 }
 
@@ -4229,11 +4235,16 @@ footer .footer-company .copy {
   .petra-mission h4 span {
     font-size: 14px;
   }
+  .petra-mission .mission-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .petra-mission .mission-list li {
-    width: auto;
+    width: 100%;
     height: auto;
     margin: 5px 0;
     display: block;
+    border: none;
     background: none;
     background: #6ebc45;
     background: radial-gradient(circle, #6ebc45 0%, #023d5c 100%);
@@ -4244,6 +4255,10 @@ footer .footer-company .copy {
   .petra-mission .mission-list li .on {
     background: #fff;
     padding: 20px;
+  }
+  .petra-mission .mission-list li .off strong,
+  .petra-mission .mission-list li .on strong {
+    font-size: 20px;
   }
   .petra-mission .mission-list li:hover {
     background-image: none;
@@ -4274,6 +4289,143 @@ footer .footer-company .copy {
   font-size: 18px;
   display: block;
   color: #333;
+  padding-top: 15px;
+}
+
+.petra-vision .vision-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: top;
+      -ms-flex-align: top;
+          align-items: top;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+
+.petra-vision .vision-list > div {
+  width: 350px;
+  height: 500px;
+  padding-top: 310px;
+  position: relative;
+  background-color: #095379;
+}
+
+.petra-vision .vision-list > div::before {
+  content: '';
+  width: 100%;
+  height: 310px;
+  background-image: url("../img/sub_petra01_vision_img01.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+}
+
+.petra-vision .vision-list > div.vision02::before {
+  background-image: url("../img/sub_petra01_vision_img02.png");
+}
+
+.petra-vision .vision-list > div.vision03::before {
+  background-image: url("../img/sub_petra01_vision_img03.png");
+}
+
+.petra-vision .vision-list > div .textbox {
+  background-color: #095379;
+  padding: 30px;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #fff;
+  height: 190px;
+  position: relative;
+}
+
+.petra-vision .vision-list > div .textbox::after {
+  content: '';
+  width: 140px;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 30px;
+  right: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  .petra-vision .vision-list {
+    width: auto;
+  }
+  .petra-vision .vision-list > div {
+    width: 32%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .petra-vision .vision-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .petra-vision .vision-list > div {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 0 0 0 50%;
+    overflow: hidden;
+  }
+  .petra-vision .vision-list > div::before {
+    width: 50%;
+    left: 0;
+    top: 0;
+    height: 100%;
+  }
+  .petra-vision .vision-list > div .textbox {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .petra-vision h4 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .petra-vision h4 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .petra-vision .vision-list > div {
+    padding-top: 150px;
+    padding-left: 0;
+  }
+  .petra-vision .vision-list > div::before {
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 150px;
+  }
+  .petra-vision .vision-list > div .textbox {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  .petra-vision .vision-list > div .textbox::after {
+    display: none;
+  }
+}
+
+.petra-policy {
+  margin-top: 160px;
 }
 
 .petra-policy h4 {
@@ -4323,6 +4475,9 @@ footer .footer-company .copy {
 }
 
 @media screen and (max-width: 640px) {
+  .petra-policy {
+    margin-top: 80px;
+  }
   .petra-policy h4 {
     font-size: 30px;
   }
@@ -4340,8 +4495,17 @@ footer .footer-company .copy {
 }
 
 @media screen and (max-width: 480px) {
+  .petra-policy {
+    margin-top: 50px;
+  }
   .petra-policy h4 {
     font-size: 25px;
+  }
+  .petra-policy .petra-policy-bg {
+    padding: 50px 2%;
+  }
+  .petra-policy .petra-policy-bg p {
+    font-size: 14px;
   }
 }
 

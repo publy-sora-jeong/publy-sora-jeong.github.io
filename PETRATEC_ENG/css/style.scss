@@ -2546,7 +2546,7 @@ footer {
             background-size: cover;
 
             .desc {
-                font-size: 25px;
+                font-size: 18px;
                 width: 260px;
                 height: 200px;
                 padding: 35px;
@@ -2568,7 +2568,13 @@ footer {
 
     @include mq('phone-wide') {
         .img .desc {
-            font-size: 20px;
+            font-size: 18px !important;
+        }
+
+        .txt {
+            strong {
+                font-size: 16px;
+            }
         }
     }
 }
@@ -2791,31 +2797,51 @@ footer {
     }
 
     @include mq('tablet-wide') {
-        .mission-list li {
-            width: 195px;
-            height: 195px;
-            margin: 0 1%;
+        .mission-list {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
 
-            .off strong {
-                font-size: 25px;
+            li {
+                width: 32%;
+                height: 250px;
+                margin: 0 1%;
+                border-radius: 0;
+                background-image: none;
+                border: 5px solid #71bf44;
+                transition: 1s;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: 1s;
 
-                &::after {
-                    width: 66px;
-                    height: 56px;
-                    margin-top: 15px;
+
+                .off strong {
+                    font-size: 25px;
+                    padding: 0;
+
+
+                    &::after {
+                        width: 66px;
+                        height: 56px;
+                        margin-top: 15px;
+                    }
                 }
-            }
 
-            &:hover {
-                .on {
-                    p {
-                        padding: 10px 20px;
-                        font-size: 15px;
+                &:hover {
+                    background: rgb(110, 188, 69);
+                    background: radial-gradient(circle, rgba(110, 188, 69, 1) 0%, rgba(2, 61, 92, 1) 100%);
 
-                        &::before {
-                            width: 66px;
-                            height: 56px;
-                            margin-top: 20px;
+                    .on {
+                        p {
+                            padding: 10px 20px;
+                            font-size: 15px;
+
+                            &::before {
+                                width: 66px;
+                                height: 56px;
+                                margin-top: 20px;
+                            }
                         }
                     }
                 }
@@ -2826,7 +2852,7 @@ footer {
     }
 
     @include mq('tablet-small') {
-        padding: 70px 5%;
+        padding: 70px 2%;
 
         h4 {
             font-size: 30px;
@@ -2836,41 +2862,41 @@ footer {
             }
         }
 
-        .mission-list {
-            margin-top: 40px;
+        // .mission-list {
+        //     margin-top: 40px;
 
-            li {
-                width: 120px;
-                height: 120px;
-                margin: 0 4px;
+        //     li {
+        //         width: 120px;
+        //         height: 120px;
+        //         margin: 0 4px;
 
-                .off strong {
-                    font-size: 18px;
-                    padding-top: 30px;
+        //         .off strong {
+        //             font-size: 18px;
+        //             padding-top: 30px;
 
-                    &::after {
-                        width: 45px;
-                        height: 39px;
-                        margin-top: 5px;
-                    }
-                }
+        //             &::after {
+        //                 width: 45px;
+        //                 height: 39px;
+        //                 margin-top: 5px;
+        //             }
+        //         }
 
-                &:hover {
-                    .on {
-                        p {
-                            padding: 10px 20px;
-                            font-size: 15px;
+        //         &:hover {
+        //             .on {
+        //                 p {
+        //                     padding: 10px 20px;
+        //                     font-size: 15px;
 
-                            &::before {
-                                width: 45px;
-                                height: 39px;
-                                margin-top: 15px;
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        //                     &::before {
+        //                         width: 45px;
+        //                         height: 39px;
+        //                         margin-top: 15px;
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
 
 
     }
@@ -2884,11 +2910,16 @@ footer {
             }
         }
 
+        .mission-list {
+            flex-wrap: wrap;
+        }
+
         .mission-list li {
-            width: auto;
+            width: 100%;
             height: auto;
             margin: 5px 0;
             display: block;
+            border: none;
             background: none;
             background: rgb(110, 188, 69);
             background: radial-gradient(circle, rgba(110, 188, 69, 1) 0%, rgba(2, 61, 92, 1) 100%);
@@ -2899,6 +2930,10 @@ footer {
             .on {
                 background: #fff;
                 padding: 20px;
+
+                strong {
+                    font-size: 20px;
+                }
             }
 
             &:hover {
@@ -2940,11 +2975,147 @@ footer {
             font-size: 18px;
             display: block;
             color: #333;
+            padding-top: 15px;
+        }
+    }
+
+    .vision-list {
+        display: flex;
+        justify-content: space-between;
+        align-items: top;
+        width: 1200px;
+        @include push--auto;
+        margin-top: 40px;
+
+        &>div {
+            width: 350px;
+            height: 500px;
+            padding-top: 310px;
+            position: relative;
+            background-color: #095379;
+
+            &::before {
+                content: '';
+                width: 100%;
+                height: 310px;
+                background-image: url('../img/sub_petra01_vision_img01.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+                display: block;
+            }
+
+            &.vision02::before {
+                background-image: url('../img/sub_petra01_vision_img02.png');
+            }
+
+            &.vision03::before {
+                background-image: url('../img/sub_petra01_vision_img03.png');
+            }
+
+            .textbox {
+                background-color: #095379;
+                padding: 30px;
+                font-size: 18px;
+                line-height: 1.4;
+                color: #fff;
+                height: 190px;
+                position: relative;
+
+                &::after {
+                    content: '';
+                    width: 140px;
+                    height: 1px;
+                    background: #fff;
+                    position: absolute;
+                    bottom: 30px;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    @include mq('contents') {
+        .vision-list {
+            width: auto;
+
+            &>div {
+                width: 32%;
+                height: auto;
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        .vision-list {
+            flex-wrap: wrap;
+
+            &>div {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 0 0 0 50%;
+                overflow: hidden;
+
+                &::before {
+                    width: 50%;
+                    left: 0;
+                    top: 0;
+                    height: 100%;
+                }
+
+                .textbox {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
+    @include mq('tablet-small') {
+        h4 {
+            font-size: 30px;
+        }
+    }
+
+    @include mq('phone-wide') {
+        h4 {
+            font-size: 25px;
+        }
+    }
+
+    @include mq('phone-mid') {
+        .vision-list {
+            &>div {
+                padding-top: 150px;
+                padding-left: 0;
+
+                &::before {
+                    left: 0;
+                    width: 100%;
+                    top: 0;
+                    height: 150px;
+                }
+
+                .textbox {
+                    width: 100%;
+                    height: auto;
+                    padding: 20px;
+
+                    &::after {
+                        display: none
+                    }
+                }
+            }
         }
     }
 }
 
 .petra-policy {
+    margin-top: 160px;
+
     h4 {
         font-size: 35px;
         text-align: center;
@@ -2993,6 +3164,8 @@ footer {
     }
 
     @include mq('tablet-small') {
+        margin-top: 80px;
+
         h4 {
             font-size: 30px;
         }
@@ -3012,8 +3185,18 @@ footer {
     }
 
     @include mq('phone-wide') {
+        margin-top: 50px;
+
         h4 {
             font-size: 25px;
+        }
+
+        .petra-policy-bg {
+            padding: 50px 2%;
+
+            p {
+                font-size: 14px;
+            }
         }
     }
 }
