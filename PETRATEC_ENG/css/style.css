@@ -4127,8 +4127,8 @@ footer .footer-company .copy {
 
 .petra-mission .mission-list li:hover .on p {
   color: #fff;
-  font-size: 18px;
-  padding: 40px;
+  font-size: 14px;
+  padding: 40px 25px 30px 25px;
 }
 
 .petra-mission .mission-list li:hover .on p::before {
@@ -4264,9 +4264,22 @@ footer .footer-company .copy {
   }
 }
 
+.petra-vision h4 {
+  font-size: 35px;
+  text-align: center;
+  color: #023d5c;
+}
+
+.petra-vision h4 span {
+  font-size: 18px;
+  display: block;
+  color: #333;
+}
+
 .petra-policy h4 {
   font-size: 35px;
   text-align: center;
+  text-transform: uppercase;
   color: #023d5c;
 }
 
@@ -4286,7 +4299,7 @@ footer .footer-company .copy {
           transform: translateY(-50%);
   width: 1200px;
   margin: 0 auto;
-  font-size: 22px;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -4343,6 +4356,7 @@ footer .footer-company .copy {
   font-size: 35px;
   color: #023d5c;
   text-align: center;
+  text-transform: uppercase;
 }
 
 .petra-ceo .greeting-wrap {
@@ -4360,6 +4374,7 @@ footer .footer-company .copy {
 
 .petra-ceo .greeting-wrap .text .top {
   font-size: 25px;
+  line-height: 1.4;
   color: #023d5c;
   font-weight: bold;
 }

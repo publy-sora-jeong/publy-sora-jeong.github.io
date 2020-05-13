@@ -2749,8 +2749,8 @@ footer {
 
                     p {
                         color: #fff;
-                        font-size: 18px;
-                        padding: 40px;
+                        font-size: 14px;
+                        padding: 40px 25px 30px 25px;
 
                         &::before {
                             content: '';
@@ -2929,10 +2929,26 @@ footer {
     }
 }
 
+
+.petra-vision {
+    h4 {
+        font-size: 35px;
+        text-align: center;
+        color: #023d5c;
+
+        span {
+            font-size: 18px;
+            display: block;
+            color: #333;
+        }
+    }
+}
+
 .petra-policy {
     h4 {
         font-size: 35px;
         text-align: center;
+        text-transform: uppercase;
         color: #023d5c;
     }
 
@@ -2950,7 +2966,7 @@ footer {
             transform: translateY(-50%);
             width: 1200px;
             margin: 0 auto;
-            font-size: 22px;
+            font-size: 18px;
             text-align: center;
 
             &::before {
@@ -3011,6 +3027,7 @@ footer {
         font-size: 35px;
         color: #023d5c;
         text-align: center;
+        text-transform: uppercase;
     }
 
     .greeting-wrap {
@@ -3027,6 +3044,7 @@ footer {
 
             .top {
                 font-size: 25px;
+                line-height: 1.4;
                 color: #023d5c;
                 font-weight: bold;
 
