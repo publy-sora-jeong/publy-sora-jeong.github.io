@@ -1,69 +1,15 @@
 $(function () {
-  // var filter = "win16|win32|win64|mac|macintel";
 
-  // if (navigator.platform) {
-  //   if (filter.indexOf(navigator.platform.toLowerCase()) < 0) {
-  //     //mobile
-  //     // $(".wrap").addClass("on");
-  //     // $(".wrap2").addClass("on");
-  //   } else {
-  //     //pc
-  //     $("html").mousemove(function (e) {
-  //       //마우스 움직일때마다
-  //       var x = e.pageX; //넓이값 변수 마우스움직일때마다 x값 계산
-  //       var y = e.pageY; //높이값 변수 마우스움직일때마다 y값 계산
-  //       $(".mouse").css({
-  //         top: y,
-  //         left: x,
-  //       }); // 변수처리된 x y 값 css상으로 구현
+  initDom();
 
-  //       setTimeout(function () {
-  //         $(".cursor-t1").css({
-  //           top: y,
-  //           left: x,
-  //         });
-  //       }, 150);
-  //       setTimeout(function () {
-  //         $(".wrap #cursor_t2").css({
-  //           top: y,
-  //           left: x,
-  //         });
-  //       }, 250);
-  //       setTimeout(function () {
-  //         $(".wrap #cursor_t3").css({
-  //           top: y,
-  //           left: x,
-  //         });
-  //       }, 350);
-  //       setTimeout(function () {
-  //         $(".wrap #cursor_t4").css({
-  //           top: y,
-  //           left: x,
-  //         });
-  //       }, 400);
 
-  //       $(".grid-item").on("mouseenter", function () {
-  //         $(".mouse").addClass("hover");
-  //         $(".mouse").removeClass("bounce");
-  //         $(this).addClass("hover");
-  //       });
-
-  //       $(".grid-item").on("mouseleave", function () {
-  //         $(".mouse").removeClass("hover");
-  //         $(".mouse").addClass("bounce");
-  //         $(this).removeClass("hover");
-  //       });
-  //     });
-  //   }
-  // }
-
+  //ISOTOPE
   var $grid = $(".grid").isotope({
     itemSelector: ".grid-item",
     getSortData: {
       name: ".name",
       category: "[data-category]",
     },
-    // layout mode options
     masonry: {
       columnWidth: 0,
     },
@@ -76,16 +22,7 @@ $(function () {
     });
   });
 
-
-
-  // $('.item-container > a ').on('click', function (e) {
-  //   e.preventDefault();
-  //   $(this).parent().addClass('click');
-  //   window.setTimeout(function () {
-  //     $('.item-container ').removeClass('click');
-  //   }, 1000);
-
-  // })
+  //WAVIFY
   var wave1 = $("#feel-the-wave").wavify({
     height: 80,
     bones: 4,
@@ -102,12 +39,7 @@ $(function () {
     speed: 0.25,
   });
 
-  // var randomNum = 0;
-  // setInterval(() => {
-  //   randomNum = Math.floor(Math.random() * 50); //0 ~ 9
-  //   console.log(randomNum);
-  // }, 300);
-
+  //MAIN VISUAL
   var circle = new TimelineMax({
     paused: false,
   });
@@ -228,4 +160,62 @@ $(function () {
   $(document).on("click", ".menu-data a", function () {
     menu.reversed(!menu.reversed());
   });
+
+
+  var isScrolled = true;
+  var scrollIndex = 0;
+  var max = 1;
+
+  //$('html, body').on('mousewheel, DOMMouseScroll', function (e) {});
+  $('html, body').on('mousewheel DOMMouseScroll', function (e) {
+    var E = e.originalEvent;
+
+    if (isScrolled) {
+      isScrolled = false;
+
+      if (E.wheelDelta < 0) {
+        //console.log('DOWN')
+        $('section').removeClass('active');
+
+        if (scrollIndex == max) {
+          scrollIndex = max;
+          $('section').eq(scrollIndex).addClass('active');
+        } else {
+          scrollIndex++;
+          $('section').eq(scrollIndex).addClass('active');
+          console.log(scrollIndex);
+        }
+
+      } else {
+        //console.log('UP')
+        $('section').removeClass('active');
+        if (scrollIndex == 0) {
+          scrollIndex = 0;
+
+        } else {
+          $('section').eq(scrollIndex).addClass('active')
+          scrollIndex--;
+          console.log(scrollIndex);
+        }
+
+      }
+
+      setTimeout(() => {
+        isScrolled = true;
+      }, 1000);
+    }
+  });
+
+  $('.about-box-wrap .box').on('click', function () {
+    $('.about').addClass('box-animate');
+    $('.about-box-wrap').removeClass('on');
+    $('.about-box-wrap').addClass('on');
+    $('.about-box-wrap .box').removeClass('box-on');
+    $(this).addClass('box-on')
+  })
+  //END
 });
+
+function initDom() {
+
+}
