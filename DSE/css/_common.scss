@@ -428,6 +428,12 @@
                   width: 150px;
             }
       }
+
+      &.tab-list-5type {
+            ul li {
+                  width: 135px;
+            }
+      }
 }
 
 
@@ -488,6 +494,12 @@
                         width: 20%;
                   }
             }
+
+            &.tab-list-5type {
+                  ul li {
+                        width: 18%;
+                  }
+            }
       }
 }
 
@@ -503,6 +515,15 @@
             padding-top: 30px;
             padding-left: 3%;
             padding-right: 3%;
+      }
+}
+
+@include mq('tablet-wide') {
+      &.tab-list-5type {
+            ul li {
+                  width: 14%;
+                  margin: 0 2px;
+            }
       }
 }
 

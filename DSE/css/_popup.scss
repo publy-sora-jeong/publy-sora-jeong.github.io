@@ -1,0 +1,55 @@
+@keyframes popupSlideIn {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+.main-popup {
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    left: 0;
+    right: 0;
+    animation: popupSlideIn 1s forwards;
+    animation-delay: 7s;
+
+    .popup-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+.main-popup .checkMainPopupClose {
+    position: absolute;
+    bottom: -38px;
+    right: 0;
+    width: 138px;
+    height: 30px;
+    background: url('../img/popup_ntday.png') no-repeat;
+    cursor: pointer;
+}
+
+.main-popup .checkMainPopupClose input {
+    opacity: 0;
+}
+
+
+
+.main-popup .btn-close {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    background: url("../img/popup_close.png") no-repeat;
+    right: 10px;
+    top: 10px;
+}

@@ -153,13 +153,15 @@ a:hover {
   background-color: #ff7890;
   background-size: cover;
   background-repeat: repeat-x;
-  height: 90vh;
-  position: relative;
+  height: 100vh;
+  width: 100%;
   background-attachment: fixed;
   font-family: 'Pangolin', 'KyoboHand', cursive;
   color: #fff;
   text-align: center;
   overflow: hidden;
+  z-index: -1;
+
 
 
 
@@ -167,16 +169,13 @@ a:hover {
     color: #fff;
     //font-family: 'Pangolin', cursive;
     font-family: 'KyoboHand';
-    font-size: 5em;
-    padding-top: 5em;
-    letter-spacing: -10px;
+    font-size: 2em;
+    padding-top: 17em;
 
     li {
       letter-spacing: -1px;
-      margin: 0 -8px;
+      margin: 0 1px;
       display: inline-block;
-      opacity: 0.5;
-
     }
   }
 
@@ -330,11 +329,13 @@ body {
 
 
 .visual-wave {
-  height: 100px;
+  height: 130px;
   position: absolute;
+  bottom: 100px;
+  width: 100%;
+  //transform: rotate(180deg);
   bottom: 0;
   width: 100%;
-
 }
 
 .wave {
@@ -343,11 +344,11 @@ body {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 3;
 }
 
 .wave+.wave {
-  z-index: 2;
+  z-index: 3;
 }
 
 
@@ -410,15 +411,16 @@ body {
 
 
   a {
-    width: 50px;
-    height: 200px;
+    width: 200px;
+    height: 50px;
     background: #000;
     color: #fff;
     display: block;
     position: fixed;
     z-index: 100;
-    top: 50%;
-    margin-top: -100px;
+    top: 0;
+    left: 50%;
+    margin-left: -100px;
     transition: 1s;
     border: 1px solid transparent;
 
@@ -430,8 +432,7 @@ body {
 
     span {
       display: block;
-      transform: rotate(90deg);
-      transform-origin: 0 100%;
+      width: 200px;
       height: 50px;
       line-height: 50px;
       text-align: center;
@@ -440,9 +441,8 @@ body {
       position: relative;
       text-transform: uppercase;
       letter-spacing: 2px;
-      margin-top: -40px;
       letter-spacing: 2px;
-      width: 100px;
+
 
       &::after {
         content: '';
@@ -450,7 +450,7 @@ body {
         height: 20px;
         background: url('../img/main/skip_w.png') no-repeat;
         background-size: contain;
-        right: -70px;
+        right: 20px;
         bottom: 14px;
         transform: rotate(-90deg);
         display: block;
@@ -459,11 +459,9 @@ body {
     }
 
     &.page-prev {
-      left: 0;
+      top: 0;
 
-      span::after {
-        transform: rotate(90deg);
-      }
+
     }
 
     &.page-next {
@@ -472,64 +470,43 @@ body {
   }
 }
 
-body>section {
-  position: absolute;
-  top: 0;
-  left: -100%;
-  right: -100%;
-  opacity: 0;
-  transition: 1s;
-  width: 100%;
-  height: 100vh;
+body>section {}
 
-  &.active {
-    left: 0;
-    opacity: 1;
-  }
-}
+
 
 .about {
   font-family: 'Vidaloka', serif;
-  background: #f7f7f7;
+  background: #fff;
   height: 100vh;
-  background: url('../img/main/gradient.jpg');
-  background-size: cover;
-  background-position: center;
+  // background: url('../img/main/gradient.jpg');
+  // background-size: cover;
+  // background-position: center;
+  position: absolute;
+  top: 100vh;
+  width: 100%;
+  z-index: 10;
 
 
   h3 {
     line-height: 1;
     font-size: 5em;
     text-align: center;
-    color: #fff;
+    color: #ffd0e8;
     transition: 1s;
     transition-delay: 0.5s;
     padding-top: 2em;
-
+    position: relative;
   }
 
-  &.box-animate {
-    // h3 {
-    //   left: 100px;
-    //   top: 100px;
-    //   transform: none;
-
-    //   br {
-    //     display: none;
-    //   }
-    // }
-  }
-
-  .about-box-wrap {
-    margin-top: 5em;
+  .about-item {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
 
-
-
+    .item {
+      width: 32%;
+    }
   }
+
 }
