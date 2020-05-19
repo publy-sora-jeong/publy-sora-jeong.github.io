@@ -1,25 +1,10 @@
 @import "reset";
+@import "font";
 @import "slick";
-
-@font-face {
-  font-family: "silgothic";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'KyoboHand';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
+@import "animation";
 
 
 html {
-  //font-size: calc(100vw / 7.2);
   line-height: 1.3;
   -webkit-text-size-adjust: 100%;
   font-size: 62.5%;
@@ -36,13 +21,21 @@ html {
     font-size: 14px;
     font-size: 1.4rem;
     overflow-x: hidden !important;
-
   }
 }
 
+
 body {
-  cursor: url('../img/main/n_basic_32.png'), default !important;
+  cursor: url('../img/main/n_basic_32.png'), auto !important;
+
+  a {
+    &:hover {
+      cursor: url('../img/main/n_link_32.png'), auto !important;
+    }
+  }
+
 }
+
 
 //selection text color 
 ::selection {
@@ -50,19 +43,6 @@ body {
   background: rgba($color: #ffd324, $alpha: 0.99);
 }
 
-@keyframes circleMoving {
-  0% {
-    transform: scale(1);
-    opacity: 0.9;
-    background-color: rgba($color: #ff80c0, $alpha: 0.25);
-  }
-
-  100% {
-    transform: scale(1.3);
-    opacity: 0;
-    background-color: rgba($color: #d20069, $alpha: 0.25);
-  }
-}
 
 .blind {
   position: absolute;
@@ -73,6 +53,17 @@ body {
   overflow: hidden;
 }
 
+
+a:hover {
+  cursor: url('../img/main/n_link_32.png');
+  width: 100px;
+  height: 100px;
+}
+
+//////////////MENU
+
+
+
 .menu-btn {
   position: fixed;
   z-index: 1000;
@@ -80,10 +71,8 @@ body {
   top: 20px;
   width: 60px;
   height: 60px;
-  //cursor: pointer;
   background: transparent;
   border-radius: 30px;
-  //transition: 0.4s;
   border: 3px solid transparent;
 
 
@@ -140,218 +129,6 @@ body {
 
 }
 
-a:hover {
-  cursor: url('../img/main/n_link_32.png');
-  width: 100px;
-  height: 100px;
-}
-
-
-
-.visual {
-  //background: url('../img/main/bg_snail.jpg') top center;
-  background-color: #ff7890;
-  background-size: cover;
-  background-repeat: repeat-x;
-  height: 100vh;
-  width: 100%;
-  background-attachment: fixed;
-  font-family: 'Pangolin', 'KyoboHand', cursive;
-  color: #fff;
-  text-align: center;
-  overflow: hidden;
-  z-index: -1;
-
-
-
-
-  h2 {
-    color: #fff;
-    //font-family: 'Pangolin', cursive;
-    font-family: 'KyoboHand';
-    font-size: 2em;
-    padding-top: 17em;
-
-    li {
-      letter-spacing: -1px;
-      margin: 0 1px;
-      display: inline-block;
-    }
-  }
-
-  .snail {
-    width: 50%;
-    background: url('../img/main/smail.png') no-repeat;
-    height: 400px;
-    position: absolute;
-    bottom: -30%;
-    left: -30%;
-    background-size: contain;
-
-  }
-
-  .snail1 {
-    left: 10%;
-    animation: snailMoving infinite 100s forwards;
-  }
-
-  .snail2 {
-    left: -50%;
-    animation: snailMoving infinite 110s 10s forwards;
-  }
-
-  @keyframes snailMoving {
-    10% {
-      bottom: -10%;
-    }
-
-    20% {
-      bottom: -30%;
-    }
-
-    50% {
-      bottom: -20%;
-    }
-
-    70% {
-      bottom: -40%;
-    }
-
-    80% {
-      bottom: -30%;
-    }
-
-    100% {
-      left: 100%;
-    }
-
-  }
-
-  .visual-subtext {
-    font-size: 2em;
-    padding: 0 5em;
-
-    span {
-      display: inline-block;
-      margin-left: 5px;
-      transform: scale(1.5) rotate(180deg);
-    }
-  }
-
-
-
-  //circle ani
-  .circle {
-    width: 30px;
-    height: 30px;
-    background: rgba($color: #ffffff, $alpha: 0.3);
-    border-radius: 50%;
-    position: absolute;
-    left: 40px;
-    bottom: -50px;
-
-    &.circle2 {
-      left: 80px;
-    }
-
-    &.circle3 {
-      left: 50%;
-    }
-
-    &.circle4 {
-      left: 90%;
-    }
-
-    &.circle5 {
-      left: 56%;
-    }
-
-    &.circle6 {
-      left: 80%;
-    }
-
-    &.circle7 {
-      left: 70%;
-    }
-  }
-}
-
-
-
-//layer 
-.layer-popup {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  background: rgba($color: #000000, $alpha: 0.7);
-  z-index: 10;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  .popup-container {
-    min-width: 50vw;
-    max-height: 80vh;
-    overflow: auto;
-    text-align: center;
-    background: rgba($color: #ffffff, $alpha: 1);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-body {
-  cursor: url('../img/main/n_basic_32.png'), auto !important;
-
-  a {
-    &:hover {
-      cursor: url('../img/main/n_link_32.png'), auto !important;
-    }
-  }
-
-
-  .grid-item:hover {
-    cursor: url('../img/main/n_select_aim.png'), auto !important;
-  }
-}
-
-.grid {
-  .grid-item {
-    width: 30%;
-    overflow: hidden;
-    padding: 2%;
-  }
-}
-
-
-
-.visual-wave {
-  height: 130px;
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
-  //transform: rotate(180deg);
-  bottom: 0;
-  width: 100%;
-}
-
-.wave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
-.wave+.wave {
-  z-index: 3;
-}
-
-
 #menu {
   position: fixed;
   top: 0;
@@ -407,85 +184,187 @@ body {
   }
 }
 
-.page-nav {
 
+.visual {
+  //background-color: #ff7890;
+  background-size: cover;
+  background-repeat: repeat-x;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background-attachment: fixed;
+  font-family: 'Pangolin', 'KyoboHand', cursive;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 
-  a {
-    width: 200px;
-    height: 50px;
-    background: #000;
-    color: #fff;
-    display: block;
+  video {
     position: fixed;
-    z-index: 100;
+    left: 0;
     top: 0;
-    left: 50%;
-    margin-left: -100px;
-    transition: 1s;
-    border: 1px solid transparent;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    //height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
 
-    &:hover {
-      cursor: url('../img/main/n_link_32.png'), auto !important;
-      background-color: rgba($color: #ffffff, $alpha: 0.1);
-      border: 1px solid #fff;
+
+  //비주얼 텍스트
+  h2 {
+    color: #fff;
+    font-family: 'KyoboHand';
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+
+    li {
+      letter-spacing: -1px;
+      margin: 0 1px;
+      display: inline-block;
     }
 
-    span {
-      display: block;
-      width: 200px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
-      font-family: 'Abel', sans-serif;
-      font-size: 18px;
-      position: relative;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      letter-spacing: 2px;
+    .visual-subtext {
+      margin-top: 0.4em;
+      font-size: 0.4em;
+      letter-spacing: 1px;
 
-
-      &::after {
-        content: '';
-        width: 20px;
-        height: 20px;
-        background: url('../img/main/skip_w.png') no-repeat;
-        background-size: contain;
-        right: 20px;
-        bottom: 14px;
-        transform: rotate(-90deg);
-        display: block;
-        position: absolute;
+      span {
+        display: inline-block;
       }
     }
-
-    &.page-prev {
-      top: 0;
+  }
 
 
+  //달팽이
+  .snail {
+    width: 50%;
+    background: url('../img/main/snail2.png') no-repeat;
+    height: 200px;
+    position: absolute;
+    bottom: 0%;
+    left: -30%;
+    background-size: contain;
+    display: none;
+
+    &.snail {
+      left: 10%;
+      animation: snailMoving infinite 100s forwards;
     }
 
-    &.page-next {
+    &.snail2 {
+      left: -50%;
+      animation: snailMoving infinite 100s 10s forwards;
+    }
+
+  }
+
+  //visual - circle moving
+  .circle {
+    width: 30px;
+    height: 30px;
+    background: rgba($color: #ffffff, $alpha: 0.3);
+    border-radius: 50%;
+    position: absolute;
+    left: 40px;
+    bottom: -50px;
+
+    &.circle2 {
+      left: 80px;
+    }
+
+    &.circle3 {
+      left: 50%;
+    }
+
+    &.circle4 {
+      left: 90%;
+    }
+
+    &.circle5 {
+      left: 56%;
+    }
+
+    &.circle6 {
+      left: 80%;
+    }
+
+    &.circle7 {
+      left: 70%;
+    }
+  }
+
+
+  .visual-wave {
+    height: 140px;
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    //transform: rotate(180deg);
+    bottom: 0px;
+    width: 100%;
+
+    .wave {
+      position: absolute;
+      left: 0;
       right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+    }
+
+    .wave+.wave {
+      z-index: 3;
     }
   }
 }
 
-body>section {}
 
+
+.intro {
+  position: fixed;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  left: 0;
+  top: 0;
+  animation: introFadeOut 2s 2s forwards;
+  display: none;
+
+  .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    img {
+      transform: scale(0.4);
+    }
+
+    p {
+      font-family: 'Vidaloka', serif;
+      font-size: 20px;
+      color: #dfdfdf;
+      margin-top: -100px;
+    }
+  }
+}
 
 
 .about {
   font-family: 'Vidaloka', serif;
   background: #fff;
   height: 100vh;
-  // background: url('../img/main/gradient.jpg');
-  // background-size: cover;
-  // background-position: center;
-  position: absolute;
   top: 100vh;
   width: 100%;
   z-index: 10;
-
 
   h3 {
     line-height: 1;
