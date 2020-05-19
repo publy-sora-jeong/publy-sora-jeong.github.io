@@ -1352,6 +1352,47 @@ footer {
     }
 }
 
+.floor-plan-wrap {
+    display: flex;
+
+    .floor-img {
+        width: 58%;
+    }
+
+    .tb-gray {
+        width: 41%;
+
+        table {
+            font-size: 14px;
+
+            td,
+            th {
+                padding: 6px 8px;
+            }
+        }
+    }
+
+    @include mq('tablet') {
+        flex-wrap: wrap;
+
+        .floor-img {
+            width: 100%;
+        }
+
+        .tb-gray {
+            width: 100%;
+
+            table {
+
+                td,
+                th {
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}
+
 .floor01 {
     .floor-title {
         background: url('../img/floor_bg.png') no-repeat;
