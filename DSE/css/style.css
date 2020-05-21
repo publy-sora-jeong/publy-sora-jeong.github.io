@@ -2637,6 +2637,46 @@ footer .copyrights {
   }
 }
 
+.floor-plan-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.floor-plan-wrap .floor-img {
+  width: 58%;
+}
+
+.floor-plan-wrap .tb-gray {
+  width: 41%;
+}
+
+.floor-plan-wrap .tb-gray table {
+  font-size: 14px;
+}
+
+.floor-plan-wrap .tb-gray table td,
+.floor-plan-wrap .tb-gray table th {
+  padding: 6px 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .floor-plan-wrap {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .floor-plan-wrap .floor-img {
+    width: 100%;
+  }
+  .floor-plan-wrap .tb-gray {
+    width: 100%;
+  }
+  .floor-plan-wrap .tb-gray table td,
+  .floor-plan-wrap .tb-gray table th {
+    padding: 10px;
+  }
+}
+
 .floor01 .floor-title {
   background: url("../img/floor_bg.png") no-repeat;
   height: 200px;
