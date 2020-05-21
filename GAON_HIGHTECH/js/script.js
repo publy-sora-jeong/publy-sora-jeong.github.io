@@ -23,8 +23,32 @@ $(document).ready(function () {
     },
     speed: 2000,
     loop: true,
-
+    observer: true,
+    observeParents: true,
   });
+
+
+  var mainProductSwiperSlider = new Swiper('.product-cnt .swiper-container', {
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    //effect: 'fade',
+    autoplay: {
+      delay: 1000,
+      disableOnInteraction: false,
+    },
+    speed: 1000,
+    loop: true,
+    observer: true,
+    observeParents: true,
+  });
+
+
+
+
+
+
 
 
 
@@ -39,19 +63,55 @@ $(document).ready(function () {
   });
 
 
-  // //QNA
-  // $('.qna-list  > dt').on('click', function () {
-  //   $('.qna-list  > dt').removeClass('open');
-  //   $(this).addClass('open');
-  //   $('.qna-list dd').slideUp(300, function () {
-  //     $(this).removeClass('open');
-  //   });
-  //   $(this).next().slideDown(300, function () {
-  //     $(this).addClass('open');
-  //   });
-  // });
+  $('.product-tab li ').on('click', function (e) {
 
-  $(window).on("resize", function () {});
+    e.preventDefault();
+    var idx = 0;
+
+    idx = $(this).index();
+    console.log(idx);
+
+    $('.product-tab li ').removeClass('on');
+    $('.product-tab li ').eq(idx).addClass('on');
+
+    $('.product-cnt').hide()
+    $('.product-cnt').eq(idx).show();
+
+
+  })
+
+
+  var awardsSwiper = undefined;
+
+  function initAwards() {
+    var screenWidth = $(window).width();
+    if (screenWidth < 641 && awardsSwiper == undefined) {
+      awardsSwiper = new Swiper('.awards .swiper-container', {
+        slidesPerView: 2,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: '.awards .swiper-button-next',
+          prevEl: '.awards .swiper-button-prev',
+        }
+
+      });
+    } else if (screenWidth > 640 && awardsSwiper != undefined) {
+      awardsSwiper.destroy();
+      awardsSwiper = undefined;
+      jQuery('.awards .swiper-wrapper').removeAttr('style');
+      jQuery('.awards .swiper-slide').removeAttr('style');
+    }
+  }
+
+
+  //Swiper plugin initialization
+  initAwards();
+
+  //Swiper plugin initialization on window resize
+  $(window).on('resize', function () {
+    initAwards();
+  });
+
 
 
   $(window).on('scroll', function () {

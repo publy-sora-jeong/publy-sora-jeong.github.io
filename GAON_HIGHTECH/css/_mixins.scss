@@ -45,7 +45,7 @@ $breakpoints: ("phone": 360px,
     "desktop": 1280px,
     "desktop-wide": 1440px,
     "desktop-full" : 1600px,
-    "contents" : 1200px);
+    "contents" : 1290px);
 
 @mixin mq($width, $type: max) {
     @if map_has_key($breakpoints, $width) {
