@@ -1,6 +1,7 @@
 @import "reset";
 @import "font";
-@import "slick";
+//@import "slick";
+@import "_swiper.min";
 @import "animation";
 
 
@@ -231,7 +232,7 @@ a:hover {
 
     .visual-subtext {
       margin-top: 0.4em;
-      font-size: 0.4em;
+      font-size: 0.7em;
       letter-spacing: 1px;
 
       span {
@@ -301,7 +302,7 @@ a:hover {
 
 
   .visual-wave {
-    height: 140px;
+    height: 30vh;
     position: absolute;
     bottom: 100px;
     width: 100%;
@@ -375,6 +376,12 @@ a:hover {
     transition-delay: 0.5s;
     padding-top: 2em;
     position: relative;
+
+    i {
+      color: #b09ff1;
+      font-weight: bold;
+
+    }
   }
 
   .about-item {
