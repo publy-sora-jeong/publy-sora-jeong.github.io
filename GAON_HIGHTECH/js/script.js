@@ -5,6 +5,7 @@ var $section;
 
 $(document).ready(function () {
   initDom();
+  savePosition();
 
 
   var mainVisualSwiperSlider = new Swiper('.visual .swiper-container', {
@@ -46,11 +47,12 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
+  $('.lang-select').on('click', function () {
+    $('.select-list').slideDown();
+  });
+  $('.lang-select').on('mouseleave', function () {
+    $('.select-list').slideUp(200);
+  });
 
   //dot ellipsis
   $(".gnews .news-cnt").each(function () {
@@ -209,8 +211,6 @@ function activeBtn(scroll) {
   }
 }
 
-
-
 function getSubMaxHeight() {
   var ht_max = 0;
   var ht_arr = [];
@@ -226,9 +226,6 @@ function getSubMaxHeight() {
 
   return ht_max;
 }
-
-
-
 
 function tabs() {
   $('.tab-list li').click(function (e) {
