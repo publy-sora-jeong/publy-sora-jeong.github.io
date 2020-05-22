@@ -964,13 +964,13 @@ button.swiper-pagination-bullet {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 0.9;
-    background-color: rgba(255, 128, 192, 0.25);
+    background-color: rgba(255, 128, 192, 0.1);
   }
   100% {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
     opacity: 0;
-    background-color: rgba(210, 0, 105, 0.25);
+    background-color: rgba(210, 0, 105, 0.15);
   }
 }
 
@@ -979,13 +979,13 @@ button.swiper-pagination-bullet {
     -webkit-transform: scale(1);
             transform: scale(1);
     opacity: 0.9;
-    background-color: rgba(255, 128, 192, 0.25);
+    background-color: rgba(255, 128, 192, 0.1);
   }
   100% {
     -webkit-transform: scale(1.3);
             transform: scale(1.3);
     opacity: 0;
-    background-color: rgba(210, 0, 105, 0.25);
+    background-color: rgba(210, 0, 105, 0.15);
   }
 }
 
@@ -1174,19 +1174,38 @@ a:hover {
           transform-origin: center;
 }
 
+.menu-btn::after {
+  content: '';
+  height: 50px;
+  width: 50px;
+  left: 0;
+  top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+
 .menu-btn:hover {
-  background-color: #fff;
-  border-color: #f9cd35;
   cursor: url("../img/main/n_link_32.png"), auto !important;
 }
 
 .menu-btn:hover::before {
-  -webkit-animation: circleMoving 0.5s ease 0.1s infinite;
-          animation: circleMoving 0.5s ease 0.1s infinite;
+  -webkit-animation: circleMoving 1s ease infinite;
+          animation: circleMoving 1s ease infinite;
+}
+
+.menu-btn:hover::after {
+  -webkit-animation: circleMoving 1s ease 0.1s infinite;
+          animation: circleMoving 1s ease 0.1s infinite;
 }
 
 .menu-btn:hover span {
-  background: #cc5376;
+  background: #e3c9ef;
 }
 
 #menu {
@@ -1315,7 +1334,7 @@ a:hover {
 .visual .circle {
   width: 30px;
   height: 30px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   position: absolute;
   left: 40px;
@@ -1346,26 +1365,52 @@ a:hover {
   left: 70%;
 }
 
-.visual .visual-wave {
-  height: 30vh;
-  position: absolute;
-  bottom: 100px;
-  width: 100%;
-  bottom: 0px;
-  width: 100%;
+@-webkit-keyframes wave {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 1000px 150px;
+  }
+  100% {
+    background-position: 2000px 0px;
+  }
+}
+
+@keyframes wave {
+  0% {
+    background-position: 0px 0px;
+  }
+  50% {
+    background-position: 1000px 150px;
+  }
+  100% {
+    background-position: 2000px 0px;
+  }
 }
 
 .visual .visual-wave .wave {
+  width: 2000px;
+  height: 200px;
+  background: url("../img/main/wave.png") repeat-x;
+  opacity: 0.6;
+  background-position: 0 0;
+  -webkit-animation: wave linear 10s 0s infinite;
+          animation: wave linear 10s 0s infinite;
   position: absolute;
+  bottom: 0px;
   left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  z-index: 3;
+  z-index: 1000;
 }
 
-.visual .visual-wave .wave + .wave {
-  z-index: 3;
+.visual .visual-wave .wave:nth-of-type(2) {
+  -webkit-animation: wave linear 8s 0s infinite;
+          animation: wave linear 8s 0s infinite;
+}
+
+.visual .visual-wave .wave:nth-of-type(3) {
+  -webkit-animation: wave linear 9s 0s infinite;
+          animation: wave linear 9s 0s infinite;
 }
 
 .intro {
@@ -1409,6 +1454,7 @@ a:hover {
   top: 100vh;
   width: 100%;
   z-index: 10;
+  display: none;
 }
 
 .about h3 {
@@ -1442,5 +1488,82 @@ a:hover {
 
 .about .about-item .item {
   width: 32%;
+}
+
+#navigation {
+  position: fixed;
+  z-index: 100;
+  left: 50px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+#navigation li {
+  display: block;
+  width: 50px;
+  height: 20px;
+}
+
+#navigation li a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  height: 2px;
+  background: #fff;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  position: relative;
+}
+
+#navigation li a .line-top {
+  width: 10px;
+  height: 2px;
+  background: #ff4b6a;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+}
+
+#navigation li a .line-btm {
+  width: 10px;
+  height: 2px;
+  background: #ff4b6a;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-transition: -webkit-transform .1s;
+  transition: -webkit-transform .1s;
+  transition: transform .1s;
+  transition: transform .1s, -webkit-transform .1s;
+}
+
+#navigation li:hover a {
+  background: #ff4b6a;
+  width: 50px;
+}
+
+#navigation li .toast {
+  opacity: 0;
+  position: absolute;
+  right: -50px;
+  background: #ff4b6a;
+  color: #fff;
+  font-size: 14px;
+  font-family: 'KyoboHand';
+  width: 100px;
+  line-height: 30px;
+  text-align: center;
+  height: 30px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -102,7 +102,6 @@ a:hover {
     left: -5px;
     top: -5px;
     border: 1px solid #fff;
-
     position: absolute;
     border-radius: 50%;
     opacity: 0;
@@ -110,20 +109,35 @@ a:hover {
     transform-origin: center;
   }
 
+  &::after {
+    content: '';
+    height: 50px;
+    width: 50px;
+    left: 0;
+    top: 0;
+    border: 1px solid rgba($color: #ffffff, $alpha: 0.6);
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 1.2s;
+    transform-origin: center;
+  }
+
   &:hover {
-    background-color: #fff;
-    border-color: #f9cd35;
     cursor: url('../img/main/n_link_32.png'), auto !important;
 
     &::before {
       //opacity: 1;
-      animation: circleMoving 0.5s ease 0.1s infinite;
-      //animation: name duration timing-function delay iteration-count direction fill-mode;
+      animation: circleMoving 1s ease infinite;
+    }
+
+    &::after {
+      animation: circleMoving 1s ease 0.1s infinite;
     }
 
 
     span {
-      background: #cc5376;
+      background: #e3c9ef;
 
     }
   }
@@ -269,7 +283,7 @@ a:hover {
   .circle {
     width: 30px;
     height: 30px;
-    background: rgba($color: #ffffff, $alpha: 0.3);
+    background: rgba($color: #ffffff, $alpha: 0.5);
     border-radius: 50%;
     position: absolute;
     left: 40px;
@@ -301,27 +315,52 @@ a:hover {
   }
 
 
+  @keyframes wave {
+    0% {
+      background-position: 0px 0px;
+    }
+
+    50% {
+      background-position: 1000px 150px
+    }
+
+    100% {
+      background-position: 2000px 0px;
+    }
+  }
+
   .visual-wave {
-    height: 30vh;
-    position: absolute;
-    bottom: 100px;
-    width: 100%;
-    //transform: rotate(180deg);
-    bottom: 0px;
-    width: 100%;
+    // position: absolute;
+    // bottom: 0px;
+    // height: 200px;
+    // width: 100%;
+    // bottom: 0;
+    // left: 0;
 
     .wave {
+      width: 2000px;
+      height: 200px;
+      background: url('../img/main/wave.png') repeat-x;
+      opacity: 0.6;
+      background-position: 0 0;
+      animation: wave linear 10s 0s infinite;
       position: absolute;
+      bottom: 0px;
       left: 0;
-      right: 0;
-      top: 0;
-      bottom: 0;
-      z-index: 3;
+      z-index: 1000;
+
+      &:nth-of-type(2) {
+        animation: wave linear 8s 0s infinite;
+      }
+
+      &:nth-of-type(3) {
+        animation: wave linear 9s 0s infinite;
+      }
     }
 
-    .wave+.wave {
-      z-index: 3;
-    }
+    // .wave+.wave {
+    //   z-index: 3;
+    // }
   }
 }
 
@@ -366,6 +405,7 @@ a:hover {
   top: 100vh;
   width: 100%;
   z-index: 10;
+  display: none;
 
   h3 {
     line-height: 1;
@@ -395,4 +435,77 @@ a:hover {
     }
   }
 
+}
+
+#navigation {
+  position: fixed;
+  z-index: 100;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  li {
+    display: block;
+    width: 50px;
+    height: 20px;
+
+    a {
+      display: inline-block;
+      vertical-align: middle;
+      width: 30px;
+      height: 2px;
+      background: #fff;
+      transition: 0.3s;
+      position: relative;
+
+      .line-top {
+        width: 10px;
+        height: 2px;
+        background: #ff4b6a;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transition: transform .1s;
+        transform-origin: right bottom;
+        //transform: rotate(45deg) translateX(10px);
+      }
+
+      .line-btm {
+        width: 10px;
+        height: 2px;
+        background: #ff4b6a;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+        transform-origin: right bottom;
+        transition: transform .1s;
+
+      }
+
+    }
+
+    &:hover {
+      a {
+        background: #ff4b6a;
+        width: 50px;
+      }
+    }
+
+    .toast {
+      opacity: 0;
+      position: absolute;
+      right: -50px;
+      background: #ff4b6a;
+      color: #fff;
+      font-size: 14px;
+      font-family: 'KyoboHand';
+      width: 100px;
+      line-height: 30px;
+      text-align: center;
+      height: 30px;
+      border-radius: 5px;
+      ;
+    }
+  }
 }

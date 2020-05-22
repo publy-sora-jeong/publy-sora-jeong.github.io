@@ -53,7 +53,7 @@ $(document).ready(function () {
 
 
   //dot ellipsis
-  $(".dot").each(function () {
+  $(".gnews .news-cnt").each(function () {
     $(this).dotdotdot({
       ellipsis: "\u2026",
       wrap: "word",

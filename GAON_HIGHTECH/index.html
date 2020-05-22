@@ -10,6 +10,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/jquery-accessibleMegaMenu.js"></script>
     <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.dotdotdot.js"></script>
     <script src="js/script.js"></script>
     <script src="js/lnb.js"></script>
     <title>Document</title>
@@ -263,7 +264,7 @@
                 </div>
             </div>
 
-            <!-- Add Arrows -->
+            <!-- VISUAL ARROW -->
             <div class="arrow">
                 <div class="arrow-container">
                     <div class="swiper-button-prev"></div>
@@ -271,7 +272,7 @@
                 </div>
             </div>
 
-            <!-- Add Pagination -->
+            <!-- VISUAL PAGING -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
@@ -325,7 +326,7 @@
     </section>
     <section class="product">
         <div class="section-container">
-            <h3 class="section-title">product</h3>
+            <h3 class="section-title--oblique">product</h3>
 
             <div class="product-tab">
                 <ul>
@@ -361,7 +362,7 @@
                         </div>
                     </div>
 
-                    <!-- Add Arrows -->
+                    <!--ARROW-->
                     <div class="arrow-container">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -397,7 +398,7 @@
                         </div>
                     </div>
 
-                    <!-- Add Arrows -->
+                    <!--ARROW-->
                     <div class="arrow-container">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -433,7 +434,7 @@
                         </div>
                     </div>
 
-                    <!-- Add Arrows -->
+                    <!--ARROW-->
                     <div class="arrow-container">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -469,7 +470,7 @@
                         </div>
                     </div>
 
-                    <!-- Add Arrows -->
+                    <!--ARROW-->
                     <div class="arrow-container">
                         <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
@@ -524,14 +525,105 @@
                         <p class="awards-txt">중소기업벤처기업부장관</p>
                     </div>
                 </div>
-
-                <!-- Add Arrows -->
             </div>
+            <!--ARROW-->
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
 
         </div>
     </section>
+    <section class="gnews">
+        <h3 class="section-title--oblique">Gaon <b>News</b></h3>
+        <div class="section-container">
+            <div class="gnews-list">
+                <ul>
+                    <li><a href="#">
+                            <p class="news-title">게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀 게시판 타이틀</p>
+                            <p class="news-cnt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero animi
+                                odit distinctio exercitationem molestiae, similique quaerat blanditiis illo, vero
+                                commodi officia voluptatem delectus ipsum rerum architecto? Tenetur, nemo! Animi,
+                                corrupti!</p>
+                            <span class="ico-more"></span>
+                        </a></li>
+                    <li><a href="#">
+                            <p class="news-title">게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀 게시판 타이틀</p>
+                            <p class="news-cnt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero animi
+                                odit distinctio exercitationem molestiae, similique quaerat blanditiis illo, vero
+                                commodi officia voluptatem delectus ipsum rerum architecto? Tenetur, nemo! Animi,
+                                corrupti!</p>
+                            <span class="ico-more"></span>
+                        </a></li>
+                    <li><a href="#">
+                            <p class="news-title">게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀게시판 타이틀 게시판 타이틀</p>
+                            <p class="news-cnt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero animi
+                                odit distinctio exercitationem molestiae, similique quaerat blanditiis illo, vero
+                                commodi officia voluptatem delectus ipsum rerum architecto? Tenetur, nemo! Animi,
+                                corrupti!</p>
+                            <span class="ico-more"></span>
+                        </a></li>
+                    <li><a href="#">
+                            <p class="news-title">게시판 타이틀 게시판 타이틀게시판 타이틀게시판 타이틀</p>
+                            <p class="news-cnt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero animi
+                                odit distinctio exercitationem molestiae, similique quaerat blanditiis illo, vero
+                                commodi officia voluptatem delectus ipsum rerum architecto? Tenetur, nemo! Animi,
+                                corrupti!</p>
+                            <span class="ico-more"></span>
+                        </a></li>
+                </ul>
+            </div>
+            <div class="gnews-link">
+                <div class="link--rnd">
+                    <a href="#">
+                        <p class="title">R&D</p>
+                        <p class="cnt">끊임없는 기술 개발과 혁신으로진보를 위해 노력합니다.</p>
+                        <span class="ico-more"></span>
+                    </a>
+                </div>
+                <div class="link--recruit">
+                    <a href="#">
+                        <p class="title">Recruit</p>
+                        <p class="cnt">함께 할 당신을 기다립니다.</p>
+                        <span class="ico-more"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="main-search">
+        <h3 class="section-title">궁금하신 제품이나 정보를 빠르게 찾아보세요.</h3>
+
+        <div class="search-box">
+            <div class="search-box-input">
+                <input type="text" value="AC/DC" placeholder="AC/DC">
+                <button id="btn-search" image><span class="blind">검색</span></button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="policy-container">
+            <ul class="policy">
+                <li><a href="#">개인정보처리 방침</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">인재채용</a></li>
+                <li><a href="#">오시는 길</a></li>
+            </ul>
+            <ul class="sns">
+                <li><a href="#">문의하기</a></li>
+                <li class="blog"><a href="#"><span>블로그</span></a></li>
+            </ul>
+        </div>
+        <div class="footer-container">
+            <h2 class="logo"><span class="bling">GAON HIGH-TECH</span></h2>
+            <ul>
+                <li>경기도 안양시 동안구 흥안대로 427번길79 한솔코스메틱 빌딩 5층 가온하이테크(주)</li>
+                <li>대표:안성인</li>
+                <li>사업자등록번호:123-86-31509</li>
+                <li>TEL:031-688-0600 / FAX:031-468-0099</li>
+            </ul>
+            <p class="copyrights">Copyright ©2020 Gaon High Tech. All rights reserved.</p>
+
+        </div>
+    </footer>
 </body>
 
 </html>
