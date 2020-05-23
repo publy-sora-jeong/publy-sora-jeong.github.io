@@ -1,5 +1,12 @@
 $(document).ready(function () {
 
+  $('.btn-top').on('click', function () {
+
+    $("html").animate({
+      scrollTop: 0
+    }, 500);
+
+  })
 
   $('.lang-select').on('click', function () {
     $('.select-list').slideDown();
