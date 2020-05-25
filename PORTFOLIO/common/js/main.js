@@ -25,106 +25,10 @@ $(function () {
     });
   });
 
-  //WAVIFY
-  var wave1 = $("#feel-the-wave").wavify({
-    height: 80,
-    bones: 4,
-    amplitude: 60,
-    color: "rgba(255 ,255,255, 0.8)",
-    speed: 0.15,
-  });
 
-  var wave2 = $("#feel-the-wave-two").wavify({
-    height: 60,
-    bones: 3,
-    amplitude: 40,
-    color: "rgba(255 ,255,255,0.7)",
-    speed: 0.25,
-  });
+  // x: Math.floor(Math.random()) + 150,
+  // y: Math.floor(Math.random()) - 400,
 
-  //MAIN VISUAL
-  var circle = new TimelineMax({
-    paused: false,
-  });
-
-  var circle2 = new TimelineMax({
-    paused: false,
-  });
-
-  var typo = new TimelineMax({});
-
-  typo.staggerFrom(
-    ".visual-typo ul  li",
-    0.8, {
-      repeat: -1,
-      y: 10,
-      opacity: 0.2,
-      ease: Expo.easeInOut,
-      yoyo: true,
-    },
-    0.1
-  );
-
-
-  typo.reverse();
-  circle
-    .to(".circle1", 5, {
-      x: Math.floor(Math.random()) + 150,
-      y: Math.floor(Math.random()) - 400,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-    })
-    .to(".circle2", 4, {
-      x: Math.floor(Math.random()) + 50,
-      y: Math.floor(Math.random()) - 400,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-      delay: 0,
-    })
-    .to(".circle3", 3, {
-      x: Math.floor(Math.random()) + 150,
-      y: Math.floor(Math.random()) - 400,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-      delay: 0,
-    });
-  circle2
-    .to(".circle4", 5, {
-      x: Math.floor(Math.random()) + 80,
-      y: Math.floor(Math.random()) - 400,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-    })
-    .to(".circle5", 5, {
-      x: Math.floor(Math.random()) + 20,
-      y: Math.floor(Math.random()) - 300,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-    })
-    .to(".circle6", 4, {
-      x: Math.floor(Math.random()) + -70,
-      y: Math.floor(Math.random()) - 400,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-    })
-    .to(".circle7", 5, {
-      x: Math.floor(Math.random()) - 40,
-      y: Math.floor(Math.random()) - 200,
-      rotation: 45,
-      repeat: -1,
-      opacity: 0,
-    });
-
-  circle.play();
-  circle2.play();
-
-  typo.play();
 
 
   $(window).on('scroll', function () {
