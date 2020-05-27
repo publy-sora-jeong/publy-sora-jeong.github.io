@@ -23,6 +23,11 @@ html {
     font-size: 1.4rem;
     overflow-x: hidden !important;
   }
+
+  img {
+    max-width: 100%;
+  }
+
 }
 
 
@@ -57,8 +62,7 @@ body {
 
 a:hover {
   cursor: url('../img/main/n_link_32.png');
-  width: 100px;
-  height: 100px;
+
 }
 
 //////////////MENU
@@ -84,7 +88,6 @@ a:hover {
     position: absolute;
     left: 12px;
     top: 17px;
-    //transition: 0.1s;
 
     &.btn-line-2 {
       margin-top: 10px;
@@ -150,8 +153,8 @@ a:hover {
   right: -100%;
   width: 100%;
   height: 100vh;
-  z-index: 999;
-  background: #ff9f9f;
+  z-index: 1100;
+  background: #2e637b;
 
   .menu-data {
     position: absolute;
@@ -199,6 +202,97 @@ a:hover {
   }
 }
 
+#navigation {
+  position: fixed;
+  z-index: 100;
+  left: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  li {
+    height: 0;
+    position: relative;
+
+    &:nth-of-type(2).active {
+      i {
+        color: #333;
+      }
+
+      &::before,
+      &::after {
+        background-color: #333;
+      }
+    }
+
+    &::before {
+      content: '';
+      width: 1px;
+      height: 0;
+      background: rgba($color: #ffffff, $alpha: 0.4);
+      margin: 10px auto;
+      display: block;
+      opacity: 0;
+      transition: 1s 0.2s;
+    }
+
+    &::after {
+      content: '';
+      width: 1px;
+      height: 0;
+      background: rgba($color: #ffffff, $alpha: 0.4);
+      display: block;
+      margin: 10px auto;
+      opacity: 0;
+      transition: 1s 0.4s;
+    }
+
+    i {
+      opacity: 0;
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      color: #fff;
+      font-weight: bold;
+      transform: rotate(30deg);
+      transition: 0.5s 0.1s;
+      text-transform: lowercase;
+      text-shadow: 1px 1px 2px rgba($color: #1c67d9, $alpha: 0.8);
+
+
+
+      &:nth-of-type(2) {
+        transition-delay: 0.1s;
+      }
+
+      &:nth-of-type(3) {
+        transition-delay: 0.2s;
+      }
+
+      &:nth-of-type(4) {
+        transition-delay: 0.3s;
+      }
+    }
+
+    &.active {
+      height: auto;
+
+      &::before {
+        opacity: 1;
+        height: 50px;
+      }
+
+      &::after {
+        opacity: 1;
+        height: 50px;
+      }
+
+      i {
+
+        opacity: 1;
+      }
+    }
+  }
+}
 
 .visual {
   //background-color: #ff7890;
@@ -208,30 +302,109 @@ a:hover {
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
-  font-family: 'Pangolin', 'KyoboHand', cursive;
+
+  font-family: 'Roboto', sans-serif;
   color: #fff;
   text-align: center;
   overflow: hidden;
   position: relative;
+  font-weight: 300;
 
   .visual-typo {
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translateX(-50%, -50%);
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    transform: translate(-50%, -50%);
 
 
-    &>ul>li {
-      font-family: 'Lato', sans-serif;
+    strong {
       letter-spacing: 1px;
       font-size: 70px;
-      text-transform: uppercase;
+      display: block;
+      font-weight: 900;
+    }
+
+    p {
+      letter-spacing: 3px;
+    }
+
+    .btn {
+      color: #fff;
+      margin-top: 4em;
+      display: block;
+      font-family: 'Roboto', sans-serif;
+      position: relative;
+      width: 150px;
+      height: 40px;
+      line-height: 40px;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: transparent;
+      transition: 1s 0.3s;
+
+      span {
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        animation: fadeInOut 0.8s infinite alternate;
+      }
+
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-top: 1px solid #fff;
+        border-left: 1px solid #fff;
+        width: 0;
+        height: 0;
+        transition: 1s;
+        opacity: 0;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-right: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        width: 0;
+        height: 0;
+        transition: 1s;
+        opacity: 0;
+      }
+
+      &:hover {
+        background-color: rgba($color: #ffffff, $alpha: 0.1);
+
+        &::before {
+          width: 110%;
+          height: 130%;
+          border-radius: 0;
+          opacity: 1;
+        }
+
+        &::after {
+          width: 110%;
+          height: 130%;
+          border-radius: 0;
+          opacity: 1;
+        }
+      }
 
     }
   }
 
+
   video {
-    position: fixed;
+    position: absolute;
     left: 0;
     top: 0;
     right: 0;
@@ -241,39 +414,6 @@ a:hover {
     z-index: -1;
     object-fit: cover;
   }
-
-
-  //비주얼 텍스트
-  h2 {
-    color: #fff;
-    font-family: 'KyoboHand';
-    font-size: 3em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%, -50%);
-
-    li {
-      letter-spacing: -1px;
-      margin: 0 1px;
-      display: inline-block;
-    }
-
-    .visual-subtext {
-      margin-top: 0.4em;
-      font-size: 0.7em;
-      letter-spacing: 1px;
-
-      span {
-        display: inline-block;
-      }
-    }
-  }
-
-
-  //달팽이
-
 
   //visual - circle moving
   .circle {
@@ -310,34 +450,6 @@ a:hover {
     }
   }
 
-
-  @keyframes wave {
-    0% {
-      background-position: 0px 0px;
-    }
-
-    50% {
-      background-position: 1000px 150px
-    }
-
-    100% {
-      background-position: 2000px 0px;
-    }
-  }
-
-  @keyframes wave2 {
-    0% {
-      background-position: 0 0px;
-    }
-
-    50% {
-      background-position: 800px 100px
-    }
-
-    100% {
-      background-position: 2000px 0px;
-    }
-  }
 
   .visual-wave {
     // position: absolute;
@@ -410,40 +522,101 @@ a:hover {
 
 .about {
   font-family: 'Vidaloka', serif;
-  background: #ddd;
-
-  top: 850px;
+  background: #fff;
   width: 100%;
+  position: relative;
   z-index: 10;
-  background: #74bfe0;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #74bfe0, #fff);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #74bfe0, #fff);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  // background: -webkit-linear-gradient(to top, #74bfe0, #fff);
+  // background: linear-gradient(to top, #74bfe0, #fff);
+  padding: 0 0 150px 0;
 
+  .section-title {
+    line-height: 1.3;
+    font-size: 3em;
+    text-align: center;
+    color: #333;
+    transition: 1s;
+    transition-delay: 0.5s;
+    padding: 2em 0 0.7em 0;
 
-  .about-container {
-    position: relative;
-    height: 800px;
+    p {
+      font-weight: bold;
+    }
+
+    span {
+      display: block;
+      font-size: 16px;
+
+    }
+
   }
 
-  .wave-svg {
-    fill: white;
-    position: absolute;
-    bottom: 0;
+
+  .item-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    margin: 0 auto;
+    //margin: 50px auto;
+    flex-wrap: wrap;
+
+    .item {
+      width: 30%;
+      margin: 50px auto 50px auto;
+
+      dt {
+        span {
+          display: block;
+          width: 100px;
+          height: 100px;
+          border: 1px solid #aac5f7;
+          border-radius: 50%;
+          margin-left: auto;
+          margin-right: auto;
+          overflow: hidden;
+          box-shadow: 1px 3px 0 rgba($color: #aac5f7, $alpha: 0.2);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            height: 60px;
+
+          }
+        }
+
+        margin-bottom: 20px;
+
+      }
+
+      dd {
+        color: #999;
+        text-align: center;
+
+      }
+    }
   }
 
+
+
+
+}
+
+
+.works {
+  background: #222;
+  position: relative;
+  padding: 150px 0;
 
   h3 {
     line-height: 1;
-    font-size: 5em;
+    font-size: 3em;
     text-align: center;
     color: #fff;
     transition: 1s;
     transition-delay: 0.5s;
-    padding-top: 2em;
-    position: relative;
+    padding: 0 0 0.7em 0;
+    font-family: 'Vidaloka', serif;
 
     i {
       color: #86b1c5;
@@ -452,91 +625,51 @@ a:hover {
     }
   }
 
-  .about-item {
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-    margin: 50px auto;
+  //swiper-slide swiper-slide-duplicate swiper-slide-duplicate-prev
 
-    .item {
-      width: 32%;
+
+  .section-container {
+    width: 1200px;
+    margin: 0 auto;
+
+    .swiper-slide {
+      width: 900px;
+      height: 470px;
+      padding: 20px 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      margin: 0 40px;
+      opacity: 0.5;
+      filter: blur(3px) grayscale(100%);
+      transition: 1s;
+      position: relative;
+
+      .sample {
+        width: 790px;
+        box-shadow: 0px 4px 0 rgba($color: #000000, $alpha: 0.1);
+      }
+
+      .sample-m {
+        width: 200px;
+        z-index: 1;
+        margin-left: -100px;
+        margin-bottom: -20px;
+      }
+
+      &.swiper-slide-active {
+        opacity: 1;
+        filter: blur(0) grayscale(0%);
+      }
     }
   }
 
 }
 
-#navigation {
-  position: fixed;
-  z-index: 100;
-  left: 50px;
-  top: 50%;
-  transform: translateY(-50%);
-
-  li {
-    display: block;
-    width: 50px;
-    height: 20px;
-
-    a {
-      display: inline-block;
-      vertical-align: middle;
-      width: 30px;
-      height: 2px;
-      background: #fff;
-      transition: 0.3s;
-      position: relative;
-
-      .line-top {
-        width: 10px;
-        height: 2px;
-        background: #aa78e2;
-        position: absolute;
-        right: 0;
-        top: 0;
-        transition: transform .1s;
-        transform-origin: right bottom;
-        //transform: rotate(45deg) translateX(10px);
-      }
-
-      .line-btm {
-        width: 10px;
-        height: 2px;
-        background: #aa78e2;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        transform-origin: right bottom;
-        transition: transform .1s;
-
-      }
-
-    }
-
-    &:hover {
-      a {
-        background: #aa78e2;
-        width: 50px;
-      }
-
-      .toast {
-        opacity: 1;
-      }
-    }
-
-    .toast {
-      //display: block;
-      opacity: 0;
-      left: 70px;
-      top: -19px;
-      border-bottom: 1px solid #fff;
-      padding: 0 20px;
-      position: absolute;
-      color: #fff;
-      font-size: 14px;
-      font-family: 'Vidaloka', serif;
-      text-align: center;
-      transition: 1s;
-    }
-  }
+.wave-svg {
+  fill: #222;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
 }
