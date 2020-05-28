@@ -71,14 +71,15 @@ a:hover {
 
 .menu-btn {
   position: fixed;
-  z-index: 1000;
-  right: 20px;
+  z-index: 1500;
+  left: 20px;
   top: 20px;
   width: 60px;
   height: 60px;
   background: transparent;
   border-radius: 30px;
   border: 3px solid transparent;
+
 
 
   span {
@@ -88,6 +89,7 @@ a:hover {
     position: absolute;
     left: 12px;
     top: 17px;
+    transition: 0.5s;
 
     &.btn-line-2 {
       margin-top: 10px;
@@ -145,32 +147,69 @@ a:hover {
     }
   }
 
+  &.open {
+
+    span.btn-line-1 {
+      transform: rotate(45deg);
+      top: 25px;
+    }
+
+    span.btn-line-2 {
+      display: none;
+    }
+
+    span.btn-line-3 {
+      transform: rotate(-45deg);
+      margin-top: 8px;
+    }
+  }
+
+
 }
 
 #menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   width: 100%;
   height: 100vh;
   z-index: 1100;
-  background: #2e637b;
+  //background: #2e637b;
+  background: rgb(238, 174, 202);
+  background: -moz-linear-gradient(45deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  background: linear-gradient(45deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca", endColorstr="#94bbe9", GradientType=1);
+  box-shadow: 5px 5px 0 rgba($color: #000000, $alpha: 0.1);
+  //transition: all 0.5s;
+
 
   .menu-data {
     position: absolute;
-    left: 10%;
+    right: 10%;
+    top: 20%;
+    position: absolute;
+    right: 10%;
     top: 20%;
 
     li {
-
-
+      text-align: right;
+      margin-top: 35px;
 
       a {
         color: #fff;
         font-family: 'Vidaloka', serif;
-        font-size: 50px;
+        font-size: 45px;
         transition: 0.3s;
         position: relative;
+
+        span {
+          display: block;
+          font-size: 14px;
+          font-family: '777Balsamtint', sans-serif;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
 
         &::before {
           content: '';
@@ -187,10 +226,9 @@ a:hover {
 
       &:hover {
 
-
         a {
-          padding-left: 20px;
-          color: #aa78e2;
+          padding-right: 20px;
+          color: #333;
 
           &::before {
             width: 100%;
@@ -331,6 +369,13 @@ a:hover {
 
     p {
       letter-spacing: 3px;
+
+      &:nth-of-type(2) {
+        font-size: 9px;
+        width: 50%;
+        margin: 30px auto;
+        opacity: 0.5;
+      }
     }
 
     .btn {
@@ -496,7 +541,7 @@ a:hover {
   z-index: 200;
   left: 0;
   top: 0;
-  animation: introFadeOut 2s 2s forwards;
+  animation: introFadeOut 0.5s 3s forwards;
   display: none;
 
   .intro-text {
@@ -559,17 +604,26 @@ a:hover {
     margin: 0 auto;
     //margin: 50px auto;
     flex-wrap: wrap;
+    perspective: 800px;
+
 
     .item {
       width: 30%;
       margin: 50px auto 50px auto;
+      transform: rotateY(180deg);
+      transition: 1s;
+      opacity: 0.1;
+
+      &:nth-of-type(2n) {
+        transition-delay: 0.3s;
+      }
 
       dt {
         span {
           display: block;
           width: 100px;
           height: 100px;
-          border: 1px solid #aac5f7;
+          border: 2px dashed #333;
           border-radius: 50%;
           margin-left: auto;
           margin-right: auto;
@@ -592,12 +646,29 @@ a:hover {
       dd {
         color: #999;
         text-align: center;
+        font-family: "777Balsamtint";
+        font-size: 18px;
+
+        strong {
+          color: #333;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
 
       }
     }
   }
 
 
+
+  &.active {
+    .item-wrap {
+      .item {
+        transform: rotateY(0);
+        opacity: 1;
+      }
+    }
+  }
 
 
 }
@@ -615,12 +686,24 @@ a:hover {
     color: #fff;
     transition: 1s;
     transition-delay: 0.5s;
-    padding: 0 0 0.7em 0;
     font-family: 'Vidaloka', serif;
+    font-weight: normal;
+    padding-bottom: 30px;
 
     i {
-      color: #86b1c5;
       font-weight: bold;
+      color: #86b1c5;
+    }
+
+
+    p {
+      color: #86b1c5;
+      font-weight: normal;
+
+      font-size: 15px;
+      font-family: '777Balsamtint', sans-serif;
+      color: #fff;
+
 
     }
   }
@@ -662,6 +745,27 @@ a:hover {
         filter: blur(0) grayscale(0%);
       }
     }
+
+    .swiper-pagination {
+      width: 100%;
+      left: 0;
+      margin-top: 50px;
+    }
+
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 7px;
+      margin: 0 3px;
+      border-radius: 30px;
+      background-color: #fff;
+      opacity: 1;
+
+      &.swiper-pagination-bullet-active {
+        background-color: #86b1c5;
+      }
+    }
+
+
   }
 
 }

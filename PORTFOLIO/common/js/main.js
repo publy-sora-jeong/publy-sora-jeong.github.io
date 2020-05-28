@@ -33,9 +33,21 @@ $(function () {
 
 
   $('.menu-btn').on('click', function () {
-    $('#menu').stop().animate({
-      right: '-50%'
-    });
+
+    if ($(this).hasClass('open')) {
+      $('#menu').stop().animate({
+        left: '-100%'
+      }, 500, 'easeInBack', function () {
+        $('.menu-btn').removeClass('open');
+      });
+    } else {
+      $('#menu').stop().animate({
+        left: '-50%'
+      }, 500, 'easeOutBack', function () {
+        $('.menu-btn').addClass('open');
+      });
+    }
+
   });
 
   $(window).on('scroll', function () {
@@ -49,6 +61,7 @@ $(function () {
 
 
   var swiper = new Swiper('.works-slide', {
+    effect: 'coverflow',
     slidesPerView: 'auto',
     speed: 600,
     loop: true,
@@ -56,11 +69,18 @@ $(function () {
     //   delay: 2500,
     //   disableOnInteraction: false,
     // },
-    centeredSlides: true,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: true,
     },
+    centeredSlides: true,
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
     pagination: {
       el: '.swiper-pagination',
       clickable: true,

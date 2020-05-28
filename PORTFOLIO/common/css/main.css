@@ -314,6 +314,13 @@ input {
   font-style: normal;
 }
 
+@font-face {
+  font-family: '777Balsamtint';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /**
  * Swiper 5.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1038,6 +1045,7 @@ button.swiper-pagination-bullet {
   }
   100% {
     top: -100%;
+    opacity: 0.7;
   }
 }
 
@@ -1047,6 +1055,7 @@ button.swiper-pagination-bullet {
   }
   100% {
     top: -100%;
+    opacity: 0.7;
   }
 }
 
@@ -1202,8 +1211,8 @@ a:hover {
 
 .menu-btn {
   position: fixed;
-  z-index: 1000;
-  right: 20px;
+  z-index: 1500;
+  left: 20px;
   top: 20px;
   width: 60px;
   height: 60px;
@@ -1219,6 +1228,8 @@ a:hover {
   position: absolute;
   left: 12px;
   top: 17px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .menu-btn span.btn-line-2 {
@@ -1279,29 +1290,65 @@ a:hover {
   background: #e3c9ef;
 }
 
+.menu-btn.open span.btn-line-1 {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 25px;
+}
+
+.menu-btn.open span.btn-line-2 {
+  display: none;
+}
+
+.menu-btn.open span.btn-line-3 {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 8px;
+}
+
 #menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  left: -100%;
   width: 100%;
   height: 100vh;
   z-index: 1100;
-  background: #2e637b;
+  background: #eeaeca;
+  background: linear-gradient(45deg, #eeaeca 0%, #94bbe9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca", endColorstr="#94bbe9", GradientType=1);
+  -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 #menu .menu-data {
   position: absolute;
-  left: 10%;
+  right: 10%;
   top: 20%;
+  position: absolute;
+  right: 10%;
+  top: 20%;
+}
+
+#menu .menu-data li {
+  text-align: right;
+  margin-top: 35px;
 }
 
 #menu .menu-data li a {
   color: #fff;
   font-family: 'Vidaloka', serif;
-  font-size: 50px;
+  font-size: 45px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: relative;
+}
+
+#menu .menu-data li a span {
+  display: block;
+  font-size: 14px;
+  font-family: '777Balsamtint', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 #menu .menu-data li a::before {
@@ -1317,8 +1364,8 @@ a:hover {
 }
 
 #menu .menu-data li:hover a {
-  padding-left: 20px;
-  color: #aa78e2;
+  padding-right: 20px;
+  color: #333;
 }
 
 #menu .menu-data li:hover a::before {
@@ -1456,6 +1503,13 @@ a:hover {
 
 .visual .visual-typo p {
   letter-spacing: 3px;
+}
+
+.visual .visual-typo p:nth-of-type(2) {
+  font-size: 9px;
+  width: 50%;
+  margin: 30px auto;
+  opacity: 0.5;
 }
 
 .visual .visual-typo .btn {
@@ -1606,8 +1660,8 @@ a:hover {
   z-index: 200;
   left: 0;
   top: 0;
-  -webkit-animation: introFadeOut 2s 2s forwards;
-          animation: introFadeOut 2s 2s forwards;
+  -webkit-animation: introFadeOut 0.5s 3s forwards;
+          animation: introFadeOut 0.5s 3s forwards;
   display: none;
 }
 
@@ -1673,11 +1727,23 @@ a:hover {
   margin: 0 auto;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-perspective: 800px;
+          perspective: 800px;
 }
 
 .about .item-wrap .item {
   width: 30%;
   margin: 50px auto 50px auto;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity: 0.1;
+}
+
+.about .item-wrap .item:nth-of-type(2n) {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
 }
 
 .about .item-wrap .item dt {
@@ -1688,7 +1754,7 @@ a:hover {
   display: block;
   width: 100px;
   height: 100px;
-  border: 1px solid #aac5f7;
+  border: 2px dashed #333;
   border-radius: 50%;
   margin-left: auto;
   margin-right: auto;
@@ -1713,6 +1779,20 @@ a:hover {
 .about .item-wrap .item dd {
   color: #999;
   text-align: center;
+  font-family: "777Balsamtint";
+  font-size: 18px;
+}
+
+.about .item-wrap .item dd strong {
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.about.active .item-wrap .item {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  opacity: 1;
 }
 
 .works {
@@ -1730,13 +1810,22 @@ a:hover {
   transition: 1s;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
-  padding: 0 0 0.7em 0;
   font-family: 'Vidaloka', serif;
+  font-weight: normal;
+  padding-bottom: 30px;
 }
 
 .works h3 i {
-  color: #86b1c5;
   font-weight: bold;
+  color: #86b1c5;
+}
+
+.works h3 p {
+  color: #86b1c5;
+  font-weight: normal;
+  font-size: 15px;
+  font-family: '777Balsamtint', sans-serif;
+  color: #fff;
 }
 
 .works .section-container {
@@ -1783,6 +1872,25 @@ a:hover {
   opacity: 1;
   -webkit-filter: blur(0) grayscale(0%);
           filter: blur(0) grayscale(0%);
+}
+
+.works .section-container .swiper-pagination {
+  width: 100%;
+  left: 0;
+  margin-top: 50px;
+}
+
+.works .section-container .swiper-pagination-bullet {
+  width: 30px;
+  height: 7px;
+  margin: 0 3px;
+  border-radius: 30px;
+  background-color: #fff;
+  opacity: 1;
+}
+
+.works .section-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #86b1c5;
 }
 
 .wave-svg {
