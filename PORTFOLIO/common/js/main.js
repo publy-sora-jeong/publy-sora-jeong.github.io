@@ -6,6 +6,10 @@ $(function () {
   initDom();
   savePosition();
 
+  // $(window).on("beforeunload", function () {
+  //   $(window).scrollTop(0);
+  // });
+
   //ISOTOPE
   var $grid = $(".grid").isotope({
     itemSelector: ".grid-item",
@@ -25,44 +29,80 @@ $(function () {
     });
   });
 
-
-
-
   // x: Math.floor(Math.random()) + 150,
   // y: Math.floor(Math.random()) - 400,
 
-
-  $('.menu-btn').on('click', function () {
-
-    if ($(this).hasClass('open')) {
-      $('#menu').stop().animate({
-        left: '-100%'
-      }, 500, 'easeInBack', function () {
-        $('.menu-btn').removeClass('open');
-      });
+  $(".menu-btn").on("click", function () {
+    if ($(this).hasClass("open")) {
+      $("#menu")
+        .stop()
+        .animate(
+          {
+            left: "-100%",
+          },
+          500,
+          "easeInBack",
+          function () {
+            $(".menu-btn").removeClass("open");
+          }
+        );
     } else {
-      $('#menu').stop().animate({
-        left: '-50%'
-      }, 500, 'easeOutBack', function () {
-        $('.menu-btn').addClass('open');
-      });
+      $("#menu")
+        .stop()
+        .animate(
+          {
+            left: "-50%",
+          },
+          500,
+          "easeOutBack",
+          function () {
+            $(".menu-btn").addClass("open");
+          }
+        );
     }
-
   });
 
-  $(window).on('scroll', function () {
+  $("#menu  ul > li > a").on("click", function (e) {
+    e.preventDefault();
+    var li_eq = $(this).parent().index();
+    var scrollTogo = $section.eq(li_eq).offset().top;
+    //console.log($(this).parent().index());
+    //console.log($section.eq(li_eq).offset().top);
+    if ($(".menu-btn").hasClass("open")) {
+      $(this).removeClass("open");
+      $("#menu")
+        .stop()
+        .animate(
+          {
+            left: "-100%",
+          },
+          500,
+          "easeInBack",
+          function () {
+            $(".menu-btn").removeClass("open");
+            $("html, body").stop().delay(200).animate(
+              {
+                scrollTop: scrollTogo,
+              },
+              1000
+            );
+          }
+        );
+    }
+  });
+
+  $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
     activeBtn(scroll);
   });
 
-  $('#navigation > ul > li').on('mouseenter', function () {
-    $(this).addClass('on');
+  $("#navigation > ul > li").on("mouseenter", function () {
+    $(this).addClass("on");
   });
 
-
-  var swiper = new Swiper('.works-slide', {
-    effect: 'coverflow',
-    slidesPerView: 'auto',
+  var swiper = new Swiper(".works-slide", {
+    effect: "coverflow",
+    slidesPerView: "auto",
     speed: 600,
     loop: true,
     // autoplay: {
@@ -82,16 +122,14 @@ $(function () {
     //   prevEl: '.swiper-button-prev',
     // },
     pagination: {
-      el: '.swiper-pagination',
+      el: ".swiper-pagination",
       clickable: true,
     },
   });
-
-
 });
 
 function initDom() {
-  $section = $('section');
+  $section = $("section");
 }
 
 function savePosition() {
@@ -100,7 +138,7 @@ function savePosition() {
   for (var i = 0; i < section_len; i++) {
     posArray.push($section.eq(i).offset().top);
   }
-  posArray.push($section.last().offset().top + $section.last().height())
+  posArray.push($section.last().offset().top + $section.last().height());
   console.log(posArray);
 }
 
@@ -108,11 +146,11 @@ function activeBtn(scroll) {
   var base = -300;
   for (var i = 0; i < section_len; i++) {
     if (scroll >= posArray[i] + base && scroll < posArray[i + 1] + base) {
-      $section.removeClass('active')
-      $section.eq(i).addClass('active');
+      $section.removeClass("active");
+      $section.eq(i).addClass("active");
 
-      $('#navigation li').removeClass('active');
-      $('#navigation li').eq(i).addClass('active');
+      $("#navigation li").removeClass("active");
+      $("#navigation li").eq(i).addClass("active");
     }
   }
 }

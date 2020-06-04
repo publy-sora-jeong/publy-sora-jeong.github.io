@@ -251,7 +251,8 @@ a:hover {
     height: 0;
     position: relative;
 
-    &:nth-of-type(2).active {
+    &:nth-of-type(2).active,
+    &:nth-of-type(4).active {
       i {
         color: #333;
       }
@@ -674,7 +675,7 @@ a:hover {
 }
 
 
-.works {
+.recent-works {
   background: #222;
   position: relative;
   padding: 150px 0;
@@ -750,6 +751,10 @@ a:hover {
       width: 100%;
       left: 0;
       margin-top: 50px;
+
+      .swiper-pagination-bullet {
+        cursor: url('../img/main/n_link_32.png'), auto !important;
+      }
     }
 
     .swiper-pagination-bullet {
@@ -776,4 +781,291 @@ a:hover {
   bottom: 0;
   width: 100%;
   z-index: 10;
+}
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+  background-color: #f6f6f6;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 700px;
+    top: -700px;
+    right: 0;
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    transform: skew(45deg) rotate(45deg);
+    z-index: 0;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -600px;
+    left: 0;
+    width: 100%;
+    height: 700px;
+    background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    transform: skew(45deg) rotate(45deg);
+    z-index: 0;
+  }
+
+  .section-container {
+    width: 1200px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .button-group {
+    margin: 0 auto;
+
+    button {
+      color: #555;
+      font-size: 20px;
+      font-family: 'Roboto', '777Balsamtint', sans-serif;
+      font-weight: 300;
+      text-transform: uppercase;
+      padding: 10px 0;
+      width: 13%;
+      text-align: left;
+      position: relative;
+      overflow: hidden;
+      transition: 0.5s 0.3s;
+      border-radius: 5px;
+      margin-right: 10px;
+
+      &::before {
+        content: '';
+        background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+        position: absolute;
+        right: calc(100% + 100px);
+        top: 0;
+        transform: skew(-20deg);
+        width: calc(100% + 100px);
+        height: 100%;
+        transition: 0.5s;
+        z-index: -1;
+      }
+
+      &:hover {
+        &::before {
+          right: -50px;
+        }
+
+        color:#fff;
+        padding-left: 10px;
+
+        span {
+          color: #fff;
+        }
+      }
+
+
+      span {
+        padding-left: 5px;
+        font-size: 11px;
+        color: #bbb;
+      }
+    }
+
+  }
+
+  .grid {
+    min-height: 400px;
+    margin-left: -10px;
+    margin-right: -10px;
+    transition: height 1s;
+
+    .grid-item {
+      width: calc(33.33% - 20px);
+      height: 300px;
+      border: 1px solid #fff;
+      background-color: rgba($color: #ffffff, $alpha: 0.9);
+      text-align: center;
+      padding: 20px;
+      box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+      border-radius: 16px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      margin: 10px;
+      transition: box-shadow 0.25s ease;
+
+      &:hover {
+        box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+      }
+
+
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        color: #333;
+        border-radius: 16px;
+      }
+    }
+  }
+}
+
+.contact {
+  background: #333;
+  padding: 100px 0 50px 0;
+
+  h3 {
+    color: #888;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+
+  .location {
+    margin: 50px auto 20px auto;
+    text-align: center;
+    width: 1200px;
+    filter: grayscale(90%);
+    transition: 0.5s;
+
+    &:hover {
+      filter: grayscale(0%);
+    }
+
+
+  }
+
+  .location-detail {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1200px;
+    margin: 0 auto;
+
+    li {
+      width: 50%;
+      color: #999;
+      font-family: '777Balsamtint';
+      font-size: 18px;
+      text-align: left;
+
+      span {
+        color: #fff;
+        padding-right: 10px;
+        width: 80px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+
+      a {
+        color: #d8bbfb;
+      }
+    }
+  }
+}
+
+.copyrights {
+  background: #222;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.pf-layer {
+  background-color: rgba($color: #222, $alpha: 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: auto;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+
+  .folio-title {
+    color: #fff;
+    font-size: 40px;
+    padding-bottom: 50px;
+    font-weight: 400;
+
+    strong {
+      display: inline-block;
+      position: relative;
+      padding: 0 10px;
+    }
+
+
+    a {
+      color: #fff;
+      font-size: 15px;
+    }
+  }
+
+  .layer-container {
+    text-align: center;
+    margin-top: 10%;
+    width: 100%;
+    //height: 100%;
+
+    .desktop {
+      box-shadow: 0 1px 10px rgba($color: #000000, $alpha: 0.1);
+      transition: 0.6s;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.02);
+        box-shadow: 0 1px 20px rgba($color: #000000, $alpha: 0.3);
+      }
+    }
+
+    p {
+      width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      //margin: 20px auto;
+      line-height: 1.7;
+      font-size: 17px;
+
+      text-align: justify;
+      color: #fff;
+    }
+
+    .pf-detail {
+      margin: 50px;
+    }
+  }
+
+  .pf-fixed-bg {
+    background-image: url('../img/src/nurinori_01.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 1410px;
+    background-size: cover;
+
+    &2 {
+      background-image: url('../img/src/nurinori_02.png');
+      background-position: bottom center;
+    }
+
+    &-sml {
+      width: 1200px;
+      margin: 20px auto;
+      background-image: url('../img/src/nurinori_02.png');
+    }
+  }
 }

@@ -1,6 +1,7 @@
 /*RESET */
 @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 html,
 body,
 div,
@@ -319,6 +320,10 @@ input {
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.notosanskr * {
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 /**
@@ -1386,11 +1391,11 @@ a:hover {
   position: relative;
 }
 
-#navigation li:nth-of-type(2).active i {
+#navigation li:nth-of-type(2).active i, #navigation li:nth-of-type(4).active i {
   color: #333;
 }
 
-#navigation li:nth-of-type(2).active::before, #navigation li:nth-of-type(2).active::after {
+#navigation li:nth-of-type(2).active::before, #navigation li:nth-of-type(2).active::after, #navigation li:nth-of-type(4).active::before, #navigation li:nth-of-type(4).active::after {
   background-color: #333;
 }
 
@@ -1795,13 +1800,13 @@ a:hover {
   opacity: 1;
 }
 
-.works {
+.recent-works {
   background: #222;
   position: relative;
   padding: 150px 0;
 }
 
-.works h3 {
+.recent-works h3 {
   line-height: 1;
   font-size: 3em;
   text-align: center;
@@ -1815,12 +1820,12 @@ a:hover {
   padding-bottom: 30px;
 }
 
-.works h3 i {
+.recent-works h3 i {
   font-weight: bold;
   color: #86b1c5;
 }
 
-.works h3 p {
+.recent-works h3 p {
   color: #86b1c5;
   font-weight: normal;
   font-size: 15px;
@@ -1828,12 +1833,12 @@ a:hover {
   color: #fff;
 }
 
-.works .section-container {
+.recent-works .section-container {
   width: 1200px;
   margin: 0 auto;
 }
 
-.works .section-container .swiper-slide {
+.recent-works .section-container .swiper-slide {
   width: 900px;
   height: 470px;
   padding: 20px 0;
@@ -1855,32 +1860,36 @@ a:hover {
   position: relative;
 }
 
-.works .section-container .swiper-slide .sample {
+.recent-works .section-container .swiper-slide .sample {
   width: 790px;
   -webkit-box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
-.works .section-container .swiper-slide .sample-m {
+.recent-works .section-container .swiper-slide .sample-m {
   width: 200px;
   z-index: 1;
   margin-left: -100px;
   margin-bottom: -20px;
 }
 
-.works .section-container .swiper-slide.swiper-slide-active {
+.recent-works .section-container .swiper-slide.swiper-slide-active {
   opacity: 1;
   -webkit-filter: blur(0) grayscale(0%);
           filter: blur(0) grayscale(0%);
 }
 
-.works .section-container .swiper-pagination {
+.recent-works .section-container .swiper-pagination {
   width: 100%;
   left: 0;
   margin-top: 50px;
 }
 
-.works .section-container .swiper-pagination-bullet {
+.recent-works .section-container .swiper-pagination .swiper-pagination-bullet {
+  cursor: url("../img/main/n_link_32.png"), auto !important;
+}
+
+.recent-works .section-container .swiper-pagination-bullet {
   width: 30px;
   height: 7px;
   margin: 0 3px;
@@ -1889,7 +1898,7 @@ a:hover {
   opacity: 1;
 }
 
-.works .section-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.recent-works .section-container .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background-color: #86b1c5;
 }
 
@@ -1899,5 +1908,314 @@ a:hover {
   bottom: 0;
   width: 100%;
   z-index: 10;
+}
+
+.portfolio {
+  position: relative;
+  overflow: hidden;
+  padding: 150px 0;
+  background-color: #f6f6f6;
+}
+
+.portfolio::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 700px;
+  top: -700px;
+  right: 0;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3ab5b0), color-stop(31%, #3d99be), to(#56317a));
+  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  -webkit-transform: skew(45deg) rotate(45deg);
+          transform: skew(45deg) rotate(45deg);
+  z-index: 0;
+}
+
+.portfolio::after {
+  content: '';
+  position: absolute;
+  bottom: -600px;
+  left: 0;
+  width: 100%;
+  height: 700px;
+  background-image: -webkit-gradient(linear, left top, right top, from(#3ab5b0), color-stop(31%, #3d99be), to(#56317a));
+  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+  -webkit-transform: skew(45deg) rotate(45deg);
+          transform: skew(45deg) rotate(45deg);
+  z-index: 0;
+}
+
+.portfolio .section-container {
+  width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.portfolio .button-group {
+  margin: 0 auto;
+}
+
+.portfolio .button-group button {
+  color: #555;
+  font-size: 20px;
+  font-family: 'Roboto', '777Balsamtint', sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding: 10px 0;
+  width: 13%;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: 0.5s 0.3s;
+  transition: 0.5s 0.3s;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.portfolio .button-group button::before {
+  content: '';
+  background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
+  position: absolute;
+  right: calc(100% + 100px);
+  top: 0;
+  -webkit-transform: skew(-20deg);
+          transform: skew(-20deg);
+  width: calc(100% + 100px);
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.portfolio .button-group button:hover {
+  color: #fff;
+  padding-left: 10px;
+}
+
+.portfolio .button-group button:hover::before {
+  right: -50px;
+}
+
+.portfolio .button-group button:hover span {
+  color: #fff;
+}
+
+.portfolio .button-group button span {
+  padding-left: 5px;
+  font-size: 11px;
+  color: #bbb;
+}
+
+.portfolio .grid {
+  min-height: 400px;
+  margin-left: -10px;
+  margin-right: -10px;
+  -webkit-transition: height 1s;
+  transition: height 1s;
+}
+
+.portfolio .grid .grid-item {
+  width: calc(33.33% - 20px);
+  height: 300px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  padding: 20px;
+  -webkit-box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+          box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
+  border-radius: 16px;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 10px;
+  -webkit-transition: -webkit-box-shadow 0.25s ease;
+  transition: -webkit-box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease;
+  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+}
+
+.portfolio .grid .grid-item:hover {
+  -webkit-box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+          box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+}
+
+.portfolio .grid .grid-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  color: #333;
+  border-radius: 16px;
+}
+
+.contact {
+  background: #333;
+  padding: 100px 0 50px 0;
+}
+
+.contact h3 {
+  color: #888;
+  font-size: 30px;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+}
+
+.contact .location {
+  margin: 50px auto 20px auto;
+  text-align: center;
+  width: 1200px;
+  -webkit-filter: grayscale(90%);
+          filter: grayscale(90%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.contact .location:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+
+.contact .location-detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.contact .location-detail li {
+  width: 50%;
+  color: #999;
+  font-family: '777Balsamtint';
+  font-size: 18px;
+  text-align: left;
+}
+
+.contact .location-detail li span {
+  color: #fff;
+  padding-right: 10px;
+  width: 80px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.contact .location-detail li a {
+  color: #d8bbfb;
+}
+
+.copyrights {
+  background: #222;
+  color: #fff;
+  line-height: 50px;
+  text-align: center;
+  color: #999;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+body {
+  overflow: hidden;
+}
+
+.pf-layer {
+  background-color: rgba(34, 34, 34, 0.95);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  overflow: auto;
+  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+
+.pf-layer .folio-title {
+  color: #fff;
+  font-size: 40px;
+  padding-bottom: 50px;
+  font-weight: 400;
+}
+
+.pf-layer .folio-title strong {
+  display: inline-block;
+  position: relative;
+  padding: 0 10px;
+}
+
+.pf-layer .folio-title a {
+  color: #fff;
+  font-size: 15px;
+}
+
+.pf-layer .layer-container {
+  text-align: center;
+  margin-top: 10%;
+  width: 100%;
+}
+
+.pf-layer .layer-container .desktop {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.pf-layer .layer-container .desktop:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pf-layer .layer-container p {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  font-size: 17px;
+  text-align: justify;
+  color: #fff;
+}
+
+.pf-layer .layer-container .pf-detail {
+  margin: 50px;
+}
+
+.pf-layer .pf-fixed-bg {
+  background-image: url("../img/src/nurinori_01.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 1410px;
+  background-size: cover;
+}
+
+.pf-layer .pf-fixed-bg2 {
+  background-image: url("../img/src/nurinori_02.png");
+  background-position: bottom center;
+}
+
+.pf-layer .pf-fixed-bg-sml {
+  width: 1200px;
+  margin: 20px auto;
+  background-image: url("../img/src/nurinori_02.png");
 }
 /*# sourceMappingURL=main.css.map */
