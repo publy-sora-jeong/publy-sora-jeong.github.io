@@ -1291,6 +1291,15 @@ footer {
             padding-left: 200px;
             display: inline-block;
 
+            .marks {
+                display: inline-block;
+            }
+
+            .wa,
+            .sectigo {
+                vertical-align: middle;
+            }
+
             .wa {
                 display: inline-block;
                 vertical-align: middle;
@@ -1298,6 +1307,16 @@ footer {
                 width: 107px;
                 height: 36px;
                 margin-left: 30px;
+            }
+
+            .sectigo {
+                display: inline-block;
+                vertical-align: middle;
+                background: url('../img/sectigo_logo_black.svg') no-repeat;
+                background-size: contain;
+                width: 107px;
+                height: 22px;
+                margin-left: 15px;
             }
         }
     }
@@ -2176,6 +2195,23 @@ footer {
         }
     }
 
+    footer .copyrights {
+        position: relative;
+
+        h2 {
+            text-align: left;
+        }
+
+        .marks {
+            margin-top: 10px;
+            text-align: left;
+
+            .wa {
+                margin-left: 0;
+            }
+        }
+    }
+
 }
 
 @media screen and (max-width: 960px) and (min-width: 769px) {
@@ -2474,6 +2510,11 @@ footer {
                 color: #555555;
                 text-align: center;
                 padding: 0;
+
+                .marks {
+                    display: block;
+                    text-align: center;
+                }
             }
         }
     }
@@ -2595,10 +2636,6 @@ footer {
         }
     }
 
-    footer .copyrights h2 .wa {
-        display: block;
-        margin: 15px auto 0 auto;
-    }
 }
 
 

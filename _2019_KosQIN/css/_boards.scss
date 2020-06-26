@@ -1414,35 +1414,43 @@
     }
 
     .b-name {
-        width: 9%;
+        width: 8%;
     }
 
     .b-userid {
-        width: 9%;
+        width: 8%;
     }
 
     .b-tag {
-        width: 12%;
+        width: 8%;
     }
 
     .b-lectitle {
-        width: 28%;
+        width: 20%;
+    }
+
+    .b-lecdate {
+        width: 15%;
+
+        i {
+            display: block;
+        }
     }
 
     .b-date1 {
-        width: 9%;
+        width: 8%;
     }
 
     .b-payment {
-        width: 9%;
+        width: 8%;
     }
 
     .b-paydate {
-        width: 9%;
+        width: 8%;
     }
 
     .b-result {
-        width: 9%;
+        width: 8%;
     }
 
     .bbs-table-data {
@@ -1486,7 +1494,7 @@
         }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
         border-top: none;
 
         .bbs-table-title {
@@ -1497,7 +1505,7 @@
             overflow: hidden;
             font-size: 13px;
             display: block;
-            height: 160px;
+            height: 190px;
             position: relative;
             border-top: 1px solid #333;
             border-bottom: 1px solid #ddd;
@@ -1566,6 +1574,25 @@
 
             .b-num {
                 display: none;
+            }
+
+            .b-lecdate {
+                left: 0;
+                top: 150px;
+                width: 100%;
+                padding-left: 10px;
+
+                &::before {
+                    content: '';
+                    width: 4px;
+                    height: 4px;
+                    background: #646a7d;
+                    border-radius: 2px;
+                    display: inline-block;
+                    margin-right: 8px;
+                    vertical-align: middle;
+                    margin-left: 5px;
+                }
             }
 
             .b-name {
@@ -1695,11 +1722,13 @@
     @media screen and (max-width: 480px) {
         .bbs-table-data {
             font-size: 13px;
-            height: 220px;
+            height: 250px;
 
             .b-name {
                 width: auto;
             }
+
+
 
             .b-payment {
                 top: 90px;
@@ -1723,6 +1752,10 @@
                 width: auto;
                 top: 180px;
                 left: 10px;
+            }
+
+            .b-lecdate {
+                top: 210px
             }
         }
 
