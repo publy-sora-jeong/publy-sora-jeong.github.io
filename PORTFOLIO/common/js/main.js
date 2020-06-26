@@ -36,8 +36,7 @@ $(function () {
     if ($(this).hasClass("open")) {
       $("#menu")
         .stop()
-        .animate(
-          {
+        .animate({
             left: "-100%",
           },
           500,
@@ -49,8 +48,7 @@ $(function () {
     } else {
       $("#menu")
         .stop()
-        .animate(
-          {
+        .animate({
             left: "-50%",
           },
           500,
@@ -72,16 +70,14 @@ $(function () {
       $(this).removeClass("open");
       $("#menu")
         .stop()
-        .animate(
-          {
+        .animate({
             left: "-100%",
           },
           500,
           "easeInBack",
           function () {
             $(".menu-btn").removeClass("open");
-            $("html, body").stop().delay(200).animate(
-              {
+            $("html, body").stop().delay(200).animate({
                 scrollTop: scrollTogo,
               },
               1000
@@ -90,6 +86,34 @@ $(function () {
         );
     }
   });
+
+  $('.btn-close-layer').on('click', function (e) {
+    e.preventDefault();
+
+    $('.pf-layer').fadeOut(500, function () {
+      $('html, body').css('overflow', 'auto')
+    });
+  });
+
+
+
+  $('.grid-item').on('click', function (e) {
+    e.preventDefault();
+    var gridID = $(this).attr('id')
+    console.log(gridID);
+
+    $('.pf-layer').attr('id', gridID).fadeIn(500, function () {
+      $('html, body').css('overflow', 'hidden')
+    });
+  });
+
+
+  $(".desktop").mCustomScrollbar({
+    theme: "dark-thick",
+    scrollbarPosition: "inside",
+    autoExpandScrollbar: "ture",
+  });
+
 
   $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
@@ -100,6 +124,24 @@ $(function () {
     $(this).addClass("on");
   });
 
+
+
+  //COLOR CODE
+  var colorCodeArr = [];
+  var colorLen = $('.info-color li').length;
+
+
+  for (var j = 0; j < colorLen; j++) {
+    colorCodeArr.push('#' + $('.info-color li').eq(j).attr('class'));
+    $('.info-color li').eq(j).find('.palette').css({
+      'background': colorCodeArr[j]
+    });
+    $('.info-color li').eq(j).find('.color-code').css({
+      'color': colorCodeArr[j]
+    }).text(colorCodeArr[j]);
+
+  }
+  console.log(colorCodeArr)
   var swiper = new Swiper(".works-slide", {
     effect: "coverflow",
     slidesPerView: "auto",
@@ -125,6 +167,24 @@ $(function () {
       el: ".swiper-pagination",
       clickable: true,
     },
+  });
+
+
+  var swiper = new Swiper(".pc-container", {
+    slidesPerView: "auto",
+    centeredSlides: true,
+
+    speed: 600,
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
   });
 });
 

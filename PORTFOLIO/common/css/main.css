@@ -1,6 +1,7 @@
 /*RESET */
 @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 html,
 body,
@@ -320,6 +321,10 @@ input {
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff") format("woff");
   font-weight: normal;
   font-style: normal;
+}
+
+.nanumgothic * {
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .notosanskr * {
@@ -1177,6 +1182,10 @@ html body {
   font-size: 14px;
   font-size: 1.4rem;
   overflow-x: hidden !important;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 html img {
@@ -2019,9 +2028,7 @@ a:hover {
   width: calc(33.33% - 20px);
   height: 300px;
   border: 1px solid #fff;
-  background-color: rgba(255, 255, 255, 0.9);
   text-align: center;
-  padding: 20px;
   -webkit-box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
           box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
   border-radius: 16px;
@@ -2054,6 +2061,17 @@ a:hover {
   height: 100%;
   color: #333;
   border-radius: 16px;
+  position: relative;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.portfolio .grid .grid-item a img {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  right: -1px;
+  bottom: -1px;
 }
 
 .contact {
@@ -2115,7 +2133,7 @@ a:hover {
 }
 
 .copyrights {
-  background: #222;
+  background: transparent;
   color: #fff;
   line-height: 50px;
   text-align: center;
@@ -2127,12 +2145,8 @@ a:hover {
   letter-spacing: 2px;
 }
 
-body {
-  overflow: hidden;
-}
-
 .pf-layer {
-  background-color: rgba(34, 34, 34, 0.95);
+  background-color: #222222;
   position: fixed;
   top: 0;
   left: 0;
@@ -2142,6 +2156,22 @@ body {
   overflow: auto;
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   font-weight: 400;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 100px 0 200px 0;
+  display: none;
+  text-align: center;
+}
+
+.pf-layer .btn-close-layer {
+  position: fixed;
+  background: url("../img/main/close_p.png") no-repeat;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+  right: 50px;
+  top: 50px;
+  border-radius: 50%;
 }
 
 .pf-layer .folio-title {
@@ -2149,6 +2179,7 @@ body {
   font-size: 40px;
   padding-bottom: 50px;
   font-weight: 400;
+  font-family: 'KyoboHand';
 }
 
 .pf-layer .folio-title strong {
@@ -2158,33 +2189,17 @@ body {
 }
 
 .pf-layer .folio-title a {
-  color: #fff;
+  color: #ffd324;
   font-size: 15px;
 }
 
 .pf-layer .layer-container {
   text-align: center;
-  margin-top: 10%;
-  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
 }
 
-.pf-layer .layer-container .desktop {
-  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-
-.pf-layer .layer-container .desktop:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
-}
-
-.pf-layer .layer-container p {
+.pf-layer .layer-container > p {
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -2194,8 +2209,210 @@ body {
   color: #fff;
 }
 
+.pf-layer .layer-container .desktop {
+  -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  background-image: url("../img/site_wrapper.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  width: 1210px;
+  height: 773px;
+  padding: 38px 5px 5px 5px;
+  overflow: auto;
+}
+
+.pf-layer .layer-container .desktop:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
+}
+
+.pf-layer .layer-container .site-gallery {
+  width: 1200px;
+  margin: 50px auto;
+}
+
+.pf-layer .layer-container .site-gallery ul li {
+  margin-top: 100px;
+}
+
+.pf-layer .layer-container .site-gallery ul li img {
+  margin-bottom: 10px;
+}
+
+.pf-layer .layer-container .site-gallery ul li p {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #fff;
+  text-align: left;
+}
+
+.pf-layer .layer-container .site-gallery ul li p strong {
+  color: #ffd324;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'KyoboHand';
+  padding: 0 10px;
+  position: relative;
+}
+
+.pf-layer .layer-container .site-gallery ul li p strong::before {
+  content: '';
+  width: 100%;
+  height: 5px;
+  background: #d8ff00;
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.pf-layer .layer-container .site-gallery ul li p:nth-of-type(1) {
+  margin-top: 20px;
+}
+
+.pf-layer .layer-container .mCSB_inside > .mCSB_container {
+  margin-right: 0;
+}
+
+.pf-layer .layer-container .mCSB_scrollTools .mCSB_draggerContainer {
+  left: 10px;
+}
+
 .pf-layer .layer-container .pf-detail {
   margin: 50px;
+}
+
+.pf-layer .layer-container .short-info {
+  margin: 50px auto;
+  text-align: left;
+  width: 1200px;
+  background: #f5f5f5;
+  border-radius: 5px;
+  padding: 30px;
+  font-size: 16px;
+}
+
+.pf-layer .layer-container .short-info p {
+  color: #999;
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+
+.pf-layer .layer-container .short-info p.lt-eng {
+  letter-spacing: 0.3px;
+}
+
+.pf-layer .layer-container .short-info p.help {
+  color: #ff9d9d;
+  font-size: 13px;
+}
+
+.pf-layer .layer-container .short-info h4 {
+  font-size: 25px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: -0.65px;
+}
+
+.pf-layer .layer-container .short-info h4.mt0 {
+  margin-top: 0;
+}
+
+.pf-layer .layer-container .short-info .row-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pf-layer .layer-container .short-info .row-wrap .col {
+  width: 50%;
+}
+
+.pf-layer .layer-container .short-info .row-wrap .hash {
+  margin-top: 10px;
+}
+
+.pf-layer .layer-container .short-info .row-wrap .hash a {
+  color: #8045ad;
+  margin-right: 10px;
+  font-size: 12px;
+}
+
+.pf-layer .layer-container .short-info .info-color {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.pf-layer .layer-container .short-info .info-color li {
+  width: 100px;
+  margin-right: 10px;
+}
+
+.pf-layer .layer-container .short-info .info-color li .palette {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #fff;
+  border-radius: 10px;
+}
+
+.pf-layer .layer-container .short-info .info-color li .color-code {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li {
+  font-size: 16px;
+  margin-top: 5px;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.kyobo {
+  font-family: 'KyoboHand';
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.sil {
+  font-family: "silgothic";
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.bstint {
+  font-family: '777Balsamtint';
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.noto_light {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 100;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.noto_regular {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.noto_medium {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.noto_bold {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 700;
+}
+
+.pf-layer .layer-container .short-info .info-fonts li.nanum {
+  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .pf-layer .pf-fixed-bg {
@@ -2217,5 +2434,45 @@ body {
   width: 1200px;
   margin: 20px auto;
   background-image: url("../img/src/nurinori_02.png");
+}
+
+.slider-test {
+  padding: 100px 0;
+}
+
+.slider-test .swiper-button-next,
+.slider-test .swiper-button-prev {
+  width: 60px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 60px;
+}
+
+.slider-test .swiper-button-next {
+  right: 40px;
+}
+
+.slider-test .swiper-button-prev {
+  left: 40px;
+}
+
+.slider-test .pc-container {
+  width: 1179px;
+  height: 760px;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.slider-test .slider-test-container {
+  width: 1188px;
+  height: 773px;
+  position: relative;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 38px 5px 5px 5px;
+  background: url("../img/site_wrapper.png") no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=main.css.map */
