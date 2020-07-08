@@ -3988,7 +3988,8 @@
 			margin-top: 20px;
 			height: 600px;
 			position: relative;
-			background-color: #333;
+			//background-color: #000;
+			background: transparent;
 			img,
 			video {
 				width: 100%;
@@ -4109,7 +4110,6 @@
 			.frame {
 				text-align: center;
 				height: auto;
-				background-color: #333;
 			}
 		}
 		.video-list {
