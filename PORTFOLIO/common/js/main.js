@@ -29,6 +29,16 @@ $(function () {
     });
   });
 
+  // change is-checked class on buttons
+  $('.button-group').each(function (i, buttonGroup) {
+    var $buttonGroup = $(buttonGroup);
+    $buttonGroup.on('click', 'button', function () {
+      $buttonGroup.find('.is-checked').removeClass('is-checked');
+      $(this).addClass('is-checked');
+    });
+  });
+
+
   // x: Math.floor(Math.random()) + 150,
   // y: Math.floor(Math.random()) - 400,
 
@@ -99,12 +109,13 @@ $(function () {
 
   $('.grid-item').on('click', function (e) {
     e.preventDefault();
-    var gridID = $(this).attr('id')
+    var gridID = "'." + $(this).attr('id') + "'"
     console.log(gridID);
+    $(gridId).fadeIn(400);
 
-    $('.pf-layer').attr('id', gridID).fadeIn(500, function () {
-      $('html, body').css('overflow', 'hidden')
-    });
+    // $('.pf-layer').attr('id', gridID).fadeIn(500, function () {
+    //   $('html, body').css('overflow', 'hidden')
+    // });
   });
 
 
