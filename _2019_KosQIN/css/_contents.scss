@@ -4256,7 +4256,8 @@
 				border: 2px solid #ddd;
 				background-color: #fff;
 				position: relative;
-				padding: 20px 30px;
+				//padding: 20px 30px;
+				padding: 40px 30px 20px 30px;
 				border-radius: 10px;
 				width: 48%;
 				box-sizing: border-box;
@@ -4302,7 +4303,7 @@
 			.lec-item {
 				.title {
 					font-size: 24px;
-					padding-bottom: 10px;
+					padding-bottom: 15px;
 					border-bottom: 1px solid #ddd;
 
 					p {
@@ -4455,48 +4456,69 @@
 	}
 
 	.plan-list {
-		ul {
-			display: flex;
-			justify-content: space-between;
-
-			li {
-				width: 48%;
-				background: #f8f8f8;
-				padding: 18px 20px;
-				font-size: 20px;
-				box-sizing: border-box;
-				text-align: center;
-
-				.col-navy {
-					font-weight: bold;
-				}
-
-				&::before {
-					content: "";
-					width: 6px;
-					height: 6px;
-					background: #09426c;
-					display: inline-block;
-					vertical-align: middle;
-					margin-right: 10px;
-				}
+		background: #f8f8f8;
+		padding: 18px 20px;
+		font-size: 20px;
+		.col-navy {
+			font-weight: bold;
+		}
+		p {
+			&::before {
+				content: "";
+				width: 6px;
+				height: 6px;
+				background: #09426c;
+				display: inline-block;
+				vertical-align: middle;
+				margin-right: 10px;
 			}
 		}
+
+		// ul {
+		// 	display: flex;
+		// 	justify-content: space-between;
+
+		// 	li {
+		// 		width: 48%;
+		// 		background: #f8f8f8;
+		// 		padding: 18px 20px;
+		// 		font-size: 20px;
+		// 		box-sizing: border-box;
+		// 		text-align: center;
+
+		// 		.col-navy {
+		// 			font-weight: bold;
+		// 		}
+
+		// 		&::before {
+		// 			content: "";
+		// 			width: 6px;
+		// 			height: 6px;
+		// 			background: #09426c;
+		// 			display: inline-block;
+		// 			vertical-align: middle;
+		// 			margin-right: 10px;
+		// 		}
+		// 	}
+		// }
 	}
 	@include mq("tablet-wide") {
-		.plan-list ul li {
+		.plan-list {
 			font-size: 16px;
 		}
 	}
 
 	@include mq("tablet") {
-		.plan-list ul {
-			flex-wrap: wrap;
-			li {
-				width: 100%;
-				margin: 5px 0;
-				font-size: 15px;
-			}
+		// .plan-list ul {
+		// 	flex-wrap: wrap;
+		// 	li {
+		// 		width: 100%;
+		// 		margin: 5px 0;
+		// 		font-size: 15px;
+		// 	}
+		// }
+		.plan-list {
+			font-size: 15px;
 		}
 	}
 	@include mq("tablet-small") {
@@ -4512,10 +4534,8 @@
 			}
 		}
 
-		.plan-list ul {
-			li {
-				font-size: 14px;
-			}
+		.plan-list {
+			font-size: 14px;
 		}
 	}
 }
