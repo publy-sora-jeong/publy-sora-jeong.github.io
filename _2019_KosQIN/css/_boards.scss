@@ -602,13 +602,19 @@
 				background-position: left center;
 				display: inline-block;
 				vertical-align: middle;
-				margin-right: 10px;
+				margin-right: 5px;
 			}
 		}
 
 		.ico.ico-edu {
 			&::before {
 				background-image: url("../img/bbs-ico-edu.png");
+			}
+		}
+		.ico.ico-vid {
+			&::before {
+				background-image: url("../img/plan-ico-video.png");
+				background-size: contain;
 			}
 		}
 	}
@@ -3577,6 +3583,12 @@
 				background: #fff;
 				border: 1px solid #ddd;
 			}
+			> span.tag-video {
+				background: #fff;
+				border: none;
+				background: #e62e8b;
+				color: #fff;
+			}
 		}
 
 		.title {
@@ -4725,6 +4737,12 @@
 			> span.tag-nurse {
 				background: #fff;
 				border: 1px solid #ddd;
+			}
+			> span.tag-video {
+				background: #fff;
+				border: none;
+				background: #e62e8b;
+				color: #fff;
 			}
 		}
 

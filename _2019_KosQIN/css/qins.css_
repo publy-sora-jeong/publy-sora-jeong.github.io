@@ -3356,16 +3356,11 @@ footer .copyrights h2 .sectigo {
   background-position: left center;
   display: inline-block;
   vertical-align: middle;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .bbs-table .b-tag .ico.ico-edu::before {
   background-image: url("../img/bbs-ico-edu.png");
-}
-
-.bbs-table .b-tag .ico.ico-vid::before {
-  background-image: url("../img/plan-ico-video.png");
-  background-size: contain;
 }
 
 .bbs-table .b-approval .approval-y {
@@ -6029,13 +6024,6 @@ footer .copyrights h2 .sectigo {
   border: 1px solid #ddd;
 }
 
-.bbs-gallery-wrap .gallery-box .tag > span.tag-video {
-  background: #fff;
-  border: none;
-  background: #e62e8b;
-  color: #fff;
-}
-
 .bbs-gallery-wrap .gallery-box .title {
   margin: 20px 0 10px 0;
   font-size: 18px;
@@ -7077,13 +7065,6 @@ footer .copyrights h2 .sectigo {
   border: 1px solid #ddd;
 }
 
-.bbs-apply-view .tag-wrap .tag > span.tag-video {
-  background: #fff;
-  border: none;
-  background: #e62e8b;
-  color: #fff;
-}
-
 .bbs-apply-view .tag-wrap .tag-sharp {
   float: right;
   color: #777;
@@ -7642,6 +7623,7 @@ footer .copyrights h2 .sectigo {
   }
   .bbs-apply-view .edu-info-top .edu-desc .tit {
     font-size: 20px;
+    line-height: 1.2;
   }
   .bbs-apply-view .edu-info-top .edu-desc .tit span {
     display: block;
@@ -12764,7 +12746,7 @@ footer .copyrights h2 .sectigo {
   margin-top: 20px;
   height: 600px;
   position: relative;
-  background: transparent;
+  background-color: #333;
 }
 
 .video-lectures .video-wrap .frame img,
@@ -12891,6 +12873,7 @@ footer .copyrights h2 .sectigo {
   .video-lectures .video-wrap .frame {
     text-align: center;
     height: auto;
+    background-color: #333;
   }
   .video-lectures .video-list {
     width: 100%;
@@ -13042,7 +13025,7 @@ footer .copyrights h2 .sectigo {
   border: 2px solid #ddd;
   background-color: #fff;
   position: relative;
-  padding: 40px 30px 20px 30px;
+  padding: 20px 30px;
   border-radius: 10px;
   width: 48%;
   -webkit-box-sizing: border-box;
@@ -13088,7 +13071,7 @@ footer .copyrights h2 .sectigo {
 
 .my-v-lecture .lec-list > ul .lec-item .title {
   font-size: 24px;
-  padding-bottom: 15px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
 }
 
@@ -13228,17 +13211,30 @@ footer .copyrights h2 .sectigo {
   top: 0;
 }
 
-.vod-plan-wrap .plan-list {
+.vod-plan-wrap .plan-list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.vod-plan-wrap .plan-list ul li {
+  width: 48%;
   background: #f8f8f8;
   padding: 18px 20px;
   font-size: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
 }
 
-.vod-plan-wrap .plan-list .col-navy {
+.vod-plan-wrap .plan-list ul li .col-navy {
   font-weight: bold;
 }
 
-.vod-plan-wrap .plan-list p::before {
+.vod-plan-wrap .plan-list ul li::before {
   content: "";
   width: 6px;
   height: 6px;
@@ -13249,13 +13245,19 @@ footer .copyrights h2 .sectigo {
 }
 
 @media screen and (max-width: 1024px) {
-  .vod-plan-wrap .plan-list {
+  .vod-plan-wrap .plan-list ul li {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .vod-plan-wrap .plan-list {
+  .vod-plan-wrap .plan-list ul {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .vod-plan-wrap .plan-list ul li {
+    width: 100%;
+    margin: 5px 0;
     font-size: 15px;
   }
 }
@@ -13272,7 +13274,7 @@ footer .copyrights h2 .sectigo {
   .vod-plan-wrap .vod-plan strong {
     font-size: 16px;
   }
-  .vod-plan-wrap .plan-list {
+  .vod-plan-wrap .plan-list ul li {
     font-size: 14px;
   }
 }
