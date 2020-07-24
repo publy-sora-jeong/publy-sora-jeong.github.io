@@ -1176,7 +1176,7 @@ html {
 html body {
   margin: 0;
   background-color: transparent;
-  font-family: "NotoKR", "NanumGothic", "dotum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Noto Sans KR", "NanumGothic", "dotum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   color: #333;
   font-size: 14px;
@@ -1388,9 +1388,9 @@ a:hover {
 
 #navigation {
   position: fixed;
-  z-index: 100;
-  left: 50px;
-  top: 50%;
+  z-index: 9999;
+  left: 43px;
+  top: 25%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
@@ -1400,11 +1400,11 @@ a:hover {
   position: relative;
 }
 
-#navigation li:nth-of-type(2).active i, #navigation li:nth-of-type(4).active i {
+#navigation li:nth-of-type(1).active i, #navigation li:nth-of-type(2).active i, #navigation li:nth-of-type(4).active i {
   color: #333;
 }
 
-#navigation li:nth-of-type(2).active::before, #navigation li:nth-of-type(2).active::after, #navigation li:nth-of-type(4).active::before, #navigation li:nth-of-type(4).active::after {
+#navigation li:nth-of-type(1).active::before, #navigation li:nth-of-type(1).active::after, #navigation li:nth-of-type(2).active::before, #navigation li:nth-of-type(2).active::after, #navigation li:nth-of-type(4).active::before, #navigation li:nth-of-type(4).active::after {
   background-color: #333;
 }
 
@@ -1444,7 +1444,6 @@ a:hover {
   -webkit-transition: 0.5s 0.1s;
   transition: 0.5s 0.1s;
   text-transform: lowercase;
-  text-shadow: 1px 1px 2px rgba(28, 103, 217, 0.8);
 }
 
 #navigation li i:nth-of-type(2) {
@@ -1483,7 +1482,7 @@ a:hover {
 .visual {
   background-size: cover;
   background-repeat: repeat-x;
-  height: 900px;
+  height: 600px;
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
@@ -1497,7 +1496,7 @@ a:hover {
 
 .visual .visual-typo {
   position: absolute;
-  top: 45%;
+  top: 30%;
   left: 50%;
   font-size: 14px;
   text-transform: uppercase;
@@ -1810,12 +1809,12 @@ a:hover {
 }
 
 .recent-works {
-  background: #222;
+  background: #fff;
   position: relative;
   padding: 150px 0;
 }
 
-.recent-works h3 {
+.recent-works > h3 {
   line-height: 1;
   font-size: 3em;
   text-align: center;
@@ -1829,12 +1828,12 @@ a:hover {
   padding-bottom: 30px;
 }
 
-.recent-works h3 i {
+.recent-works > h3 i {
   font-weight: bold;
   color: #86b1c5;
 }
 
-.recent-works h3 p {
+.recent-works > h3 p {
   color: #86b1c5;
   font-weight: normal;
   font-size: 15px;
@@ -1920,22 +1919,7 @@ a:hover {
 .portfolio {
   position: relative;
   overflow: hidden;
-  padding: 150px 0;
-  background-color: #f6f6f6;
-}
-
-.portfolio::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 700px;
-  top: -700px;
-  right: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#3ab5b0), color-stop(31%, #3d99be), to(#56317a));
-  background-image: linear-gradient(to right, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
-  -webkit-transform: skew(45deg) rotate(45deg);
-          transform: skew(45deg) rotate(45deg);
-  z-index: 0;
+  padding: 50px 0 100px 0;
 }
 
 .portfolio::after {
@@ -1953,10 +1937,10 @@ a:hover {
 }
 
 .portfolio .section-container {
-  width: 1200px;
   margin: auto;
   position: relative;
   z-index: 1;
+  padding: 0 5%;
 }
 
 .portfolio .button-group {
@@ -1965,47 +1949,46 @@ a:hover {
 
 .portfolio .button-group button {
   color: #555;
-  font-size: 20px;
-  font-family: 'Roboto', '777Balsamtint', sans-serif;
+  font-size: 15px;
   font-weight: 300;
   text-transform: uppercase;
   padding: 10px 0;
-  width: 13%;
   text-align: left;
   position: relative;
-  overflow: hidden;
   -webkit-transition: 0.5s 0.3s;
   transition: 0.5s 0.3s;
   border-radius: 5px;
-  margin-right: 10px;
+  margin-right: 20px;
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 500;
+}
+
+.portfolio .button-group button:focus {
+  outline: none;
 }
 
 .portfolio .button-group button::before {
   content: '';
   background-image: linear-gradient(-225deg, #2CD8D5 0%, #C5C1FF 56%, #FFBAC3 100%);
   position: absolute;
-  right: calc(100% + 100px);
-  top: 0;
-  -webkit-transform: skew(-20deg);
-          transform: skew(-20deg);
-  width: calc(100% + 100px);
-  height: 100%;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  z-index: -1;
+  z-index: 1;
+  mix-blend-mode: color-dodge;
 }
 
 .portfolio .button-group button:hover, .portfolio .button-group button.is-checked {
-  color: #fff;
   padding-left: 10px;
+  padding-right: 10px;
 }
 
 .portfolio .button-group button:hover::before, .portfolio .button-group button.is-checked::before {
-  right: -50px;
-}
-
-.portfolio .button-group button:hover span, .portfolio .button-group button.is-checked span {
-  color: #fff;
+  left: 0;
+  width: 100%;
 }
 
 .portfolio .button-group button span {
@@ -2016,22 +1999,13 @@ a:hover {
 
 .portfolio .grid {
   min-height: 400px;
-  margin-left: -10px;
-  margin-right: -10px;
   -webkit-transition: height 1s;
   transition: height 1s;
   margin-top: 50px;
 }
 
 .portfolio .grid .grid-item {
-  width: calc(33.33% - 20px);
-  height: 300px;
-  background-color: #ccc;
-  text-align: center;
-  -webkit-box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
-          box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
-  border-radius: 16px;
-  margin-bottom: 20px;
+  width: calc(33.3333% - 20px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 10px;
@@ -2041,23 +2015,21 @@ a:hover {
   transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
 }
 
-.portfolio .grid .grid-item:hover {
-  -webkit-box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
-          box-shadow: 5px 12px 20px rgba(36, 37, 38, 0.13);
+.portfolio .grid .grid-item .desc {
+  z-index: 10;
+  margin-top: 10px;
 }
 
-.portfolio .grid .grid-item#pf-tinpo {
-  background-color: #3c9fbb;
+.portfolio .grid .grid-item .desc strong {
+  display: block;
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 18px;
 }
 
 .portfolio .grid .grid-item:hover a img {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
-}
-
-.portfolio .grid .grid-item:hover .desc {
-  top: 0;
-  opacity: 1;
 }
 
 .portfolio .grid .grid-item a {
@@ -2073,9 +2045,7 @@ a:hover {
   width: 100%;
   height: 100%;
   color: #333;
-  border-radius: 16px;
   position: relative;
-  padding: 20px;
   overflow: hidden;
 }
 
@@ -2083,55 +2053,6 @@ a:hover {
   width: 100%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-}
-
-.portfolio .grid .grid-item a .desc {
-  position: absolute;
-  z-index: 10;
-  height: 100%;
-  width: 100%;
-  top: -100%;
-  left: 0;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 10px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  opacity: 0;
-}
-
-.portfolio .grid .grid-item a .desc strong {
-  display: block;
-  font-weight: bold;
-  padding-bottom: 10px;
-}
-
-.portfolio .grid .grid-item a .desc p:last-child::after {
-  content: '';
-  width: 30px;
-  height: 30px;
-  background: url("../img/ico/send_w.png") no-repeat center center;
-  background-size: 70%;
-  display: block;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  padding: 3px;
-  margin: 20px auto 0;
 }
 
 .contact {
@@ -2205,71 +2126,26 @@ a:hover {
   letter-spacing: 2px;
 }
 
-.pf-layer {
-  background-color: #222222;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9999;
-  overflow: auto;
-  font-family: 'Roboto', 'Noto Sans KR', sans-serif;
-  font-weight: 400;
-  overflow: auto;
-  overflow-x: hidden;
-  padding: 100px 0 200px 0;
-  display: none;
-  text-align: center;
-}
-
-.pf-layer .btn-close-layer {
-  position: fixed;
-  background: url("../img/main/close_p.png") no-repeat;
-  background-size: contain;
-  width: 50px;
-  height: 50px;
-  right: 50px;
-  top: 50px;
-  border-radius: 50%;
-}
-
-.pf-layer .folio-title {
+.folio-title {
   color: #fff;
-  font-size: 40px;
-  padding-bottom: 50px;
+  font-size: 30px;
+  padding-bottom: 10px;
   font-weight: 400;
-  font-family: 'KyoboHand';
+  letter-spacing: -1px;
 }
 
-.pf-layer .folio-title strong {
+.folio-title strong {
   display: inline-block;
   position: relative;
   padding: 0 10px;
 }
 
-.pf-layer .folio-title a {
+.folio-title a {
   color: #ffd324;
   font-size: 15px;
 }
 
-.pf-layer .layer-container {
-  text-align: center;
-  margin: 0 auto;
-  padding: 50px 0;
-}
-
-.pf-layer .layer-container > p {
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7;
-  font-size: 17px;
-  text-align: justify;
-  color: #fff;
-}
-
-.pf-layer .layer-container .desktop {
+.desktop {
   -webkit-box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
   -webkit-transition: 0.6s;
@@ -2280,77 +2156,31 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center top;
   width: 1210px;
-  height: 773px;
+  height: 640px;
   padding: 38px 5px 5px 5px;
   overflow: auto;
 }
 
-.pf-layer .layer-container .desktop:hover {
+.desktop:hover {
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
   -webkit-box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
           box-shadow: 0 1px 20px rgba(0, 0, 0, 0.3);
 }
 
-.pf-layer .layer-container .site-gallery {
-  width: 1200px;
-  margin: 50px auto;
-}
-
-.pf-layer .layer-container .site-gallery ul li {
-  margin-top: 100px;
-}
-
-.pf-layer .layer-container .site-gallery ul li img {
-  margin-bottom: 10px;
-}
-
-.pf-layer .layer-container .site-gallery ul li p {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.5;
-  color: #fff;
-  text-align: left;
-}
-
-.pf-layer .layer-container .site-gallery ul li p strong {
-  color: #ffd324;
-  font-weight: 700;
-  font-size: 20px;
-  font-family: 'KyoboHand';
-  padding: 0 10px;
-  position: relative;
-}
-
-.pf-layer .layer-container .site-gallery ul li p strong::before {
-  content: '';
-  width: 100%;
-  height: 5px;
-  background: #d8ff00;
-  opacity: 0.2;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  z-index: -1;
-}
-
-.pf-layer .layer-container .site-gallery ul li p:nth-of-type(1) {
-  margin-top: 20px;
-}
-
-.pf-layer .layer-container .mCSB_inside > .mCSB_container {
+.mCSB_inside > .mCSB_container {
   margin-right: 0;
 }
 
-.pf-layer .layer-container .mCSB_scrollTools .mCSB_draggerContainer {
+.mCSB_scrollTools .mCSB_draggerContainer {
   left: 10px;
 }
 
-.pf-layer .layer-container .pf-detail {
+.pf-detail {
   margin: 50px;
 }
 
-.pf-layer .layer-container .short-info {
+.short-info {
   margin: 50px auto;
   text-align: left;
   width: 1200px;
@@ -2360,23 +2190,23 @@ a:hover {
   font-size: 16px;
 }
 
-.pf-layer .layer-container .short-info p {
+.short-info p {
   color: #999;
   font-size: 14px;
   letter-spacing: -1px;
 }
 
-.pf-layer .layer-container .short-info p.lt-eng {
+.short-info p.lt-eng {
   letter-spacing: 0.3px;
 }
 
-.pf-layer .layer-container .short-info p.help {
+.short-info p.help {
   color: #ff9d9d;
   font-size: 13px;
 }
 
-.pf-layer .layer-container .short-info h4 {
-  font-size: 25px;
+.short-info h4 {
+  font-size: 20px;
   font-weight: 500;
   padding-bottom: 10px;
   margin-top: 50px;
@@ -2384,11 +2214,11 @@ a:hover {
   letter-spacing: -0.65px;
 }
 
-.pf-layer .layer-container .short-info h4.mt0 {
+.short-info h4.mt0 {
   margin-top: 0;
 }
 
-.pf-layer .layer-container .short-info .row-wrap {
+.short-info .row-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2397,85 +2227,102 @@ a:hover {
           justify-content: space-between;
 }
 
-.pf-layer .layer-container .short-info .row-wrap .col {
+.short-info .row-wrap .col {
   width: 50%;
 }
 
-.pf-layer .layer-container .short-info .row-wrap .hash {
+.short-info .row-wrap .hash {
   margin-top: 10px;
 }
 
-.pf-layer .layer-container .short-info .row-wrap .hash a {
+.short-info .row-wrap .hash a {
   color: #8045ad;
   margin-right: 10px;
   font-size: 12px;
 }
 
-.pf-layer .layer-container .short-info .info-color {
+.short-info .info-color {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.pf-layer .layer-container .short-info .info-color li {
-  width: 100px;
+.short-info .info-color li {
+  width: 50px;
   margin-right: 10px;
 }
 
-.pf-layer .layer-container .short-info .info-color li .palette {
-  width: 100px;
-  height: 100px;
+.short-info .info-color li .palette {
+  width: 50px;
+  height: 50px;
   border: 1px solid #fff;
   border-radius: 10px;
 }
 
-.pf-layer .layer-container .short-info .info-color li .color-code {
-  font-size: 14px;
+.short-info .info-color li .color-code {
+  font-size: 11px;
   margin-top: 5px;
+  letter-spacing: 0px;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li {
+.short-info .info-fonts li {
   font-size: 16px;
   margin-top: 5px;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.kyobo {
+.short-info .info-fonts li.kyobo {
   font-family: 'KyoboHand';
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.sil {
+.short-info .info-fonts li.sil {
   font-family: "silgothic";
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.bstint {
+.short-info .info-fonts li.bstint {
   font-family: '777Balsamtint';
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.noto_light {
+.short-info .info-fonts li.noto_light {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 100;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.noto_regular {
+.short-info .info-fonts li.noto_regular {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.noto_medium {
+.short-info .info-fonts li.noto_medium {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.noto_bold {
+.short-info .info-fonts li.noto_bold {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 700;
 }
 
-.pf-layer .layer-container .short-info .info-fonts li.nanum {
+.short-info .info-fonts li.nanum {
   font-family: 'Nanum Gothic', sans-serif;
 }
 
-.pf-layer .pf-fixed-bg {
+.layer-container {
+  text-align: center;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.layer-container > p {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+  font-size: 17px;
+  text-align: justify;
+  color: #fff;
+}
+
+.pf-fixed-bg {
   background-image: url("../img/src/nurinori_01.png");
   background-repeat: no-repeat;
   background-position: top center;
@@ -2485,54 +2332,14 @@ a:hover {
   background-size: cover;
 }
 
-.pf-layer .pf-fixed-bg2 {
+.pf-fixed-bg2 {
   background-image: url("../img/src/nurinori_02.png");
   background-position: bottom center;
 }
 
-.pf-layer .pf-fixed-bg-sml {
+.pf-fixed-bg-sml {
   width: 1200px;
   margin: 20px auto;
   background-image: url("../img/src/nurinori_02.png");
-}
-
-.slider-test {
-  padding: 100px 0;
-}
-
-.slider-test .swiper-button-next,
-.slider-test .swiper-button-prev {
-  width: 60px;
-  height: 60px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 60px;
-}
-
-.slider-test .swiper-button-next {
-  right: 40px;
-}
-
-.slider-test .swiper-button-prev {
-  left: 40px;
-}
-
-.slider-test .pc-container {
-  width: 1179px;
-  height: 760px;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.slider-test .slider-test-container {
-  width: 1188px;
-  height: 773px;
-  position: relative;
-  overflow: hidden;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 38px 5px 5px 5px;
-  background: url("../img/site_wrapper.png") no-repeat;
-  background-size: contain;
 }
 /*# sourceMappingURL=main.css.map */

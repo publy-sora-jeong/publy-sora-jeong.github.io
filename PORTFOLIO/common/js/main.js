@@ -119,11 +119,11 @@ $(function () {
   });
 
 
-  $(".desktop").mCustomScrollbar({
-    theme: "dark-thick",
-    scrollbarPosition: "inside",
-    autoExpandScrollbar: "ture",
-  });
+  // $(".wrap").mCustomScrollbar({
+  //   theme: "dark-thick",
+  //   // scrollbarPosition: "inside",
+  //   // autoExpandScrollbar: "ture",
+  // });
 
 
   $(window).on("scroll", function () {
@@ -153,33 +153,6 @@ $(function () {
 
   }
   console.log(colorCodeArr)
-  var swiper = new Swiper(".works-slide", {
-    effect: "coverflow",
-    slidesPerView: "auto",
-    speed: 600,
-    loop: true,
-    // autoplay: {
-    //   delay: 2500,
-    //   disableOnInteraction: false,
-    // },
-    coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows: true,
-    },
-    centeredSlides: true,
-    // navigation: {
-    //   nextEl: '.swiper-button-next',
-    //   prevEl: '.swiper-button-prev',
-    // },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
-
 
   var swiper = new Swiper(".pc-container", {
     slidesPerView: "auto",
