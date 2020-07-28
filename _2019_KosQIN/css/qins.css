@@ -7019,6 +7019,20 @@ footer .copyrights h2 .sectigo {
   margin-left: 0;
 }
 
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test.selected a {
+  color: #0086d4;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test a::before {
+  content: "";
+  width: 19px;
+  height: 19px;
+  background: url("../img/ico-video-tab.png") no-repeat;
+  display: inline-block;
+  margin-right: 7px;
+  vertical-align: middle;
+}
+
 .bbs-apply-view .edu-info-bottom .tab-top li.selected {
   background: #fff;
   border-bottom: 1px solid #fff;
@@ -7034,6 +7048,32 @@ footer .copyrights h2 .sectigo {
 .bbs-apply-view .edu-info-bottom .tab-cont h5 {
   font-size: 25px;
   padding-bottom: 15px;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-cont .video-test {
+  text-align: center;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-cont .video-test h5 {
+  color: #0091f1;
+  text-align: center;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-cont .video-test p {
+  line-height: 1.6;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-cont .video-test p > strong {
+  display: block;
+  font-size: 25px;
+  color: #0086d4;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-cont .video-sample {
+  width: 1090px;
+  height: 596px;
+  margin: 40px auto;
+  background: #eee;
 }
 
 .bbs-apply-view .edu-info-bottom .tab-cont.selected {
@@ -7337,6 +7377,36 @@ footer .copyrights h2 .sectigo {
   margin-left: 0;
 }
 
+@-webkit-keyframes textAlert {
+  0% {
+    color: #e62e8b;
+  }
+  100% {
+    color: #0091f1;
+  }
+}
+
+@keyframes textAlert {
+  0% {
+    color: #e62e8b;
+  }
+  100% {
+    color: #0091f1;
+  }
+}
+
+.bbs-apply-view .edu-info-top .edu-desc .detail .textbox--alert {
+  margin-top: 10px;
+  color: #e62e8b;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bbs-apply-view .edu-info-top .edu-desc .detail .textbox--alert p {
+  -webkit-animation: textAlert 0.5s infinite alternate;
+          animation: textAlert 0.5s infinite alternate;
+}
+
 .bbs-apply-view .location-info-map {
   display: table;
   height: 520px;
@@ -7599,6 +7669,10 @@ footer .copyrights h2 .sectigo {
   .bbs-apply-view .edu-info-bottom .tab-cont h5 {
     font-size: 22px;
   }
+  .bbs-apply-view .edu-info-bottom .tab-cont .video-sample {
+    width: auto;
+    height: 500px;
+  }
   .bbs-apply-view .btn-area.btn-area-ar {
     text-align: center;
   }
@@ -7624,6 +7698,18 @@ footer .copyrights h2 .sectigo {
   .bbs-apply-view .edu-info-bottom .tab-cont h5 {
     font-size: 18px;
   }
+  .bbs-apply-view .edu-info-bottom .tab-cont .video-test .video-sample {
+    height: 350px;
+  }
+  .bbs-apply-view .edu-info-bottom .tab-cont .video-test p {
+    font-size: 14px;
+  }
+  .bbs-apply-view .edu-info-bottom .tab-cont .video-test p > strong {
+    display: inline;
+    line-height: 1.6;
+    font-size: 16px;
+    font-weight: bold;
+  }
   .bbs-apply-view .apply-view-table.mt-50 {
     margin-top: 20px !important;
   }
@@ -7648,6 +7734,10 @@ footer .copyrights h2 .sectigo {
     margin-right: 0;
     padding-top: 8px;
     padding-bottom: 4px;
+  }
+  .bbs-apply-view .edu-info-top .edu-desc .detail .textbox--alert {
+    font-size: 14px;
+    line-height: 1.5;
   }
 }
 

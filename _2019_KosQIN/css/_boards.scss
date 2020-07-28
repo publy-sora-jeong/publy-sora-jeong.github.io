@@ -4679,6 +4679,23 @@
 				&:first-child {
 					margin-left: 0;
 				}
+
+				&.video-test {
+					&.selected {
+						a {
+							color: #0086d4;
+						}
+					}
+					a::before {
+						content: "";
+						width: 19px;
+						height: 19px;
+						background: url("../img/ico-video-tab.png") no-repeat;
+						display: inline-block;
+						margin-right: 7px;
+						vertical-align: middle;
+					}
+				}
 			}
 
 			li.selected {
@@ -4696,6 +4713,28 @@
 			h5 {
 				font-size: 25px;
 				padding-bottom: 15px;
+			}
+
+			.video-test {
+				text-align: center;
+				h5 {
+					color: #0091f1;
+					text-align: center;
+				}
+				p {
+					line-height: 1.6;
+					& > strong {
+						display: block;
+						font-size: 25px;
+						color: #0086d4;
+					}
+				}
+			}
+			.video-sample {
+				width: 1090px;
+				height: 596px;
+				margin: 40px auto;
+				background: #eee;
 			}
 		}
 
@@ -5004,6 +5043,25 @@
 							}
 						}
 					}
+
+					@keyframes textAlert {
+						0% {
+							color: #e62e8b;
+						}
+						100% {
+							color: #0091f1;
+						}
+					}
+					&--alert {
+						margin-top: 10px;
+						color: #e62e8b;
+						font-size: 16px;
+						font-weight: bold;
+
+						p {
+							animation: textAlert 0.5s infinite alternate;
+						}
+					}
 				}
 			}
 		}
@@ -5298,6 +5356,11 @@
 				h5 {
 					font-size: 22px;
 				}
+
+				.video-sample {
+					width: auto;
+					height: 500px;
+				}
 			}
 		}
 
@@ -5343,6 +5406,22 @@
 				h5 {
 					font-size: 18px;
 				}
+
+				.video-test {
+					.video-sample {
+						height: 350px;
+					}
+					p {
+						font-size: 14px;
+
+						& > strong {
+							display: inline;
+							line-height: 1.6;
+							font-size: 16px;
+							font-weight: bold;
+						}
+					}
+				}
 			}
 		}
 
@@ -5379,15 +5458,24 @@
 			}
 		}
 
-		.edu-info-top .edu-desc .tit {
-			font-size: 20px;
-			//line-height: 1.2;
+		.edu-info-top .edu-desc {
+			.tit {
+				font-size: 20px;
+				//line-height: 1.2;
 
-			span {
-				display: block;
-				margin-right: 0;
-				padding-top: 8px;
-				padding-bottom: 4px;
+				span {
+					display: block;
+					margin-right: 0;
+					padding-top: 8px;
+					padding-bottom: 4px;
+				}
+			}
+
+			.detail {
+				.textbox--alert {
+					font-size: 14px;
+					line-height: 1.5;
+				}
 			}
 		}
 	}
