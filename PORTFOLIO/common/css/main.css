@@ -331,6 +331,13 @@ input {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /**
  * Swiper 5.4.1
  * Most modern mobile touch slider and framework with hardware accelerated transitions
@@ -1237,6 +1244,7 @@ a:hover {
 
 .menu-btn span {
   background: #fff;
+  background: #e3c9ef;
   width: 30px;
   height: 2px;
   position: absolute;
@@ -1304,6 +1312,10 @@ a:hover {
   background: #e3c9ef;
 }
 
+.menu-btn.open span {
+  background: #fff;
+}
+
 .menu-btn.open span.btn-line-1 {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
@@ -1323,160 +1335,25 @@ a:hover {
 #menu {
   position: fixed;
   top: 0;
-  left: -100%;
+  right: 0;
+  padding: 10px 20px;
   width: 100%;
-  height: 100vh;
-  z-index: 1100;
-  background: #eeaeca;
-  background: linear-gradient(45deg, #eeaeca 0%, #94bbe9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#eeaeca", endColorstr="#94bbe9", GradientType=1);
-  -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
-          box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.1);
-}
-
-#menu .menu-data {
-  position: absolute;
-  right: 10%;
-  top: 20%;
-  position: absolute;
-  right: 10%;
-  top: 20%;
-}
-
-#menu .menu-data li {
   text-align: right;
-  margin-top: 35px;
+  z-index: 1500;
 }
 
-#menu .menu-data li a {
-  color: #fff;
-  font-family: 'Vidaloka', serif;
-  font-size: 45px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  position: relative;
+#menu li {
+  display: inline-block;
 }
 
-#menu .menu-data li a span {
-  display: block;
-  font-size: 14px;
-  font-family: '777Balsamtint', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-#menu .menu-data li a::before {
-  content: '';
-  width: 30px;
-  height: 1px;
-  background: #fff;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
-
-#menu .menu-data li:hover a {
-  padding-right: 20px;
-  color: #333;
-}
-
-#menu .menu-data li:hover a::before {
-  width: 100%;
-}
-
-#navigation {
-  position: fixed;
-  z-index: 9999;
-  left: 43px;
-  top: 25%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-}
-
-#navigation li {
-  height: 0;
-  position: relative;
-}
-
-#navigation li:nth-of-type(1).active i, #navigation li:nth-of-type(2).active i, #navigation li:nth-of-type(4).active i {
-  color: #333;
-}
-
-#navigation li:nth-of-type(1).active::before, #navigation li:nth-of-type(1).active::after, #navigation li:nth-of-type(2).active::before, #navigation li:nth-of-type(2).active::after, #navigation li:nth-of-type(4).active::before, #navigation li:nth-of-type(4).active::after {
-  background-color: #333;
-}
-
-#navigation li::before {
-  content: '';
-  width: 1px;
-  height: 0;
-  background: rgba(255, 255, 255, 0.4);
-  margin: 10px auto;
-  display: block;
-  opacity: 0;
-  -webkit-transition: 1s 0.2s;
-  transition: 1s 0.2s;
-}
-
-#navigation li::after {
-  content: '';
-  width: 1px;
-  height: 0;
-  background: rgba(255, 255, 255, 0.4);
-  display: block;
-  margin: 10px auto;
-  opacity: 0;
-  -webkit-transition: 1s 0.4s;
-  transition: 1s 0.4s;
-}
-
-#navigation li i {
-  opacity: 0;
-  display: block;
-  text-align: center;
-  font-size: 13px;
-  color: #fff;
+#menu a {
   font-weight: bold;
-  -webkit-transform: rotate(30deg);
-          transform: rotate(30deg);
-  -webkit-transition: 0.5s 0.1s;
-  transition: 0.5s 0.1s;
-  text-transform: lowercase;
-}
-
-#navigation li i:nth-of-type(2) {
-  -webkit-transition-delay: 0.1s;
-          transition-delay: 0.1s;
-}
-
-#navigation li i:nth-of-type(3) {
-  -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
-}
-
-#navigation li i:nth-of-type(4) {
-  -webkit-transition-delay: 0.3s;
-          transition-delay: 0.3s;
-}
-
-#navigation li.active {
-  height: auto;
-}
-
-#navigation li.active::before {
-  opacity: 1;
-  height: 50px;
-}
-
-#navigation li.active::after {
-  opacity: 1;
-  height: 50px;
-}
-
-#navigation li.active i {
-  opacity: 1;
+  font-family: '777Balsamtint';
+  text-transform: uppercase;
+  font-size: 20px;
+  padding: 0 10px;
+  letter-spacing: 1px;
+  color: #edbcd4;
 }
 
 .visual {
@@ -2341,5 +2218,152 @@ a:hover {
   width: 1200px;
   margin: 20px auto;
   background-image: url("../img/src/nurinori_02.png");
+}
+
+.sub-top {
+  padding-top: 100vh;
+  width: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: top center;
+}
+
+.sub-top.nurinori {
+  background-image: url("../img/src/nurinori/pp_top.png");
+}
+
+.sub-contents {
+  background-color: #fff;
+  padding: 150px 0 0 0;
+  font-family: 'NanumSquareRound';
+}
+
+.sub-contents .description {
+  width: 1200px;
+  margin: 0 auto;
+  font-size: 18px;
+}
+
+.sub-contents .description h3 {
+  font-size: 60px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid #333;
+  margin-bottom: 20px;
+}
+
+.sub-contents .description dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.sub-contents .description dl dt,
+.sub-contents .description dl dd {
+  margin-top: 30px;
+  font-size: 16px;
+}
+
+.sub-contents .description dl dt.overview,
+.sub-contents .description dl dd.overview {
+  width: 100%;
+}
+
+.sub-contents .description dl dt {
+  width: 10%;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sub-contents .description dl dd {
+  width: 40%;
+  color: #999;
+}
+
+.sub-contents .description dl dd.overview {
+  margin-top: 10px;
+  width: 50%;
+  text-align: justify;
+}
+
+.sub-contents .description dl dd a {
+  color: #999;
+}
+
+.sub-contents .img-container {
+  width: 1200px;
+  margin: 100px auto 0 auto;
+}
+
+.sub-contents .img-container p {
+  margin-top: 30px;
+}
+
+.next-project {
+  display: block;
+  width: 100%;
+  height: 520px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  margin-top: 100px;
+}
+
+.next-project:hover::after {
+  opacity: 0.2;
+}
+
+.next-project::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.next-project--nurinoriyear {
+  background-image: url("../img/src/nurinori/pp_nextproject.png");
+}
+
+.next-project .container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 120px;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  letter-spacing: -2px;
+}
+
+.next-project .container .heading {
+  letter-spacing: -0.5px;
+}
+
+.next-project .container h3 {
+  margin-top: 50px;
+  font-size: 55px;
+}
+
+.next-project .container h3 span {
+  display: block;
+  font-size: 20px;
+}
+
+.next-project .container h3 p {
+  font-weight: bold;
 }
 /*# sourceMappingURL=main.css.map */

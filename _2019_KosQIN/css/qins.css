@@ -7019,15 +7019,31 @@ footer .copyrights h2 .sectigo {
   margin-left: 0;
 }
 
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test {
+  background: #e62e8b;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test.selected {
+  background: #fff;
+}
+
 .bbs-apply-view .edu-info-bottom .tab-top li.video-test.selected a {
   color: #0086d4;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test.selected a::before {
+  background: url("../img/ico-video-tab.png") no-repeat;
+}
+
+.bbs-apply-view .edu-info-bottom .tab-top li.video-test a {
+  color: #fff;
 }
 
 .bbs-apply-view .edu-info-bottom .tab-top li.video-test a::before {
   content: "";
   width: 19px;
   height: 19px;
-  background: url("../img/ico-video-tab.png") no-repeat;
+  background: url("../img/ico-video-tab-off.png") no-repeat;
   display: inline-block;
   margin-right: 7px;
   vertical-align: middle;

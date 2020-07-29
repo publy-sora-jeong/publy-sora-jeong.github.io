@@ -61,7 +61,7 @@
 		}
 	}
 
-	.search-box + p {
+	.search-box+p {
 		margin-top: 10px;
 	}
 
@@ -82,7 +82,7 @@
 	@media screen and (max-width: 768px) {
 		font-size: 14px;
 
-		.search-box + p {
+		.search-box+p {
 			font-size: 14px;
 		}
 	}
@@ -155,7 +155,7 @@
 			float: right;
 			font-size: 18px;
 
-			> span {
+			>span {
 				display: inline-block;
 				padding: 0 10px;
 				position: relative;
@@ -406,7 +406,7 @@
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 
-		> li {
+		>li {
 			display: table-cell;
 			vertical-align: middle;
 			padding: 19px 5px;
@@ -415,7 +415,7 @@
 			text-align: center;
 		}
 
-		> p {
+		>p {
 			display: table-cell;
 			vertical-align: middle;
 			padding: 19px 5px;
@@ -432,7 +432,7 @@
 		-webkit-transition: 0.4s;
 		transition: 0.4s;
 
-		> li {
+		>li {
 			display: table-cell;
 			vertical-align: middle;
 			padding: 19px 5px;
@@ -441,7 +441,7 @@
 			text-align: center;
 		}
 
-		> p {
+		>p {
 			display: table-cell;
 			vertical-align: middle;
 			padding: 19px 5px;
@@ -611,6 +611,7 @@
 				background-image: url("../img/bbs-ico-edu.png");
 			}
 		}
+
 		.ico.ico-vid {
 			&::before {
 				background-image: url("../img/plan-ico-video.png");
@@ -650,7 +651,7 @@
 	}
 
 	.b-title {
-		> i[class*="ico-"] {
+		>i[class*="ico-"] {
 			font-size: 0;
 			display: inline-block;
 			vertical-align: middle;
@@ -829,7 +830,7 @@
 				font-size: 15px;
 				color: #777;
 
-				> .file-name {
+				>.file-name {
 					display: inline-block;
 					max-width: calc(100% - 120px);
 					vertical-align: middle;
@@ -838,7 +839,7 @@
 					white-space: nowrap;
 				}
 
-				> .btn-down {
+				>.btn-down {
 					width: 100px;
 					display: inline-block;
 					vertical-align: middle;
@@ -1214,7 +1215,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
@@ -1513,7 +1514,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
@@ -1797,8 +1798,7 @@
 		width: 8%;
 	}
 
-	@media screen and (max-width: 640px) {
-	}
+	@media screen and (max-width: 640px) {}
 }
 
 ////////////////////////////////////////////////////////REGIST HISTORY
@@ -1857,7 +1857,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
@@ -2104,7 +2104,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
@@ -2343,7 +2343,7 @@
 			border-bottom: 1px solid #ddd;
 			margin-bottom: 10px;
 
-			> p {
+			>p {
 				display: block;
 				position: absolute;
 			}
@@ -2668,7 +2668,7 @@
 			border-bottom: 1px solid #ddd;
 			border-top: 1px solid #000;
 
-			& > p {
+			&>p {
 				border-bottom: 0;
 			}
 
@@ -2899,7 +2899,7 @@
 			border-bottom: 1px solid #ddd;
 			border-top: 1px solid #000;
 
-			& > p {
+			&>p {
 				border-bottom: 0;
 			}
 
@@ -3219,6 +3219,7 @@
 	}
 
 	@media screen and (max-width: 768px) {
+
 		.b-num,
 		.b-hits {
 			display: none !important;
@@ -3534,7 +3535,7 @@
 	}
 
 	&,
-	& > * {
+	&>* {
 		box-sizing: border-box;
 	}
 
@@ -3556,7 +3557,7 @@
 		.tag {
 			margin-top: 13px;
 
-			> span {
+			>span {
 				display: inline-block;
 				font-size: 12px;
 				-webkit-box-sizing: border-box;
@@ -3569,21 +3570,22 @@
 				vertical-align: middle;
 			}
 
-			> span.tag-charge {
+			>span.tag-charge {
 				background: #0385d0;
 				color: #fff;
 			}
 
-			> span.tag-free {
+			>span.tag-free {
 				background: #f5a100;
 				color: #fff;
 			}
 
-			> span.tag-nurse {
+			>span.tag-nurse {
 				background: #fff;
 				border: 1px solid #ddd;
 			}
-			> span.tag-video {
+
+			>span.tag-video {
 				background: #fff;
 				border: none;
 				background: #e62e8b;
@@ -3641,7 +3643,7 @@
 			color: #777;
 			letter-spacing: -0.6px;
 
-			> span {
+			>span {
 				position: relative;
 				display: inline-block;
 				margin-left: 10px;
@@ -3847,7 +3849,7 @@
 			}
 
 			.post-info {
-				> span {
+				>span {
 					display: block;
 					margin-left: 0;
 					margin-bottom: 3px;
@@ -3992,7 +3994,7 @@
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 
-				> span {
+				>span {
 					font-size: 25px;
 					display: block;
 
@@ -4037,6 +4039,7 @@
 						padding-left: 15px;
 						position: relative;
 						overflow: hidden;
+
 						&::before {
 							content: "";
 							position: absolute;
@@ -4050,14 +4053,15 @@
 						&:first-child {
 							margin-top: 0;
 						}
-						> span {
+
+						>span {
 							width: 23%;
 							float: left;
 							display: block;
 							color: #333;
 						}
 
-						> span.dd {
+						>span.dd {
 							width: 67%;
 							color: #777;
 						}
@@ -4096,7 +4100,7 @@
 			background-position: 0 2px;
 			font-weight: bold;
 
-			> p {
+			>p {
 				font-size: 16px;
 				margin-top: 10px;
 			}
@@ -4230,7 +4234,7 @@
 		margin-top: 10px;
 		text-align: right;
 
-		> .radio-container {
+		>.radio-container {
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -4347,6 +4351,7 @@
 
 		.apply-table {
 			table {
+
 				th,
 				td {
 					padding: 10px;
@@ -4424,7 +4429,7 @@
 			}
 		}
 
-		.edu-applicant-info-gray .bbs-applicant-title > p {
+		.edu-applicant-info-gray .bbs-applicant-title>p {
 			margin-top: 0;
 			font-size: 14px;
 		}
@@ -4452,6 +4457,7 @@
 
 		.apply-table {
 			table {
+
 				th,
 				td {
 					font-size: 13px;
@@ -4496,12 +4502,12 @@
 	margin: 0 auto;
 
 	.btn-area {
-		> a {
+		>a {
 			display: inline-block;
 			vertical-align: middle;
 		}
 
-		> input {
+		>input {
 			display: inline-block;
 			vertical-align: middle;
 		}
@@ -4681,19 +4687,32 @@
 				}
 
 				&.video-test {
+					background: #e62e8b;
+
 					&.selected {
+						background: #fff;
+
 						a {
 							color: #0086d4;
+
+							&::before {
+								background: url("../img/ico-video-tab.png") no-repeat;
+							}
 						}
 					}
-					a::before {
-						content: "";
-						width: 19px;
-						height: 19px;
-						background: url("../img/ico-video-tab.png") no-repeat;
-						display: inline-block;
-						margin-right: 7px;
-						vertical-align: middle;
+
+					a {
+						color: #fff;
+
+						&::before {
+							content: "";
+							width: 19px;
+							height: 19px;
+							background: url("../img/ico-video-tab-off.png") no-repeat;
+							display: inline-block;
+							margin-right: 7px;
+							vertical-align: middle;
+						}
 					}
 				}
 			}
@@ -4717,19 +4736,23 @@
 
 			.video-test {
 				text-align: center;
+
 				h5 {
 					color: #0091f1;
 					text-align: center;
 				}
+
 				p {
 					line-height: 1.6;
-					& > strong {
+
+					&>strong {
 						display: block;
 						font-size: 25px;
 						color: #0086d4;
 					}
 				}
 			}
+
 			.video-sample {
 				width: 1090px;
 				height: 596px;
@@ -4750,7 +4773,7 @@
 			overflow: hidden;
 			float: left;
 
-			> span {
+			>span {
 				display: inline-block;
 				font-size: 12px;
 				-webkit-box-sizing: border-box;
@@ -4763,21 +4786,22 @@
 				vertical-align: middle;
 			}
 
-			> span.tag-charge {
+			>span.tag-charge {
 				background: #0385d0;
 				color: #fff;
 			}
 
-			> span.tag-free {
+			>span.tag-free {
 				background: #f5a100;
 				color: #fff;
 			}
 
-			> span.tag-nurse {
+			>span.tag-nurse {
 				background: #fff;
 				border: 1px solid #ddd;
 			}
-			> span.tag-video {
+
+			>span.tag-video {
 				background: #fff;
 				border: none;
 				background: #e62e8b;
@@ -4847,7 +4871,7 @@
 						margin-left: 0;
 					}
 
-					> span {
+					>span {
 						font-weight: bold;
 						padding-left: 33px;
 						background: url("../img/ico-calendar.png") no-repeat left center;
@@ -4856,7 +4880,7 @@
 						vertical-align: middle;
 					}
 
-					> span.capacity {
+					>span.capacity {
 						background-image: url("../img/ico-capacity.png");
 					}
 
@@ -4896,7 +4920,7 @@
 				-webkit-box-sizing: border-box;
 				box-sizing: border-box;
 
-				> span {
+				>span {
 					font-size: 25px;
 					display: block;
 
@@ -4964,14 +4988,14 @@
 						position: relative;
 						overflow: hidden;
 
-						> span {
+						>span {
 							width: 25%;
 							float: left;
 							display: block;
 							color: #333;
 						}
 
-						> span.dd {
+						>span.dd {
 							width: 75%;
 							color: #777;
 							padding-left: 5%;
@@ -5048,10 +5072,12 @@
 						0% {
 							color: #e62e8b;
 						}
+
 						100% {
 							color: #0091f1;
 						}
 					}
+
 					&--alert {
 						margin-top: 10px;
 						color: #e62e8b;
@@ -5240,7 +5266,7 @@
 			width: 85%;
 
 			.bycar {
-				> li {
+				>li {
 					margin-top: 40px;
 					font-size: 14px;
 					color: #777;
@@ -5411,10 +5437,11 @@
 					.video-sample {
 						height: 350px;
 					}
+
 					p {
 						font-size: 14px;
 
-						& > strong {
+						&>strong {
 							display: inline;
 							line-height: 1.6;
 							font-size: 16px;
@@ -5481,9 +5508,10 @@
 	}
 
 	@media screen and (max-width: 480px) {
-		.btn-area > a {
+		.btn-area>a {
 			min-width: 80px;
 		}
+
 		.bbs-apply-view-top {
 			padding: 15px;
 		}
@@ -5534,7 +5562,7 @@
 			}
 		}
 
-		.btn-area > a {
+		.btn-area>a {
 			min-width: 50px;
 
 			&.btn-like {
@@ -5568,7 +5596,7 @@
 	}
 
 	.comment-list {
-		> li {
+		>li {
 			position: relative;
 			border-bottom: 1px dashed #ddd;
 			padding: 20px 0;
@@ -5635,7 +5663,7 @@
 			}
 		}
 
-		> li.li-reply {
+		>li.li-reply {
 			padding-left: 20px;
 
 			&::before {
@@ -5713,7 +5741,7 @@
 		}
 
 		.comment-list {
-			> li {
+			>li {
 				padding: 15px 0;
 
 				.cont-header {
@@ -5879,7 +5907,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
@@ -6091,7 +6119,7 @@
 				border-bottom: 1px solid #ddd;
 			}
 
-			> p {
+			>p {
 				position: absolute;
 				padding: 0;
 				line-height: 30px;
