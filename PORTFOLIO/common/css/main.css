@@ -1353,7 +1353,7 @@ a:hover {
   font-size: 20px;
   padding: 0 10px;
   letter-spacing: 1px;
-  color: #edbcd4;
+  color: #fff;
 }
 
 .visual {
@@ -1886,10 +1886,11 @@ a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 10px;
-  -webkit-transition: -webkit-box-shadow 0.25s ease;
-  transition: -webkit-box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease;
-  transition: box-shadow 0.25s ease, -webkit-box-shadow 0.25s ease;
+}
+
+.portfolio .grid .grid-item > a {
+  background-color: #f2f2f2;
+  height: 400px;
 }
 
 .portfolio .grid .grid-item .desc {
