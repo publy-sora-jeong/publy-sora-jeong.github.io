@@ -4,14 +4,13 @@ var $section;
 
 $(function () {
   initDom();
+  includeHTML();
 
 
-  if ($(window).hasClass('main')) {
-    savePosition();
-  }
-  // $(window).on("beforeunload", function () {
-  //   $(window).scrollTop(0);
-  // });
+  headerfix();
+  $(window).on('scroll', function () {
+    headerfix();
+  })
 
   //ISOTOPE
   var $grid = $(".grid").isotope({
@@ -42,77 +41,6 @@ $(function () {
   });
 
 
-  // x: Math.floor(Math.random()) + 150,
-  // y: Math.floor(Math.random()) - 400,
-
-  $(".menu-btn").on("click", function () {
-    if ($(this).hasClass("open")) {
-      $("#menu")
-        .stop()
-        .animate({
-            left: "-100%",
-          },
-          500,
-          "easeInBack",
-          function () {
-            $(".menu-btn").removeClass("open");
-          }
-        );
-    } else {
-      $("#menu")
-        .stop()
-        .animate({
-            left: "-50%",
-          },
-          500,
-          "easeOutBack",
-          function () {
-            $(".menu-btn").addClass("open");
-          }
-        );
-    }
-  });
-
-
-  /*
-  $("#menu  ul > li > a").on("click", function (e) {
-    e.preventDefault();
-    var li_eq = $(this).parent().index();
-    var scrollTogo = $section.eq(li_eq).offset().top;
-    //console.log($(this).parent().index());
-    //console.log($section.eq(li_eq).offset().top);
-    if ($(".menu-btn").hasClass("open")) {
-      $(this).removeClass("open");
-      $("#menu")
-        .stop()
-        .animate({
-            left: "-100%",
-          },
-          500,
-          "easeInBack",
-          function () {
-            $(".menu-btn").removeClass("open");
-            $("html, body").stop().delay(200).animate({
-                scrollTop: scrollTogo,
-              },
-              1000
-            );
-          }
-        );
-    }
-  });
-
-  */
-
-
-
-
-  // $(".wrap").mCustomScrollbar({
-  //   theme: "dark-thick",
-  //   // scrollbarPosition: "inside",
-  //   // autoExpandScrollbar: "ture",
-  // });
-
 
   $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
@@ -140,24 +68,7 @@ $(function () {
     }).text(colorCodeArr[j]);
 
   }
-  console.log(colorCodeArr)
 
-  var swiper = new Swiper(".pc-container", {
-    slidesPerView: "auto",
-    centeredSlides: true,
-
-    speed: 600,
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-
-  });
 });
 
 function initDom() {
@@ -183,6 +94,46 @@ function activeBtn(scroll) {
 
       $("#navigation li").removeClass("active");
       $("#navigation li").eq(i).addClass("active");
+    }
+  }
+}
+
+function headerfix() {
+  if ($(window).scrollTop() > 10) {
+    $('#menu').addClass('fixed');
+  } else {
+    $('#menu').removeClass('fixed');
+  }
+}
+
+function includeHTML() {
+  var z, i, elmnt, file, xhttp;
+  /* Loop through a collection of all HTML elements: */
+  z = document.getElementsByTagName("*");
+  for (i = 0; i < z.length; i++) {
+    elmnt = z[i];
+    /*search for elements with a certain atrribute:*/
+    file = elmnt.getAttribute("include-html");
+    if (file) {
+      /* Make an HTTP request using the attribute value as the file name: */
+      xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function () {
+        if (this.readyState == 4) {
+          if (this.status == 200) {
+            elmnt.innerHTML = this.responseText;
+          }
+          if (this.status == 404) {
+            elmnt.innerHTML = "Page not found.";
+          }
+          /* Remove the attribute, and call this function once more: */
+          elmnt.removeAttribute("include-html");
+          includeHTML();
+        }
+      }
+      xhttp.open("GET", file, true);
+      xhttp.send();
+      /* Exit the function: */
+      return;
     }
   }
 }
