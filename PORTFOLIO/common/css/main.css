@@ -2244,6 +2244,10 @@ a:hover {
   background-image: url("../img/src/nurinori/detailpage__top.png");
 }
 
+.sub-top.yearplan {
+  background-image: url("../img/src/nurinori_yearplan/detailpage__top.png");
+}
+
 .sub-contents {
   background-color: #fff;
   padding: 150px 0 0 0;
