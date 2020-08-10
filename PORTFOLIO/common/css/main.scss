@@ -770,12 +770,13 @@ a:hover {
   .grid {
     min-height: 400px;
     transition: height 1s;
-    margin-top: 50px;
+    //margin-top: 50px;
 
     .grid-item {
       width: calc(33.3333% - 20px);
       box-sizing: border-box;
       margin: 10px;
+      margin-top: 60px;
 
       video {
         width: 100%;
@@ -785,7 +786,6 @@ a:hover {
       &>a {
         background-color: #f7f7f7;
         height: 400px;
-
       }
 
       &:nth-of-type(3n+1) {
@@ -795,12 +795,16 @@ a:hover {
       .desc {
         z-index: 10;
         margin-top: 10px;
+        letter-spacing: -1px;
+        font-family: 'NanumSquareRound';
+        font-size: 16px;
+
 
         strong {
           display: block;
           font-weight: bold;
           padding-bottom: 5px;
-          font-size: 18px;
+          font-size: 22px;
         }
       }
 

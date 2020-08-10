@@ -1903,7 +1903,6 @@ a:hover {
   min-height: 400px;
   -webkit-transition: height 1s;
   transition: height 1s;
-  margin-top: 50px;
 }
 
 .portfolio .grid .grid-item {
@@ -1911,6 +1910,7 @@ a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 10px;
+  margin-top: 60px;
 }
 
 .portfolio .grid .grid-item video {
@@ -1926,13 +1926,16 @@ a:hover {
 .portfolio .grid .grid-item .desc {
   z-index: 10;
   margin-top: 10px;
+  letter-spacing: -1px;
+  font-family: 'NanumSquareRound';
+  font-size: 16px;
 }
 
 .portfolio .grid .grid-item .desc strong {
   display: block;
   font-weight: bold;
   padding-bottom: 5px;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .portfolio .grid .grid-item:hover a img {
