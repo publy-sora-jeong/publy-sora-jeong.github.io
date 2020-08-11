@@ -66,6 +66,21 @@
 
                 a {
                     color: #999;
+                    position: relative;
+
+                    &:hover {
+                        color: #ff4058;
+                    }
+
+
+
+
+                    // &:hover {
+                    //     color: #fff;
+                    //     background: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
+                    //     padding: 6px 10px;
+                    //     ;
+                    // }
 
                 }
             }
@@ -118,7 +133,11 @@
 
 
     &--nurinoriyear {
-        background-image: url('../img/src/nurinori/pp_nextproject.png');
+        background-image: url('../img/src/nurinori_yearplan/footer_nextproject.png');
+    }
+
+    &--tinpo {
+        background-image: url('../img/src/tinpo/footer_nextproject.png');
     }
 
     .container {
@@ -150,5 +169,85 @@
             }
 
         }
+    }
+
+
+}
+
+.fix-layer-control {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100px;
+    background: rgba($color: #000000, $alpha: 0.8);
+    display: none;
+
+    .btn-prev,
+    .btn-next {
+        span {
+            font-size: 13px;
+            display: block;
+            padding: 0 50px;
+        }
+
+        p {
+            padding: 0 50px;
+            font-size: 22px;
+            font-weight: bold;
+            line-height: 1.2;
+            margin-top: 2px;
+        }
+    }
+
+    .btn-prev {
+        position: absolute;
+        left: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #fff;
+        font-size: 30px;
+        font-family: 'NanumSquareRound';
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &::before {
+            content: '👈';
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+        }
+
+    }
+
+    .btn-next {
+        position: absolute;
+        text-align: right;
+        right: 10px;
+        top: 50%;
+        transform: translate(0, -50%);
+        color: #fff;
+        font-size: 30px;
+        font-family: 'NanumSquareRound';
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &::before {
+            content: '👉';
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+
     }
 }

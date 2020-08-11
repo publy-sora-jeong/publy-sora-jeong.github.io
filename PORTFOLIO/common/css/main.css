@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*RESET */
 @import url("https://fonts.googleapis.com/css2?family=Vidaloka&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap");
@@ -1174,6 +1175,68 @@ button.swiper-pagination-bullet {
   }
 }
 
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?4ftmyl");
+  src: url("../fonts/icomoon.eot?4ftmyl#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?4ftmyl") format("truetype"), url("../fonts/icomoon.woff?4ftmyl") format("woff"), url("../fonts/icomoon.svg?4ftmyl#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-link:before {
+  content: "\e900";
+}
+
+.icon-tick:before {
+  content: "\e901";
+}
+
+.icon-error:before {
+  content: "\e902";
+}
+
+.icon-private:before {
+  content: "\e903";
+}
+
+.icon-right-arrow .path1:before {
+  content: "\e904";
+  color: #ff9800;
+}
+
+.icon-right-arrow .path2:before {
+  content: "\e905";
+  margin-left: -1em;
+  color: black;
+}
+
+.icon-right-arrow-1 .path1:before {
+  content: "\e906";
+  color: #ff9800;
+}
+
+.icon-right-arrow-1 .path2:before {
+  content: "\e907";
+  margin-left: -1em;
+  color: black;
+}
+
 html {
   line-height: 1.3;
   -webkit-text-size-adjust: 100%;
@@ -2308,6 +2371,11 @@ a:hover {
 
 .sub-contents .description dl dd a {
   color: #999;
+  position: relative;
+}
+
+.sub-contents .description dl dd a:hover {
+  color: #ff4058;
 }
 
 .sub-contents .img-container {
@@ -2352,7 +2420,11 @@ a:hover {
 }
 
 .next-project--nurinoriyear {
-  background-image: url("../img/src/nurinori/pp_nextproject.png");
+  background-image: url("../img/src/nurinori_yearplan/footer_nextproject.png");
+}
+
+.next-project--tinpo {
+  background-image: url("../img/src/tinpo/footer_nextproject.png");
 }
 
 .next-project .container {
@@ -2384,9 +2456,102 @@ a:hover {
   font-weight: bold;
 }
 
+.fix-layer-control {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+}
+
+.fix-layer-control .btn-prev span,
+.fix-layer-control .btn-next span {
+  font-size: 13px;
+  display: block;
+  padding: 0 50px;
+}
+
+.fix-layer-control .btn-prev p,
+.fix-layer-control .btn-next p {
+  padding: 0 50px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+.fix-layer-control .btn-prev {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  color: #fff;
+  font-size: 30px;
+  font-family: 'NanumSquareRound';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fix-layer-control .btn-prev::before {
+  content: '👈';
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.fix-layer-control .btn-next {
+  position: absolute;
+  text-align: right;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  color: #fff;
+  font-size: 30px;
+  font-family: 'NanumSquareRound';
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.fix-layer-control .btn-next::before {
+  content: '👉';
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @media screen and (max-width: 768px) {
   .portfolio .grid .grid-item {
     width: calc(50% - 20px);
+  }
+  .portfolio .grid .grid-item .desc strong {
+    font-size: 18px;
+  }
+  .portfolio .grid .grid-item .desc p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .portfolio .grid .grid-item {
+    width: calc(50% - 20px);
+  }
+  .portfolio .grid .grid-item .desc strong {
+    font-size: 17px;
+  }
+  .portfolio .grid .grid-item .desc p {
+    font-size: 14px;
   }
 }
 

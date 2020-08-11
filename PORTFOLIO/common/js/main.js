@@ -69,6 +69,10 @@ $(function () {
 
   }
 
+  $('html, body').on('click', function () {
+    $('.fix-layer-control').fadeIn();
+  });
+
 });
 
 function initDom() {
