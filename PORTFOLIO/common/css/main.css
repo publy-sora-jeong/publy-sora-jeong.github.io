@@ -1409,8 +1409,7 @@ a:hover {
   content: '';
   width: 100%;
   height: 0;
-  background-image: -webkit-gradient(linear, left top, right top, from(#86c7fb), color-stop(31%, #42add3), to(#9353d4d7));
-  background-image: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
+  background-color: rgba(0, 0, 0, 0.5);
   -webkit-box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
           box-shadow: 0 4px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: 0.5s;
@@ -1969,10 +1968,10 @@ a:hover {
 }
 
 .portfolio .grid .grid-item {
-  width: calc(33.3333% - 20px);
+  width: calc(33.3333% - 50px);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 10px;
+  margin: 25px;
   margin-top: 60px;
 }
 
@@ -2314,6 +2313,50 @@ a:hover {
   background-image: url("../img/src/nurinori_yearplan/detailpage__top.png");
 }
 
+.sub-top.tinpo {
+  background-image: url("../img/src/tinpo/detailpage__top.png");
+}
+
+.sub-top.tbd {
+  background-image: url("../img/src/the_book_digital/detailpage__top.png");
+}
+
+.sub-top.nemo {
+  background-image: url("../img/src/nemo_dive/detailpage__top.png");
+}
+
+.sub-top.little {
+  background-image: url("../img/src/littlehomelearn/detailpage__top.png");
+}
+
+.sub-top.dse {
+  background-image: url("../img/src/DSE/detailpage__top.png");
+}
+
+.sub-top.gaonhightech {
+  background-image: url("../img/src/gaon_hightech/detailpage__top.png");
+}
+
+.sub-top.df {
+  background-image: url("../img/src/design_forte/detailpage__top.png");
+}
+
+.sub-top.kmf {
+  background-image: url("../img/src/kmf/detailpage__top.png");
+}
+
+.sub-top.chlaw {
+  background-image: url("../img/src/chaeum/detailpage__top.png");
+}
+
+.sub-top.asolution {
+  background-image: url("../img/src/ASolution/detailpage__top.png");
+}
+
+.sub-top.little {
+  background-image: url("../img/src/littlehomelearn/detailpage__top.png");
+}
+
 .sub-contents {
   background-color: #fff;
   padding: 150px 0 0 0;
@@ -2425,6 +2468,38 @@ a:hover {
 
 .next-project--tinpo {
   background-image: url("../img/src/tinpo/footer_nextproject.png");
+}
+
+.next-project--tbd {
+  background-image: url("../img/src/the_book_digital/footer_nextproject.png");
+}
+
+.next-project--nemo {
+  background-image: url("../img/src/nemo_dive/footer_nextproject.png");
+}
+
+.next-project--little {
+  background-image: url("../img/src/littlehomelearn/footer_nextproject.png");
+}
+
+.next-project--dse {
+  background-image: url("../img/src/DSE/footer_nextproject.png");
+}
+
+.next-project--gaonhightech {
+  background-image: url("../img/src/gaon_hightech/footer_nextproject.png");
+}
+
+.next-project--df {
+  background-image: url("../img/src/design_forte/footer_nextproject.png");
+}
+
+.next-project--kmf {
+  background-image: url("../img/src/kmf/footer_nextproject.png");
+}
+
+.next-project--chlaw {
+  background-image: url("../img/src/chaeum/footer_nextproject.png");
 }
 
 .next-project .container {

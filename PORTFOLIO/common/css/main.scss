@@ -190,7 +190,8 @@ a:hover {
     content: '';
     width: 100%;
     height: 0;
-    background-image: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
+    //background-image: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
+    background-color: rgba($color: #000000, $alpha: 0.5);
     box-shadow: 0 4px 0 rgba($color: #000000, $alpha: 0.15);
     transition: 0.5s;
     position: absolute;
@@ -775,9 +776,9 @@ a:hover {
     //margin-top: 50px;
 
     .grid-item {
-      width: calc(33.3333% - 20px);
+      width: calc(33.3333% - 50px);
       box-sizing: border-box;
-      margin: 10px;
+      margin: 25px;
       margin-top: 60px;
 
       video {

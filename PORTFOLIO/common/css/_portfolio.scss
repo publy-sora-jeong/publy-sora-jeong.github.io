@@ -14,6 +14,53 @@
     &.yearplan {
         background-image: url('../img/src/nurinori_yearplan/detailpage__top.png');
     }
+
+    &.tinpo {
+        background-image: url('../img/src/tinpo/detailpage__top.png');
+    }
+
+
+    &.tbd {
+        background-image: url('../img/src/the_book_digital/detailpage__top.png');
+    }
+
+    &.nemo {
+        background-image: url('../img/src/nemo_dive/detailpage__top.png');
+    }
+
+    &.little {
+        background-image: url('../img/src/littlehomelearn/detailpage__top.png');
+    }
+
+    &.dse {
+        background-image: url('../img/src/DSE/detailpage__top.png');
+    }
+
+    &.gaonhightech {
+        background-image: url('../img/src/gaon_hightech/detailpage__top.png');
+    }
+
+    &.df {
+        background-image: url('../img/src/design_forte/detailpage__top.png');
+    }
+
+    &.kmf {
+        background-image: url('../img/src/kmf/detailpage__top.png');
+    }
+
+    &.chlaw {
+        background-image: url('../img/src/chaeum/detailpage__top.png');
+    }
+
+    &.asolution {
+        background-image: url('../img/src/ASolution/detailpage__top.png');
+    }
+
+    &.little {
+        background-image: url('../img/src/littlehomelearn/detailpage__top.png');
+    }
+
+
 }
 
 .sub-contents {
@@ -138,6 +185,38 @@
 
     &--tinpo {
         background-image: url('../img/src/tinpo/footer_nextproject.png');
+    }
+
+    &--tbd {
+        background-image: url('../img/src/the_book_digital/footer_nextproject.png');
+    }
+
+    &--nemo {
+        background-image: url('../img/src/nemo_dive/footer_nextproject.png');
+    }
+
+    &--little {
+        background-image: url('../img/src/littlehomelearn/footer_nextproject.png');
+    }
+
+    &--dse {
+        background-image: url('../img/src/DSE/footer_nextproject.png');
+    }
+
+    &--gaonhightech {
+        background-image: url('../img/src/gaon_hightech/footer_nextproject.png');
+    }
+
+    &--df {
+        background-image: url('../img/src/design_forte/footer_nextproject.png');
+    }
+
+    &--kmf {
+        background-image: url('../img/src/kmf/footer_nextproject.png');
+    }
+
+    &--chlaw {
+        background-image: url('../img/src/chaeum/footer_nextproject.png');
     }
 
     .container {
