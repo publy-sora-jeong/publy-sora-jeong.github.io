@@ -2543,15 +2543,15 @@ a:hover {
   display: none;
 }
 
-.fix-layer-control .btn-prev span,
-.fix-layer-control .btn-next span {
+.fix-layer-control .page-prev span,
+.fix-layer-control .page-next span {
   font-size: 13px;
   display: block;
   padding: 0 50px;
 }
 
-.fix-layer-control .btn-prev p,
-.fix-layer-control .btn-next p {
+.fix-layer-control .page-prev p,
+.fix-layer-control .page-next p {
   padding: 0 50px;
   font-size: 22px;
   font-weight: bold;
@@ -2559,7 +2559,7 @@ a:hover {
   margin-top: 2px;
 }
 
-.fix-layer-control .btn-prev {
+.fix-layer-control .page-prev {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -2572,7 +2572,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.fix-layer-control .btn-prev::before {
+.fix-layer-control .page-prev::before {
   content: '👈';
   display: inline-block;
   vertical-align: middle;
@@ -2582,7 +2582,7 @@ a:hover {
   left: 0;
 }
 
-.fix-layer-control .btn-next {
+.fix-layer-control .page-next {
   position: absolute;
   text-align: right;
   right: 10px;
@@ -2596,7 +2596,7 @@ a:hover {
   text-transform: uppercase;
 }
 
-.fix-layer-control .btn-next::before {
+.fix-layer-control .page-next::before {
   content: '👉';
   display: inline-block;
   vertical-align: middle;

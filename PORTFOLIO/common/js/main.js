@@ -73,7 +73,76 @@ $(function () {
     $('.fix-layer-control').fadeIn();
   });
 
+
+  $(".page-prev, .page-next").on("click", function (e) {
+    e.preventDefault();
+
+    var eventBtn = $(this).attr("class");
+    var curDocNumber = window.location.pathname.match(/\d+/g)[0];
+    var tmpDocNumber = curDocNumber;
+    var docList = new Array();
+    var projectTitle;
+
+    $.ajax({
+      type: "GET",
+      dataType: "JSON",
+      url: "db.json",
+      success: function (data) {
+        if (data != null) {
+          var curDocPos = $.inArray(Number(curDocNumber), data.list);
+          projectTitle = data.project;
+          console.log(projectTitle);
+
+          if (eventBtn == "page-prev") {
+            if (!(curDocPos - 1 < 0)) {
+              movePath(data.list[(curDocPos - 1)]);
+              console.log(date.project[curDocPos - 1]);
+            }
+          } else {
+            if (!(curDocPos + 1 >= data.list.length)) {
+              movePath(data.list[(curDocPos + 1)]);
+              console.log(date.project[curDocPos + 1]);
+            }
+          }
+        }
+      }
+    });
+
+
+    ///RECENT 
+    /*
+    		$.ajax({
+				type: "GET",
+				url: "portfolio2.html",
+				success: function(data)
+				{
+
+					var count = 0;
+					$.each($(data).find('.item'),function(i,dat) {
+						$(".folio_item").append(this);
+						if ( count >= 5 )
+						{
+							return false;
+						}
+						else {
+							count++;
+						}
+					});
+				}
+			}); */
+  });
+
 });
+
+
+function movePath(num) {
+  location.href = "sub_" + num + ".html";
+}
+
+
+
+
+
 
 function initDom() {
   $section = $("section");

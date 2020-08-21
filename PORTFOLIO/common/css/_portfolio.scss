@@ -264,8 +264,8 @@
     background: rgba($color: #000000, $alpha: 0.8);
     display: none;
 
-    .btn-prev,
-    .btn-next {
+    .page-prev,
+    .page-next {
         span {
             font-size: 13px;
             display: block;
@@ -281,7 +281,7 @@
         }
     }
 
-    .btn-prev {
+    .page-prev {
         position: absolute;
         left: 10px;
         top: 50%;
@@ -305,7 +305,7 @@
 
     }
 
-    .btn-next {
+    .page-next {
         position: absolute;
         text-align: right;
         right: 10px;
