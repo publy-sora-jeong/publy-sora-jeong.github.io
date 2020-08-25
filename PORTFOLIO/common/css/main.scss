@@ -779,7 +779,7 @@ a:hover {
       width: calc(33.3333% - 50px);
       box-sizing: border-box;
       margin: 25px;
-      margin-top: 60px;
+      margin-top: 70px;
 
       video {
         width: 100%;
@@ -800,14 +800,19 @@ a:hover {
         margin-top: 10px;
         letter-spacing: -1px;
         font-family: 'NanumSquareRound';
-        font-size: 16px;
+        font-size: 22px;
+
+        p {
+          font-weight: bold;
+        }
 
 
         strong {
           display: block;
-          font-weight: bold;
+          font-weight: normal;
           padding-bottom: 5px;
-          font-size: 22px;
+          font-size: 18px;
+          color: #bbb;
         }
       }
 

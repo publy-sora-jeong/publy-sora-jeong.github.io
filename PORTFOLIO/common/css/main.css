@@ -1972,7 +1972,7 @@ a:hover {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 25px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 .portfolio .grid .grid-item video {
@@ -1990,14 +1990,19 @@ a:hover {
   margin-top: 10px;
   letter-spacing: -1px;
   font-family: 'NanumSquareRound';
-  font-size: 16px;
+  font-size: 22px;
+}
+
+.portfolio .grid .grid-item .desc p {
+  font-weight: bold;
 }
 
 .portfolio .grid .grid-item .desc strong {
   display: block;
-  font-weight: bold;
+  font-weight: normal;
   padding-bottom: 5px;
-  font-size: 22px;
+  font-size: 18px;
+  color: #bbb;
 }
 
 .portfolio .grid .grid-item:hover a img {
@@ -2357,6 +2362,10 @@ a:hover {
   background-image: url("../img/src/littlehomelearn/detailpage__top.png");
 }
 
+.sub-top.ssuniv {
+  background-image: url("../img/src/soongsil/detailpage__top.png");
+}
+
 .sub-contents {
   background-color: #fff;
   padding: 150px 0 0 0;
@@ -2370,7 +2379,7 @@ a:hover {
 }
 
 .sub-contents .description h3 {
-  font-size: 60px;
+  font-size: 40px;
   padding-bottom: 10px;
   border-bottom: 5px solid #333;
   margin-bottom: 20px;
@@ -2440,6 +2449,14 @@ a:hover {
   color: #fff;
   position: relative;
   margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .next-project:hover::after {
@@ -2502,14 +2519,17 @@ a:hover {
   background-image: url("../img/src/chaeum/footer_nextproject.png");
 }
 
+.next-project--ssuniv {
+  background-image: url("../img/src/soongsil/footer_nextproject.png");
+}
+
 .next-project .container {
-  width: 1200px;
   margin: 0 auto;
-  padding-top: 120px;
   font-size: 20px;
   color: #fff;
   position: relative;
   z-index: 1;
+  width: 100%;
   letter-spacing: -2px;
 }
 
@@ -2519,7 +2539,7 @@ a:hover {
 
 .next-project .container h3 {
   margin-top: 50px;
-  font-size: 55px;
+  font-size: 45px;
 }
 
 .next-project .container h3 span {
@@ -2535,12 +2555,11 @@ a:hover {
   position: fixed;
   z-index: 1000;
   left: 0;
-  bottom: 0;
+  bottom: -100px;
   right: 0;
   width: 100%;
   height: 100px;
   background: rgba(0, 0, 0, 0.8);
-  display: none;
 }
 
 .fix-layer-control .page-prev span,
