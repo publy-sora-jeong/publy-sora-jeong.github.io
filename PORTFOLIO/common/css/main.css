@@ -2305,65 +2305,340 @@ a:hover {
   width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  -o-object-fit: cover;
-     object-fit: cover;
+  background-size: cover;
   background-position: top center;
 }
 
-.sub-top.nurinori {
+.sub-top--nurinori {
   background-image: url("../img/src/nurinori/detailpage__top.png");
 }
 
-.sub-top.yearplan {
-  background-image: url("../img/src/nurinori_yearplan/detailpage__top.png");
+.sub-top--ssuniv {
+  background-image: url("../img/src/soongsil/detailpage__top.png");
 }
 
-.sub-top.tinpo {
-  background-image: url("../img/src/tinpo/detailpage__top.png");
-}
-
-.sub-top.tbd {
-  background-image: url("../img/src/the_book_digital/detailpage__top.png");
-}
-
-.sub-top.nemo {
-  background-image: url("../img/src/nemo_dive/detailpage__top.png");
-}
-
-.sub-top.little {
+.sub-top--little {
   background-image: url("../img/src/littlehomelearn/detailpage__top.png");
 }
 
-.sub-top.dse {
-  background-image: url("../img/src/DSE/detailpage__top.png");
-}
-
-.sub-top.gaonhightech {
-  background-image: url("../img/src/gaon_hightech/detailpage__top.png");
-}
-
-.sub-top.df {
-  background-image: url("../img/src/design_forte/detailpage__top.png");
-}
-
-.sub-top.kmf {
-  background-image: url("../img/src/kmf/detailpage__top.png");
-}
-
-.sub-top.chlaw {
-  background-image: url("../img/src/chaeum/detailpage__top.png");
-}
-
-.sub-top.asolution {
+.sub-top--asolution {
   background-image: url("../img/src/ASolution/detailpage__top.png");
 }
 
-.sub-top.little {
-  background-image: url("../img/src/littlehomelearn/detailpage__top.png");
+.sub-top--goodus {
+  background-image: url("../img/src/goodus/detailpage__top.png");
 }
 
-.sub-top.ssuniv {
-  background-image: url("../img/src/soongsil/detailpage__top.png");
+.sub-top--gnlife {
+  background-image: url("../img/src/gnlife/detailpage__top.png");
+}
+
+.sub-top--tbd {
+  background-image: url("../img/src/the_book_digital/detailpage__top.png");
+}
+
+.sub-top--dse {
+  background-image: url("../img/src/DSE/detailpage__top.png");
+}
+
+.sub-top--tinpo {
+  background-image: url("../img/src/tinpo/detailpage__top.png");
+}
+
+.sub-top--petratec {
+  background-image: url("../img/src/petratec/detailpage__top.png");
+}
+
+.sub-top--gaonhightech {
+  background-image: url("../img/src/gaon_hightech/detailpage__top.png");
+}
+
+.sub-top--didlab {
+  background-image: url("../img/src/DIDlab/detailpage__top.png");
+}
+
+.sub-top--khtire {
+  background-image: url("../img/src/khtire/detailpage__top.png");
+}
+
+.sub-top--biopharma {
+  background-image: url("../img/src/biopharma/detailpage__top.png");
+}
+
+.sub-top--yearplan {
+  background-image: url("../img/src/nurinori_yearplan/detailpage__top.png");
+}
+
+.sub-top--newedu {
+  background-image: url("../img/src/new_edu/detailpage__top.png");
+}
+
+.sub-top--ezcook {
+  background-image: url("../img/src/ezcook/detailpage__top.png");
+}
+
+.sub-top--qins {
+  background-image: url("../img/src/qins/detailpage__top.png");
+}
+
+.sub-top--tabbyhands {
+  background-image: url("../img/src/tabbyhands/detailpage__top.png");
+}
+
+.sub-top--nemo {
+  background-image: url("../img/src/nemo_dive/detailpage__top.png");
+}
+
+.sub-top--promotionteam {
+  background-image: url("../img/src/promotionteam/detailpage__top.png");
+}
+
+.sub-top--anymedinhealth {
+  background-image: url("../img/src/anymedinhealth/detailpage__top.png");
+}
+
+.sub-top--cellsmith {
+  background-image: url("../img/src/cellsmith/detailpage__top.png");
+}
+
+.sub-top--gsfic {
+  background-image: url("../img/src/gsfic/detailpage__top.png");
+}
+
+.sub-top--df {
+  background-image: url("../img/src/design_forte/detailpage__top.png");
+}
+
+.sub-top--mkg {
+  background-image: url("../img/src/mkg/detailpage__top.png");
+}
+
+.sub-top--chlaw {
+  background-image: url("../img/src/chaeum/detailpage__top.png");
+}
+
+.sub-top--kmf {
+  background-image: url("../img/src/kmf/detailpage__top.png");
+}
+
+.sub-top--anytape {
+  background-image: url("../img/src/anytape/detailpage__top.png");
+}
+
+.sub-top--gaoncons {
+  background-image: url("../img/src/gaoncons/detailpage__top.png");
+}
+
+.sub-top--secretisland {
+  background-image: url("../img/src/secretisland/detailpage__top.png");
+}
+
+.sub-top--luchestar {
+  background-image: url("../img/src/luchestar/detailpage__top.png");
+}
+
+.sub-top--geri {
+  background-image: url("../img/src/geri/detailpage__top.png");
+}
+
+.next-project {
+  display: block;
+  width: 100%;
+  height: 520px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  position: relative;
+  margin-top: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.next-project:hover::after {
+  opacity: 0.2;
+}
+
+.next-project::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.next-project--nurinori {
+  background-image: url("../img/src/nurinori/footer_nextproject.png");
+}
+
+.next-project--ssuniv {
+  background-image: url("../img/src/soongsil/footer_nextproject.png");
+}
+
+.next-project--little {
+  background-image: url("../img/src/littlehomelearn/footer_nextproject.png");
+}
+
+.next-project--asolution {
+  background-image: url("../img/src/ASolution/footer_nextproject.png");
+}
+
+.next-project--goodus {
+  background-image: url("../img/src/goodus/footer_nextproject.png");
+}
+
+.next-project--gnlife {
+  background-image: url("../img/src/gnlife/footer_nextproject.png");
+}
+
+.next-project--tbd {
+  background-image: url("../img/src/the_book_digital/footer_nextproject.png");
+}
+
+.next-project--dse {
+  background-image: url("../img/src/DSE/footer_nextproject.png");
+}
+
+.next-project--tinpo {
+  background-image: url("../img/src/tinpo/footer_nextproject.png");
+}
+
+.next-project--petratec {
+  background-image: url("../img/src/petratec/footer_nextproject.png");
+}
+
+.next-project--gaonhightech {
+  background-image: url("../img/src/gaon_hightech/footer_nextproject.png");
+}
+
+.next-project--didlab {
+  background-image: url("../img/src/DIDlab/footer_nextproject.png");
+}
+
+.next-project--khtire {
+  background-image: url("../img/src/khtire/footer_nextproject.png");
+}
+
+.next-project--biopharma {
+  background-image: url("../img/src/biopharma/footer_nextproject.png");
+}
+
+.next-project--yearplan {
+  background-image: url("../img/src/nurinori_yearplan/footer_nextproject.png");
+}
+
+.next-project--newedu {
+  background-image: url("../img/src/new_edu/footer_nextproject.png");
+}
+
+.next-project--ezcook {
+  background-image: url("../img/src/ezcook/footer_nextproject.png");
+}
+
+.next-project--qins {
+  background-image: url("../img/src/qins/footer_nextproject.png");
+}
+
+.next-project--tabbyhands {
+  background-image: url("../img/src/tabbyhands/footer_nextproject.png");
+}
+
+.next-project--nemo {
+  background-image: url("../img/src/nemo_dive/footer_nextproject.png");
+}
+
+.next-project--promotionteam {
+  background-image: url("../img/src/promotionteam/footer_nextproject.png");
+}
+
+.next-project--anymedinhealth {
+  background-image: url("../img/src/anymedinhealth/footer_nextproject.png");
+}
+
+.next-project--cellsmith {
+  background-image: url("../img/src/cellsmith/footer_nextproject.png");
+}
+
+.next-project--gsfic {
+  background-image: url("../img/src/gsfic/footer_nextproject.png");
+}
+
+.next-project--df {
+  background-image: url("../img/src/design_forte/footer_nextproject.png");
+}
+
+.next-project--mkg {
+  background-image: url("../img/src/mkg/footer_nextproject.png");
+}
+
+.next-project--chlaw {
+  background-image: url("../img/src/chaeum/footer_nextproject.png");
+}
+
+.next-project--kmf {
+  background-image: url("../img/src/kmf/footer_nextproject.png");
+}
+
+.next-project--anytape {
+  background-image: url("../img/src/anytape/footer_nextproject.png");
+}
+
+.next-project--gaoncons {
+  background-image: url("../img/src/gaoncons/footer_nextproject.png");
+}
+
+.next-project--secretisland {
+  background-image: url("../img/src/secretisland/footer_nextproject.png");
+}
+
+.next-project--luchestar {
+  background-image: url("../img/src/luchestar/footer_nextproject.png");
+}
+
+.next-project--geri {
+  background-image: url("../img/src/geri/footer_nextproject.png");
+}
+
+.next-project .container {
+  margin: 0 auto;
+  font-size: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  letter-spacing: -2px;
+}
+
+.next-project .container .heading {
+  letter-spacing: -0.5px;
+}
+
+.next-project .container h3 {
+  margin-top: 50px;
+  font-size: 45px;
+}
+
+.next-project .container h3 span {
+  display: block;
+  font-size: 20px;
+}
+
+.next-project .container h3 p {
+  font-weight: bold;
 }
 
 .sub-contents {
@@ -2437,118 +2712,6 @@ a:hover {
 
 .sub-contents .img-container p {
   margin-top: 30px;
-}
-
-.next-project {
-  display: block;
-  width: 100%;
-  height: 520px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  position: relative;
-  margin-top: 100px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
-}
-
-.next-project:hover::after {
-  opacity: 0.2;
-}
-
-.next-project::after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  opacity: 0.5;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.next-project--nurinoriyear {
-  background-image: url("../img/src/nurinori_yearplan/footer_nextproject.png");
-}
-
-.next-project--tinpo {
-  background-image: url("../img/src/tinpo/footer_nextproject.png");
-}
-
-.next-project--tbd {
-  background-image: url("../img/src/the_book_digital/footer_nextproject.png");
-}
-
-.next-project--nemo {
-  background-image: url("../img/src/nemo_dive/footer_nextproject.png");
-}
-
-.next-project--little {
-  background-image: url("../img/src/littlehomelearn/footer_nextproject.png");
-}
-
-.next-project--dse {
-  background-image: url("../img/src/DSE/footer_nextproject.png");
-}
-
-.next-project--gaonhightech {
-  background-image: url("../img/src/gaon_hightech/footer_nextproject.png");
-}
-
-.next-project--df {
-  background-image: url("../img/src/design_forte/footer_nextproject.png");
-}
-
-.next-project--kmf {
-  background-image: url("../img/src/kmf/footer_nextproject.png");
-}
-
-.next-project--chlaw {
-  background-image: url("../img/src/chaeum/footer_nextproject.png");
-}
-
-.next-project--ssuniv {
-  background-image: url("../img/src/soongsil/footer_nextproject.png");
-}
-
-.next-project .container {
-  margin: 0 auto;
-  font-size: 20px;
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  letter-spacing: -2px;
-}
-
-.next-project .container .heading {
-  letter-spacing: -0.5px;
-}
-
-.next-project .container h3 {
-  margin-top: 50px;
-  font-size: 45px;
-}
-
-.next-project .container h3 span {
-  display: block;
-  font-size: 20px;
-}
-
-.next-project .container h3 p {
-  font-weight: bold;
 }
 
 .fix-layer-control {
