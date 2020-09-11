@@ -2301,7 +2301,7 @@ a:hover {
 }
 
 .sub-top {
-  padding-top: 100vh;
+  padding-top: 960px;
   width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
