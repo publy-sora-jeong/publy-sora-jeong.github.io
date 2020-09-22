@@ -1256,6 +1256,7 @@ html body {
      -moz-user-select: auto;
       -ms-user-select: auto;
           user-select: auto;
+  min-width: 1200px;
 }
 
 html img {
