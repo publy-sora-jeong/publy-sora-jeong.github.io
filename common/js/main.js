@@ -6,11 +6,48 @@ $(function () {
   initDom();
   includeHTML();
 
+  $cursor = $(".cursor");
+  $links = $("a");
 
-  headerfix();
-  $(window).on('scroll', function () {
-    headerfix();
-  })
+  $(window).on("mousemove", mouseAni);
+
+  function mouseAni(e) {
+    $cursor.css(
+      {
+        top: e.pageY - 5 + "px",
+        left: e.pageX - 10 + "px",
+      },
+      100
+    );
+  }
+
+  function mouseHover() {}
+  // headerfix();
+  // $(window).on("scroll", function () {
+  //   headerfix();
+  // });
+
+  // setTimeout(() => {
+  //   $(".typo .change").text("change");
+  // }, 1000);
+  var time = 0;
+  var numbering = "#0";
+  setInterval(() => {
+    time++;
+    $(".typo .change").text("change");
+    $(".typo .numbering").text(numbering + "" + time);
+    console.log(time);
+    if (time == 2) {
+      $(".typo .change").text("testing");
+    }
+    if (time == 3) {
+      $(".typo .change").text("first");
+    }
+    if (time == 4) {
+      $(".typo .change").text("second");
+      time = 0;
+    }
+  }, 800);
 
   //ISOTOPE
   var $grid = $(".grid").isotope({
@@ -32,28 +69,27 @@ $(function () {
   });
 
   // change is-checked class on buttons
-  $('.button-group').each(function (i, buttonGroup) {
+  $(".button-group").each(function (i, buttonGroup) {
     var $buttonGroup = $(buttonGroup);
-    $buttonGroup.on('click', 'button', function () {
-      $buttonGroup.find('.is-checked').removeClass('is-checked');
-      $(this).addClass('is-checked');
+    $buttonGroup.on("click", "button", function () {
+      $buttonGroup.find(".is-checked").removeClass("is-checked");
+      $(this).addClass("is-checked");
     });
   });
 
-
-
-  var p_lastPostion = $('.next-project').offset().top - 520;
-  console.log(p_lastPostion);
+  if ($("html, body").hasClass("sub")) {
+    var p_lastPostion = $(".sub.next-project").offset().top - 520;
+  }
 
   $(window).on("scroll", function () {
     var scroll = $(this).scrollTop();
     if (scroll > 100 && scroll < p_lastPostion) {
-      $('.fix-layer-control').stop().animate({
-        bottom: 0
+      $(".fix-layer-control").stop().animate({
+        bottom: 0,
       });
     } else {
-      $('.fix-layer-control').stop().animate({
-        bottom: -100
+      $(".fix-layer-control").stop().animate({
+        bottom: -100,
       });
     }
 
@@ -64,32 +100,28 @@ $(function () {
     $(this).addClass("on");
   });
 
-
-
   //COLOR CODE
   var colorCodeArr = [];
-  var colorLen = $('.info-color li').length;
-
+  var colorLen = $(".info-color li").length;
 
   for (var j = 0; j < colorLen; j++) {
-    colorCodeArr.push('#' + $('.info-color li').eq(j).attr('class'));
-    $('.info-color li').eq(j).find('.palette').css({
-      'background': colorCodeArr[j]
+    colorCodeArr.push("#" + $(".info-color li").eq(j).attr("class"));
+    $(".info-color li").eq(j).find(".palette").css({
+      background: colorCodeArr[j],
     });
-    $('.info-color li').eq(j).find('.color-code').css({
-      'color': colorCodeArr[j]
-    }).text(colorCodeArr[j]);
-
+    $(".info-color li")
+      .eq(j)
+      .find(".color-code")
+      .css({
+        color: colorCodeArr[j],
+      })
+      .text(colorCodeArr[j]);
   }
 
   // $('html, body').on('click', function () {
   //   $('.fix-layer-control').fadeIn();
   // });
-
-
-
 });
-
 
 function initDom() {
   $section = $("section");
@@ -118,15 +150,15 @@ function activeBtn(scroll) {
   }
 }
 
-function headerfix() {
-  if ($(window).scrollTop() > 10) {
-    $('#menu').addClass('fixed');
-  } else {
-    $('#menu').removeClass('fixed');
-  }
-}
+// function headerfix() {
+//   if ($(window).scrollTop() > 10) {
+//     $("#menu").addClass("fixed");
+//   } else {
+//     $("#menu").removeClass("fixed");
+//   }
+// }
 
-//include header menu 
+//include header menu
 function includeHTML() {
   var z, i, elmnt, file, xhttp;
   /* Loop through a collection of all HTML elements: */
@@ -150,7 +182,7 @@ function includeHTML() {
           elmnt.removeAttribute("include-html");
           includeHTML();
         }
-      }
+      };
       xhttp.open("GET", file, true);
       xhttp.send();
       /* Exit the function: */
