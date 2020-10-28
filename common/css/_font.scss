@@ -1,43 +1,13 @@
-@font-face {
-    font-family: "silgothic";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/silgothic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'KyoboHand';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/KyoboHand.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Vidaloka&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
-
-@font-face {
-    font-family: '777Balsamtint';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_nine_@1.1/777Balsamtint.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
-.nanumgothic * {
-    font-family: 'Nanum Gothic', sans-serif;
-}
-
 @import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * {
-    font-family: 'Noto Sans KR', sans-serif;
+	font-family: "Noto Sans KR", sans-serif;
 }
 
 @font-face {
-    font-family: 'NanumSquareRound';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+	font-family: "NanumSquareRound";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
