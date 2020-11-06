@@ -19,26 +19,26 @@ $(function () {
   initDom();
   includeHTML();
 
-  //   var time = 0;
-  //   var numbering = "#0";
-  //   setInterval(() => {
-  //     time++;
-  //     $(".numbering").text("#I AM");
-  //     $(".typo .change").text("CHALLENGER");
-  //     $(".subtit").html("I am trying to overcome fear of trying new things. ");
+  // var time = 0;
+  // var numbering = "#0";
+  // setInterval(() => {
+  //   time++;
+  //   $(".numbering").text("#I AM");
+  //   $(".typo .change").text("CHALLENGER");
+  //   $(".subtit").html("I am trying to overcome fear of trying new things. ");
 
-  //     if (time == 2) {
-  //       $(".numbering").text("#I AM");
-  //       $(".typo .change").text("ADJUSTED");
-  //       $(".subtit").html(" I'm trying to be an assertive well-adjusted person.");
-  //     }
-  //     if (time == 3) {
-  //       $(".numbering").text("#I HAVE ");
-  //       $(".typo .change").text("ACTING POWER");
-  //       $(".subtit").html("I put money where my mouths are.");
-  //       time = 0;
-  //     }
-  //   }, 2000);
+  //   if (time == 2) {
+  //     $(".numbering").text("#I AM");
+  //     $(".typo .change").text("ADJUSTED");
+  //     $(".subtit").html(" I'm trying to be an assertive well-adjusted person.");
+  //   }
+  //   if (time == 3) {
+  //     $(".numbering").text("#I HAVE ");
+  //     $(".typo .change").text("ACTING POWER");
+  //     $(".subtit").html("I put money where my mouths are.");
+  //     time = 0;
+  //   }
+  // }, 2000);
 
   //ISOTOPE
   var $grid = $(".grid").isotope({

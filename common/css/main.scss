@@ -52,6 +52,9 @@ html {
 
 //////////////MENU
 
+a {
+  cursor: default;
+}
 .menu-btn {
   position: fixed;
   z-index: 1500;
@@ -147,14 +150,14 @@ html {
 }
 
 header {
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: 0 10px;
   width: 100%;
   text-align: right;
   height: 60px;
-  z-index: 1500;
+  z-index: 1;
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
 
@@ -168,6 +171,10 @@ header {
     letter-spacing: -1px;
     font-family: "Rubik", sans-serif;
     padding-right: 10px;
+
+    a {
+      display: block;
+    }
     &::after {
       content: "";
       width: 7px;
@@ -644,7 +651,7 @@ header {
       width: 50%;
       color: #999;
       font-family: "777Balsamtint";
-      font-size: 18px;
+      font-size: 13px;
       text-align: left;
 
       span {
@@ -964,6 +971,7 @@ body {
 /* Cursor Styling */
 .cursor {
   position: fixed;
+  z-index: 1;
   width: 20px;
   height: 20px;
   background: rgba($color: #ac75f0, $alpha: 0.4);
