@@ -52,9 +52,6 @@ html {
 
 //////////////MENU
 
-a {
-  cursor: default;
-}
 .menu-btn {
   position: fixed;
   z-index: 1500;
@@ -150,14 +147,13 @@ a {
 }
 
 header {
-  position: absolute;
+  //position: absolute;
   top: 0;
   right: 0;
   padding: 0 10px;
   width: 100%;
   text-align: right;
   height: 60px;
-  z-index: 1;
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
 
@@ -205,8 +201,6 @@ header {
 
     a {
       font-weight: bold;
-      position: relative;
-      z-index: 2;
       font-family: "NanumSquareRound";
       //text-transform: uppercase;
       font-size: 16px;
@@ -214,6 +208,10 @@ header {
       letter-spacing: 0;
       line-height: 60px;
       color: #333 !important;
+
+      &:hover {
+        color: red !important;
+      }
     }
   }
 }
@@ -484,7 +482,7 @@ header {
   .section-container {
     margin: auto;
     position: relative;
-    z-index: 1;
+    //z-index: 1;
     padding: 0 2%;
   }
 
@@ -930,7 +928,7 @@ header {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  ///cursor: none;
+  //cursor: none;
 }
 body {
   background-color: rgb(24, 23, 23);
@@ -958,49 +956,4 @@ body {
   height: 400px;
   box-shadow: 3px 11px 27px 0px rgba(0, 0, 0, 0.75);
   transition: all 0.5s ease-in-out;
-}
-
-@keyframes mouseAnimation {
-  0% {
-    transform: scale(0.1);
-  }
-  100% {
-    transform: scale(3);
-  }
-}
-/* Cursor Styling */
-.cursor {
-  position: fixed;
-  z-index: 1;
-  width: 20px;
-  height: 20px;
-  background: rgba($color: #ac75f0, $alpha: 0.4);
-  border-radius: 50%;
-  pointer-events: auto;
-
-  .shadow {
-    width: 20px;
-    height: 20px;
-    background: rgba($color: #ac75f0, $alpha: 0.2);
-    border-radius: 50%;
-    // margin-top: -15px;
-    // margin-left: -15px;
-    z-index: -1;
-    animation: mouseAnimation alternate infinite 1s;
-  }
-  //animation: mouseAnimation 1s alternate infinite;
-
-  &.hover {
-    &::before {
-      content: "";
-      width: 20px;
-      height: 20px;
-      transform: scale(3);
-      background: rgba($color: #ff9d9d, $alpha: 0.2);
-      z-index: 9999;
-      position: absolute;
-    }
-  }
-}
-.cursor-scale {
 }

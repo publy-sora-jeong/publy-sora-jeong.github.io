@@ -1256,10 +1256,6 @@ html img {
   overflow: hidden;
 }
 
-a {
-  cursor: default;
-}
-
 .menu-btn {
   position: fixed;
   z-index: 1500;
@@ -1359,14 +1355,12 @@ a {
 }
 
 header {
-  position: absolute;
   top: 0;
   right: 0;
   padding: 0 10px;
   width: 100%;
   text-align: right;
   height: 60px;
-  z-index: 1;
   background: #fff;
   border-bottom: 1px solid #e4e4e4;
 }
@@ -1420,14 +1414,16 @@ header li {
 
 header li a {
   font-weight: bold;
-  position: relative;
-  z-index: 2;
   font-family: "NanumSquareRound";
   font-size: 16px;
   padding: 0 20px;
   letter-spacing: 0;
   line-height: 60px;
   color: #333 !important;
+}
+
+header li a:hover {
+  color: red !important;
 }
 
 .visual {
@@ -1724,7 +1720,6 @@ header li a {
 .portfolio .section-container {
   margin: auto;
   position: relative;
-  z-index: 1;
   padding: 0 2%;
 }
 
@@ -2530,11 +2525,6 @@ header li a {
   margin: 50px auto 0 auto;
 }
 
-.sub-contents .img-container.htHidden {
-  max-height: 100vh;
-  overflow: auto;
-}
-
 .sub-contents .img-container .imgbox {
   overflow: hidden;
   border-radius: 20px;
@@ -2763,59 +2753,5 @@ body {
           box-shadow: 3px 11px 27px 0px rgba(0, 0, 0, 0.75);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-}
-
-@-webkit-keyframes mouseAnimation {
-  0% {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-  }
-  100% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-  }
-}
-
-@keyframes mouseAnimation {
-  0% {
-    -webkit-transform: scale(0.1);
-            transform: scale(0.1);
-  }
-  100% {
-    -webkit-transform: scale(3);
-            transform: scale(3);
-  }
-}
-
-/* Cursor Styling */
-.cursor {
-  position: fixed;
-  z-index: 1;
-  width: 20px;
-  height: 20px;
-  background: rgba(172, 117, 240, 0.4);
-  border-radius: 50%;
-  pointer-events: auto;
-}
-
-.cursor .shadow {
-  width: 20px;
-  height: 20px;
-  background: rgba(172, 117, 240, 0.2);
-  border-radius: 50%;
-  z-index: -1;
-  -webkit-animation: mouseAnimation alternate infinite 1s;
-          animation: mouseAnimation alternate infinite 1s;
-}
-
-.cursor.hover::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  -webkit-transform: scale(3);
-          transform: scale(3);
-  background: rgba(255, 157, 157, 0.2);
-  z-index: 9999;
-  position: absolute;
 }
 /*# sourceMappingURL=main.css.map */

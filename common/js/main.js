@@ -1,19 +1,6 @@
 var posArray;
 var section_len;
 var $section;
-var $cursor;
-
-$(document).on("mousemove", function (e) {
-  $cursor = $(".cursor");
-  $cursor_shadow = $(".cursor .shadow");
-  mouseX = e.pageX;
-  mouseY = e.pageY - $(window).scrollTop();
-
-  $cursor.css({
-    top: mouseY - 10 + "px",
-    left: mouseX - 5 + "px",
-  });
-});
 
 $(function () {
   initDom();
