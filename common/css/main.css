@@ -1432,7 +1432,7 @@ header li a:hover {
   border-bottom: 1px solid #e4e4e4;
   background-size: cover;
   background-repeat: repeat-x;
-  height: 80vh;
+  height: 300px;
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
@@ -1443,6 +1443,7 @@ header li a:hover {
   overflow: hidden;
   position: relative;
   font-weight: 300;
+  display: none;
 }
 
 @-webkit-keyframes fliker {
