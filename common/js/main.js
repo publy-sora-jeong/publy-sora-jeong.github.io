@@ -61,8 +61,9 @@ $(function () {
 
 	$(window).on("scroll", function () {
 		var scroll = $(this).scrollTop();
-		if (scroll > 100 && scroll < p_lastPostion) {
-			$(".fix-layer-control").stop().animate({
+		this.console.log(scroll);
+		if (scroll > 100 || scroll < p_lastPostion) {
+			$(".fix-layer-control").stop(true, true).animate({
 				bottom: 0,
 			});
 		} else {

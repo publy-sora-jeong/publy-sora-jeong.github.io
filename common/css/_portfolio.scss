@@ -138,6 +138,10 @@
   &--geri {
     background-image: url("../img/src/geri/detailpage__top.png");
   }
+
+  &--riderlog {
+    background-image: url("../img/src/riderlog/star_thumb.png");
+  }
 }
 
 .next-project {
@@ -406,11 +410,17 @@
 
   .img-container {
     margin: 50px auto 0 auto;
+    text-align: center;
 
-    // &.htHidden {
-    //   max-height: 100vh;
-    //   overflow: auto;
-    // }
+    p {
+      margin: 10px auto;
+
+      img {
+        border-radius: 10px;
+        overflow: hidden;
+      }
+    }
+
     .imgbox {
       overflow: hidden;
       border-radius: 20px;
@@ -421,6 +431,7 @@
         max-width: 100%;
       }
     }
+
     &.img-overlay {
       width: 90%;
       margin-left: auto;
@@ -437,34 +448,6 @@
         top: 5%;
         width: 45%;
         box-shadow: -5px 5px 0 rgba($color: #000000, $alpha: 0.07);
-      }
-    }
-
-    &.img-1type {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    &.img-2type {
-      display: flex;
-      justify-content: space-between;
-      p {
-        width: 48%;
-      }
-    }
-
-    &.img-3type {
-      display: flex;
-      justify-content: space-between;
-      p {
-        width: 32%;
-      }
-    }
-    &.img-4type {
-      display: flex;
-      justify-content: space-between;
-      p {
-        width: 24%;
       }
     }
   }
