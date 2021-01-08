@@ -1,547 +1,546 @@
 .sub-top {
-  //padding-top: 960px;
-  width: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  ///object-fit: cover;
-  background-size: cover;
-  background-position: top center;
-  height: 760px;
-  overflow: hidden;
-  margin-top: 60px;
+	//padding-top: 960px;
+	width: 100%;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	///object-fit: cover;
+	background-size: cover;
+	background-position: top center;
+	height: 760px;
+	overflow: hidden;
+	margin-top: 60px;
 
-  &--nurinori {
-    background-image: url("../img/src/nurinori/detailpage__top.png");
-  }
+	&--nurinori {
+		background-image: url("../img/src/_common_imgs/nurinori_detail_top.png");
+	}
 
-  &--ssuniv {
-    background-image: url("../img/src/soongsil/detailpage__top.png");
-  }
+	&--ssuniv {
+		background-image: url("../img/src/_common_imgs/soongsil_detail_top.png");
+	}
 
-  &--little {
-    background-image: url("../img/src/littlehomelearn/detailpage__top.png");
-  }
+	&--little {
+		background-image: url("../img/src/_common_imgs/littlehomelearn_detail_top.png");
+	}
 
-  &--asolution {
-    background-image: url("../img/src/ASolution/detailpage__top.png");
-  }
+	&--asolution {
+		background-image: url("../img/src/_common_imgs/asolution_detail_top.png");
+	}
 
-  &--goodus {
-    background-image: url("../img/src/goodus/detailpage__top.png");
-  }
+	&--goodus {
+		background-image: url("../img/src/_common_imgs/goodus_detail_top.png");
+	}
 
-  &--gnlife {
-    background-image: url("../img/src/gnlife/detailpage__top.png");
-  }
+	&--gnlife {
+		background-image: url("../img/src/_common_imgs/gnlife_detail_top.png");
+	}
 
-  &--tbd {
-    background-image: url("../img/src/the_book_digital/detailpage__top.png");
-  }
+	&--tbd {
+		background-image: url("../img/src/_common_imgs/tbd_detail_top.png");
+	}
 
-  &--dse {
-    background-image: url("../img/src/DSE/detailpage__top.png");
-  }
+	&--dse {
+		background-image: url("../img/src/_common_imgs/dse_detail_top.png");
+	}
 
-  &--tinpo {
-    background-image: url("../img/src/tinpo/detailpage__top.png");
-  }
+	&--tinpo {
+		background-image: url("../img/src/_common_imgs/tinpo_detail_top.png");
+	}
 
-  &--petratec {
-    background-image: url("../img/src/petratec/detailpage__top.png");
-  }
+	&--petratec {
+		background-image: url("../img/src/_common_imgs/petratec_detail_top.png");
+	}
 
-  &--gaonhightech {
-    background-image: url("../img/src/gaon_hightech/detailpage__top.png");
-  }
+	&--gaonhightech {
+		background-image: url("../img/src/_common_imgs/gaonhightech_detail_top.png");
+	}
 
-  &--didlab {
-    background-image: url("../img/src/DIDlab/detailpage__top.png");
-  }
+	&--didlab {
+		background-image: url("../img/src/_common_imgs/did_detail_top.png");
+	}
 
-  &--khtire {
-    background-image: url("../img/src/khtire/detailpage__top.png");
-  }
+	&--khtire {
+		background-image: url("../img/src/_common_imgs/khtire_detail_top.png");
+	}
 
-  &--biopharma {
-    background-image: url("../img/src/biopharma/detailpage__top.png");
-  }
+	&--biopharma {
+		background-image: url("../img/src/_common_imgs/biopharma_detail_top.png");
+	}
 
-  &--yearplan {
-    background-image: url("../img/src/nurinori_yearplan/detailpage__top.png");
-  }
+	&--yearplan {
+		background-image: url("../img/src/_common_imgs/yearplan_detail_top.png");
+	}
 
-  &--newedu {
-    background-image: url("../img/src/new_edu/detailpage__top.png");
-  }
+	&--newedu {
+		background-image: url("../img/src/_common_imgs/newedu_detail_top.png");
+	}
 
-  &--ezcook {
-    background-image: url("../img/src/ezcook/detailpage__top.png");
-  }
+	&--ezcook {
+		background-image: url("../img/src/_common_imgs/ezcook_detail_top.png");
+	}
 
-  &--qins {
-    background-image: url("../img/src/qins/detailpage__top.png");
-  }
+	&--qins {
+		background-image: url("../img/src/_common_imgs/qins_detail_top.png");
+	}
 
-  &--tabbyhands {
-    background-image: url("../img/src/tabbyhands/detailpage__top.png");
-  }
+	&--tabbyhands {
+		background-image: url("../img/src/_common_imgs/tabbyhands_detail_top.png");
+	}
 
-  &--nemo {
-    background-image: url("../img/src/nemo_dive/detailpage__top.png");
-  }
+	&--nemo {
+		background-image: url("../img/src/_common_imgs/nemodive_detail_top.png");
+	}
 
-  &--promotionteam {
-    background-image: url("../img/src/promotionteam/detailpage__top.png");
-  }
+	&--promotionteam {
+		background-image: url("../img/src/_common_imgs/promotionteam_detail_top.png");
+	}
 
-  &--anymedinhealth {
-    background-image: url("../img/src/anymedinhealth/detailpage__top.png");
-  }
+	&--anymedinhealth {
+		background-image: url("../img/src/_common_imgs/anymedinhealth_detail_top.png");
+	}
 
-  &--cellsmith {
-    background-image: url("../img/src/cellsmith/detailpage__top.png");
-  }
+	&--cellsmith {
+		background-image: url("../img/src/_common_imgs/cellsmith_detail_top.png");
+	}
 
-  &--gsfic {
-    background-image: url("../img/src/gsfic/detailpage__top.png");
-  }
+	&--gsfic {
+		background-image: url("../img/src/_common_imgs/gsfic_detail_top.png");
+	}
 
-  &--df {
-    background-image: url("../img/src/design_forte/detailpage__top.png");
-  }
+	&--df {
+		background-image: url("../img/src/_common_imgs/design_forte_detail_top.png");
+	}
 
-  &--mkg {
-    background-image: url("../img/src/mkg/detailpage__top.png");
-  }
+	&--mkg {
+		background-image: url("../img/src/_common_imgs/mkg_detail_top.png");
+	}
 
-  &--chlaw {
-    background-image: url("../img/src/chaeum/detailpage__top.png");
-  }
+	&--chlaw {
+		background-image: url("../img/src/_common_imgs/chaum_detail_top.png");
+	}
 
-  &--kmf {
-    background-image: url("../img/src/kmf/detailpage__top.png");
-  }
+	&--kmf {
+		background-image: url("../img/src/_common_imgs/kmf_detail_top.png");
+	}
 
-  &--anytape {
-    background-image: url("../img/src/anytape/detailpage__top.png");
-  }
+	&--anytape {
+		background-image: url("../img/src/_common_imgs/anytape_detail_top.png");
+	}
 
-  &--gaoncons {
-    background-image: url("../img/src/gaoncons/detailpage__top.png");
-  }
+	&--gaoncons {
+		background-image: url("../img/src/_common_imgs/gaoncons_detail_top.png");
+	}
 
-  &--secretisland {
-    background-image: url("../img/src/secretisland/detailpage__top.png");
-  }
+	&--secretisland {
+		background-image: url("../img/src/_common_imgs/secretisland_detail_top.png");
+	}
 
-  &--luchestar {
-    background-image: url("../img/src/luchestar/detailpage__top.png");
-  }
+	&--luchestar {
+		background-image: url("../img/src/_common_imgs/luchestar_detail_top.png");
+	}
 
-  &--geri {
-    background-image: url("../img/src/geri/detailpage__top.png");
-  }
+	&--geri {
+		background-image: url("../img/src/_common_imgs/geri_detail_top.png");
+	}
 
-  &--riderlog {
-    background-image: url("../img/src/riderlog/star_thumb.png");
-  }
+	&--riderlog {
+		background-image: url("../img/src/_common_imgs/riderlog_detail_top.png");
+	}
 
-  &--lgdwebzine {
-    background-image: url("../img/src/lgdwebzine/detailpage__top.png");
-  }
+	&--lgdwebzine {
+		background-image: url("../img/src/_common_imgs/lgdwebzine_detail_top.png");
+	}
 
-  &--jcr {
-    background-image: url("../img/src/jcrpackaging/detailpage__top.png");
-  }
+	&--jcr {
+		background-image: url("../img/src/_common_imgs/jcrpack_detail_top.png");
+	}
 }
 
 .next-project {
-  display: block;
-  width: 100%;
-  height: 520px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  position: relative;
-  margin-top: 100px;
-  display: flex;
-  align-items: center;
-  padding-left: 5%;
-  padding-right: 5%;
+	display: block;
+	width: 100%;
+	height: 520px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	position: relative;
+	margin-top: 100px;
+	display: flex;
+	align-items: center;
+	padding-left: 5%;
+	padding-right: 5%;
 
-  &:hover {
-    &::after {
-      opacity: 0.2;
-    }
-  }
+	&:hover {
+		&::after {
+			opacity: 0.2;
+		}
+	}
 
-  &::after {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #000;
-    opacity: 0.5;
-    transition: 0.5s;
-  }
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000;
+		opacity: 0.5;
+		transition: 0.5s;
+	}
 
-  &--nurinori {
-    background-image: url("../img/src/nurinori/footer_nextproject.png");
-  }
+	&--nurinori {
+		background-image: url("../img/src/_common_imgs/nurinori_next.png");
+	}
 
-  &--ssuniv {
-    background-image: url("../img/src/soongsil/footer_nextproject.png");
-  }
+	&--ssuniv {
+		background-image: url("../img/src/_common_imgs/soongsil_next.png");
+	}
 
-  &--little {
-    background-image: url("../img/src/littlehomelearn/footer_nextproject.png");
-  }
+	&--little {
+		background-image: url("../img/src/_common_imgs/littlehomelearn_next.png");
+	}
 
-  &--asolution {
-    background-image: url("../img/src/ASolution/footer_nextproject.png");
-  }
+	&--asolution {
+		background-image: url("../img/src/_common_imgs/asolution_next.png");
+	}
 
-  &--goodus {
-    background-image: url("../img/src/goodus/footer_nextproject.png");
-  }
+	&--goodus {
+		background-image: url("../img/src/_common_imgs/goodus_next.png");
+	}
 
-  &--gnlife {
-    background-image: url("../img/src/gnlife/footer_nextproject.png");
-  }
+	&--gnlife {
+		background-image: url("../img/src/_common_imgs/gnlife_next.png");
+	}
 
-  &--tbd {
-    background-image: url("../img/src/the_book_digital/footer_nextproject.png");
-  }
+	&--tbd {
+		background-image: url("../img/src/_common_imgs/tbd_next.png");
+	}
 
-  &--dse {
-    background-image: url("../img/src/DSE/footer_nextproject.png");
-  }
+	&--dse {
+		background-image: url("../img/src/_common_imgs/dse_next.png");
+	}
 
-  &--tinpo {
-    background-image: url("../img/src/tinpo/footer_nextproject.png");
-  }
+	&--tinpo {
+		background-image: url("../img/src/_common_imgs/tinpo_next.png");
+	}
 
-  &--petratec {
-    background-image: url("../img/src/petratec/footer_nextproject.png");
-  }
+	&--petratec {
+		background-image: url("../img/src/_common_imgs/petratec_next.png");
+	}
 
-  &--gaonhightech {
-    background-image: url("../img/src/gaon_hightech/footer_nextproject.png");
-  }
+	&--gaonhightech {
+		background-image: url("../img/src/_common_imgs/gaonhightech_next.png");
+	}
 
-  &--didlab {
-    background-image: url("../img/src/DIDlab/footer_nextproject.png");
-  }
+	&--didlab {
+		background-image: url("../img/src/_common_imgs/did_next.png");
+	}
 
-  &--khtire {
-    background-image: url("../img/src/khtire/footer_nextproject.png");
-  }
+	&--khtire {
+		background-image: url("../img/src/_common_imgs/khtire_next.png");
+	}
 
-  &--biopharma {
-    background-image: url("../img/src/biopharma/footer_nextproject.png");
-  }
+	&--biopharma {
+		background-image: url("../img/src/_common_imgs/biopharma_next.png");
+	}
 
-  &--yearplan {
-    background-image: url("../img/src/nurinori_yearplan/footer_nextproject.png");
-  }
+	&--yearplan {
+		background-image: url("../img/src/_common_imgs/yearplan_next.png");
+	}
 
-  &--newedu {
-    background-image: url("../img/src/new_edu/footer_nextproject.png");
-  }
+	&--newedu {
+		background-image: url("../img/src/_common_imgs/newedu_next.png");
+	}
 
-  &--ezcook {
-    background-image: url("../img/src/ezcook/footer_nextproject.png");
-  }
+	&--ezcook {
+		background-image: url("../img/src/_common_imgs/ezcook_next.png");
+	}
 
-  &--qins {
-    background-image: url("../img/src/qins/footer_nextproject.png");
-  }
+	&--qins {
+		background-image: url("../img/src/_common_imgs/qins_next.png");
+	}
 
-  &--tabbyhands {
-    background-image: url("../img/src/tabbyhands/footer_nextproject.png");
-  }
+	&--tabbyhands {
+		background-image: url("../img/src/_common_imgs/tabbyhands_next.png");
+	}
 
-  &--nemo {
-    background-image: url("../img/src/nemo_dive/footer_nextproject.png");
-  }
+	&--nemo {
+		background-image: url("../img/src/_common_imgs/nemodive_next.png");
+	}
 
-  &--promotionteam {
-    background-image: url("../img/src/promotionteam/footer_nextproject.png");
-  }
+	&--promotionteam {
+		background-image: url("../img/src/_common_imgs/promotionteam_next.png");
+	}
 
-  &--anymedinhealth {
-    background-image: url("../img/src/anymedinhealth/footer_nextproject.png");
-  }
+	&--anymedinhealth {
+		background-image: url("../img/src/_common_imgs/anymedinhealth_next.png");
+	}
 
-  &--cellsmith {
-    background-image: url("../img/src/cellsmith/footer_nextproject.png");
-  }
+	&--cellsmith {
+		background-image: url("../img/src/_common_imgs/cellsmith_next.png");
+	}
 
-  &--gsfic {
-    background-image: url("../img/src/gsfic/footer_nextproject.png");
-  }
+	&--gsfic {
+		background-image: url("../img/src/_common_imgs/gsfic_next.png");
+	}
 
-  &--df {
-    background-image: url("../img/src/design_forte/footer_nextproject.png");
-  }
+	&--df {
+		background-image: url("../img/src/_common_imgs/design_forte_next.png");
+	}
 
-  &--mkg {
-    background-image: url("../img/src/mkg/footer_nextproject.png");
-  }
+	&--mkg {
+		background-image: url("../img/src/_common_imgs/mkg_next.png");
+	}
 
-  &--chlaw {
-    background-image: url("../img/src/chaeum/footer_nextproject.png");
-  }
+	&--chlaw {
+		background-image: url("../img/src/_common_imgs/chaum_next.png");
+	}
 
-  &--kmf {
-    background-image: url("../img/src/kmf/footer_nextproject.png");
-  }
+	&--kmf {
+		background-image: url("../img/src/_common_imgs/kmf_next.png");
+	}
 
-  &--anytape {
-    background-image: url("../img/src/anytape/footer_nextproject.png");
-  }
+	&--anytape {
+		background-image: url("../img/src/_common_imgs/anytape_next.png");
+	}
 
-  &--gaoncons {
-    background-image: url("../img/src/gaoncons/footer_nextproject.png");
-  }
+	&--gaoncons {
+		background-image: url("../img/src/_common_imgs/gaoncons_next.png");
+	}
 
-  &--secretisland {
-    background-image: url("../img/src/secretisland/footer_nextproject.png");
-  }
+	&--secretisland {
+		background-image: url("../img/src/_common_imgs/secretisland_next.png");
+	}
 
-  &--luchestar {
-    background-image: url("../img/src/luchestar/footer_nextproject.png");
-  }
+	&--luchestar {
+		background-image: url("../img/src/_common_imgs/luchestar_next.png");
+	}
 
-  &--geri {
-    background-image: url("../img/src/geri/footer_nextproject.png");
-  }
+	&--geri {
+		background-image: url("../img/src/_common_imgs/geri_next.png");
+	}
 
-  &--jcr {
-    background-image: url("../img/src/lgdwebzine/footer_nextproject.png");
-  }
+	&--jcr {
+		background-image: url("../img/src/_common_imgs/jcrpack_next.png");
+	}
 
-  &--lgdwebzine {
-    background-image: url("../img/src/jcrpackaging/footer_nextproject.png");
-  }
+	&--lgdwebzine {
+		background-image: url("../img/src/_common_imgs/lgdwebzine_next.png");
+	}
 
+	.container {
+		margin: 0 auto;
+		font-size: 20px;
+		color: #fff;
+		position: relative;
+		z-index: 1;
+		width: 100%;
+		letter-spacing: -2px;
 
-  .container {
-    margin: 0 auto;
-    font-size: 20px;
-    color: #fff;
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    letter-spacing: -2px;
+		.heading {
+			letter-spacing: -0.5px;
+		}
 
-    .heading {
-      letter-spacing: -0.5px;
-    }
+		h3 {
+			margin-top: 50px;
+			font-size: 45px;
 
-    h3 {
-      margin-top: 50px;
-      font-size: 45px;
+			span {
+				display: block;
+				font-size: 20px;
+			}
 
-      span {
-        display: block;
-        font-size: 20px;
-      }
-
-      p {
-        font-weight: bold;
-      }
-    }
-  }
+			p {
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 .sub-contents {
-  background-color: #fff;
-  padding: 150px 0 0 0;
+	background-color: #fff;
+	padding: 150px 0 0 0;
 
-  font-family: "NanumSquareRound";
+	font-family: "NanumSquareRound";
 
-  .description {
-    width: 1200px;
-    margin: 0 auto;
-    font-size: 18px;
+	.description {
+		width: 1200px;
+		margin: 0 auto;
+		font-size: 18px;
 
-    h3 {
-      font-size: 40px;
-      padding-bottom: 10px;
-      border-bottom: 5px solid #333;
-      margin-bottom: 20px;
-    }
+		h3 {
+			font-size: 40px;
+			padding-bottom: 10px;
+			border-bottom: 5px solid #333;
+			margin-bottom: 20px;
+		}
 
-    dl {
-      display: flex;
-      flex-wrap: wrap;
+		dl {
+			display: flex;
+			flex-wrap: wrap;
 
-      dt,
-      dd {
-        margin-top: 30px;
-        font-size: 16px;
+			dt,
+			dd {
+				margin-top: 30px;
+				font-size: 16px;
 
-        &.overview {
-          width: 100%;
-        }
-      }
+				&.overview {
+					width: 100%;
+				}
+			}
 
-      dt {
-        width: 10%;
-        font-weight: bold;
-        text-transform: uppercase;
-      }
+			dt {
+				width: 10%;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
 
-      dd {
-        width: 40%;
-        color: #999;
+			dd {
+				width: 40%;
+				color: #999;
 
-        &.overview {
-          margin-top: 10px;
-          width: 50%;
-          text-align: justify;
-        }
+				&.overview {
+					margin-top: 10px;
+					width: 50%;
+					text-align: justify;
+				}
 
-        a {
-          color: #999;
-          position: relative;
+				a {
+					color: #999;
+					position: relative;
 
-          &:hover {
-            color: #ff4058;
-          }
+					&:hover {
+						color: #ff4058;
+					}
 
-          // &:hover {
-          //     color: #fff;
-          //     background: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
-          //     padding: 6px 10px;
-          //     ;
-          // }
-        }
-      }
-    }
-  }
+					// &:hover {
+					//     color: #fff;
+					//     background: linear-gradient(to right, #86c7fb 0%, #42add3 31%, #9353d4d7 100%);
+					//     padding: 6px 10px;
+					//     ;
+					// }
+				}
+			}
+		}
+	}
 
-  .img-container {
-    margin: 50px auto 0 auto;
-    text-align: center;
+	.img-container {
+		margin: 50px auto 0 auto;
+		text-align: center;
 
-    p {
-      margin: 10px auto;
+		p {
+			margin: 10px auto;
 
-      img {
-        border-radius: 10px;
-        overflow: hidden;
-      }
-    }
+			img {
+				border-radius: 10px;
+				overflow: hidden;
+			}
+		}
 
-    .imgbox {
-      overflow: hidden;
-      border-radius: 20px;
-      border: 1px solid #ddd;
-      box-shadow: 5px 5px 0 rgba($color: #000000, $alpha: 0.07);
+		.imgbox {
+			overflow: hidden;
+			border-radius: 20px;
+			border: 1px solid #ddd;
+			box-shadow: 5px 5px 0 rgba($color: #000000, $alpha: 0.07);
 
-      img {
-        max-width: 100%;
-      }
-    }
+			img {
+				max-width: 100%;
+			}
+		}
 
-    &.img-overlay {
-      width: 90%;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
+		&.img-overlay {
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			position: relative;
 
-      .imgbox-under {
-        width: 80%;
-      }
+			.imgbox-under {
+				width: 80%;
+			}
 
-      .imgbox-overlay {
-        position: absolute;
-        right: 0;
-        top: 5%;
-        width: 45%;
-        box-shadow: -5px 5px 0 rgba($color: #000000, $alpha: 0.07);
-      }
-    }
-  }
+			.imgbox-overlay {
+				position: absolute;
+				right: 0;
+				top: 5%;
+				width: 45%;
+				box-shadow: -5px 5px 0 rgba($color: #000000, $alpha: 0.07);
+			}
+		}
+	}
 }
 
 .fix-layer-control {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  bottom: -100px;
-  right: 0;
-  width: 100%;
-  height: 100px;
-  background: rgba($color: #000000, $alpha: 0.8);
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	bottom: -100px;
+	right: 0;
+	width: 100%;
+	height: 100px;
+	background: rgba($color: #000000, $alpha: 0.8);
 
-  .page-prev,
-  .page-next {
-    span {
-      font-size: 13px;
-      display: block;
-      padding: 0 50px;
-    }
+	.page-prev,
+	.page-next {
+		span {
+			font-size: 13px;
+			display: block;
+			padding: 0 50px;
+		}
 
-    p {
-      padding: 0 50px;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 1.2;
-      margin-top: 2px;
-    }
-  }
+		p {
+			padding: 0 50px;
+			font-size: 22px;
+			font-weight: bold;
+			line-height: 1.2;
+			margin-top: 2px;
+		}
+	}
 
-  .page-prev {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translate(0, -50%);
-    color: #fff;
-    font-size: 30px;
-    font-family: "NanumSquareRound";
-    font-weight: bold;
-    text-transform: uppercase;
+	.page-prev {
+		position: absolute;
+		left: 10px;
+		top: 50%;
+		transform: translate(0, -50%);
+		color: #fff;
+		font-size: 30px;
+		font-family: "NanumSquareRound";
+		font-weight: bold;
+		text-transform: uppercase;
 
-    &::before {
-      content: "👈";
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 10px;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-  }
+		&::before {
+			content: "👈";
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10px;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
 
-  .page-next {
-    position: absolute;
-    text-align: right;
-    right: 10px;
-    top: 50%;
-    transform: translate(0, -50%);
-    color: #fff;
-    font-size: 30px;
-    font-family: "NanumSquareRound";
-    font-weight: bold;
-    text-transform: uppercase;
+	.page-next {
+		position: absolute;
+		text-align: right;
+		right: 10px;
+		top: 50%;
+		transform: translate(0, -50%);
+		color: #fff;
+		font-size: 30px;
+		font-family: "NanumSquareRound";
+		font-weight: bold;
+		text-transform: uppercase;
 
-    &::before {
-      content: "👉";
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 10px;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
-  }
+		&::before {
+			content: "👉";
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 10px;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+	}
 }
