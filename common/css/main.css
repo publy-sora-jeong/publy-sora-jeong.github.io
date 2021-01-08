@@ -1432,7 +1432,7 @@ header li a:hover {
   border-bottom: 1px solid #e4e4e4;
   background-size: cover;
   background-repeat: repeat-x;
-  height: 300px;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
   background-attachment: fixed;
@@ -1443,7 +1443,6 @@ header li a:hover {
   overflow: hidden;
   position: relative;
   font-weight: 300;
-  display: none;
 }
 
 @-webkit-keyframes fliker {
@@ -2120,12 +2119,14 @@ header li a:hover {
 }
 
 .sub-top {
-  padding-top: 960px;
   width: 100%;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
+  height: 760px;
+  overflow: hidden;
+  margin-top: 60px;
 }
 
 .sub-top--nurinori {
@@ -2262,6 +2263,14 @@ header li a:hover {
 
 .sub-top--riderlog {
   background-image: url("../img/src/riderlog/star_thumb.png");
+}
+
+.sub-top--lgdwebzine {
+  background-image: url("../img/src/lgdwebzine/detailpage__top.png");
+}
+
+.sub-top--jcr {
+  background-image: url("../img/src/jcrpackaging/detailpage__top.png");
 }
 
 .next-project {
@@ -2434,6 +2443,14 @@ header li a:hover {
 
 .next-project--geri {
   background-image: url("../img/src/geri/footer_nextproject.png");
+}
+
+.next-project--jcr {
+  background-image: url("../img/src/lgdwebzine/footer_nextproject.png");
+}
+
+.next-project--lgdwebzine {
+  background-image: url("../img/src/jcrpackaging/footer_nextproject.png");
 }
 
 .next-project .container {
