@@ -1219,7 +1219,7 @@ html {
 html body {
   margin: 0;
   background-color: transparent;
-  font-family: "Noto Sans KR", "NanumGothic", "dotum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Noto Sans KR", "NanumGothic", "dotum", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-weight: 400;
   color: #333;
   font-size: 14px;
@@ -2275,6 +2275,10 @@ header li a:hover {
   background-image: url("../img/src/_common_imgs/jcrpack_detail_top.png");
 }
 
+.sub-top--kcit {
+  background-image: url("../img/src/_common_imgs/kcit_detail_top.png");
+}
+
 .next-project {
   display: block;
   width: 100%;
@@ -2453,6 +2457,10 @@ header li a:hover {
 
 .next-project--lgdwebzine {
   background-image: url("../img/src/_common_imgs/lgdwebzine_next.png");
+}
+
+.next-project--kcit {
+  background-image: url("../img/src/_common_imgs/kcit_next.png");
 }
 
 .next-project .container {

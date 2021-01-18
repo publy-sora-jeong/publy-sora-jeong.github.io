@@ -4,7 +4,7 @@ var $section;
 
 $(function () {
 	initDom();
-	includeHTML();
+	//includeHTML();
 
 	var time = 0;
 	var numbering = "#0";
@@ -61,7 +61,7 @@ $(function () {
 
 	$(window).on("scroll", function () {
 		var scroll = $(this).scrollTop();
-		this.console.log(scroll);
+		//this.console.log(scroll);
 		if (scroll > 100 || scroll < p_lastPostion) {
 			$(".fix-layer-control").stop(true, true).animate({
 				bottom: 0,
