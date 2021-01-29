@@ -1787,11 +1787,12 @@ header li a:hover {
 }
 
 .portfolio .grid .grid-item {
-  width: calc(33.3333% - 50px);
+  width: 20%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   margin: 25px;
   margin-top: 70px;
+  margin: 0;
   z-index: 1;
 }
 
@@ -1811,6 +1812,7 @@ header li a:hover {
   letter-spacing: -1px;
   font-family: "NanumSquareRound";
   font-size: 22px;
+  display: none;
 }
 
 .portfolio .grid .grid-item .desc p {
