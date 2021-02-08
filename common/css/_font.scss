@@ -1,13 +1,33 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 .notosanskr * {
 	font-family: "Noto Sans KR", sans-serif;
 }
 
 @font-face {
-	font-family: "NanumSquareRound";
-	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff")
-		format("woff");
-	font-weight: normal;
+	font-family: "S-CoreDream-3Light";
 	font-style: normal;
+	font-weight: 100;
+	src: url(../fonts/S-CoreDream-3Light.woff) format("woff");
+}
+
+@font-face {
+	font-family: "S-CoreDream-4Regular";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../fonts/S-CoreDream-4Regular.woff) format("woff");
+}
+
+@font-face {
+	font-family: "S-CoreDream-5Medium";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../fonts/S-CoreDream-5Medium.woff) format("woff");
+}
+
+@font-face {
+	font-family: "S-CoreDream-6Bold";
+	font-style: normal;
+	font-weight: 100;
+	src: url(../fonts/S-CoreDream-6Bold.woff) format("woff");
 }

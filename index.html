@@ -5,32 +5,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <meta property="og:title" content="PORTFOLIO :: Happiness comes in waves" />
-  <meta property="og:image" content="https://publy-sora-jeong.github.io/PORTFOLIO/common/img/og.png" />
-  <meta property="og:site_name" content="portfolio" />
+  <meta property="og:title" content="SORA_JEONG : WEB PUBLISHING PORTFOLIO" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="web portfolio" />
   <meta property="og:type" content="portfolio wetsite" />
 
   <script src="common/js/global.js"></script>
-  <script src="common/js/main.js"></script>
+  <script src="common/js/site.js"></script>
 
   <link rel="stylesheet" href="common/css/main.css" />
   <link rel="icon" type="image/png" sizes="16x16" href="common/img/favicon.png" />
   <title>WEB PUBLISHING PORTFOLIO</title>
 </head>
 
-<body class="wrap">
+<body>
   <header>
-    <h1 class="logo">
-      <a href="index.html">
-        <p>PORTFOLIO</p>
-        <span>web publishing</span>
-      </a>
-    </h1>
-    <div id="menu">
-      <ul>
-        <li><a href="index.html">#HOME</a></li>
-        <li><a href="contact.html">#CONTACT</a></li>
-      </ul>
+    <div class="header-container">
+      <h1 class="logo">
+        <a href="index.html">
+          <p>SORA JEONG</p>
+          <span>web publishing portfolio</span>
+        </a>
+      </h1>
+      <div id="menu">
+        <ul>
+          <li><a href="index.html">#HOME</a></li>
+          <li><a href="contact.html">#CONTACT</a></li>
+        </ul>
+      </div>
     </div>
   </header>
 
@@ -38,429 +40,448 @@
   <section class="portfolio">
     <div class="section-container">
       <div class="button-group filter-button-group">
-        <button data-filter="*" class="is-checked">SHOW ALL</button>
-        <button data-filter=".pub">PUBLISHING</button>
-        <button data-filter=".des">DESIGN</button>
-        <button data-filter=".wz">WEBZINE & Letters</button>
+        <button data-filter="*" class="is-checked">Show all</button>
+        <button data-filter=".pub">Publishing</button>
+        <button data-filter=".des">Web Design</button>
+        <button data-filter=".wz">Webzine & Newsletter</button>
       </div>
 
       <div class="grid">
-        <!-- <div class="grid-item pub des wz">
-          <a href="p_lgdprom.html">
-            <img src="common/img/src/_common_imgs/lgdprom_main_thumb.png" alt="엘지 디스플레이 홍보팀 웹진 2021 " />
-          </a>
-          <div class="desc">
-            <strong>LG display 홍보용 웹진 </strong>
-            <p>LG display 홍보용 웹진 디자인 & 웹퍼블리싱</p>
-          </div>
-        </div> -->
+        <!--taipei-->
+        <div class="grid-item pub des">
+          <a href="_taipei/taipei.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">타이뻬이한국학교</span>
 
+            </div>
+            <img src="_taipei/main_thumb.png" alt="타이뻬이한국학교 퍼블리싱 & 서브 디자인 " />
+            <div class="desc">
+              <h4>
+                <strong class="site">타이뻬이한국학교</strong>
+                <p class="work">웹 퍼블리싱 & 서브콘텐츠 디자인</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+
+        <!--IJ Capstone-->
+        <div class="grid-item pub">
+          <a href="_capstone/capstone.html">
+            <div class="lable-container"><span class="label ">인제대학교 캡스톤디자인센터</span></div>
+            <img src="_capstone/main_thumb.png" alt="인제대학교 캡스톤디자인센터 반응형 퍼블리싱 " />
+            <div class="desc">
+              <h4>
+                <strong class="site">인제대학교 캡스톤디자인센터 </strong>
+                <p class="work">반응형 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--LG Display -->
         <div class="grid-item pub des wz">
-          <a href="p_lgdwebzine.html">
-            <img src="common/img/src/_common_imgs/lgdwebzine_main_thumb.png" alt="엘지 디스플레이 웹진 2021 " />
+          <a href="_lgd/lgdwebzine.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">LG디스플레이 웹진</span>
+            </div>
+            <img src="_lgd/main_thumb.png" alt="LG디스플레이 웹진 디자인 및 퍼블리싱 " />
+            <div class="desc">
+              <h4>
+                <strong class="site">LG디스플레이 웹진</strong>
+                <p class="work">디자인 & 퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>LG display magazine </strong>
-            <p>LG display 사내 웹진 디자인 & 웹퍼블리싱</p>
-          </div>
         </div>
+        <!--TIX KOREA-->
         <div class="grid-item pub">
-          <a href="p_jcrpackaging.html">
-            <img src="common/img/src/_common_imgs/jcrpack_main_thumb.png" alt="JCR Packaging " />
+          <a href="_tix/tix.html">
+            <div class="lable-container">
+              <span class="label ">TIX KOREA</span>
+            </div>
+            <img src="_tix/main_thumb.png" alt="TIX KOREA 예매사이트 반응형 퍼블리싱  " />
+            <div class="desc">
+              <h4>
+                <strong class="site">TIX KOREA 예매사이트</strong>
+                <p class="work">반응형 퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>JCR Packaging </strong>
-            <p>신규 반응형웹 퍼블리싱 다국어(영어&스페인어)</p>
-          </div>
-        </div>
-        <div class="grid-item pub">
-          <a href="p_kcit.html">
-            <img src="common/img/src/_common_imgs/kcit_main_thumb.png" alt="한국융합IT " />
-          </a>
-          <div class="desc">
-            <strong>한국융합IT </strong>
-            <p>신규 반응형웹 퍼블리싱 영문/국문</p>
-          </div>
-        </div>
-        <div class="grid-item pub">
-          <a href="p_tixkorea.html">
-            <img src="common/img/src/_common_imgs/tixkorea_main_thumb.png" alt="TICKET K Project" />
-          </a>
-          <div class="desc">
-            <strong>TICKET K Project </strong>
-            <p>TIX KOREA 신규 반응형 예매사이트 퍼블리싱</p>
-          </div>
-        </div>
-        <div class="grid-item pub">
-          <a href="p_riderlog.html">
-            <img src="common/img/src/_common_imgs/riderlog_main_thumb.png" alt="별따러가자 " />
-          </a>
-          <div class="desc">
-            <strong>별따러가자 </strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-        <div class="grid-item pub">
-          <a href="p_nurinori.html">
-            <img src="common/img/src/_common_imgs/nurinori_main_thumb.png" alt="NURINORI 2020 " />
-          </a>
-          <div class="desc">
-            <strong>누리놀이 </strong>
-            <p>PC웹사이트 리뉴얼, 유지보수, 이벤트페이지 제작</p>
-          </div>
-        </div>
 
-        <div class="grid-item pub des">
-          <a href="p_ssuniv.html">
-            <img src="common/img/src/_common_imgs/soongsil_main_thumb.png" alt="숭실대학교 2020.09 " />
-          </a>
-          <div class="desc">
-            <strong>숭실대학교 국제법무학과</strong>
-            <p>학과홈페이지 반응형웹 리뉴얼 디자인 & 퍼블리싱</p>
-          </div>
         </div>
-        <div class="grid-item pub des">
-          <a href="p_ssuniv_prof.html">
-            <img src="common/img/src/_common_imgs/soongsilprof_main_thumb.png" alt="NURINORI 2020 " />
-          </a>
-          <div class="desc">
-            <strong>숭실대학교 국제법무학과 교수협의회 </strong>
-            <p>리뉴얼 웹디자인 & 퍼블리싱</p>
-          </div>
-        </div>
-        <div class="grid-item pub">
-          <a href="p_littlehomelearn.html">
-            <img src="common/img/src/_common_imgs/littlehomelearn_main_thumb.png" alt="리틀홈런 2020.09" />
-          </a>
-          <div class="desc">
-            <strong>리틀홈런 </strong>
-            <p>PC/모바일 신규 웹사이트 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_asolution.html">
-            <img src="common/img/src/_common_imgs/asolution_main_thumb.png" alt="A Solution 2020.08" />
-          </a>
-          <div class="desc">
-            <strong>에이솔루션</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item des">
-          <a href="p_goodus.html">
-            <img src="common/img/src/_common_imgs/goodus_main_thumb.png" alt="Gmanager admin 2020.08" />
-          </a>
-          <div class="desc">
-            <strong>굿어스</strong>
-            <p>GManager for SDWAN 어드민페이지 디자인</p>
-          </div>
-        </div>
-
-        <div class="grid-item wz pub">
-          <a href="p_gnlife.html">
-            <img src="common/img/src/_common_imgs/gnlife_main_thumb.png" alt="강남라이프 웹진 2020.07" />
-          </a>
-          <div class="desc">
-            <strong>강남라이프</strong>
-            <p>7월호 웹진 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_tbd.html">
-            <img src="common/img/src/_common_imgs/tbd_main_thumb.png" alt="더북디지털 2020.07" />
-          </a>
-          <div class="desc">
-            <strong>더북디지털</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub des">
-          <a href="p_dse.html">
-            <img src="common/img/src/_common_imgs/dse_main_thumb.png" alt="계양 DSE 2020.07" />
-          </a>
-          <div class="desc">
-            <strong>계양 DSE 지식산업센터 </strong>
-            <p>반응형 신규 사이트 디자인&퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_tinpo.html">
-            <img src="common/img/src/_common_imgs/tinpo_main_thumb.png" alt="tinpo 2020.05" />
-          </a>
-          <div class="desc">
-            <strong>틴포 창의력발달검사APP</strong>
-            <p>
-              갤럭시 탭A (1280 X 800) 전용 만3-5세 유아용 창의력발달검사
-              하이브리드앱 퍼블리싱
-            </p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_petratec.html">
-            <img src="common/img/src/_common_imgs/petratec_main_thumb.png" alt="페트라텍 2020.05" />
-          </a>
-          <div class="desc">
-            <strong>페트라텍</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_gaonhightech.html">
-            <img src="common/img/src/_common_imgs/gaonhightech_main_thumb.png" alt="가온하이테크 2020.05" />
-          </a>
-          <div class="desc">
-            <strong>가온하이테크</strong>
-            <p>반응형 신규 사이트 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_didlab.html">
-            <img src="common/img/src/_common_imgs/did_main_thumb.png" alt="DID기술융합공작소 2020.04" />
-          </a>
-          <div class="desc">
-            <strong>DID기술융합공작소 </strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item des pub wz">
-          <a href="p_khtire.html">
-            <img src="common/img/src/_common_imgs/khtire_main_thumb.png" alt="금호타이어 웹진, 뉴스레터 2020.03" />
-          </a>
-          <div class="desc">
-            <strong>금호타이어</strong>
-            <p>웹진/뉴스테러 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_biopharma.html">
-            <img src="common/img/src/_common_imgs/biopharma_main_thumb.png" alt="바이오파마 2020.03" />
-          </a>
-          <div class="desc">
-            <strong>바이오파마</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_yearplan.html">
-            <img src="common/img/src/_common_imgs/yearplan_main_thumb.png" alt="NURINORI YEARPLAN 2020" />
-          </a>
-          <div class="desc">
-            <strong>누리놀이2020 연간교육계획안</strong>
-            <p>연간교육계획안 소개, 다운로드 페이지</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_newedu.html">
-            <img src="common/img/src/_common_imgs/newedu_main_thumb.png" alt="새로운교육 2020.03" />
-          </a>
-          <div class="desc">
-            <strong>새로운교육</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_ezcook.html">
-            <img src="common/img/src/_common_imgs/ezcook_main_thumb.png" alt="주식회사 캔 2020.02" />
-          </a>
-          <div class="desc">
-            <strong>주식회사 캔</strong>
-            <p>이지쿡 - 신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_qins.html">
-            <img src="common/img/src/_common_imgs/qins_main_thumb.png" alt="대한환자안전질향상간호사회 2019.10 " />
-          </a>
-          <div class="desc">
-            <strong>대한환자안전질향상간호사회</strong>
-            <p>반응형웹 리뉴얼 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub des">
-          <a href="p_tabbyhands.html">
-            <img src="common/img/src/_common_imgs/tabbyhands_main_thumb.png" alt="태비핸즈 2019.09 " />
-          </a>
-          <div class="desc">
-            <strong>태비핸즈 </strong>
-            <p>
-              반려동물 용품 중고거래 app 레이아웃 리뉴얼 디자인 & 퍼블리싱
-            </p>
-          </div>
-        </div>
-
-        <div class="grid-item des pub">
-          <a href="p_nemodive.html">
-            <img src="common/img/src/_common_imgs/nemodive_main_thumb.png" alt="Nemo dive 2019.09" />
-          </a>
-          <div class="desc">
-            <strong>니모다이브</strong>
-            <p>신규 반응형 웹사이트 메인 / 서브 / 컨텐츠 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item des pub">
-          <a href="p_promotionteam.html">
-            <img src="common/img/src/_common_imgs/promotionteam_main_thumb.png" alt="프로모션팀 2019.08 " />
-          </a>
-          <div class="desc">
-            <strong>프로모션팀 </strong>
-            <p>쇼핑몰형 웹사이트 리뉴얼 & 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_anymedinhealth.html">
-            <img src="common/img/src/_common_imgs/anymedinhealth_main_thumb.png" alt="애니메디앤헬스 2019.06 " />
-          </a>
-          <div class="desc">
-            <strong>애니메디앤헬스 </strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
-        <div class="grid-item pub">
-          <a href="p_cellsmith.html">
-            <img src="common/img/src/_common_imgs/cellsmith_main_thumb.png" alt="셀스미스 2019.05 " />
-          </a>
-          <div class="desc">
-            <strong>셀스미스 </strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
-        </div>
-
+        <!--KOREA Webzine-->
         <div class="grid-item pub wz">
-          <a href="p_gsfic.html">
-            <img src="common/img/src/_common_imgs/gsfic_main_thumb.png" alt="GSFIC 2019.05" />
+          <a href="_korea/korea.html">
+            <div class="lable-container">
+              <span class="label ">KOREA</span>
+            </div>
+            <img src="_korea/main_thumb.png" alt="KOREA 웹진 PC 퍼블리싱  " />
+            <div class="desc">
+              <h4>
+                <strong class="site">KOREA 웹진</strong>
+                <p class="work">웹 퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>GSFIC</strong>
-            <p>GSFIC 웹진 & 뉴스레터 퍼블리싱</p>
-          </div>
         </div>
-
+        <!--Star picker-->
         <div class="grid-item pub">
-          <a href="p_designforte.html">
-            <img src="common/img/src/_common_imgs/design_forte_main_thumb.png" alt="design forte 2019.04" />
-          </a>
-          <div class="desc">
-            <strong>디자인포르테</strong>
-            <p>
-              반응형웹 리뉴얼 퍼블리싱. 풀페이지 형식의 기업 소개 웹사이트
-            </p>
-          </div>
-        </div>
+          <a href="_starpicker/starpicker.html">
+            <div class="lable-container"><span class="label">별따러가자</span></div>
+            <img src="_starpicker/main_thumb.png" alt="별따러가자 반응형 퍼블리싱 " />
 
+            <div class="desc">
+              <h4>
+                <strong class="site">별따러가자 </strong>
+                <p class="work">반응형 퍼블리싱</p>
+              </h4>
+            </div>
+
+          </a>
+
+        </div>
+        <!--tinpo-->
         <div class="grid-item pub">
-          <a href="p_mkg.html">
-            <img src="common/img/src/_common_imgs/mkg_main_thumb.png" alt="MKG 2019.02 " />
+          <a href="_tinpo/tinpo.html">
+            <div class="lable-container">
+              <span class="label ">틴포 창의력발달검사</span>
+            </div>
+            <img src="_tinpo/main_thumb.png" alt="틴포 창의력발달검사" />
+            <div class="desc">
+              <h4>
+                <strong class="site">틴포 창의력발달검사</strong>
+                <p class="work">퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>MKG</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
         </div>
-
+        <!--little homelearn-->
+        <div class="grid-item pub">
+          <a href="_littlehomelearn/little.html">
+            <div class="lable-container">
+              <span class="label ">리틀홈런 PC/모바일 신규 웹사이트 퍼블리싱</span>
+            </div>
+            <img src="_littlehomelearn/main_thumb.png" alt="리틀홈런" />
+            <div class="desc">
+              <h4>
+                <strong class="site">리틀홈런</strong>
+                <p class="work">웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--nurinori year-->
+        <div class="grid-item pub">
+          <a href="_nurinoriyear/nurinori.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">누리놀이</span>
+            </div>
+            <img src="_nurinoriyear/main_thumb.png" alt="누리놀이 연간 " />
+            <div class="desc">
+              <h4>
+                <strong class="site">누리놀이 2020 연간교육계획안</strong>
+                <p class="work">웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--k engineering school-->
+        <div class="grid-item pub">
+          <a href="_newEdu/newEdu.html">
+            <div class="lable-container">
+              <span class="label ">새로운교육</span>
+            </div>
+            <img src="_newEdu/main_thumb.png" alt="새로운교육" />
+            <div class="desc">
+              <h4>
+                <strong class="site">새로운교육</strong>
+                <p class="work">웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--nurinori year-->
         <div class="grid-item pub des">
-          <a href="p_chlaw.html">
-            <img src="common/img/src/_common_imgs/chaum_main_thumb.png" alt="chaeum 2019.02" />
+          <a href="_nemodive/nemodive.html">
+            <div class="lable-container">
+              <span class="label ">니모다이브</span>
+            </div>
+            <img src="_nemodive/main_thumb.png" alt="니모다이브" />
+            <div class="desc">
+              <h4>
+                <strong class="site">니모다이브</strong>
+                <p class="work">반응형 웹 퍼블리싱 & 디자인</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>채움 법무법인</strong>
-            <p>반응형 신규 사이트 디자인 & 퍼블리싱</p>
-          </div>
         </div>
-
+        <!--DSE -->
         <div class="grid-item pub des">
-          <a href="p_kmf.html">
-            <img src="common/img/src/_common_imgs/kmf_main_thumb.png" alt="한국매니지먼트 연합 2018.12" />
-          </a>
-          <div class="desc">
-            <strong>한국매니지먼트 연합</strong>
-            <p>반응형웹 + 관리자페이지 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
+          <a href="_dse/dse.html">
+            <div class="lable-container">
+              <span class="label ">계양DSE</span>
 
+            </div>
+            <img src="_dse/main_thumb.png" alt="계양DSE" />
+            <div class="desc">
+              <h4>
+                <strong class="site">계양DSE</strong>
+                <p class="work">웹 디자인 & 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--GAON HT -->
         <div class="grid-item pub">
-          <a href="p_anytape.html">
-            <img src="common/img/src/_common_imgs/anytape_main_thumb.png" alt="애니테이프 2018.12" />
+          <a href="_gaonht/gaonht.html">
+            <div class="lable-container ">
+              <span class="label ">가온하이테크</span>
+            </div>
+            <img src="_gaonht/main_thumb.png" alt="가온하이테크" />
+            <div class="desc">
+              <h4>
+                <strong class="site">가온하이테크</strong>
+                <p class="work">웹 퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>애니테이프</strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
         </div>
-
+        <!--Asolution -->
         <div class="grid-item pub">
-          <a href="p_gaoncons.html">
-            <img src="common/img/src/_common_imgs/gaoncons_main_thumb.png" alt="가온건설 2018.10 " />
+          <a href="_asolution/asolution.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">에이솔루션</span>
+            </div>
+            <img src="_asolution/main_thumb.png" alt="ASOLUTION" />
+            <div class="desc">
+              <h4>
+                <strong class="site">에이솔루션</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
           </a>
-          <div class="desc">
-            <strong>가온건설 </strong>
-            <p>신규 반응형웹 퍼블리싱</p>
-          </div>
+        </div>
+        <!--MKG -->
+        <div class="grid-item pub">
+          <a href="_mkg/mkg.html">
+            <div class="lable-container">
+              <span class="label ">유)엠케이지</span>
+            </div>
+            <img src="_mkg/main_thumb.png" alt="MKG" />
+            <div class="desc">
+              <h4>
+                <strong class="site">MKG</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--taewon hs  -->
+        <div class="grid-item pub">
+          <a href="_taewonhs/taewonhs.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">태원고등학교</span>
+            </div>
+            <img src="_taewonhs/main_thumb.png" alt="태원고등학교" />
+            <div class="desc">
+              <h4>
+                <strong class="site">태원고등학교</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--myungduk hs  -->
+        <div class="grid-item pub">
+          <a href="_myungdukhs/myungduk.html">
+            <div class="lable-container">
+              <span class="label ">명덕외국어고등학교</span>
+            </div>
+            <img src="_myungdukhs/main_thumb.png" alt="명덕외고" />
+            <div class="desc">
+              <h4>
+                <strong class="site">명덕외국어고등학교</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--한국매니지먼트연합-->
+        <div class="grid-item pub des">
+          <a href="_kmf/kmf.html">
+            <div class="lable-container">
+              <span class="label ">한국매니지먼트연합</span>
+
+            </div>
+            <img src="_kmf/main_thumb.png" alt="한국매니지먼트연합" />
+            <div class="desc">
+              <h4>
+                <strong class="site">한국매니지먼트연합</strong>
+                <p class="work">반응형웹 퍼블리싱 & 디자인</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--kaywon hs  -->
+        <div class="grid-item pub">
+          <a href="_kaywonhs/kaywon.html">
+            <div class="lable-container">
+              <span class="label ">계원예술고등학교</span>
+            </div>
+            <img src="_kaywonhs/main_thumb.png" alt="계원예술고등학교" />
+            <div class="desc">
+              <h4>
+                <strong class="site">계원예술고등학교</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--gumihs  -->
+        <div class="grid-item pub">
+          <a href="_gumihs/gumihs.html">
+            <div class="lable-container">
+              <span class="label ">구미전자공업고등학교</span>
+            </div>
+            <img src="_gumihs/main_thumb.png" alt="구미전자공고" />
+            <div class="desc">
+              <h4>
+                <strong class="site">구미전자공업고등학교</strong>
+                <p class="work">반응형웹 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--gsfic  -->
+        <div class="grid-item pub wz">
+          <a href="_gsfic/gafic.html">
+            <div class="lable-container">
+              <span class="label ">GSFIC</span>
+            </div>
+            <img src="_gsfic/main_thumb.png" alt="GSFIC" />
+            <div class="desc">
+              <h4>
+                <strong class="site">GSFIC</strong>
+                <p class="work">웹진 / 뉴스레터 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--GERI  -->
+        <div class="grid-item pub des">
+          <a href="_geri/geri.html">
+            <div class="lable-container">
+              <span class="label ">구미전자정보기술원</span>
+
+            </div>
+            <img src="_geri/main_thumb.png" alt="geri" />
+            <div class="desc">
+              <h4>
+                <strong class="site">구미전자정보기술원</strong>
+                <p class="work">디자인 & 퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--동일공고
+        <div class="grid-item pub">
+          <a href="_dongilhs/dongilhs.html">
+            <div class="lable-container">
+              <span class="label ">동일공업고등학교</span>
+            </div>
+            <img src="_dongilhs/main_thumb.png" alt="geri" />
+            <div class="desc">
+              <h4>
+                <strong class="site">동일공업고등학교</strong>
+                <p class="work">반응형 웹퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>  -->
+        <!--채움법무법인  -->
+        <div class="grid-item pub des">
+          <a href="_chaumlaw/chaeumlaw.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">채움법무법인</span>
+
+            </div>
+            <img src="_chaumlaw/main_thumb.png" alt="채움법무법인" />
+            <div class="desc">
+              <h4>
+                <strong class="site">채움법무법인</strong>
+                <p class="work">반응형 웹퍼블리싱 & 디자인</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--cellsmith  -->
+        <div class="grid-item pub">
+          <a href="_cellsmith/cellsmith.html">
+            <div class="lable-container">
+              <span class="label ">셀스미스</span>
+            </div>
+            <img src="_cellsmith/main_thumb.png" alt="cellsmith" />
+            <div class="desc">
+              <h4>
+                <strong class="site">셀스미스</strong>
+                <p class="work">반응형 웹퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--cellsmith  -->
+        <div class="grid-item pub">
+          <a href="_anytape/anytape.html">
+            <div class="lable-container">
+              <span class="label ">애니테이프 + 애니메디앤헬스케어</span>
+            </div>
+            <img src="_anytape/main_thumb.png" alt="cellsmith" />
+            <div class="desc">
+              <h4>
+                <strong class="site">애니테이프 / 애니메디앤헬스케어</strong>
+                <p class="work">반응형 웹퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
+        </div>
+        <!--yedarm  -->
+        <div class="grid-item pub">
+          <a href="_yedarm/yedarm.html">
+            <div class="lable-container lable-dark">
+              <span class="label ">예닮글로벌학교</span>
+            </div>
+            <img src="_yedarm/main_thumb.png" alt="예닮글로벌학교" />
+            <div class="desc">
+              <h4>
+                <strong class="site">예닮글로벌학교</strong>
+                <p class="work">웹퍼블리싱</p>
+              </h4>
+            </div>
+          </a>
         </div>
 
-        <div class="grid-item des pub">
-          <a href="p_secretisland.html">
-            <img src="common/img/src/_common_imgs/secretisland_main_thumb.png" alt="시크릿아일랜드 2018.07" />
-          </a>
-          <div class="desc">
-            <strong>시크릿아일랜드 </strong>
-            <p>신규 반응형웹 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
 
-        <div class="grid-item des pub">
-          <a href="p_luchestar.html">
-            <img src="common/img/src/_common_imgs/luchestar_main_thumb.png" alt="루체스타 2018.07 " />
-          </a>
-          <div class="desc">
-            <strong>루체스타</strong>
-            <p>오피스텔 분양사이트 반응형 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
 
-        <div class="grid-item des pub">
-          <a href="p_geri.html">
-            <img src="common/img/src/_common_imgs/geri_main_thumb.png" alt="구미전자정보기술원  2018.06 " />
-          </a>
-          <div class="desc">
-            <strong>구미전자정보기술원 </strong>
-            <p>리뉴얼 반응형웹 디자인 & 퍼블리싱</p>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
-  <section class="contact">
+  <footer class="contact">
     <div class="section-container">
-      <h3>CONTACT</h3>
+      <h3 class="blind">CONTACT</h3>
       <ul class="location-detail">
-        <li><span>Call</span>０１０ - ８９９３ - ５８１９</li>
+        <li><span>Call</span>010.8993.5819</li>
         <li><span>Email</span>syriana77@naver.com</li>
+        <li><span>Location</span>경기도 수원</li>
 
       </ul>
     </div>
-  </section>
-  <div class="copyrights">
-    copyrights &copy; 2020 SORA JEONG all rights reserved. last modified -
-    2020-09
-  </div>
+    <div class="copyrights">
+      copyrights &copy; 2020 SORA JEONG all rights reserved. <br>last modified -
+      2021.01
+    </div>
+  </footer>
+
+
 </body>
 
 </html>
